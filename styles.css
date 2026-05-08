@@ -40,6 +40,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: var(--font-poppins);
+  --color-gtc-primary: #5ce1e6;
+  --color-gtc-dark: #007879;
+  --color-gtc-mid: #00a8aa;
+  --color-gtc-deep: #054247;
+  --color-gtc-accent: #12b3c4;
 }
 
 :root {
@@ -52,8 +58,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.85 0.12 197);
+  --primary-foreground: oklch(0.145 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
