@@ -13,7 +13,7 @@ export const Footer = () => {
   const locale = useLocale();
 
   return (
-    <footer className="border-t bg-gtc-deep text-white">
+    <footer className="border-t bg-black text-white">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-3">
           {/* Brand */}

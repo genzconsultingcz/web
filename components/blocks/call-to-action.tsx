@@ -21,10 +21,10 @@ export const CallToAction = ({ data }: { data: PageBlocksCta }) => {
   return (
     <Section id="contact" background={data.background ?? 'bg-gtc-deep'}>
       <div className="text-center">
-        <h2 className="text-balance text-4xl font-semibold text-white lg:text-5xl" data-tina-field={tinaField(data, 'title')}>
+        <h2 className="text-balance text-4xl font-black tracking-tight text-black lg:text-5xl" data-tina-field={tinaField(data, 'title')}>
           {data.title}
         </h2>
-        <p className="mt-4 text-gtc-primary" data-tina-field={tinaField(data, 'description')}>
+        <p className="mt-4 text-black/70" data-tina-field={tinaField(data, 'description')}>
           {data.description}
         </p>
         <div className="mt-12 flex flex-wrap justify-center gap-4">
@@ -39,7 +39,7 @@ export const CallToAction = ({ data }: { data: PageBlocksCta }) => {
             if (action!.type === 'leadMagnet') {
               return (
                 <div key={action!.label} data-tina-field={tinaField(action)} className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
-                  <Button size="lg" variant="ghost" className="rounded-xl px-5 text-base text-white" onClick={() => setModalOpen(true)}>
+                  <Button size="lg" variant="ghost" className="rounded-xl px-5 text-base text-black" onClick={() => setModalOpen(true)}>
                     {action!.label}
                   </Button>
                 </div>
