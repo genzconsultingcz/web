@@ -1,58 +1,25 @@
 {
   "header": {
-    "icon": {
-      "name": "Tina",
-      "color": "orange",
-      "style": "float"
-    },
-    "name": "Tina Starter",
-    "color": "default",
+    "name": "GenZ Consulting",
+    "calendlyUrl": "https://calendly.com/adam-dalecky",
     "nav": [
-      {
-        "href": "/",
-        "label": "Home"
-      },
-      {
-        "href": "/about",
-        "label": "About"
-      },
-      {
-        "href": "/posts",
-        "label": "Blog"
-      }
+      { "href": "#services", "label": "Služby" },
+      { "href": "#team", "label": "Tým" },
+      { "href": "#contact", "label": "Kontakt" }
     ]
   },
   "footer": {
+    "phone": "+420 606 028 051",
+    "email": "adam.dalecky@genzconsulting.cz",
     "social": [
       {
-        "icon": {
-          "name": "FaLinkedin"
-        },
-        "url": "https://www.linkedin.com/company/tinacms"
+        "icon": { "name": "FaLinkedin" },
+        "url": "https://cz.linkedin.com/company/gen-zconsulting"
       },
       {
-        "icon": {
-          "name": "FaGithub"
-        },
-        "url": "https://github.com/tinacms/tinacms"
-      },
-      {
-        "icon": {
-          "name": "FaYoutube"
-        },
-        "url": "https://www.youtube.com/@TinaCMS"
-      },
-      {
-        "icon": {
-          "name": "FaXTwitter"
-        },
-        "url": "https://x.com/TinaCMS"
+        "icon": { "name": "FaLinkedin" },
+        "url": "https://www.linkedin.com/in/adam-dalecky/"
       }
     ]
-  },
-  "theme": {
-    "color": "blue",
-    "font": "sans",
-    "darkMode": "light"
   }
 }
