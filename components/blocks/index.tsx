@@ -12,6 +12,7 @@ import { LogoSlider } from "./logo-slider";
 import { ProblemStatement } from "./problem-statement";
 import { Team } from "./team";
 import { CaseStudies } from "./case-studies";
+import { Marquee } from "../ui/marquee";
 
 export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
   if (!props.blocks) return null;
@@ -21,6 +22,7 @@ export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
         return (
           <div key={i} data-tina-field={tinaField(block)}>
             <Block {...block} />
+            {block.__typename === "PageBlocksHero" && <Marquee />}
           </div>
         );
       })}
