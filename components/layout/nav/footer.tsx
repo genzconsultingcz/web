@@ -13,12 +13,12 @@ export const Footer = () => {
   const locale = useLocale();
 
   return (
-    <footer className="bg-gtc-deep text-white">
+    <footer className="bg-black text-white">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link href={`/${locale}`} className="text-xl font-bold tracking-tight">
+            <Link href={`/${locale}`} className="text-xl font-black tracking-tight text-white">
               {header?.name}
             </Link>
             <p className="mt-3 text-sm text-gtc-primary/80">
