@@ -3,9 +3,10 @@
     "name": "GenZ Consulting",
     "calendlyUrl": "https://calendly.com/adam-dalecky",
     "nav": [
-      { "href": "#services", "label": "Služby" },
-      { "href": "#team", "label": "Tým" },
-      { "href": "#contact", "label": "Kontakt" }
+      { "href": "/services", "label": "Služby" },
+      { "href": "/about", "label": "O nás" },
+      { "href": "/case-studies", "label": "Case studies" },
+      { "href": "/contact", "label": "Kontakt" }
     ]
   },
   "footer": {
@@ -14,11 +15,13 @@
     "social": [
       {
         "icon": { "name": "FaLinkedin" },
-        "url": "https://cz.linkedin.com/company/gen-zconsulting"
+        "url": "https://cz.linkedin.com/company/gen-zconsulting",
+        "label": "GenZ Consulting LinkedIn"
       },
       {
         "icon": { "name": "FaLinkedin" },
-        "url": "https://www.linkedin.com/in/adam-dalecky/"
+        "url": "https://www.linkedin.com/in/adam-dalecky/",
+        "label": "Adam Dalecký LinkedIn"
       }
     ]
   }

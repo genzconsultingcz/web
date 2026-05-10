@@ -1,7 +1,6 @@
 // tina/config.tsx
 import { defineConfig } from 'tinacms';
 import Global from './collection/global';
-import Page from './collection/page';
 
 const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
@@ -19,10 +18,10 @@ const config = defineConfig({
   build: {
     publicFolder: 'public',
     outputFolder: 'admin',
-    basePath: '', // no basePath for this site
+    basePath: '',
   },
   schema: {
-    collections: [Page, Global],
+    collections: [Global],
   },
 });
 

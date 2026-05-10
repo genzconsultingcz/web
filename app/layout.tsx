@@ -10,7 +10,7 @@ import { TailwindIndicator } from '@/components/ui/breakpoint-indicator';
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="cs" className={poppins.variable}>
-      <body className="min-h-screen bg-background font-sans antialiased">
+      <body className={cn('min-h-screen bg-background font-sans antialiased', poppins.variable)}>
         <VideoDialogProvider>
           {children}
           <VideoDialog />

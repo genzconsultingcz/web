@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 interface CalendlyButtonProps {
   url: string;
@@ -37,7 +38,7 @@ export function CalendlyButton({
     <Button
       variant={variant}
       size={size}
-      className={className}
+      className={cn('h-auto', className)}
       onClick={() => loadCalendlyScript(url)}
     >
       {label}

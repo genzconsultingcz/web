@@ -1,6 +1,5 @@
-query contentQuery($relativePath: String!) {
-  ...LayoutQueryFragment
-  page(relativePath: $relativePath) {
-    ...PageParts
+query globalQuery {
+  global(relativePath: "index.json") {
+    ...GlobalParts
   }
 }

@@ -1,9 +1,6 @@
-// app/[locale]/page.tsx
 import React from 'react';
-import { notFound } from 'next/navigation';
-import client from '@/tina/__generated__/client';
 import Layout from '@/components/layout/layout';
-import ClientPage from '@/app/[locale]/[...urlSegments]/client-page';
+import HomePage from '@/components/pages/home/HomePage';
 
 export const revalidate = 300;
 
@@ -12,16 +9,10 @@ export default async function Home({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  let data;
-  try {
-    data = await client.queries.page({ relativePath: `${locale}/home.mdx` });
-  } catch {
-    notFound();
-  }
+  await params;
   return (
-    <Layout rawPageData={data}>
-      <ClientPage {...data} />
+    <Layout>
+      <HomePage />
     </Layout>
   );
 }
