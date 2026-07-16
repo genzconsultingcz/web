@@ -127,9 +127,9 @@ export default function CustomPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              { num: '01', title: 'We find out what\'s wrong', desc: 'A quick, no-obligation call to understand your situation and whether we can help.' },
-              { num: '02', title: 'We get to know your company', desc: 'Deep dive into your context, goals, and the problem from every angle.' },
-              { num: '03', title: 'We build a tailored solution', desc: 'A solution designed precisely for you — whether a known product or something built from scratch.' },
+              { num: '01', title: 'Zjistíme, co je špatně', desc: 'Krátký, bez závazků call, abychom pochopili vaši situaci a jestli vám můžeme pomoci.' },
+              { num: '02', title: 'Poznáme vaši firmu', desc: 'Hloubkový průzkum vašeho kontextu, cílů a problému z každého úhlu.' },
+              { num: '03', title: 'Vytvoříme řešení na míru', desc: 'Řešení přesně pro vás — ať už známý produkt, nebo něco vyvinutého od začátku.' },
             ].map(({ num, title, desc }, i) => (
               <motion.div
                 key={num}
