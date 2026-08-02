@@ -2,12 +2,13 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTranslations, useLocale } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowRight, ArrowUpRight, ArrowDown, Check, Quote, Linkedin, Download } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import { getCaseStudy } from '@/components/pages/case-studies/case-study-data';
+import type { HomeQuery } from '../../../tina/__generated__/types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -19,28 +20,11 @@ const fadeUp: any = {
   }),
 };
 
-const LOGOS = [
-  { name: 'Global Payments', src: '/globalpayments.jpeg' },
-  { name: 'Generali', src: '/logo-orizzontale.2020-07-16-17-41-47.jpeg' },
-  { name: 'AV Media', src: '/AV-MEDIA-SYSTEMS_horizontalni_1200_1200-970x970.png' },
-  { name: 'Raynet', src: '/LOGO_Raynet_big.png' },
-  { name: 'ČZU', src: '/CZU_logotyp_V_zelena.png' },
-  { name: 'CITA', src: '/CITALogo.png' },
-  { name: 'TAP', src: '/tap_logo.png' },
-];
+export type HomeContent = NonNullable<NonNullable<HomeQuery['home']>['cs']>;
+export type HomeLogos = NonNullable<HomeQuery['home']>['logos'];
 
-type TestimonialItem = {
-  quote: string;
-  author: string;
-  role: string;
-  linkedin: string;
-};
-
-function TestimonialSlider({ t }: { t: ReturnType<typeof useTranslations> }) {
-  const testimonials: TestimonialItem[] = [
-    { quote: t('testimonial1Quote'), author: t('testimonial1Author'), role: t('testimonial1Role'), linkedin: t('testimonial1Linkedin') },
-    { quote: t('testimonial2Quote'), author: t('testimonial2Author'), role: t('testimonial2Role'), linkedin: t('testimonial2Linkedin') },
-  ];
+function TestimonialSlider({ content }: { content: HomeContent['testimonials'] }) {
+  const testimonials = content?.items ?? [];
   const sliderRef = React.useRef<HTMLDivElement>(null);
   const [active, setActive] = React.useState(0);
 
@@ -76,21 +60,21 @@ function TestimonialSlider({ t }: { t: ReturnType<typeof useTranslations> }) {
           >
             <Quote className="mb-6 size-10 text-gtc-primary" fill="currentColor" />
             <blockquote className="flex-1 text-base font-medium leading-relaxed text-white/90 md:text-lg">
-              {item.quote}
+              {item?.quote}
             </blockquote>
             <div className="mt-8 flex items-center gap-3">
               <div className="h-px w-8 bg-gtc-primary" />
               <div>
-                <p className="text-sm font-bold text-white">{item.author}</p>
-                <p className="text-xs text-white/40">{item.role}</p>
+                <p className="text-sm font-bold text-white">{item?.author}</p>
+                <p className="text-xs text-white/40">{item?.role}</p>
                 <a
-                  href={item.linkedin}
+                  href={item?.linkedin ?? '#'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-gtc-primary hover:underline"
                 >
                   <Linkedin className="size-4" />
-                  {t('linkedInLabel')}
+                  {content?.linkedInLabel}
                 </a>
               </div>
             </div>
@@ -101,7 +85,7 @@ function TestimonialSlider({ t }: { t: ReturnType<typeof useTranslations> }) {
         {testimonials.map((_, i) => (
           <button
             key={i}
-            aria-label={t('testimonialNavAria', { n: i + 1 })}
+            aria-label={content?.navAria?.replace('{n}', String(i + 1))}
             onClick={() => goTo(i)}
             className={`h-2 rounded-full transition-all duration-300 ${active === i ? 'w-6 bg-gtc-primary' : 'w-2 bg-white/25'}`}
           />
@@ -111,22 +95,8 @@ function TestimonialSlider({ t }: { t: ReturnType<typeof useTranslations> }) {
   );
 }
 
-export default function HomePage() {
-  const t = useTranslations('home');
+export default function HomePage({ content, logos }: { content: HomeContent; logos: HomeLogos }) {
   const locale = useLocale();
-
-  const services = [
-    { num: t('service1Number'), title: t('service1Title'), desc: t('service1Desc'), slug: t('service1Slug') },
-    { num: t('service2Number'), title: t('service2Title'), desc: t('service2Desc'), slug: t('service2Slug') },
-    { num: t('service3Number'), title: t('service3Title'), desc: t('service3Desc'), slug: t('service3Slug') },
-    { num: t('service4Number'), title: t('service4Title'), desc: t('service4Desc'), slug: t('service4Slug') },
-  ];
-
-  const steps = [
-    { num: t('step1Number'), title: t('step1Title'), desc: t('step1Desc') },
-    { num: t('step2Number'), title: t('step2Title'), desc: t('step2Desc') },
-    { num: t('step3Number'), title: t('step3Title'), desc: t('step3Desc') },
-  ];
 
   const caseStudies = ['av-media', 'global-payments', 'generali']
     .map((slug) => {
@@ -134,12 +104,6 @@ export default function HomePage() {
       return cs ? { slug, client: cs.client, intro: cs.hero.intro } : null;
     })
     .filter((cs): cs is { slug: string; client: string; intro: string } => Boolean(cs));
-
-  const stats = [
-    { num: t('stat1Number'), label: t('stat1Label') },
-    { num: t('stat2Number'), label: t('stat2Label') },
-    { num: t('stat3Number'), label: t('stat3Label') },
-  ];
 
   return (
     <>
@@ -157,7 +121,7 @@ export default function HomePage() {
             >
               <span aria-hidden className="h-px w-10 bg-black/40" />
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-black/50">
-                {t('heroEyebrow')}
+                {content.hero?.eyebrow}
               </span>
             </motion.div>
 
@@ -168,9 +132,9 @@ export default function HomePage() {
               custom={0.1}
               className="text-[2.25rem] font-black leading-[1.04] tracking-tight text-black text-balance break-words sm:text-5xl md:text-6xl lg:text-7xl"
             >
-              {t('heroHeadline1')}{' '}
+              {content.hero?.headline1}{' '}
               {(() => {
-                const h2 = t('heroHeadline2');
+                const h2 = content.hero?.headline2 ?? '';
                 const m = h2.match(/^(.*?)([.!?]*)$/);
                 const word = m?.[1] ?? h2;
                 const trail = m?.[2] ?? '';
@@ -200,7 +164,7 @@ export default function HomePage() {
               custom={0.2}
               className="mt-8 text-2xl font-bold text-black/70 md:text-3xl"
             >
-              {t('heroSubline')}
+              {content.hero?.subline}
             </motion.p>
 
             <motion.p
@@ -210,7 +174,7 @@ export default function HomePage() {
               custom={0.3}
               className="mt-5 max-w-xl text-base text-black/60 md:text-lg"
             >
-              {t('heroBody')}
+              {content.hero?.body}
             </motion.p>
 
             <motion.div
@@ -221,7 +185,7 @@ export default function HomePage() {
               className="mt-10 flex flex-wrap gap-3"
             >
               <ContactButton
-                label={t('heroPrimaryCta')}
+                label={content.hero?.primaryCta ?? ''}
                 size="lg"
                 className="rounded-full bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
@@ -229,7 +193,7 @@ export default function HomePage() {
                 href="#pdf-guide"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-transparent px-8 py-4 text-sm font-bold text-black hover:bg-black hover:text-white transition-colors"
               >
-                {t('heroSecondaryCta')}
+                {content.hero?.secondaryCta}
                 <ArrowDown className="size-4" />
               </a>
             </motion.div>
@@ -259,7 +223,7 @@ export default function HomePage() {
             <div className="relative aspect-square overflow-hidden rounded-[2.75rem] border-[3px] border-black bg-gradient-to-b from-gtc-primary/20 via-gtc-primary/10 to-white shadow-[0_0_0_1px_rgba(16,185,129,0.12)]">
               <Image
                 src="/team_no_bg.png"
-                alt={t('heroImageAlt')}
+                alt={content.hero?.imageAlt ?? ''}
                 fill
                 priority
                 sizes="(max-width: 1024px) 90vw, 40vw"
@@ -280,17 +244,17 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="mb-8 text-center text-xs font-bold uppercase tracking-[0.2em] text-zinc-400"
           >
-            {t('logosEyebrow')}
+            {content.logosEyebrow}
           </motion.p>
         </div>
         <div className="overflow-hidden w-full px-6">
           <InfiniteSlider gap={64} speed={40} speedOnHover={20} className="w-full">
-            {LOGOS.map(({ name, src }) => (
-              <div key={name} className="flex items-center justify-center">
-                {src ? (
+            {(logos ?? []).map((logo) => (
+              <div key={logo?.name} className="flex items-center justify-center">
+                {logo?.src ? (
                   <Image
-                    src={src}
-                    alt={name}
+                    src={logo.src}
+                    alt={logo.name ?? ''}
                     width={0}
                     height={0}
                     sizes="200px"
@@ -298,7 +262,7 @@ export default function HomePage() {
                     className="grayscale opacity-60 transition-all duration-300 hover:opacity-100 hover:grayscale-0"
                   />
                 ) : (
-                  <span className="text-sm font-bold uppercase tracking-widest text-zinc-300">{name}</span>
+                  <span className="text-sm font-bold uppercase tracking-widest text-zinc-300">{logo?.name}</span>
                 )}
               </div>
             ))}
@@ -318,17 +282,17 @@ export default function HomePage() {
               viewport={{ once: true }}
             >
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-gtc-primary">
-                {t('problemEyebrow')}
+                {content.problem?.eyebrow}
               </p>
               <h2 className="text-2xl font-black leading-tight text-white md:text-3xl">
-                {t('problemTitle')}
+                {content.problem?.title}
               </h2>
               <p className="mt-4 text-base font-semibold text-white/60 italic">
-                {t('problemVillain')}
+                {content.problem?.villain}
               </p>
               <ul className="mt-6 space-y-3">
-                {[t('problemItem1'), t('problemItem2'), t('problemItem3')].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
+                {(content.problem?.items ?? []).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
                     <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-gtc-primary" />
                     <span className="text-sm leading-relaxed text-white/70">{item}</span>
                   </li>
@@ -345,17 +309,17 @@ export default function HomePage() {
               custom={0.15}
             >
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-gtc-primary">
-                {t('solutionEyebrow')}
+                {content.solution?.eyebrow}
               </p>
               <h2 className="text-2xl font-black leading-tight text-white md:text-3xl">
-                {t('solutionTitle')}
+                {content.solution?.title}
               </h2>
               <p className="mt-2 text-xl font-black text-gtc-primary md:text-2xl">
-                {t('solutionSubtitle')}
+                {content.solution?.subtitle}
               </p>
               <ul className="mt-6 space-y-3">
-                {[t('solutionItem1'), t('solutionItem2'), t('solutionItem3')].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
+                {(content.solution?.items ?? []).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
                     <Check className="mt-0.5 size-4 shrink-0 text-gtc-primary" />
                     <span className="text-sm leading-relaxed text-white/70">{item}</span>
                   </li>
@@ -379,18 +343,18 @@ export default function HomePage() {
             <div className="flex items-center gap-3">
               <span className="h-px w-12 bg-gtc-primary" />
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">
-                {t('servicesEyebrow')}
+                {content.services?.eyebrow}
               </p>
             </div>
             <h2 className="mt-6 text-4xl font-black leading-tight text-black md:text-5xl">
-              {t('servicesTitle')}
+              {content.services?.title}
             </h2>
           </motion.div>
 
           <div className="grid gap-px bg-zinc-200 sm:grid-cols-2">
-            {services.map(({ num, title, desc, slug }, i) => (
+            {(content.services?.items ?? []).map((service, i) => (
               <motion.div
-                key={slug}
+                key={service?.slug}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -398,14 +362,14 @@ export default function HomePage() {
                 custom={i * 0.08}
                 className="group relative bg-white p-8 hover:bg-zinc-50 transition-colors duration-200"
               >
-                <span className="text-4xl font-black text-gtc-primary select-none">{num}</span>
-                <h3 className="mt-3 text-lg font-black text-black">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-500">{desc}</p>
+                <span className="text-4xl font-black text-gtc-primary select-none">{service?.num}</span>
+                <h3 className="mt-3 text-lg font-black text-black">{service?.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-500">{service?.desc}</p>
                 <Link
-                  href={`/${locale}/services/${slug}`}
+                  href={`/${locale}/services/${service?.slug}`}
                   className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
                 >
-                  {t('servicesLearnMore')}
+                  {content.services?.learnMore}
                   <ArrowRight className="size-3" />
                 </Link>
                 <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gtc-primary transition-all duration-300 group-hover:w-full" />
@@ -424,7 +388,7 @@ export default function HomePage() {
               href={`/${locale}/services`}
               className="text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
             >
-              {t('servicesViewAll')}
+              {content.services?.viewAll}
             </Link>
           </motion.div>
         </div>
@@ -441,15 +405,15 @@ export default function HomePage() {
             className="mb-14"
           >
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">
-              {t('processEyebrow')}
+              {content.process?.eyebrow}
             </p>
-            <h2 className="text-3xl font-black text-black md:text-4xl">{t('processTitle')}</h2>
+            <h2 className="text-3xl font-black text-black md:text-4xl">{content.process?.title}</h2>
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            {steps.map(({ num, title, desc }, i) => (
+            {(content.process?.steps ?? []).map((step, i, arr) => (
               <motion.div
-                key={num}
+                key={step?.num}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -457,10 +421,10 @@ export default function HomePage() {
                 custom={i * 0.1}
                 className="relative"
               >
-                <div className="text-6xl font-black leading-none text-gtc-primary">{num}</div>
-                <h3 className="mt-4 text-lg font-black text-black">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-500">{desc}</p>
-                {i < steps.length - 1 && (
+                <div className="text-6xl font-black leading-none text-gtc-primary">{step?.num}</div>
+                <h3 className="mt-4 text-lg font-black text-black">{step?.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-500">{step?.desc}</p>
+                {i < arr.length - 1 && (
                   <div className="absolute -right-4 top-8 hidden text-zinc-300 md:block">→</div>
                 )}
               </motion.div>
@@ -480,9 +444,9 @@ export default function HomePage() {
             className="mb-12"
           >
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">
-              {t('csEyebrow')}
+              {content.caseStudies?.eyebrow}
             </p>
-            <h2 className="text-3xl font-black text-black md:text-4xl">{t('csTitle')}</h2>
+            <h2 className="text-3xl font-black text-black md:text-4xl">{content.caseStudies?.title}</h2>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -501,13 +465,13 @@ export default function HomePage() {
                   className="flex flex-1 flex-col"
                 >
                   <span className="mb-3 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-gtc-dark">
-                    {t('csCardLabel')}
+                    {content.caseStudies?.cardLabel}
                     <ArrowUpRight className="size-3.5" />
                   </span>
                   <h3 className="text-lg font-black text-black">{client}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-zinc-500">{intro}</p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gtc-dark group-hover:text-black transition-colors duration-150">
-                    {t('csReadMore')}
+                    {content.caseStudies?.readMore}
                     <ArrowRight className="size-3" />
                   </span>
                 </motion.span>
@@ -527,7 +491,7 @@ export default function HomePage() {
               href={`/${locale}/case-studies`}
               className="text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
             >
-              {t('csViewAll')}
+              {content.caseStudies?.viewAll}
             </Link>
           </motion.div>
         </div>
@@ -542,14 +506,14 @@ export default function HomePage() {
               <div className="mb-6 flex items-center gap-2.5">
                 <span className="size-1.5 shrink-0 rounded-full bg-gtc-primary" />
                 <span className="text-xs font-bold uppercase tracking-[0.22em] text-white/40">
-                  {t('pdfBadge')}
+                  {content.pdf?.badge}
                 </span>
               </div>
               <h2 className="text-4xl font-black leading-[1.05] text-white md:text-5xl">
-                {t('pdfHeadline')}
+                {content.pdf?.headline}
               </h2>
               <p className="mt-5 max-w-lg text-base leading-relaxed text-white/50">
-                {t('pdfBody')}
+                {content.pdf?.body}
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
@@ -558,10 +522,10 @@ export default function HomePage() {
                   className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gtc-primary px-7 py-3.5 text-sm font-bold text-black transition-opacity hover:opacity-90"
                 >
                   <Download className="size-4" />
-                  {t('pdfCta')}
+                  {content.pdf?.cta}
                 </a>
                 <ContactButton
-                  label={t('pdfSecondaryCta')}
+                  label={content.pdf?.secondaryCta ?? ''}
                   size="lg"
                   variant="outline"
                   className="rounded-full border-white/25 bg-transparent px-7 py-3.5 text-sm font-bold text-white hover:border-white/50 hover:bg-white/5"
@@ -583,11 +547,11 @@ export default function HomePage() {
                 style={{ aspectRatio: '3/4', transform: 'rotate(3deg)' }}
               >
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/35">
-                  {t('pdfCoverMetaTag')}
+                  {content.pdf?.coverMetaTag}
                 </p>
                 <div>
                   <h3 className="text-2xl font-black leading-tight text-black">
-                    {t('pdfCoverTitle')}
+                    {content.pdf?.coverTitle}
                   </h3>
                   <div className="mt-6 space-y-2">
                     <div className="h-[3px] w-full rounded-full bg-black" />
@@ -595,7 +559,7 @@ export default function HomePage() {
                     <div className="h-[2px] w-2/5 rounded-full bg-black/15" />
                   </div>
                   <p className="mt-8 text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
-                    {t('pdfCoverMeta')}
+                    {content.pdf?.coverMeta}
                   </p>
                 </div>
               </div>
@@ -608,9 +572,9 @@ export default function HomePage() {
       <section className="bg-gtc-primary py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-8 sm:grid-cols-3">
-            {stats.map(({ num, label }, i) => (
+            {(content.stats ?? []).map((stat, i) => (
               <motion.div
-                key={label}
+                key={stat?.label}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -618,8 +582,8 @@ export default function HomePage() {
                 custom={i * 0.1}
                 className="text-center"
               >
-                <div className="text-6xl font-black text-black md:text-7xl">{num}</div>
-                <div className="mt-2 text-sm font-semibold uppercase tracking-widest text-black/60">{label}</div>
+                <div className="text-6xl font-black text-black md:text-7xl">{stat?.num}</div>
+                <div className="mt-2 text-sm font-semibold uppercase tracking-widest text-black/60">{stat?.label}</div>
               </motion.div>
             ))}
           </div>
@@ -636,9 +600,9 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="mb-12 text-xs font-bold uppercase tracking-[0.2em] text-gtc-primary"
           >
-            {t('testimonialsEyebrow')}
+            {content.testimonials?.eyebrow}
           </motion.p>
-          <TestimonialSlider t={t} />
+          <TestimonialSlider content={content.testimonials} />
         </div>
       </section>
 
@@ -653,32 +617,17 @@ export default function HomePage() {
             className="max-w-2xl"
           >
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">
-              {t('teamEyebrow')}
+              {content.team?.eyebrow}
             </p>
             <h2 className="text-3xl font-black leading-tight text-black md:text-4xl">
-              {t('teamTitle')}
+              {content.team?.title}
             </h2>
           </motion.div>
 
           <div className="mt-12 grid gap-8 sm:grid-cols-2">
-            {[
-              {
-                name: t('member1Name'),
-                role: t('member1Role'),
-                bio: t('member1Bio'),
-                img: '/adam_cropped.jpeg',
-                linkedin: 'https://www.linkedin.com/in/adam-dalecky/',
-              },
-              {
-                name: t('member2Name'),
-                role: t('member2Role'),
-                bio: t('member2Bio'),
-                img: '/jonathan_cropped.jpeg',
-                linkedin: 'https://www.linkedin.com/in/jonatan-petr/',
-              },
-            ].map((m, i) => (
+            {(content.team?.members ?? []).map((member, i) => (
               <motion.div
-                key={m.name}
+                key={member?.name}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -688,8 +637,8 @@ export default function HomePage() {
               >
                 <div className="relative h-40 w-28 shrink-0 overflow-hidden">
                   <Image
-                    src={m.img}
-                    alt={`${m.name} — GenZ Consulting`}
+                    src={member?.photo ?? ''}
+                    alt={`${member?.name} — GenZ Consulting`}
                     fill
                     className="object-cover object-[center_0%]"
                     sizes="112px"
@@ -697,17 +646,17 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gtc-primary/10 mix-blend-multiply" />
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-xl font-black text-black">{m.name}</p>
-                  <p className="mt-0.5 text-sm font-semibold text-gtc-dark">{m.role}</p>
-                  <p className="mt-3 text-sm leading-relaxed text-zinc-500">{m.bio}</p>
+                  <p className="text-xl font-black text-black">{member?.name}</p>
+                  <p className="mt-0.5 text-sm font-semibold text-gtc-dark">{member?.role}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-500">{member?.bio}</p>
                   <a
-                    href={m.linkedin}
+                    href={member?.linkedin ?? '#'}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-auto inline-flex items-center gap-1.5 pt-4 text-xs font-bold text-zinc-400 transition-colors duration-150 hover:text-gtc-dark"
                   >
                     <Linkedin className="size-3.5" />
-                    {t('linkedInLabel')}
+                    {content.testimonials?.linkedInLabel}
                   </a>
                 </div>
               </motion.div>
@@ -718,7 +667,7 @@ export default function HomePage() {
             href={`/${locale}/about`}
             className="mt-8 inline-flex items-center gap-1.5 text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
           >
-            {t('teamViewAbout')}
+            {content.team?.viewAbout}
           </Link>
         </div>
       </section>
@@ -733,11 +682,11 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
           >
-            <h2 className="text-4xl font-black text-white md:text-5xl">{t('ctaTitle')}</h2>
-            <p className="mt-4 text-base text-white/60">{t('ctaDesc')}</p>
+            <h2 className="text-4xl font-black text-white md:text-5xl">{content.cta?.title}</h2>
+            <p className="mt-4 text-base text-white/60">{content.cta?.desc}</p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <ContactButton
-                label={t('ctaPrimary')}
+                label={content.cta?.primary ?? ''}
                 size="lg"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
@@ -745,7 +694,7 @@ export default function HomePage() {
                 href="#pdf-guide"
                 className="rounded-none border-2 border-white/30 px-8 py-4 text-sm font-bold text-white hover:border-white hover:bg-white/5 transition-colors"
               >
-                {t('ctaSecondary')}
+                {content.cta?.secondary}
               </a>
             </div>
           </motion.div>
