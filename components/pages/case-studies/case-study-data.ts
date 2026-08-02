@@ -68,7 +68,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
     hero: {
       headline: 'Co Gen Z chce od pracovního prostoru, a proč to firmy ještě nevědí.',
       intro:
-        'Spojili jsme kvalitativní hloubkové rozhovory s aktivní Gen Z a kvantitativní šetření mezi běžnou Gen Z. Výsledkem jsou data ve čtyřech sekcích — Mindset, Práce, AI a Prostředí — která AV Media používá jako sales argument pro firmy, které chtějí stavět prostor pro mladé.',
+        'Spojili jsme kvalitativní hloubkové rozhovory s aktivní Gen Z a kvantitativní šetření mezi běžnou Gen Z. Výsledkem jsou data ve čtyřech sekcích, Mindset, Práce, AI a Prostředí, která AV Media používá jako sales argument pro firmy, které chtějí stavět prostor pro mladé.',
     },
     scope: [
       { label: 'Rozsah', value: 'Kvalitativní + kvantitativní výzkum' },
@@ -77,13 +77,13 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
     ],
     stats: [
       { value: '318 + 20', label: 'respondentů celkem, kvantitativně i kvalitativně' },
-      { value: '2', label: 'segmenty Gen Z — aktivní (podnikající) a běžná (studium + brigády)' },
+      { value: '2', label: 'segmenty Gen Z, aktivní (podnikající) a běžná (studium + brigády)' },
       { value: '4', label: 'tematické sekce dat o tom, jak Gen Z přemýšlí, pracuje a kde chce být' },
     ],
     context: {
       headline: 'Když prostor přestává fungovat pro generaci, která ho nejvíc využívá.',
       intro:
-        'AV MEDIA dodává audiovizuální technologie do kanceláří, zasedaček a eventových prostor už přes tři dekády. Trh se ale začal měnit rychleji než návrhy projektů — a to hlavně kvůli generaci, která má od pracovního prostoru jiná očekávání než kdokoliv předtím. Cílem projektu bylo dát AV Media tvrdá data, o která se mohou opřít v sales argumentaci pro své klienty.',
+        'AV MEDIA dodává audiovizuální technologie do kanceláří, zasedaček a eventových prostor už přes tři dekády. Trh se ale začal měnit rychleji než návrhy projektů, a to hlavně kvůli generaci, která má od pracovního prostoru jiná očekávání než kdokoliv předtím. Cílem projektu bylo dát AV Media tvrdá data, o která se mohou opřít v sales argumentaci pro své klienty.',
       clientLabel: 'Kdo je klient',
       client:
         'AV MEDIA je největší český dodavatel audiovizuálních technologií pro firmy. Stojí za displeji, ozvučením, videokonferencemi a kompletním vybavením zasedaček, huddle roomů, prezentačních i eventových prostor. Pracuje pro největší tuzemské i mezinárodní firmy, které potřebují, aby jejich prostor fungoval pro každodenní práci, prezentace i setkávání.',
@@ -92,7 +92,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
         {
           title: 'Prostor jako strategická investice',
           body:
-            'Pracovní prostředí přestalo být jen interiér. Pro firmy, které bojují o talenty, je to nástroj kultury i retence — a Gen Z na něj reaguje jinak než předchozí generace.',
+            'Pracovní prostředí přestalo být jen interiér. Pro firmy, které bojují o talenty, je to nástroj kultury i retence, a Gen Z na něj reaguje jinak než předchozí generace.',
         },
         {
           title: 'Hybrid je výchozí, ne benefit',
@@ -102,7 +102,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
         {
           title: 'Wi‑Fi, zásuvky a tabule jsou must‑have',
           body:
-            'Základní vybavení už není argument — je to úplný standard. Pokud chybí, prostor selhává ještě dřív, než se v něm začne pracovat.',
+            'Základní vybavení už není argument, je to úplný standard. Pokud chybí, prostor selhává ještě dřív, než se v něm začne pracovat.',
         },
         {
           title: 'Smysl > status, čas > místo',
@@ -117,7 +117,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
     approach: {
       headline: 'Tři kroky od dotazníku k použitelné strategii.',
       intro:
-        'Postupovali jsme metodicky — od hloubky k šíři. Nejdřív jsme poslouchali, pak měřili, pak data interpretovali přímo s týmem AV Media. Každé doporučení tak má dvojí oporu — hlas konkrétních lidí a sílu čísel.',
+        'Postupovali jsme metodicky, od hloubky k šíři. Nejdřív jsme poslouchali, pak měřili, pak data interpretovali přímo s týmem AV Media. Každé doporučení tak má dvojí oporu, hlas konkrétních lidí a sílu čísel.',
       steps: [
         {
           num: '1',
@@ -135,7 +135,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
           num: '3',
           title: 'Interpretace & prezentace',
           body:
-            'Živý workshop u týmu AV Media. Procházeli jsme data sekci po sekci a překládali je do konkrétních byznysových úhlů — kde a jak je v sales pitchích použít.',
+            'Živý workshop u týmu AV Media. Procházeli jsme data sekci po sekci a překládali je do konkrétních byznysových úhlů, kde a jak je v sales pitchích použít.',
         },
       ],
       assessedTitle: 'Co konkrétně jsme posuzovali',
@@ -168,14 +168,14 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
     findings: {
       headline: 'Čtyři zjištění, která mění design pracovního prostoru.',
       intro:
-        'Z desítek datových bodů vybíráme čtyři — jeden z každé sekce — které mají největší byznysový dopad pro AV Media. Každý z nich má praktický důsledek pro to, jak se dnes navrhují kanceláře.',
+        'Z desítek datových bodů vybíráme čtyři, jeden z každé sekce, které mají největší byznysový dopad pro AV Media. Každý z nich má praktický důsledek pro to, jak se dnes navrhují kanceláře.',
       columns: ['Co jsme zjistili', 'Proč to je důležité', 'Co z toho plyne pro AV Media'],
       items: [
         {
           category: 'Mindset',
           title: 'Smysl práce > status práce',
           cols: [
-            'Gen Z neřeší prestiž titulu ani společenský status zaměstnavatele. Řeší, jestli to, co dělá, dává smysl jí osobně i světu kolem.',
+            'Gen Z neřeší prestiž titulu ani společenský status zaměstnavatele. Řeší, jestli to, co dělá, dává smysl jim osobně i světu kolem.',
             'Tradiční employer branding postavený na velikosti firmy a hierarchii ztrácí váhu. Mladí kandidáti si vybírají firmy podle hodnot a dopadu, ne podle vizitky.',
             'Argument „investice do prostředí“ je přesvědčivější, když ukazuje, že prostor odráží hodnoty firmy. AV řešení jsou součástí toho, jak firma žije své hodnoty navenek i dovnitř.',
           ],
@@ -186,7 +186,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
           cols: [
             'Gen Z preferuje, kdy bude pracovat, před tím, odkud bude pracovat. Pevný 8–16 režim v kanceláři ji odrazuje víc než povinná docházka samotná.',
             'Pro Gen Z je klíčové rozhodovat si sami, kdy budou pracovat. Ve zbytku času chtějí sportovat, trávit čas s přáteli a věnovat se vlastním věcem. Práce už není střed života, ale jeden z pilířů.',
-            'Prostor musí být použitelný v různou denní dobu a v různých režimech — ráno, večer, mezi tréninkem a schůzkou. Modulární zóny a snadné přepínání AV setupu mezi focus a sync prací.',
+            'Prostor musí být použitelný v různou denní dobu a v různých režimech, ráno, večer, mezi tréninkem a schůzkou. Modulární zóny a snadné přepínání AV setupu mezi focus a sync prací.',
           ],
         },
         {
@@ -195,7 +195,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
           cols: [
             'Drtivá většina Gen Z používá AI denně. Otázka už není „jestli“, ale „jak hluboko“. U aktivní Gen Z je AI strategický nástroj, u běžné je to každodenní pomocník.',
             'Pokud firma AI brzdí nebo neumí, Gen Z to čte jako signál zaostalosti. Naopak prostředí, které AI plně integruje, posílá tichý signál, že firma rozumí dnešku.',
-            'Návrh prostoru musí počítat s AI nástroji v meeting flow — transkripcemi a hlasovými zápisy. AV se stává nositelem AI, ne jen displejem.',
+            'Návrh prostoru musí počítat s AI nástroji v meeting flow, transkripcemi a hlasovými zápisy. AV se stává nositelem AI, ne jen displejem.',
           ],
         },
         {
@@ -212,7 +212,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
     outputs: {
       headline: 'Co konkrétně AV Media dostali do ruky.',
       intro:
-        'Naše práce nekončila prezentací. AV Media odešli se sadou výstupů, které jejich sales i produktový tým mohou používat opakovaně — u každého projektu, ne jen u jedné kampaně.',
+        'Naše práce nekončila prezentací. AV Media odešli se sadou výstupů, které jejich sales i produktový tým mohou používat opakovaně, u každého projektu, ne jen u jedné kampaně.',
       items: [
         {
           num: '01',
@@ -224,7 +224,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
           num: '02',
           title: 'Kvantitativní výzkum',
           body:
-            'Report z dotazníkového šetření mezi 318 zástupci běžné Gen Z. Strukturovaný do čtyř sekcí — Kontext, Práce, Mindset a AI — s RAW daty pro vlastní analýzu.',
+            'Report z dotazníkového šetření mezi 318 zástupci běžné Gen Z. Strukturovaný do čtyř sekcí, Kontext, Práce, Mindset a AI, s RAW daty pro vlastní analýzu.',
         },
         {
           num: '03',
@@ -236,7 +236,7 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
           num: '04',
           title: 'Interpretace dat & insighty',
           body:
-            'Překlad dat do byznysových důsledků pro AV Media — s konkrétními úhly, jak je použít v sales pitchích pro firmy a v argumentaci pro design pracovních prostor.',
+            'Překlad dat do byznysových důsledků pro AV Media, s konkrétními úhly, jak je použít v sales pitchích pro firmy a v argumentaci pro design pracovních prostor.',
         },
       ],
       quote:
@@ -258,13 +258,13 @@ const avMedia: Record<CaseStudyLocale, CaseStudy> = {
           num: '02',
           title: 'Komplexnost i detail',
           body:
-            'Pracujeme na strategické vrstvě — segmentace, content pillars, pozice značky — i na jednotlivých formulacích a doporučeních pro design prostoru. Obojí v jednom týmu.',
+            'Pracujeme na strategické vrstvě, segmentace, content pillars, pozice značky, i na jednotlivých formulacích a doporučeních pro design prostoru. Obojí v jednom týmu.',
         },
         {
           num: '03',
           title: 'Gen Z native',
           body:
-            'Naše doporučení vychází z přímé znalosti toho, jak Gen Z přemýšlí a komunikuje. Nemusíme tu generaci zkoumat zvenku — jsme její součástí.',
+            'Naše doporučení vychází z přímé znalosti toho, jak Gen Z přemýšlí a komunikuje. Nemusíme tu generaci zkoumat zvenku, jsme její součástí.',
         },
       ],
     },
@@ -489,9 +489,9 @@ const generali: Record<CaseStudyLocale, CaseStudy> = {
     logoAlt: 'Generali',
     year: '2025',
     hero: {
-      headline: 'Trainee program, který Gen Z skutečně chce.',
+      headline: 'Trainee program, který Gen Z skutečně chce',
       intro:
-        'Spoluvytvořili jsme s Generali Českou pojišťovnou trainee program pro generaci Z — od přepracování náborových textů přes metodiku osobního rozvoje až po komunikační strategii. Cílem bylo postavit program, který přitáhne a udrží ty nejlepší mladé talenty.',
+        'Spoluvytvořili jsme s Generali Českou pojišťovnou trainee program pro generaci Z. Od přepracování náborových textů přes metodiku osobního rozvoje až po komunikační strategii. Cílem bylo postavit program, který přitáhne a udrží ty nejlepší mladé talenty.',
     },
     scope: [
       { label: 'Rozsah', value: '10 fází programu' },
@@ -509,7 +509,7 @@ const generali: Record<CaseStudyLocale, CaseStudy> = {
         'Generali Česká pojišťovna připravovala devítiměsíční trainee program pro 12 čerstvých absolventů. Otázka byla, jak ho udělat tak, aby skutečně oslovil generaci s radikálně jinými očekáváními, než ty předchozí.',
       clientLabel: 'Kdo je klient',
       client:
-        'Generali Česká pojišťovna je největší pojišťovna na českém trhu s více než 200letou historií. Trainee program patří mezi klíčové nástroje pro dlouhodobý talent pipeline a staví na modelu 60 % reálná práce v týmu, 20 % rozvoj, 20 % společný udržitelnostní projekt — s rotacemi napříč odděleními (IT, data, právo, strategie) a networkingem s top managementem.',
+        'Generali Česká pojišťovna je největší pojišťovna na českém trhu s více než 200letou historií. Trainee program patří mezi klíčové nástroje pro dlouhodobý talent pipeline a staví na modelu 60 % reálná práce v týmu, 20 % rozvoj, 20 % společný udržitelnostní projekt, s rotacemi napříč odděleními (IT, data, právo, strategie) a networkingem s top managementem.',
       whyTitle: 'Proč to nebyl běžný projekt',
       whyIntro:
         'Gen Z je nejtěžší skupina pro nábor a zároveň skupina, která rozhoduje o budoucnosti firem. Má radikálně jiná očekávání než předchozí generace. Generali potřebovali:',
@@ -533,7 +533,7 @@ const generali: Record<CaseStudyLocale, CaseStudy> = {
       ],
       briefLabel: 'Naše zadání',
       brief:
-        'Generali nás přizvali, abychom prošli celý devítiměsíční program pohledem Gen Z a společně s nimi ho dotvořili do podoby, která reálně osloví talenty z této generace. Měli program lehce předpřipravený interním týmem — naším úkolem bylo dovést ho do detailu: v textech, formátech, metodikách i komunikační strategii.',
+        'Generali nás přizvali, abychom prošli celý devítiměsíční program pohledem Gen Z a společně s nimi ho dotvořili do podoby, která reálně osloví talenty z této generace. Měli program lehce předpřipravený interním týmem, naším úkolem bylo dovést ho do detailu, v textech, formátech, metodikách i komunikační strategii.',
     },
     approach: {
       headline: 'Tři kroky od insightu k funkčnímu programu.',
@@ -544,12 +544,12 @@ const generali: Record<CaseStudyLocale, CaseStudy> = {
           num: '1',
           title: 'Diagnostika',
           body:
-            'Společný audit existujícího návrhu programu napříč 10 kroky — od náboru po development centrum.',
+            'Společný audit existujícího návrhu programu napříč 10 kroky, od náboru po development centrum.',
         },
         {
           num: '2',
           title: 'Výzkum',
-          body: 'Vlastní výzkum mezi Gen Z — co od trainee programu reálně očekávají.',
+          body: 'Vlastní výzkum mezi Gen Z, co od trainee programu reálně očekávají.',
         },
         {
           num: '3',
@@ -629,7 +629,7 @@ const generali: Record<CaseStudyLocale, CaseStudy> = {
           num: '01',
           title: 'Spolutvorba 10 fází programu',
           body:
-            'Společná práce na každém kroku — od formulací inzerátů přes ikonografii v komunikačních materiálech až po metodiku ukončovacího development centra. Vše s jasným „jak“ a „proč“.',
+            'Společná práce na každém kroku, od formulací inzerátů přes ikonografii v komunikačních materiálech až po metodiku ukončovacího development centra. Vše s jasným „jak“ a „proč“.',
         },
         {
           num: '02',
@@ -641,7 +641,7 @@ const generali: Record<CaseStudyLocale, CaseStudy> = {
           num: '03',
           title: 'Metodika Learning Contractu',
           body:
-            'Plán osobního rozvoje, který si trainee píše sám — s jasnou strukturou cílů, pravidelných check-upů s manažerem a závěrečné reflexe. Nástroj použitelný opakovaně i u dalších ročníků programu.',
+            'Plán osobního rozvoje, který si trainee píše sám, s jasnou strukturou cílů, pravidelných check-upů s manažerem a závěrečné reflexe. Nástroj použitelný opakovaně i u dalších ročníků programu.',
         },
         {
           num: '04',
@@ -653,7 +653,7 @@ const generali: Record<CaseStudyLocale, CaseStudy> = {
           num: '05',
           title: 'Validační data z výzkumu mezi Gen Z',
           body:
-            'Ke každému doporučení dohledatelná evidence z našeho výzkumu — co Gen Z reálně očekává od trainee programů a co je přitahuje.',
+            'Ke každému doporučení dohledatelná evidence z našeho výzkumu, co Gen Z reálně očekává od trainee programů a co je přitahuje.',
         },
       ],
       quote:
@@ -902,7 +902,7 @@ const globalPayments: Record<CaseStudyLocale, CaseStudy> = {
     hero: {
       headline: 'Když produkt funguje, ale Gen Z zákazník se k němu nedostane.',
       intro:
-        'Prošli jsme celou cestu zákazníka Global Payments pohledem Gen Z mikropodnikatele — od Googlu přes web a objednávku až po terminál. Pojmenovali jsme, kde se ztrácí potenciální zákazníci, a dali konkrétní playbook, jak je získat zpátky.',
+        'Prošli jsme celou cestu zákazníka Global Payments pohledem Gen Z mikropodnikatele, od Googlu přes web a objednávku až po terminál. Pojmenovali jsme, kde se ztrácí potenciální zákazníci a dali konkrétní playbook, jak je získat zpátky.',
     },
     scope: [
       { label: 'Rozsah', value: 'Komplexní audit cesty zákazníka' },
@@ -910,8 +910,8 @@ const globalPayments: Record<CaseStudyLocale, CaseStudy> = {
       { label: 'Výstup', value: 'Konkrétní playbook' },
     ],
     stats: [
-      { value: '8', label: 'fází cesty zákazníka pod drobnohledem — od vyhledávání po terminál' },
-      { value: '2', label: 'segmenty výzkumu — kvantitativní i kvalitativní data' },
+      { value: '8', label: 'fází cesty zákazníka pod drobnohledem, od vyhledávání po terminál' },
+      { value: '2', label: 'segmenty výzkumu, kvantitativní i kvalitativní data' },
       { value: '100 %', label: 'doporučení opřená o vlastní výzkum mezi Gen Z' },
     ],
     context: {
@@ -923,23 +923,23 @@ const globalPayments: Record<CaseStudyLocale, CaseStudy> = {
         'Global Payments je globální fintech, který v Česku nabízí platební terminály a online platební brány pro kavárny, restaurace, e-shopy, maloobchody a živnostníky. V portfoliu má řešení od mobilního terminálu po komplexní pokladní systém.',
       whyTitle: 'Proč to nebyl běžný projekt',
       whyIntro:
-        'Gen Z mikropodnikatelé jsou rychle rostoucí segment — freelanceři, kreativci, malé e-shopy, kavárny, brand owneři. Stojí ale mimo tradiční B2B sales motion, kterým fintech tradičně cílí na korporátní klientelu. Global Payments potřebovali:',
+        'Gen Z mikropodnikatelé jsou rychle rostoucí segment, freelanceři, kreativci, malé e-shopy, kavárny, brand owneři. Stojí ale mimo tradiční B2B sales motion, kterým fintech tradičně cílí na korporátní klientelu. Global Payments potřebovali:',
       whyPoints: [
         {
           title: 'Najít je tam, kde hledají',
-          body: 'AI search, Google a sociální sítě jsou pro Gen Z první kontaktní body — klasické sales kanály už nestačí.',
+          body: 'AI search, Google a sociální sítě jsou pro Gen Z první kontaktní body, klasické sales kanály už nestačí.',
         },
         {
           title: 'Mluvit tak, jak mluví oni',
-          body: 'Korporátní žargon a prázdné fráze Gen Z odrazují — čekají věcnost, transparentnost a srozumitelnost.',
+          body: 'Korporátní žargon a prázdné fráze Gen Z odrazují, čekají věcnost, transparentnost a srozumitelnost.',
         },
         {
           title: 'Nabídnout cestu, která neodrazuje',
-          body: 'UX webu, formuláře, CTA, onboardingové emaily — každý krok rozhoduje, jestli Gen Z dotáhne objednávku do konce.',
+          body: 'UX webu, formuláře, CTA, onboardingové emaily, každý krok rozhoduje, jestli Gen Z dotáhne objednávku do konce.',
         },
         {
           title: 'Postavit obsah, který je zajímá',
-          body: 'Nejde o korporátní novinky a B2B partnerství — Gen Z podnikatel řeší cashflow, daně, fakturace, růst.',
+          body: 'Nejde o korporátní novinky a B2B partnerství, Gen Z podnikatel řeší cashflow, daně, fakturace, růst.',
         },
       ],
       briefLabel: 'Naše zadání',
@@ -955,19 +955,19 @@ const globalPayments: Record<CaseStudyLocale, CaseStudy> = {
           num: '1',
           title: 'Diagnostika',
           body:
-            'Mystery shopping celé cesty zákazníka jako Gen Z mikropodnikatel — od googlení přes web a formulář až po terminál v ruce.',
+            'Mystery shopping celé cesty zákazníka jako Gen Z mikropodnikatel, od googlení přes web a formulář až po terminál v ruce.',
         },
         {
           num: '2',
           title: 'Výzkum',
           body:
-            'Vlastní kvantitativní i kvalitativní výzkum mezi Gen Z mikropodnikateli — co reálně řeší při výběru platebního řešení.',
+            'Vlastní kvantitativní i kvalitativní výzkum mezi Gen Z mikropodnikateli, co reálně řeší při výběru platebního řešení.',
         },
         {
           num: '3',
           title: 'Audit & playbook',
           body:
-            'Pojmenování insightů a konkrétní doporučení pro každou fázi cesty — prioritizovaný seznam změn s jasným „jak“ a „proč“.',
+            'Pojmenování insightů a konkrétní doporučení pro každou fázi cesty, prioritizovaný seznam změn s jasným „jak“ a „proč“.',
         },
       ],
       assessedTitle: 'Co konkrétně jsme posuzovali',
@@ -987,7 +987,7 @@ const globalPayments: Record<CaseStudyLocale, CaseStudy> = {
         {
           num: '03',
           title: 'Google reviews',
-          body: 'Sběr a analýza online recenzí — co konkrétně zákazníkům na Global Payments vadí, co naopak chválí a kde jsou opakované patterny.',
+          body: 'Sběr a analýza online recenzí, co konkrétně zákazníkům na Global Payments vadí, co naopak chválí a kde jsou opakované patterny.',
         },
         {
           num: '04',
@@ -1007,7 +1007,7 @@ const globalPayments: Record<CaseStudyLocale, CaseStudy> = {
           title: 'Global Payments „neexistuje“',
           cols: [
             'ChatGPT vidí Global Payments jen jako řešení pro velké firmy. Google bez placené reklamy ukazuje firmu až na druhé straně výsledků.',
-            'Gen Z začíná každou rešerši přes ChatGPT a Google — pokud tam nejste, neexistujete. Konkurence vyhrává hned na prvním kroku.',
+            'Gen Z začíná každou rešerši přes ChatGPT a Google, pokud tam nejste, neexistujete. Konkurence vyhrává hned na prvním kroku.',
             'SEO a AI search optimalizace, jasná pozice „pro mikropodnikatele“, brand awareness na platformách, kde Gen Z reálně tráví čas.',
           ],
         },
@@ -1043,19 +1043,19 @@ const globalPayments: Record<CaseStudyLocale, CaseStudy> = {
     outputs: {
       headline: 'Co konkrétně Global Payments dostali do ruky.',
       intro:
-        'Naše práce nekončila prezentací. Klient odešel s pěti samostatnými výstupy, které jeho marketing, sales i UX tým mohou používat opakovaně — ne jen u jedné kampaně.',
+        'Naše práce nekončila prezentací. Klient odešel s pěti samostatnými výstupy, které jeho marketing, sales i UX tým mohou používat opakovaně, ne jen u jedné kampaně.',
       items: [
         {
           num: '01',
           title: 'Mystery shopping report',
           body:
-            'Kompletní průchod cestou zákazníka v osmi fázích — vyhledávání, web, kontaktní formulář, objednávka, podpora, GP TOM, terminál a další tipy. Každá fáze s nálezy a doporučeními.',
+            'Kompletní průchod cestou zákazníka v osmi fázích, vyhledávání, web, kontaktní formulář, objednávka, podpora, GP TOM, terminál a další tipy. Každá fáze s nálezy a doporučeními.',
         },
         {
           num: '02',
           title: 'Konkurenční analýza',
           body:
-            'Kdo a jak v segmentu komunikuje — SumUp, KB SmartPay, Dotykačka, ČSOB, Comgate. V čem je každý silný, kde má slabiny a co z toho plyne pro pozici Global Payments.',
+            'Kdo a jak v segmentu komunikuje, SumUp, KB SmartPay, Dotykačka, ČSOB, Comgate. V čem je každý silný, kde má slabiny a co z toho plyne pro pozici Global Payments.',
         },
         {
           num: '03',
@@ -1067,7 +1067,7 @@ const globalPayments: Record<CaseStudyLocale, CaseStudy> = {
           num: '04',
           title: 'Google reviews report',
           body:
-            'Sběr a analýza online recenzí — co konkrétně zákazníkům na Global Payments vadí, kde se opakují vzorce a jaké patterny komunikace by recenze posunuly k lepšímu.',
+            'Sběr a analýza online recenzí, co konkrétně zákazníkům na Global Payments vadí, kde se opakují vzorce a jaké patterny komunikace by recenze posunuly k lepšímu.',
         },
         {
           num: '05',
@@ -1089,19 +1089,19 @@ const globalPayments: Record<CaseStudyLocale, CaseStudy> = {
           num: '01',
           title: 'Data na pozadí',
           body:
-            'Každé doporučení opíráme o vlastní výzkum mezi Gen Z. Pracujeme s aktuálními daty o této generaci, ne s odhady ani s trendovými zprávami z internetu.',
+            'Každé doporučení opíráme o vlastní výzkum mezi Gen Z. Pracujeme s aktuálními daty o této generaci, ne s odhady ani trendovými zprávami z internetu.',
         },
         {
           num: '02',
           title: 'Komplexnost i detail',
           body:
-            'Pracujeme na strategické vrstvě — pozice značky, segmentace, content pillars — i na jednotlivých formulacích v textech a CTA. Obojí v jednom týmu.',
+            'Pracujeme na strategické vrstvě, pozice značky, segmentace, content pillars, i na jednotlivých formulacích v textech a CTA. Obojí v jednom týmu.',
         },
         {
           num: '03',
           title: 'Gen Z native',
           body:
-            'Naše doporučení vychází z přímé znalosti toho, jak Gen Z přemýšlí a komunikuje. Nemusíme tu generaci zkoumat — jsme její součástí.',
+            'Naše doporučení vychází z přímé znalosti toho, jak Gen Z přemýšlí a komunikuje. Nemusíme tu generaci zkoumat, jsme její součástí.',
         },
       ],
     },

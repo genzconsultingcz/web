@@ -133,7 +133,8 @@
     "ctaTitle": "Ready to start?",
     "ctaDesc": "Book a no-obligation call or download our free guide.",
     "ctaPrimary": "Book a call",
-    "ctaSecondary": "Download free guide"
+    "ctaSecondary": "Download free guide",
+    "csReadMore": "Read case study"
   },
   "services": {
     "eyebrow": "Our services",

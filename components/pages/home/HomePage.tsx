@@ -4,10 +4,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'motion/react';
-import { ArrowRight, ArrowDown, Check, Quote, Linkedin, Download } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ArrowDown, Check, Quote, Linkedin, Download } from 'lucide-react';
 import { CalendlyButton } from '@/components/ui/CalendlyButton';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import { useLayout } from '@/components/layout/layout-context';
+import { getCaseStudy } from '@/components/pages/case-studies/case-study-data';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -48,11 +49,12 @@ export default function HomePage() {
     { num: t('step3Number'), title: t('step3Title'), desc: t('step3Desc') },
   ];
 
-  const caseStudies = [
-    { client: t('cs1Client'), service: t('cs1Service'), result: t('cs1Result') },
-    { client: t('cs2Client'), service: t('cs2Service'), result: t('cs2Result') },
-    { client: t('cs3Client'), service: t('cs3Service'), result: t('cs3Result') },
-  ];
+  const caseStudies = ['av-media', 'global-payments', 'generali']
+    .map((slug) => {
+      const cs = getCaseStudy(slug, locale);
+      return cs ? { slug, client: cs.client, intro: cs.hero.intro } : null;
+    })
+    .filter((cs): cs is { slug: string; client: string; intro: string } => Boolean(cs));
 
   const stats = [
     { num: t('stat1Number'), label: t('stat1Label') },
@@ -85,7 +87,7 @@ export default function HomePage() {
               initial="hidden"
               animate="visible"
               custom={0.1}
-              className="text-5xl font-black leading-[1.04] tracking-tight text-black sm:text-6xl md:text-7xl"
+              className="text-[2.25rem] font-black leading-[1.04] tracking-tight text-black text-balance break-words sm:text-5xl md:text-6xl lg:text-7xl"
             >
               {t('heroHeadline1')}{' '}
               {(() => {
@@ -95,7 +97,7 @@ export default function HomePage() {
                 const trail = m?.[2] ?? '';
                 return (
                   <>
-                    <span className="relative inline-block whitespace-nowrap">
+                    <span className="relative inline-block">
                       <span
                         aria-hidden
                         className="absolute -inset-x-3 -inset-y-1 -z-0 rounded-[0.55em] bg-gtc-primary"
@@ -163,7 +165,7 @@ export default function HomePage() {
             initial="hidden"
             animate="visible"
             custom={0.25}
-            className="relative order-1 mx-auto w-full max-w-sm lg:order-2 lg:max-w-md"
+            className="relative order-1 mx-auto w-full max-w-[16rem] sm:max-w-xs lg:order-2 lg:max-w-md"
           >
             {/* offset teal sticker panel behind */}
             <div
@@ -408,20 +410,33 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {caseStudies.map(({ client, service, result }, i) => (
-              <motion.div
-                key={client}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={i * 0.1}
-                className="border border-zinc-200 p-7 hover:border-gtc-primary transition-colors duration-200"
+            {caseStudies.map(({ client, intro, slug }, i) => (
+              <Link
+                key={slug}
+                href={`/${locale}/case-studies/${slug}`}
+                className="group relative flex flex-col border border-zinc-200 bg-white p-7 transition-colors duration-200 hover:border-gtc-primary"
               >
-                <span className="text-xs font-bold uppercase tracking-widest text-gtc-dark">{service}</span>
-                <h3 className="mt-2 text-lg font-black text-black">{client}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-500">{result}</p>
-              </motion.div>
+                <motion.span
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={i * 0.1}
+                  className="flex flex-1 flex-col"
+                >
+                  <span className="mb-3 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-gtc-dark">
+                    Case study
+                    <ArrowUpRight className="size-3.5" />
+                  </span>
+                  <h3 className="text-lg font-black text-black">{client}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-500">{intro}</p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gtc-dark group-hover:text-black transition-colors duration-150">
+                    {t('csReadMore')}
+                    <ArrowRight className="size-3" />
+                  </span>
+                </motion.span>
+                <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gtc-primary transition-all duration-300 group-hover:w-full" />
+              </Link>
             ))}
           </div>
 
@@ -577,7 +592,7 @@ export default function HomePage() {
                 className="flex flex-col"
               >
                 <Quote className="mb-6 size-10 text-gtc-primary" fill="currentColor" />
-                <blockquote className="flex-1 text-lg font-bold leading-relaxed text-white md:text-xl lg:text-2xl">
+                <blockquote className="flex-1 text-base font-medium leading-relaxed text-white/90 md:text-lg">
                   {item.quote}
                 </blockquote>
                 <div className="mt-8 flex items-center gap-3">
