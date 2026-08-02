@@ -16,6 +16,7 @@ const fadeUp: any = {
   }),
 };
 
+// titleKey/descKey values are currently duplicated from content/home/index.json's services.items — reconcile when this page is migrated to Tina.
 const SERVICES = [
   {
     num: '01',

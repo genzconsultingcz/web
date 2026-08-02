@@ -163,7 +163,7 @@ const homeLocaleFields = [
           { type: 'string', label: 'Name', name: 'name' },
           { type: 'string', label: 'Role', name: 'role' },
           { type: 'string', label: 'Bio', name: 'bio', ui: { component: 'textarea' } },
-          { type: 'image', label: 'Photo', name: 'photo' },
+          { type: 'string', label: 'Photo', name: 'photo' },
           { type: 'string', label: 'LinkedIn URL', name: 'linkedin' },
         ],
       },
@@ -199,7 +199,7 @@ const Home: Collection = {
       ui: { itemProps: (item: any) => ({ label: item?.name }) },
       fields: [
         { type: 'string', label: 'Name', name: 'name' },
-        { type: 'image', label: 'Logo Image', name: 'src' },
+        { type: 'string', label: 'Logo Image', name: 'src' },
       ],
     },
   ],

@@ -19,7 +19,7 @@ export default async function Home({
 
   return (
     <Layout>
-      <HomePage content={content!} logos={data.home.logos} />
+      <HomePage content={content} logos={data.home.logos} />
     </Layout>
   );
 }

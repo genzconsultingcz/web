@@ -106,8 +106,16 @@ function TestimonialSlider({ content }: { content: HomeContent['testimonials'] }
   );
 }
 
-export default function HomePage({ content, logos }: { content: HomeContent; logos: HomeLogos }) {
+export default function HomePage({
+  content,
+  logos,
+}: {
+  content: HomeContent | null | undefined;
+  logos: HomeLogos;
+}) {
   const locale = useLocale();
+
+  if (!content) return null;
 
   const caseStudies = ['av-media', 'global-payments', 'generali']
     .map((slug) => {

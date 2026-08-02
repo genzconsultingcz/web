@@ -25,7 +25,7 @@ function socialLinkName(url: string): string {
 
 export const Footer = () => {
   const { globalSettings } = useLayout();
-  const { header, footer } = globalSettings!;
+  const { header, footer } = globalSettings ?? {};
   const locale = useLocale();
   const copy = locale === 'en' ? footer?.copy?.en : footer?.copy?.cs;
 
