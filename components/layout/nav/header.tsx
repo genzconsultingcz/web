@@ -56,7 +56,7 @@ export const Header = () => {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href={`/${locale}`} aria-label={nav.homeLogoAria}>
+          <Link href={`/${locale}`} aria-label={nav.homeLogoAria || undefined}>
             <Image
               src="/logo_dark_bg_v3.png"
               alt="GenZ Consulting"
@@ -141,7 +141,7 @@ export const Header = () => {
             </Link>
 
             <ContactButton
-                label={nav.bookCallLabel}
+                label={nav.bookCallLabel || 'Contact'}
                 size="default"
                 className="rounded-none bg-gtc-primary px-5 py-2 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
@@ -151,7 +151,7 @@ export const Header = () => {
           <button
             onClick={() => setMenuOpen((v) => !v)}
             className="lg:hidden p-2 text-white"
-            aria-label={menuOpen ? nav.menuCloseAria : nav.menuOpenAria}
+            aria-label={menuOpen ? nav.menuCloseAria || undefined : nav.menuOpenAria || undefined}
           >
             {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -163,13 +163,13 @@ export const Header = () => {
         <div className="fixed inset-0 z-40 flex flex-col bg-black lg:hidden">
           {/* Top bar mirrors the header */}
           <div className="flex h-20 items-center justify-between px-6">
-            <Link href={`/${locale}`} aria-label={nav.homeLogoAria} onClick={() => setMenuOpen(false)}>
+            <Link href={`/${locale}`} aria-label={nav.homeLogoAria || undefined} onClick={() => setMenuOpen(false)}>
               <Image src="/logo_dark_bg_v3.png" alt="GenZ Consulting" width={120} height={40} className="h-16 w-auto" priority />
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
               className="p-2 text-white"
-              aria-label={nav.menuCloseAria}
+              aria-label={nav.menuCloseAria || undefined}
             >
               <X className="size-5" />
             </button>
@@ -227,7 +227,7 @@ export const Header = () => {
             {/* Bottom actions */}
             <div className="mt-auto pt-8 space-y-4">
               <ContactButton
-                  label={nav.bookCallLabel}
+                  label={nav.bookCallLabel || 'Contact'}
                   size="lg"
                   className="h-auto w-full rounded-none bg-gtc-primary px-6 py-4 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />

@@ -45,7 +45,7 @@ export const Footer = () => {
         <div className="grid gap-12 md:grid-cols-3 justify-items-center text-center">
           {/* Brand */}
           <div className="max-w-[260px]">
-            <Link href={`/${locale}`} aria-label={copy.homeLogoAria}>
+            <Link href={`/${locale}`} aria-label={copy.homeLogoAria || undefined}>
               <Image
                 src="/logo_dark_bg_v3.png"
                 alt="GenZ Consulting"

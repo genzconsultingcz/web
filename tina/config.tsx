@@ -1,6 +1,7 @@
 // tina/config.tsx
 import { defineConfig } from 'tinacms';
 import Global from './collection/global';
+import Home from './collection/home';
 
 const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
@@ -21,7 +22,7 @@ const config = defineConfig({
     basePath: '',
   },
   schema: {
-    collections: [Global],
+    collections: [Global, Home],
   },
 });
 
