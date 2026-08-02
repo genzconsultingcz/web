@@ -5,9 +5,8 @@ import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowRight, ArrowUpRight, ArrowDown, Check, Quote, Linkedin, Download } from 'lucide-react';
-import { CalendlyButton } from '@/components/ui/CalendlyButton';
+import { ContactButton } from '@/components/ui/ContactButton';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
-import { useLayout } from '@/components/layout/layout-context';
 import { getCaseStudy } from '@/components/pages/case-studies/case-study-data';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -30,11 +29,91 @@ const LOGOS = [
   { name: 'TAP', src: '/tap_logo.png' },
 ];
 
+type TestimonialItem = {
+  quote: string;
+  author: string;
+  role: string;
+  linkedin: string;
+};
+
+function TestimonialSlider({ t }: { t: ReturnType<typeof useTranslations> }) {
+  const testimonials: TestimonialItem[] = [
+    { quote: t('testimonial1Quote'), author: t('testimonial1Author'), role: t('testimonial1Role'), linkedin: t('testimonial1Linkedin') },
+    { quote: t('testimonial2Quote'), author: t('testimonial2Author'), role: t('testimonial2Role'), linkedin: t('testimonial2Linkedin') },
+  ];
+  const sliderRef = React.useRef<HTMLDivElement>(null);
+  const [active, setActive] = React.useState(0);
+
+  const syncActive = () => {
+    const el = sliderRef.current;
+    if (!el) return;
+    const per = el.scrollWidth / testimonials.length || 1;
+    setActive(Math.round(el.scrollLeft / per));
+  };
+
+  const goTo = (i: number) => {
+    const el = sliderRef.current;
+    if (!el) return;
+    el.scrollTo({ left: (el.scrollWidth / testimonials.length) * i, behavior: 'smooth' });
+  };
+
+  return (
+    <>
+      <div
+        ref={sliderRef}
+        onScroll={syncActive}
+        className="flex snap-x snap-mandatory gap-12 overflow-x-auto pb-6 [&::-webkit-scrollbar]:hidden [scrollbar-width:none] lg:grid lg:grid-cols-2 lg:overflow-visible lg:pb-0"
+      >
+        {testimonials.map((item, i) => (
+          <motion.div
+            key={i}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0.1 * (i + 1)}
+            className="flex w-[82vw] shrink-0 snap-start flex-col lg:w-auto lg:shrink-none lg:snap-none"
+          >
+            <Quote className="mb-6 size-10 text-gtc-primary" fill="currentColor" />
+            <blockquote className="flex-1 text-base font-medium leading-relaxed text-white/90 md:text-lg">
+              {item.quote}
+            </blockquote>
+            <div className="mt-8 flex items-center gap-3">
+              <div className="h-px w-8 bg-gtc-primary" />
+              <div>
+                <p className="text-sm font-bold text-white">{item.author}</p>
+                <p className="text-xs text-white/40">{item.role}</p>
+                <a
+                  href={item.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-gtc-primary hover:underline"
+                >
+                  <Linkedin className="size-4" />
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+      <div className="mt-6 flex justify-center gap-2 lg:hidden">
+        {testimonials.map((_, i) => (
+          <button
+            key={i}
+            aria-label={`Go to testimonial ${i + 1}`}
+            onClick={() => goTo(i)}
+            className={`h-2 rounded-full transition-all duration-300 ${active === i ? 'w-6 bg-gtc-primary' : 'w-2 bg-white/25'}`}
+          />
+        ))}
+      </div>
+    </>
+  );
+}
+
 export default function HomePage() {
   const t = useTranslations('home');
   const locale = useLocale();
-  const { globalSettings } = useLayout();
-  const calendlyUrl = (globalSettings?.header as any)?.calendlyUrl ?? '';
 
   const services = [
     { num: t('service1Number'), title: t('service1Title'), desc: t('service1Desc'), slug: t('service1Slug') },
@@ -141,14 +220,11 @@ export default function HomePage() {
               custom={0.4}
               className="mt-10 flex flex-wrap gap-3"
             >
-              {calendlyUrl && (
-                <CalendlyButton
-                  url={calendlyUrl}
-                  label={t('heroPrimaryCta')}
-                  size="lg"
-                  className="rounded-full bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
-                />
-              )}
+              <ContactButton
+                label={t('heroPrimaryCta')}
+                size="lg"
+                className="rounded-full bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
+              />
               <a
                 href="#pdf-guide"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-transparent px-8 py-4 text-sm font-bold text-black hover:bg-black hover:text-white transition-colors"
@@ -484,17 +560,12 @@ export default function HomePage() {
                   <Download className="size-4" />
                   {t('pdfCta')}
                 </a>
-                {calendlyUrl && (
-                  <a
-                    href={calendlyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-bold text-white transition-colors hover:border-white/50 hover:bg-white/5"
-                  >
-                    {t('pdfSecondaryCta')}
-                    <ArrowRight className="size-4" />
-                  </a>
-                )}
+                <ContactButton
+                  label={t('pdfSecondaryCta')}
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full border-white/25 bg-transparent px-7 py-3.5 text-sm font-bold text-white hover:border-white/50 hover:bg-white/5"
+                />
               </div>
             </div>
 
@@ -567,53 +638,7 @@ export default function HomePage() {
           >
             {t('testimonialsEyebrow')}
           </motion.p>
-          <div className="grid gap-12 lg:grid-cols-2">
-            {[
-              {
-                quote: t('testimonial1Quote'),
-                author: t('testimonial1Author'),
-                role: t('testimonial1Role'),
-                linkedin: t('testimonial1Linkedin'),
-              },
-              {
-                quote: t('testimonial2Quote'),
-                author: t('testimonial2Author'),
-                role: t('testimonial2Role'),
-                linkedin: t('testimonial2Linkedin'),
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={0.1 * (i + 1)}
-                className="flex flex-col"
-              >
-                <Quote className="mb-6 size-10 text-gtc-primary" fill="currentColor" />
-                <blockquote className="flex-1 text-base font-medium leading-relaxed text-white/90 md:text-lg">
-                  {item.quote}
-                </blockquote>
-                <div className="mt-8 flex items-center gap-3">
-                  <div className="h-px w-8 bg-gtc-primary" />
-                  <div>
-                    <p className="text-sm font-bold text-white">{item.author}</p>
-                    <p className="text-xs text-white/40">{item.role}</p>
-                    <a
-                      href={item.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-gtc-primary hover:underline"
-                    >
-                      <Linkedin className="size-4" />
-                      LinkedIn
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <TestimonialSlider t={t} />
         </div>
       </section>
 
@@ -711,14 +736,11 @@ export default function HomePage() {
             <h2 className="text-4xl font-black text-white md:text-5xl">{t('ctaTitle')}</h2>
             <p className="mt-4 text-base text-white/60">{t('ctaDesc')}</p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              {calendlyUrl && (
-                <CalendlyButton
-                  url={calendlyUrl}
-                  label={t('ctaPrimary')}
-                  size="lg"
-                  className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
-                />
-              )}
+              <ContactButton
+                label={t('ctaPrimary')}
+                size="lg"
+                className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
+              />
               <a
                 href="#pdf-guide"
                 className="rounded-none border-2 border-white/30 px-8 py-4 text-sm font-bold text-white hover:border-white hover:bg-white/5 transition-colors"

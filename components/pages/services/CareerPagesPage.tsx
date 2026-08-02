@@ -2,8 +2,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
-import { CalendlyButton } from '@/components/ui/CalendlyButton';
-import { useLayout } from '@/components/layout/layout-context';
+import { ContactButton } from '@/components/ui/ContactButton';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -49,8 +48,6 @@ function DetailRow({
 
 export default function CareerPagesPage() {
   const t = useTranslations('careerPages');
-  const { globalSettings } = useLayout();
-  const calendlyUrl = (globalSettings?.header as any)?.calendlyUrl ?? '';
   return (
     <>
       {/* ── HERO ── */}
@@ -86,22 +83,19 @@ export default function CareerPagesPage() {
             {t('subtitle')}
           </motion.p>
 
-          {calendlyUrl && (
-            <motion.div
+          <motion.div
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               custom={0.3}
               className="mt-10"
             >
-              <CalendlyButton
-                url={calendlyUrl}
+              <ContactButton
                 label={t('cta')}
                 size="lg"
                 className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
             </motion.div>
-          )}
         </div>
 
         <div
@@ -160,14 +154,11 @@ export default function CareerPagesPage() {
             <h2 className="text-4xl font-black text-white md:text-5xl">{t('title')}</h2>
             <p className="mt-4 text-base text-white/60">{t('subtitle')}</p>
             <div className="mt-10">
-              {calendlyUrl && (
-                <CalendlyButton
-                  url={calendlyUrl}
-                  label={t('cta')}
-                  size="lg"
-                  className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
-                />
-              )}
+              <ContactButton
+                label={t('cta')}
+                size="lg"
+                className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
+              />
             </div>
           </motion.div>
         </div>

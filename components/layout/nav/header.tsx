@@ -5,8 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { useLayout } from '../layout-context';
-import { CalendlyButton } from '../../ui/CalendlyButton';
+import { ContactButton } from '../../ui/ContactButton';
 import { cn } from '@/lib/utils';
 
 const SERVICES = [
@@ -18,8 +17,6 @@ const SERVICES = [
 ] as const;
 
 export const Header = () => {
-  const { globalSettings } = useLayout();
-  const header = globalSettings!.header!;
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -27,8 +24,6 @@ export const Header = () => {
   const t = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname();
-
-  const calendlyUrl = (header as any).calendlyUrl ?? '';
 
   const switchLocale = (newLocale: string) => {
     const withoutLocale = pathname.replace(/^\/(cs|en)/, '') || '/';
@@ -148,15 +143,12 @@ export const Header = () => {
               {otherLocale}
             </Link>
 
-            {calendlyUrl && (
-              <CalendlyButton
-                url={calendlyUrl}
+            <ContactButton
                 label={t('bookCall')}
                 size="default"
                 className="rounded-none bg-gtc-primary px-5 py-2 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
-            )}
-          </nav>
+            </nav>
 
           {/* Mobile toggle */}
           <button
@@ -175,7 +167,7 @@ export const Header = () => {
           {/* Top bar mirrors the header */}
           <div className="flex h-20 items-center justify-between px-6">
             <Link href={`/${locale}`} aria-label="GenZ Consulting — domů" onClick={() => setMenuOpen(false)}>
-              <Image src="/logo.png" alt="GenZ Consulting" width={120} height={40} className="h-16 w-auto" priority />
+              <Image src="/logo_dark_bg_v3.png" alt="GenZ Consulting" width={120} height={40} className="h-16 w-auto" priority />
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
@@ -237,14 +229,11 @@ export const Header = () => {
 
             {/* Bottom actions */}
             <div className="mt-auto pt-8 space-y-4">
-              {calendlyUrl && (
-                <CalendlyButton
-                  url={calendlyUrl}
+<ContactButton
                   label={t('bookCall')}
                   size="lg"
                   className="h-auto w-full rounded-none bg-gtc-primary px-6 py-4 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />
-              )}
               <Link
                 href={switchLocale(otherLocale)}
                 className="block text-center text-xs font-bold uppercase tracking-widest text-white/40 hover:text-white/70 transition-colors"

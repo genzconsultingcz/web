@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import { CalendlyButton } from '@/components/ui/CalendlyButton';
-import { useLayout } from '@/components/layout/layout-context';
+import { ContactButton } from '@/components/ui/ContactButton';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -54,8 +53,6 @@ export default function ServicesPage() {
   const tHome = useTranslations('home');
   const tCustom = useTranslations('customSolution');
   const locale = useLocale();
-  const { globalSettings } = useLayout();
-  const calendlyUrl = (globalSettings?.header as any)?.calendlyUrl ?? '';
   return (
     <>
       {/* ── HERO ── */}
@@ -91,22 +88,19 @@ export default function ServicesPage() {
             {t('subtitle')}
           </motion.p>
 
-          {calendlyUrl && (
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              custom={0.3}
-              className="mt-10"
-            >
-              <CalendlyButton
-                url={calendlyUrl}
-                label={t('cta')}
-                size="lg"
-                className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
-              />
-            </motion.div>
-          )}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={0.3}
+            className="mt-10"
+          >
+            <ContactButton
+              label={t('cta')}
+              size="lg"
+              className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
+            />
+          </motion.div>
         </div>
 
         {/* decorative large text */}
@@ -188,14 +182,11 @@ export default function ServicesPage() {
             <h2 className="text-4xl font-black text-white md:text-5xl">{t('notSure')}</h2>
             <p className="mt-4 text-base text-white/60">{t('notSureDesc')}</p>
             <div className="mt-10 flex flex-wrap gap-3">
-              {calendlyUrl && (
-                <CalendlyButton
-                  url={calendlyUrl}
-                  label={t('notSureCta')}
-                  size="lg"
-                  className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
-                />
-              )}
+              <ContactButton
+                label={t('notSureCta')}
+                size="lg"
+                className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
+              />
             </div>
           </motion.div>
         </div>

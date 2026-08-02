@@ -1,7 +1,6 @@
 {
   "header": {
     "name": "GenZ Consulting",
-    "calendlyUrl": "https://calendly.com/adam-dalecky",
     "nav": [
       { "href": "/services", "label": "Služby" },
       { "href": "/about", "label": "O nás" },

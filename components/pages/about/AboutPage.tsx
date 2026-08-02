@@ -4,8 +4,9 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { Linkedin } from 'lucide-react';
-import { CalendlyButton } from '@/components/ui/CalendlyButton';
-import { useLayout } from '@/components/layout/layout-context';
+import { ContactButton } from '@/components/ui/ContactButton';
+import { useVideoDialog } from '@/components/ui/VideoDialogContext';
+import { Play } from 'lucide-react';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -25,8 +26,7 @@ const values = [
 
 export default function AboutPage() {
   const t = useTranslations('about');
-  const { globalSettings } = useLayout();
-  const calendlyUrl = (globalSettings?.header as any)?.calendlyUrl ?? '';
+  const { openVideo } = useVideoDialog();
 
   return (
     <>
@@ -93,14 +93,28 @@ export default function AboutPage() {
               whileInView="visible"
               viewport={{ once: true }}
               custom={0.15}
-              className="relative aspect-[4/3] overflow-hidden"
+              className="relative aspect-[4/3] overflow-hidden group"
             >
               <video
                 src="/linkedin.mp4"
-                controls
+                autoPlay
+                muted
+                loop
                 playsInline
                 className="h-full w-full object-cover"
               />
+              <div className="absolute inset-0 bg-gtc-deep/20 transition-colors duration-300 group-hover:bg-gtc-deep/40" />
+              <button
+                type="button"
+                onClick={() => openVideo('/linkedin.mp4')}
+                aria-label={t('watchVideo')}
+                className="absolute inset-0 flex cursor-pointer items-center justify-center"
+              >
+                <span className="flex items-center gap-3 border-2 border-gtc-primary bg-gtc-primary px-6 py-4 text-xs font-black uppercase tracking-[0.2em] text-black shadow-lg transition-all duration-300 group-hover:bg-transparent group-hover:text-gtc-primary">
+                  <Play className="size-4 fill-current" />
+                  {t('watchVideo')}
+                </span>
+              </button>
             </motion.div>
           </div>
         </div>
@@ -296,16 +310,13 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl font-black text-white md:text-5xl">{t('ctaTitle')}</h2>
             <p className="mt-4 text-base text-white/60">{t('ctaDesc')}</p>
-            {calendlyUrl && (
-              <div className="mt-10">
-                <CalendlyButton
-                  url={calendlyUrl}
+            <div className="mt-10">
+                <ContactButton
                   label={t('cta')}
                   size="lg"
                   className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />
               </div>
-            )}
           </motion.div>
         </div>
       </section>

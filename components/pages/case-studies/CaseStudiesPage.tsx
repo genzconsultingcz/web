@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
-import { CalendlyButton } from '@/components/ui/CalendlyButton';
-import { useLayout } from '@/components/layout/layout-context';
+import { ContactButton } from '@/components/ui/ContactButton';
+import { getCaseStudy } from '@/components/pages/case-studies/case-study-data';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -20,27 +20,21 @@ const fadeUp: any = {
 
 const CASE_STUDIES = [
   {
-    clientKey: 'cs1Client' as const,
     serviceKey: 'cs1Service' as const,
-    descKey: 'cs1Desc' as const,
     resultKey: 'cs1Result' as const,
     logo: '/AV-MEDIA-SYSTEMS_horizontalni_1200_1200-970x970.png',
     logoAlt: 'AV Media Systems',
     slug: 'av-media',
   },
   {
-    clientKey: 'cs2Client' as const,
     serviceKey: 'cs2Service' as const,
-    descKey: 'cs2Desc' as const,
     resultKey: 'cs2Result' as const,
     logo: '/globalpayments.jpeg',
     logoAlt: 'Global Payments',
     slug: 'global-payments',
   },
   {
-    clientKey: 'cs3Client' as const,
     serviceKey: 'cs3Service' as const,
-    descKey: 'cs3Desc' as const,
     resultKey: 'cs3Result' as const,
     logo: '/logo-orizzontale.2020-07-16-17-41-47.jpeg',
     logoAlt: 'Generali',
@@ -51,8 +45,19 @@ const CASE_STUDIES = [
 export default function CaseStudiesPage() {
   const t = useTranslations('caseStudies');
   const locale = useLocale();
-  const { globalSettings } = useLayout();
-  const calendlyUrl = (globalSettings?.header as any)?.calendlyUrl ?? '';
+
+  const caseStudies = CASE_STUDIES.map(({ serviceKey, resultKey, logo, logoAlt, slug }) => {
+    const cs = getCaseStudy(slug, locale);
+    return {
+      serviceKey,
+      resultKey,
+      logo,
+      logoAlt,
+      slug,
+      client: cs?.client ?? '',
+      desc: cs?.hero.intro ?? '',
+    };
+  });
 
   return (
     <>
@@ -99,9 +104,9 @@ export default function CaseStudiesPage() {
       <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-8 md:grid-cols-3">
-            {CASE_STUDIES.map(({ clientKey, serviceKey, descKey, resultKey, logo, logoAlt, slug }, i) => (
+            {caseStudies.map(({ serviceKey, resultKey, logo, logoAlt, slug, client, desc }, i) => (
               <motion.article
-                key={clientKey}
+                key={client}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -125,8 +130,8 @@ export default function CaseStudiesPage() {
                   <span className="text-xs font-bold uppercase tracking-[0.15em] text-gtc-dark">
                     {t(serviceKey)}
                   </span>
-                  <h2 className="text-xl font-black text-black leading-tight">{t(clientKey)}</h2>
-                  <p className="text-sm leading-relaxed text-zinc-500">{t(descKey)}</p>
+                  <h2 className="text-xl font-black text-black leading-tight">{client}</h2>
+                  <p className="text-sm leading-relaxed text-zinc-500">{desc}</p>
                 </div>
 
                 {/* Result box */}
@@ -165,16 +170,13 @@ export default function CaseStudiesPage() {
           >
             <h2 className="text-4xl font-black text-white md:text-5xl">{t('ctaTitle')}</h2>
             <p className="mt-4 text-base text-white/60">{t('ctaDesc')}</p>
-            {calendlyUrl && (
-              <div className="mt-10">
-                <CalendlyButton
-                  url={calendlyUrl}
+            <div className="mt-10">
+                <ContactButton
                   label={t('cta')}
                   size="lg"
                   className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />
               </div>
-            )}
           </motion.div>
         </div>
       </section>

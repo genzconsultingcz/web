@@ -224,6 +224,7 @@
     "title": "Systems for young people should be built by young people.",
     "subtitle": "We are GenZ Consulting — consultants who are Gen Z not from the outside, but from the inside.",
     "storyLabel": "Our story",
+    "watchVideo": "Watch the video",
     "storyText": "GenZ Consulting was born from a simple idea: companies lose Gen Z talent not because this generation is complicated — but because systems for young people are built by people from another generation who cannot fully understand their needs and expectations.",
     "storyText2": "We're different. We are Gen Z ourselves and we understand how companies work. Our solutions don't come from theory — they come from real first-hand experience.",
     "missionLabel": "Our mission",
@@ -267,6 +268,10 @@
     "ctaDesc": "Book a no-obligation call and we'll find out how we can help your company.",
     "cta": "Book a call",
     "readMore": "Read case study"
+  },
+  "contactDialog": {
+    "close": "Close",
+    "title": "Book a time for a meeting."
   },
   "contact": {
     "eyebrow": "Contact",

@@ -224,6 +224,7 @@
     "title": "Systémy pro mladé by měli stavět mladí.",
     "subtitle": "Jsme GenZ Consulting — konzultanti, kteří Gen Z nejsou zvenčí, ale zevnitř.",
     "storyLabel": "Náš příběh",
+    "watchVideo": "Přehrát video",
     "storyText": "GenZ Consulting vznikl z jednoduché myšlenky: firmy ztrácejí Gen Z talenty ne proto, že by tato generace byla složitá, ale proto, že systémy pro mladé staví lidé z jiné generace, kteří nemohou plně pochopit jejich potřeby a očekávání.",
     "storyText2": "My jsme jiní. Sami jsme Gen Z a zároveň rozumíme tomu, jak firmy fungují. Naše řešení nevycházejí z teorie, ale z reálné zkušenosti z první ruky.",
     "missionLabel": "Naše mise",
@@ -267,6 +268,10 @@
     "ctaDesc": "Domluvte si nezávazný call a zjistíme, jak můžeme pomoci vaší firmě.",
     "cta": "Domluvit schůzku",
     "readMore": "Přečíst case study"
+  },
+  "contactDialog": {
+    "close": "Zavřít",
+    "title": "Domluvte si datum schůzky."
   },
   "contact": {
     "eyebrow": "Kontakt",

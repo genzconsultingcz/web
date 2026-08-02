@@ -16,7 +16,7 @@ type Status = 'idle' | 'submitting' | 'success' | 'error';
 export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
   const t = useTranslations('leadMagnet');
   const { globalSettings } = useLayout();
-  const calendlyUrl = (globalSettings?.header as any)?.calendlyUrl ?? '';
+  const contactEmail = (globalSettings?.footer as any)?.email ?? '';
 
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
@@ -129,12 +129,10 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
                 </form>
               )}
 
-              {/* Secondary: book a call */}
-              {calendlyUrl && status !== 'success' && (
+              {/* Secondary: contact directly */}
+              {contactEmail && status !== 'success' && (
                 <a
-                  href={calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`mailto:${contactEmail}`}
                   className="inline-flex items-center gap-2 self-start rounded-full border border-white/20 px-7 py-3.5 text-sm font-bold text-white transition-colors hover:border-white/40 hover:bg-white/5"
                 >
                   {t('secondaryCta')}

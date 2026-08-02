@@ -63,7 +63,7 @@ export const Footer = () => {
             <p className="mb-4 text-xs font-bold uppercase tracking-widest text-gtc-primary">
               {t('navLabel')}
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-center">
               {navLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
@@ -86,7 +86,7 @@ export const Footer = () => {
               {(footer as any)?.email && (
                 <a
                   href={`mailto:${(footer as any).email}`}
-                  className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors duration-150"
+                  className="flex items-center justify-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors duration-150"
                 >
                   <Mail className="size-4 shrink-0" />
                   {(footer as any).email}
@@ -95,13 +95,13 @@ export const Footer = () => {
               {(footer as any)?.phone && (
                 <a
                   href={`tel:${(footer as any).phone}`}
-                  className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors duration-150"
+                  className="flex items-center justify-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors duration-150"
                 >
                   <Phone className="size-4 shrink-0" />
                   {(footer as any).phone}
                 </a>
               )}
-              <div className="flex flex-col gap-2 pt-1">
+              <div className="flex flex-col items-center gap-2 pt-1">
                 {footer?.social?.map((link, i) => {
                   const url = link!.url ?? '';
                   const name = socialLinkName(url);
@@ -112,7 +112,7 @@ export const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${name} LinkedIn`}
-                      className="flex items-center gap-2 text-sm text-white/60 hover:text-gtc-primary transition-colors duration-150"
+                      className="flex items-center justify-center gap-2 text-sm text-white/60 hover:text-gtc-primary transition-colors duration-150"
                     >
                       <Linkedin className="size-4 shrink-0" />
                       {name}

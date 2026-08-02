@@ -20,12 +20,6 @@ const Global: Collection = {
           name: 'name',
         },
         {
-          type: 'string',
-          label: 'Calendly URL',
-          name: 'calendlyUrl',
-          description: 'Full Calendly booking URL, e.g. https://calendly.com/adam-dalecky/30min',
-        },
-        {
           type: 'object',
           label: 'Nav Links',
           name: 'nav',

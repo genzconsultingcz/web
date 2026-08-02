@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { Mail, Phone, Linkedin, ChevronDown } from 'lucide-react';
-import { CalendlyButton } from '@/components/ui/CalendlyButton';
-import { useLayout } from '@/components/layout/layout-context';
+import { ContactButton } from '@/components/ui/ContactButton';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -25,8 +24,6 @@ const FAQ_KEYS = [
 
 export default function ContactPage() {
   const t = useTranslations('contact');
-  const { globalSettings } = useLayout();
-  const calendlyUrl = (globalSettings?.header as any)?.calendlyUrl ?? '';
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -80,7 +77,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-16 md:grid-cols-2">
 
-            {/* ── LEFT: Calendly + contact details ── */}
+            {/* ── LEFT: Primary CTA + contact details ── */}
             <motion.div
               variants={fadeUp}
               initial="hidden"
@@ -88,16 +85,13 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">
-                {t('calendlyTitle')}
+                {t('title')}
               </p>
-              {calendlyUrl && (
-                <CalendlyButton
-                  url={calendlyUrl}
-                  label={t('calendlyTitle')}
-                  size="lg"
-                  className="w-full rounded-none bg-gtc-primary px-8 py-5 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
-                />
-              )}
+              <ContactButton
+                label={t('title')}
+                size="lg"
+                className="w-full rounded-none bg-gtc-primary px-8 py-5 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
+              />
 
               <div className="my-8 flex items-center gap-4">
                 <div className="h-px flex-1 bg-zinc-200" />

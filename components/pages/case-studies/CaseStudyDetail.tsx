@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { motion, useInView, useReducedMotion } from 'motion/react';
 import { ArrowLeft, ArrowUpRight, Mail, Quote } from 'lucide-react';
-import { CalendlyButton } from '@/components/ui/CalendlyButton';
-import { useLayout } from '@/components/layout/layout-context';
+import { ContactButton } from '@/components/ui/ContactButton';
 import { getCaseStudy } from './case-study-data';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -94,9 +93,6 @@ function SectionEyebrow({ num, label }: { num: string; label: string }) {
 export default function CaseStudyDetail({ slug }: { slug: string }) {
   const locale = useLocale();
   const t = useTranslations('caseStudyDetail');
-  const { globalSettings } = useLayout();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const calendlyUrl = (globalSettings?.header as any)?.calendlyUrl ?? '';
 
   const cs = getCaseStudy(slug, locale);
   if (!cs) return null;
@@ -611,14 +607,11 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
             <h2 className="text-4xl font-black text-white md:text-5xl">{t('ctaTitle')}</h2>
             <p className="mt-4 text-base text-white/60">{t('ctaDesc')}</p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              {calendlyUrl && (
-                <CalendlyButton
-                  url={calendlyUrl}
+              <ContactButton
                   label={t('cta')}
                   size="lg"
                   className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black transition-colors hover:bg-gtc-primary/90"
                 />
-              )}
               <Link
                 href={`/${locale}/case-studies`}
                 className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-[0.1em] text-white/60 transition-colors hover:text-gtc-primary"
