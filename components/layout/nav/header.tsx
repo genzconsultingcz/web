@@ -141,7 +141,7 @@ export const Header = () => {
             </Link>
 
             <ContactButton
-                label={nav.bookCallLabel || 'Contact'}
+                label={nav.bookCallLabel ?? ''}
                 size="default"
                 className="rounded-none bg-gtc-primary px-5 py-2 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
@@ -227,7 +227,7 @@ export const Header = () => {
             {/* Bottom actions */}
             <div className="mt-auto pt-8 space-y-4">
               <ContactButton
-                  label={nav.bookCallLabel || 'Contact'}
+                  label={nav.bookCallLabel ?? ''}
                   size="lg"
                   className="h-auto w-full rounded-none bg-gtc-primary px-6 py-4 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />
