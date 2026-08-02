@@ -44,24 +44,44 @@ pnpm dev
 
 ## Deployment
 
-### GitHub Pages
+### Cloudflare Pages (OpenNext)
 
-This starter can be deployed to GitHub Pages. A GitHub Actions workflow is included that handles the build and deployment process. 
+This project deploys to Cloudflare using the [OpenNext Cloudflare adapter](https://opennext.js.org/cloudflare) (`@opennextjs/cloudflare`) + Wrangler. This keeps the full Next.js runtime (middleware, API route, server components, rewrites) intact — so TinaCMS content queried by server components and the `/admin` route continue to work.
 
-To deploy to GitHub Pages:
+Configuration files:
+- `wrangler.jsonc` — Worker config (`nodejs_compat` + assets binding are required).
+- `open-next.config.ts` — OpenNext Cloudflare adapter config.
 
-1. In your repository settings, ensure GitHub Pages is enabled and set to deploy from the `gh-pages` branch
-2. Push changes to your main branch - the workflow will automatically build and deploy the site
+#### Local preview (production-accurate on the Workers runtime)
+
+```
+npm run preview
+```
+
+Builds the app via OpenNext and serves it locally with `wrangler dev`. Secrets go in `.dev.vars` (gitignored).
+
+#### Deploy via CLI
+
+```
+npm run deploy
+```
+
+#### Deploy from the Cloudflare dashboard (connected Git repo)
+
+1. Create a **Workers** project connected to this repo.
+2. Set the build command to: `pnpm opennextjs-cloudflare build`
+3. Add environment variables from your [Tina Cloud](https://app.tina.io) project and Cloudflare dashboard:
+   - `NEXT_PUBLIC_TINA_CLIENT_ID`
+   - `TINA_TOKEN`
+   - `NEXT_PUBLIC_TINA_BRANCH` (e.g. `main`)
+   - `RESEND_API_KEY`
+4. The `build` script runs `tinacms build && next build`; OpenNext then compiles `.open-next/` output that Wrangler deploys.
 
 > [!NOTE]
-> When deploying to GitHub Pages, you'll need to update your secrets in Settings | Secrets and variables | Actions to include:
-> - `NEXT_PUBLIC_TINA_CLIENT_ID`
-> - `TINA_TOKEN`
->
-> You get these from your TinaCloud project - [read the docs](https://tina.io/docs/tina-cloud/deployment-options/github-pages)
+> `@opennextjs/cloudflare` requires `next >= 15.5.21`. Image optimization is set to `unoptimized: true` so it works on the free plan without the paid `IMAGES` binding.
 
 > [!IMPORTANT]
-> GitHub Pages does not support server side code, so this will run as a static site. If you don't want to deploy to GitHub pages, just delete `.github/workflows/build-and-deploy.yml`
+> GitHub Pages cannot run server-side code and is not the target for this repository — the GitHub Actions `build-and-deploy.yml` workflow will not work. Remove `.github/workflows/` if you don't need it.
 
 ### Building the Starter Locally (Using the hosted content API)
 
