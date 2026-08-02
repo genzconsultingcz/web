@@ -1,12 +1,46 @@
 {
   "header": {
     "name": "GenZ Consulting",
-    "nav": [
-      { "href": "/services", "label": "Služby" },
-      { "href": "/about", "label": "O nás" },
-      { "href": "/case-studies", "label": "Case studies" },
-      { "href": "/contact", "label": "Kontakt" }
-    ]
+    "nav": {
+      "cs": {
+        "homeLabel": "Domů",
+        "aboutLabel": "O nás",
+        "caseStudiesLabel": "Case studies",
+        "contactLabel": "Kontakt",
+        "servicesLabel": "Služby",
+        "viewServicesLabel": "Všechny služby →",
+        "bookCallLabel": "Domluvit schůzku",
+        "homeLogoAria": "GenZ Consulting — domů",
+        "menuOpenAria": "Otevřít menu",
+        "menuCloseAria": "Zavřít menu",
+        "serviceLinks": [
+          { "slug": "trainee-program", "label": "Trainee program" },
+          { "slug": "onboarding-app", "label": "Onboardingová aplikace" },
+          { "slug": "genz-workshop", "label": "Workshop o Gen Z" },
+          { "slug": "career-pages", "label": "Kariérní stránky" },
+          { "slug": "custom", "label": "Individuální řešení" }
+        ]
+      },
+      "en": {
+        "homeLabel": "Home",
+        "aboutLabel": "About",
+        "caseStudiesLabel": "Case studies",
+        "contactLabel": "Contact",
+        "servicesLabel": "Services",
+        "viewServicesLabel": "All services →",
+        "bookCallLabel": "Book a call",
+        "homeLogoAria": "GenZ Consulting — home",
+        "menuOpenAria": "Open menu",
+        "menuCloseAria": "Close menu",
+        "serviceLinks": [
+          { "slug": "trainee-program", "label": "Trainee program" },
+          { "slug": "onboarding-app", "label": "Onboarding app" },
+          { "slug": "genz-workshop", "label": "Gen Z Workshop" },
+          { "slug": "career-pages", "label": "Career pages" },
+          { "slug": "custom", "label": "Custom solution" }
+        ]
+      }
+    }
   },
   "footer": {
     "phone": "+420 606 028 051",
@@ -14,19 +48,48 @@
     "social": [
       {
         "icon": { "name": "FaLinkedin" },
-        "url": "https://cz.linkedin.com/company/gen-zconsulting",
-        "label": "GenZ Consulting LinkedIn"
+        "url": "https://cz.linkedin.com/company/gen-zconsulting"
       },
       {
         "icon": { "name": "FaLinkedin" },
-        "url": "https://www.linkedin.com/in/adam-dalecky/",
-        "label": "Adam Dalecký LinkedIn"
+        "url": "https://www.linkedin.com/in/adam-dalecky/"
       },
       {
         "icon": { "name": "FaLinkedin" },
-        "url": "https://www.linkedin.com/in/jonatan-petr/",
-        "label": "Jonatan Petr LinkedIn"
+        "url": "https://www.linkedin.com/in/jonatan-petr/"
       }
-    ]
+    ],
+    "copy": {
+      "cs": {
+        "tagline": "Systémy pro mladé by měli stavět mladí.",
+        "rights": "Všechna práva vyhrazena.",
+        "navLabel": "Navigace",
+        "contactLabel": "Kontakt",
+        "followLabel": "Sledujte nás",
+        "web": "www.genzconsulting.cz",
+        "socialDomain": "linkedin.com/company/gen-zconsulting",
+        "navServices": "Služby",
+        "navAbout": "O nás",
+        "navCaseStudies": "Case studies",
+        "navContact": "Kontakt",
+        "navGuide": "Průvodce",
+        "homeLogoAria": "GenZ Consulting — domů"
+      },
+      "en": {
+        "tagline": "Systems for young people should be built by young people.",
+        "rights": "All rights reserved.",
+        "navLabel": "Navigation",
+        "contactLabel": "Contact",
+        "followLabel": "Follow us",
+        "web": "www.genzconsulting.cz",
+        "socialDomain": "linkedin.com/company/gen-zconsulting",
+        "navServices": "Services",
+        "navAbout": "About",
+        "navCaseStudies": "Case studies",
+        "navContact": "Contact",
+        "navGuide": "Guide",
+        "homeLogoAria": "GenZ Consulting — home"
+      }
+    }
   }
 }
