@@ -20,7 +20,18 @@ const fadeUp: any = {
   }),
 };
 
-export type HomeContent = NonNullable<NonNullable<HomeQuery['home']>['cs']>;
+// Strips __typename at every depth: the `cs` and `en` branches (and each of
+// their nested objects — hero, problem, services.items, testimonials.items,
+// etc.) are structurally identical aside from that literal (e.g. 'HomeCsHero'
+// vs 'HomeEnHero'), and page.tsx picks whichever branch matches the requested
+// locale — so HomeContent must accept either without a cast at the call site.
+type DeepOmitTypename<T> = T extends readonly (infer U)[]
+  ? DeepOmitTypename<U>[]
+  : T extends object
+    ? { [K in keyof T as K extends '__typename' ? never : K]: DeepOmitTypename<T[K]> }
+    : T;
+
+export type HomeContent = DeepOmitTypename<NonNullable<NonNullable<HomeQuery['home']>['cs']>>;
 export type HomeLogos = NonNullable<HomeQuery['home']>['logos'];
 
 function TestimonialSlider({ content }: { content: HomeContent['testimonials'] }) {
