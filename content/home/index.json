@@ -1,0 +1,255 @@
+{
+  "cs": {
+    "hero": {
+      "eyebrow": "Specialisté na generaci Z",
+      "headline1": "Generace Z není",
+      "headline2": "komplikovaná",
+      "subline": "Firmy ji jen neumí oslovit.",
+      "body": "Pomáháme firmám přitáhnout, vybrat a udržet Gen Z talenty. A protože sami Gen Z jsme, rozumíme jim opravdu.",
+      "primaryCta": "Domluvit schůzku",
+      "secondaryCta": "Stáhnout průvodce zdarma",
+      "imageAlt": "Tým GenZ Consulting"
+    },
+    "logosEyebrow": "Klienti a partneři",
+    "problem": {
+      "eyebrow": "Proč to nefunguje",
+      "title": "Firmy nepřicházejí o Gen Z kvůli tomu, že je tato generace složitá.",
+      "villain": "Přicházejí o ně, protože systémy pro mladé staví lidé, kteří jejich potřeby nikdy nežili.",
+      "items": [
+        "Kandidáti se nehlásí nebo po nástupu rychle odcházejí.",
+        "Onboarding a HR komunikace z minulých let Gen Z prostě neosloví.",
+        "Nábor je drahý a výsledky často neodpovídají očekávání."
+      ]
+    },
+    "solution": {
+      "eyebrow": "Jak přistupujeme jinak",
+      "title": "Nejsme konzultanti, kteří o Gen Z jen čtou.",
+      "subtitle": "Jsme Gen Z a rozumíme i tomu, jak funguje firma.",
+      "items": [
+        "Přímá zkušenost z vlastní generace, ne jen teorie.",
+        "Pracujeme s firmami jako Global Payments, Generali nebo AV Media.",
+        "Dáváme řešení, která mají jasný dopad."
+      ]
+    },
+    "services": {
+      "eyebrow": "Co umíme",
+      "title": "Čtyři způsoby, jak pomáháme",
+      "viewAll": "Zobrazit všechny služby →",
+      "learnMore": "Zjistit více →",
+      "items": [
+        { "num": "01", "title": "Trainee program", "desc": "Kompletní trainee program na míru přitáhne správné talenty, efektivně je vyškolí a udrží ve firmě.", "slug": "trainee-program" },
+        { "num": "02", "title": "Onboardingová aplikace", "desc": "Digitální průvodce onboardingem v nástrojích, které firma již používá. HR vidí vše v reálném čase.", "slug": "onboarding-app" },
+        { "num": "03", "title": "Workshop o Gen Z", "desc": "Vzdělávací workshop pro HR týmy ve třech variantách, od obecného základu po výzkum na míru vaší firmě.", "slug": "genz-workshop" },
+        { "num": "04", "title": "Kariérní stránky", "desc": "Analýza vaší kariérní stránky z pohledu Gen Z s konkrétními doporučeními, co a jak změnit.", "slug": "career-pages" }
+      ]
+    },
+    "process": {
+      "eyebrow": "Jak spolupráce vypadá",
+      "title": "Tři kroky ke spolupráci",
+      "steps": [
+        { "num": "01", "title": "Zjistíme, co vás trápí", "desc": "Setkáme se a zjistíme, zda má smysl to řešit společně. Bez závazků." },
+        { "num": "02", "title": "Poznáme vaši firmu", "desc": "Pochopíme, jak to u vás chodí, a jaký je celý kontext problému." },
+        { "num": "03", "title": "Postavíme řešení na míru", "desc": "Navrhneme řešení přesně pro vás: jednoduché na nasazení a s měřitelným dopadem." }
+      ]
+    },
+    "caseStudies": {
+      "eyebrow": "Naše práce",
+      "title": "Projekty, kde jsme pomohli",
+      "viewAll": "Zobrazit všechny case studies →",
+      "cardLabel": "Case study",
+      "readMore": "Číst case study"
+    },
+    "pdf": {
+      "badge": "Zdarma · Bez emailu · Bez triků",
+      "headline": "PDF: Kariérní stránky pro Gen Z.",
+      "body": "32 stran. Checklist a reálné příklady toho, co Gen Z na kariérních stránkách hledá a kde české firmy padají. Stáhněte, pošlete šéfovi nebo použijte na schůzce.",
+      "cta": "Stáhnout PDF (3,4 MB)",
+      "secondaryCta": "Domluvit nezávazný call",
+      "coverTitle": "Kariérní stránky pro Gen Z.",
+      "coverMeta": "32 stran · 2026",
+      "coverMetaTag": "GZC · GUIDE 01"
+    },
+    "stats": [
+      { "num": "50+", "label": "spokojených firem" },
+      { "num": "3", "label": "oblasti expertízy" },
+      { "num": "100%", "label": "Gen Z tým" }
+    ],
+    "testimonials": {
+      "eyebrow": "Co říkají klienti",
+      "linkedInLabel": "LinkedIn",
+      "navAria": "Přejít na referenci {n}",
+      "items": [
+        {
+          "quote": "Tým GenZ Consulting si prošel celou cestu našeho zákazníka očima mladého podnikatele, od prvního hledání na Googlu až po terminál v ruce. Ukázali nám painpointy, které jsme my často jako painpointy ani nevnímali. Rovnou k nim navrhli i řešení, z nichž některá jsme později implementováli a využili na našem webu. Tím, že jsou to lidé z nové řady Gen Z, které opravdu rozumějí, ale i jejich  doporučení nebyla jen jejich zkušenost, ověřena a otestována.",
+          "author": "Jozef Ryšavý",
+          "role": "Marketingový ředitel, Global Payments",
+          "linkedin": "https://www.linkedin.com/in/jozef-rysavy-0868055/"
+        },
+        {
+          "quote": "GenZ Consulting pro nás realizovali rozsáhlý výzkum mladé generace – přes 300 dotazníků a víc než 20 hloubkových rozhovorů. Data nejen posbírali, ale také je interpretovalí a porovnávali mezi sebou, což pro nás bylo velice užitečné. Nejvíce nás zaujala forma výstupu – interaktivní web, ze kterého se k výsledkům snadno vracíme. Oceňujeme také jejich přístup a rychlost, s jakou celý projekt zvládli.",
+          "author": "Jiří Plátek",
+          "role": "Marketingový ředitel, AV Media",
+          "linkedin": "https://www.linkedin.com/in/jiriplatek/"
+        }
+      ]
+    },
+    "team": {
+      "eyebrow": "Náš tým",
+      "title": "Sami jsme Gen Z. Rozumíme té generaci zevnitř.",
+      "viewAbout": "Více o nás →",
+      "members": [
+        {
+          "name": "Adam Dalecký",
+          "role": "Co-founder & Lead Consultant",
+          "bio": "Adam pomáhá firmám lépe pracovat s Gen Z v náboru a onboardingových procesech. Prošel desítkami rozhovorů a dobře rozumí této generaci.",
+          "photo": "/adam_cropped.jpeg",
+          "linkedin": "https://www.linkedin.com/in/adam-dalecky/"
+        },
+        {
+          "name": "Jonatan Petr",
+          "role": "Co-founder & AI Project Lead",
+          "bio": "Jonatan je součástí GenZ Consulting od začátku. Rozumí Gen Z i tomu, jak firmy skutečně fungují, a do práce přináší zároveň pohled z generace i praktický přístup z byznysu.",
+          "photo": "/jonathan_cropped.jpeg",
+          "linkedin": "https://www.linkedin.com/in/jonatan-petr/"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Připraveni začít?",
+      "desc": "Rezervujte si nezávazný call nebo si stáhněte náš průvodce zdarma.",
+      "primary": "Domluvit schůzku",
+      "secondary": "Stáhnout průvodce zdarma"
+    }
+  },
+  "en": {
+    "hero": {
+      "eyebrow": "Gen Z specialists",
+      "headline1": "Gen Z is not",
+      "headline2": "complicated.",
+      "subline": "Companies just don't know how to reach them.",
+      "body": "We help companies attract, select and retain Gen Z talent. And because we are Gen Z ourselves, we truly understand them.",
+      "primaryCta": "Book a call",
+      "secondaryCta": "Download free guide",
+      "imageAlt": "GenZ Consulting team"
+    },
+    "logosEyebrow": "Clients & partners",
+    "problem": {
+      "eyebrow": "Why it's not working",
+      "title": "Companies do not lose Gen Z because this generation is complicated.",
+      "villain": "They lose them because systems for young people are built by people who never lived those needs.",
+      "items": [
+        "Candidates do not apply or leave soon after joining.",
+        "Onboarding and HR communication from the past decade simply do not reach Gen Z.",
+        "Recruitment is expensive and the results often fall short of expectations."
+      ]
+    },
+    "solution": {
+      "eyebrow": "How we do it differently",
+      "title": "We are not consultants who only read about Gen Z.",
+      "subtitle": "We are Gen Z and we understand how businesses work.",
+      "items": [
+        "Direct experience from our own generation, not just theory.",
+        "We work with companies such as Global Payments, Generali and AV Media.",
+        "We create solutions that have a clear impact."
+      ]
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Four ways we help",
+      "viewAll": "View all services →",
+      "learnMore": "Learn more →",
+      "items": [
+        { "num": "01", "title": "Trainee program", "desc": "A fully custom trainee program — attracts the right talent, trains them effectively and keeps them at your company.", "slug": "trainee-program" },
+        { "num": "02", "title": "Onboarding app", "desc": "A digital onboarding guide built in tools your company already uses. HR sees everything in real time.", "slug": "onboarding-app" },
+        { "num": "03", "title": "Gen Z Workshop", "desc": "An educational workshop for HR teams in three variants — from a general foundation to custom research for your company.", "slug": "genz-workshop" },
+        { "num": "04", "title": "Career pages", "desc": "An analysis of your career page from Gen Z's perspective — concrete recommendations on what and how to change.", "slug": "career-pages" }
+      ]
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "Three steps to collaboration",
+      "steps": [
+        { "num": "01", "title": "We find out what's wrong", "desc": "We meet and find out whether it makes sense to solve it together. No commitment." },
+        { "num": "02", "title": "We get to know your company", "desc": "We understand how things work at your company and what the full context of the problem is." },
+        { "num": "03", "title": "We build a tailored solution", "desc": "We design a solution precisely for you — easy to implement, with measurable impact." }
+      ]
+    },
+    "caseStudies": {
+      "eyebrow": "Our work",
+      "title": "Projects where we helped",
+      "viewAll": "View all case studies →",
+      "cardLabel": "Case study",
+      "readMore": "Read case study"
+    },
+    "pdf": {
+      "badge": "Free · No email · No tricks",
+      "headline": "PDF: Career pages for Gen Z.",
+      "body": "32 pages. Checklist + real examples of what Gen Z looks for on career pages and where companies fall short. Download, share with your manager, use in your next meeting.",
+      "cta": "Download PDF (3.4 MB)",
+      "secondaryCta": "Or book a call instead",
+      "coverTitle": "Career pages for Gen Z.",
+      "coverMeta": "32 pages · 2026",
+      "coverMetaTag": "GZC · GUIDE 01"
+    },
+    "stats": [
+      { "num": "50+", "label": "satisfied companies" },
+      { "num": "3", "label": "areas of expertise" },
+      { "num": "100%", "label": "Gen Z team" }
+    ],
+    "testimonials": {
+      "eyebrow": "What clients say",
+      "linkedInLabel": "LinkedIn",
+      "navAria": "Go to testimonial {n}",
+      "items": [
+        {
+          "quote": "The GenZ Consulting team walked our customer's entire journey through the eyes of a young entrepreneur, from the very first Google search all the way to a terminal in hand. They pointed out pain points that we often didn't even perceive as pain points. They immediately proposed solutions, some of which we later implemented and used on our website. Because they are Gen Z, they truly understand the generation, but I liked that they didn't rely only on their personal experience - they backed it up with research and testing. Their recommendations also respected the reality of our business, our constraints and regulations, so we could apply them right away.",
+          "author": "Jozef Ryšavý",
+          "role": "Marketing Director, Global Payments",
+          "linkedin": "https://www.linkedin.com/in/jozef-rysavy-0868055/"
+        },
+        {
+          "quote": "GenZ Consulting ran an extensive study of the young generation for us - over 300 questionnaires and 20 in-depth interviews. They didn't just collect the data, they also linked and compared it against each other, which proved very useful for us. We were particularly pleased with the form of the output. We received an interactive website from which we can easily look things back up. We also appreciated their approach and the speed with which they handled the whole project. We were very happy with the cooperation.",
+          "author": "Jiří Plátek",
+          "role": "Marketing Director, AV Media",
+          "linkedin": "https://www.linkedin.com/in/jiriplatek/"
+        }
+      ]
+    },
+    "team": {
+      "eyebrow": "Our team",
+      "title": "We are Gen Z ourselves. We understand this generation from the inside.",
+      "viewAbout": "More about us →",
+      "members": [
+        {
+          "name": "Adam Dalecký",
+          "role": "Co-founder & Lead Consultant",
+          "bio": "Adam helps companies work better with Gen Z in hiring and onboarding. He has gone through dozens of interviews and understands this generation well.",
+          "photo": "/adam_cropped.jpeg",
+          "linkedin": "https://www.linkedin.com/in/adam-dalecky/"
+        },
+        {
+          "name": "Jonatan Petr",
+          "role": "Co-founder & AI Project Lead",
+          "bio": "Jonatan has been part of GenZ Consulting from the start. He understands Gen Z and how companies really work, and brings both a generational perspective and a practical business approach to the work.",
+          "photo": "/jonathan_cropped.jpeg",
+          "linkedin": "https://www.linkedin.com/in/jonatan-petr/"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to start?",
+      "desc": "Book a no-obligation call or download our free guide.",
+      "primary": "Book a call",
+      "secondary": "Download free guide"
+    }
+  },
+  "logos": [
+    { "name": "Global Payments", "src": "/globalpayments.jpeg" },
+    { "name": "Generali", "src": "/logo-orizzontale.2020-07-16-17-41-47.jpeg" },
+    { "name": "AV Media", "src": "/AV-MEDIA-SYSTEMS_horizontalni_1200_1200-970x970.png" },
+    { "name": "Raynet", "src": "/LOGO_Raynet_big.png" },
+    { "name": "ČZU", "src": "/CZU_logotyp_V_zelena.png" },
+    { "name": "CITA", "src": "/CITALogo.png" },
+    { "name": "TAP", "src": "/tap_logo.png" }
+  ]
+}
