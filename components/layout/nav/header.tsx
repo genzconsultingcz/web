@@ -3,27 +3,22 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { ContactButton } from '../../ui/ContactButton';
+import { useLayout } from '../layout-context';
 import { cn } from '@/lib/utils';
-
-const SERVICES = [
-  { key: 'traineeProgram', slug: 'trainee-program' },
-  { key: 'onboardingApp', slug: 'onboarding-app' },
-  { key: 'genzWorkshop', slug: 'genz-workshop' },
-  { key: 'careerPages', slug: 'career-pages' },
-  { key: 'customSolution', slug: 'custom' },
-] as const;
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const t = useTranslations('nav');
+  const { globalSettings } = useLayout();
   const locale = useLocale();
   const pathname = usePathname();
+
+  const nav = locale === 'en' ? globalSettings?.header?.nav?.en : globalSettings?.header?.nav?.cs;
 
   const switchLocale = (newLocale: string) => {
     const withoutLocale = pathname.replace(/^\/(cs|en)/, '') || '/';
@@ -47,11 +42,13 @@ export const Header = () => {
     setMobileServicesOpen(false);
   }, [pathname]);
 
-  const homeLink = { href: `/${locale}`, label: t('homePageLink') };
+  if (!nav) return null;
+
+  const homeLink = { href: `/${locale}`, label: nav.homeLabel };
   const navLinks = [
-    { href: `/${locale}/about`, label: t('about') },
-    { href: `/${locale}/case-studies`, label: t('caseStudies') },
-    { href: `/${locale}/contact`, label: t('contact') },
+    { href: `/${locale}/about`, label: nav.aboutLabel },
+    { href: `/${locale}/case-studies`, label: nav.caseStudiesLabel },
+    { href: `/${locale}/contact`, label: nav.contactLabel },
   ];
 
   return (
@@ -59,7 +56,7 @@ export const Header = () => {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href={`/${locale}`} aria-label={t('homeLogoAria')}>
+          <Link href={`/${locale}`} aria-label={nav.homeLogoAria}>
             <Image
               src="/logo_dark_bg_v3.png"
               alt="GenZ Consulting"
@@ -92,7 +89,7 @@ export const Header = () => {
                   servicesOpen ? 'text-gtc-primary' : 'text-white/70 hover:text-white'
                 )}
               >
-                {t('services')}
+                {nav.servicesLabel}
                 <ChevronDown
                   className={cn('size-3.5 transition-transform duration-200', servicesOpen && 'rotate-180')}
                 />
@@ -103,13 +100,13 @@ export const Header = () => {
                   onMouseLeave={() => setServicesOpen(false)}
                   className="absolute left-0 top-full mt-2 w-56 border border-white/10 bg-black py-2 shadow-xl"
                 >
-                  {SERVICES.map(({ key, slug }) => (
+                  {nav.serviceLinks?.map((service) => (
                     <Link
-                      key={slug}
-                      href={`/${locale}/services/${slug}`}
+                      key={service?.slug}
+                      href={`/${locale}/services/${service?.slug}`}
                       className="block px-4 py-2.5 text-sm text-white/70 hover:bg-white/5 hover:text-white transition-colors duration-100"
                     >
-                      {t(key)}
+                      {service?.label}
                     </Link>
                   ))}
                   <div className="mx-4 my-2 border-t border-white/10" />
@@ -117,7 +114,7 @@ export const Header = () => {
                     href={`/${locale}/services`}
                     className="block px-4 py-2.5 text-sm font-semibold text-gtc-primary hover:bg-white/5 transition-colors duration-100"
                   >
-                    {t('viewServices')}
+                    {nav.viewServicesLabel}
                   </Link>
                 </div>
               )}
@@ -144,7 +141,7 @@ export const Header = () => {
             </Link>
 
             <ContactButton
-                label={t('bookCall')}
+                label={nav.bookCallLabel}
                 size="default"
                 className="rounded-none bg-gtc-primary px-5 py-2 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
@@ -154,7 +151,7 @@ export const Header = () => {
           <button
             onClick={() => setMenuOpen((v) => !v)}
             className="lg:hidden p-2 text-white"
-            aria-label={menuOpen ? t('menuCloseAria') : t('menuOpenAria')}
+            aria-label={menuOpen ? nav.menuCloseAria : nav.menuOpenAria}
           >
             {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -166,13 +163,13 @@ export const Header = () => {
         <div className="fixed inset-0 z-40 flex flex-col bg-black lg:hidden">
           {/* Top bar mirrors the header */}
           <div className="flex h-20 items-center justify-between px-6">
-            <Link href={`/${locale}`} aria-label={t('homeLogoAria')} onClick={() => setMenuOpen(false)}>
+            <Link href={`/${locale}`} aria-label={nav.homeLogoAria} onClick={() => setMenuOpen(false)}>
               <Image src="/logo_dark_bg_v3.png" alt="GenZ Consulting" width={120} height={40} className="h-16 w-auto" priority />
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
               className="p-2 text-white"
-              aria-label={t('menuCloseAria')}
+              aria-label={nav.menuCloseAria}
             >
               <X className="size-5" />
             </button>
@@ -192,27 +189,27 @@ export const Header = () => {
               onClick={() => setMobileServicesOpen((v) => !v)}
               className="flex w-full items-center justify-between border-b border-white/10 py-5 text-lg font-bold text-white"
             >
-              {t('services')}
+              {nav.servicesLabel}
               <ChevronDown
                 className={cn('size-5 transition-transform duration-200', mobileServicesOpen && 'rotate-180')}
               />
             </button>
             {mobileServicesOpen && (
               <div className="border-b border-white/10 py-2 pl-4 space-y-0.5">
-                {SERVICES.map(({ key, slug }) => (
+                {nav.serviceLinks?.map((service) => (
                   <Link
-                    key={slug}
-                    href={`/${locale}/services/${slug}`}
+                    key={service?.slug}
+                    href={`/${locale}/services/${service?.slug}`}
                     className="block py-3 text-base text-white/60 hover:text-white transition-colors"
                   >
-                    {t(key)}
+                    {service?.label}
                   </Link>
                 ))}
                 <Link
                   href={`/${locale}/services`}
                   className="block py-3 text-base font-semibold text-gtc-primary"
                 >
-                  {t('viewServices')}
+                  {nav.viewServicesLabel}
                 </Link>
               </div>
             )}
@@ -229,8 +226,8 @@ export const Header = () => {
 
             {/* Bottom actions */}
             <div className="mt-auto pt-8 space-y-4">
-<ContactButton
-                  label={t('bookCall')}
+              <ContactButton
+                  label={nav.bookCallLabel}
                   size="lg"
                   className="h-auto w-full rounded-none bg-gtc-primary px-6 py-4 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />
