@@ -24,7 +24,15 @@
     "cta": "Domluvit schůzku",
     "notSure": "Nevíte, kde začít?",
     "notSureDesc": "Každá firma je jiná. Pokud si nejste jistí co přesně potřebujete, začněme rozhovorem.",
-    "notSureCta": "Domluvit nezávaznou schůzku"
+    "notSureCta": "Domluvit nezávaznou schůzku",
+    "service1Title": "Trainee program",
+    "service1Desc": "Kompletní trainee program na míru přitáhne správné talenty, efektivně je vyškolí a udrží ve firmě.",
+    "service2Title": "Onboardingová aplikace",
+    "service2Desc": "Digitální průvodce onboardingem v nástrojích, které firma již používá. HR vidí vše v reálném čase.",
+    "service3Title": "Workshop o Gen Z",
+    "service3Desc": "Vzdělávací workshop pro HR týmy ve třech variantách, od obecného základu po výzkum na míru vaší firmě.",
+    "service4Title": "Kariérní stránky",
+    "service4Desc": "Analýza vaší kariérní stránky z pohledu Gen Z s konkrétními doporučeními, co a jak změnit."
   },
   "traineeProgram": {
     "eyebrow": "Služba 01",

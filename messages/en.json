@@ -24,7 +24,15 @@
     "cta": "Book a call",
     "notSure": "Not sure where to start?",
     "notSureDesc": "Every company is different. If you're not sure what you need, let's start with a conversation.",
-    "notSureCta": "Book a no-obligation call"
+    "notSureCta": "Book a no-obligation call",
+    "service1Title": "Trainee program",
+    "service1Desc": "A fully custom trainee program — attracts the right talent, trains them effectively and keeps them at your company.",
+    "service2Title": "Onboarding app",
+    "service2Desc": "A digital onboarding guide built in tools your company already uses. HR sees everything in real time.",
+    "service3Title": "Gen Z Workshop",
+    "service3Desc": "An educational workshop for HR teams in three variants — from a general foundation to custom research for your company.",
+    "service4Title": "Career pages",
+    "service4Desc": "An analysis of your career page from Gen Z's perspective — concrete recommendations on what and how to change."
   },
   "traineeProgram": {
     "eyebrow": "Service 01",
