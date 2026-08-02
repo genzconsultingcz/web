@@ -552,25 +552,53 @@ export default function HomePage() {
           >
             {t('testimonialsEyebrow')}
           </motion.p>
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            custom={0.1}
-          >
-            <Quote className="mb-6 size-10 text-gtc-primary" fill="currentColor" />
-            <blockquote className="text-2xl font-black leading-snug text-white md:text-3xl lg:text-4xl lg:max-w-3xl">
-              {t('testimonial1Quote')}
-            </blockquote>
-            <div className="mt-8 flex items-center gap-3">
-              <div className="h-px w-8 bg-gtc-primary" />
-              <div>
-                <p className="text-sm font-bold text-white">{t('testimonial1Author')}</p>
-                <p className="text-xs text-white/40">{t('testimonial1Role')}</p>
-              </div>
-            </div>
-          </motion.div>
+          <div className="grid gap-12 lg:grid-cols-2">
+            {[
+              {
+                quote: t('testimonial1Quote'),
+                author: t('testimonial1Author'),
+                role: t('testimonial1Role'),
+                linkedin: t('testimonial1Linkedin'),
+              },
+              {
+                quote: t('testimonial2Quote'),
+                author: t('testimonial2Author'),
+                role: t('testimonial2Role'),
+                linkedin: t('testimonial2Linkedin'),
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={0.1 * (i + 1)}
+                className="flex flex-col"
+              >
+                <Quote className="mb-6 size-10 text-gtc-primary" fill="currentColor" />
+                <blockquote className="flex-1 text-lg font-bold leading-relaxed text-white md:text-xl lg:text-2xl">
+                  {item.quote}
+                </blockquote>
+                <div className="mt-8 flex items-center gap-3">
+                  <div className="h-px w-8 bg-gtc-primary" />
+                  <div>
+                    <p className="text-sm font-bold text-white">{item.author}</p>
+                    <p className="text-xs text-white/40">{item.role}</p>
+                    <a
+                      href={item.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-gtc-primary hover:underline"
+                    >
+                      <Linkedin className="size-4" />
+                      LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
