@@ -10,14 +10,27 @@
     "onboardingApp": "Onboarding app",
     "genzWorkshop": "Gen Z Workshop",
     "careerPages": "Career pages",
-    "customSolution": "Custom solution"
+    "customSolution": "Custom solution",
+    "viewServices": "All services →",
+    "homeLogoAria": "GenZ Consulting — home",
+    "menuOpenAria": "Open menu",
+    "menuCloseAria": "Close menu"
   },
   "footer": {
     "rights": "All rights reserved.",
     "tagline": "Systems for young people should be built by young people.",
     "navLabel": "Navigation",
     "contactLabel": "Contact",
-    "followLabel": "Follow us"
+    "followLabel": "Follow us",
+    "web": "www.genzconsulting.cz",
+    "socialDomain": "linkedin.com/company/gen-zconsulting",
+    "linkedIn": "LinkedIn",
+    "navServices": "Services",
+    "navAbout": "About",
+    "navCaseStudies": "Case studies",
+    "navContact": "Contact",
+    "navGuide": "Guide",
+    "homeLogoAria": "GenZ Consulting — home"
   },
   "leadMagnet": {
     "badge": "Free · For HR & EB · Instant download",
@@ -33,7 +46,9 @@
     "coverTitle": "7 things that decide about Gen Z.",
     "coverMeta": "32 pages · 2026",
     "errorGeneric": "Something went wrong. Please try again.",
-    "errorInvalidEmail": "Please enter a valid email address."
+    "errorInvalidEmail": "Please enter a valid email address.",
+    "closeAria": "Close",
+    "guideMetaTag": "GZC · GUIDE 01"
   },
   "home": {
     "heroEyebrow": "Gen Z specialists",
@@ -134,7 +149,12 @@
     "ctaDesc": "Book a no-obligation call or download our free guide.",
     "ctaPrimary": "Book a call",
     "ctaSecondary": "Download free guide",
-    "csReadMore": "Read case study"
+    "csReadMore": "Read case study",
+    "csCardLabel": "Case study",
+    "linkedInLabel": "LinkedIn",
+    "heroImageAlt": "GenZ Consulting team",
+    "testimonialNavAria": "Go to testimonial {n}",
+    "pdfCoverMetaTag": "GZC · GUIDE 01"
   },
   "services": {
     "eyebrow": "Our services",
@@ -191,7 +211,10 @@
     "variant2Desc": "Tailored to your industry and company based on GenZ Consulting's data and research. Participants leave with insights directly from their world.",
     "variant3Title": "Custom from new research",
     "variant3Desc": "We'll build research specifically for your company and industry. Data that nobody else has.",
-    "cta": "Book a call"
+    "cta": "Book a call",
+    "heroImageAlt": "GenZ Consulting workshop at Career Expo",
+    "variantsLabel": "Workshop variants",
+    "variantsTitle": "Choose the depth that fits your company"
   },
   "careerPages": {
     "eyebrow": "Service 04",
@@ -217,7 +240,15 @@
     "whatText": "We'll jointly diagnose where the biggest obstacle is and propose a solution directly for your situation. The result can be one of our products or something built completely custom.",
     "forLabel": "Who it's for",
     "forText": "Companies that know they have a problem with Gen Z but don't know how to approach it. And companies that know exactly what they want — it just doesn't exist as a ready-made product yet.",
-    "cta": "Book a no-obligation call"
+    "cta": "Book a no-obligation call",
+    "step1Title": "We find out what's wrong",
+    "step1Desc": "A short, no-obligation call to understand your situation and whether we can help.",
+    "step2Title": "We get to know your company",
+    "step2Desc": "An in-depth look at your context, goals and problem from every angle.",
+    "step3Title": "We build a solution on measure",
+    "step3Desc": "A solution exactly for you — whether a known product or something built from scratch.",
+    "ctaTitle": "Let's start with a conversation.",
+    "ctaDesc": "No commitment. We'll find out together what your company needs."
   },
   "about": {
     "eyebrow": "About GenZ Consulting",
@@ -245,7 +276,11 @@
     "member2Bio": "Part of GenZ Consulting from the start. An inside view of the generation, paired with a feel for how companies actually work.",
     "ctaTitle": "Want to learn more?",
     "ctaDesc": "Book a no-obligation call.",
-    "cta": "Book a call"
+    "cta": "Book a call",
+    "teamImageAlt": "GenZ Consulting team",
+    "workshopImageAlt": "GenZ Consulting at Career Expo",
+    "teamBanner": "A team that lives Gen Z from the inside.",
+    "linkedIn": "LinkedIn"
   },
   "caseStudies": {
     "eyebrow": "Our work",

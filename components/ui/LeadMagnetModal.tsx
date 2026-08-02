@@ -57,7 +57,7 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
           {/* Close */}
           <button
             onClick={onClose}
-            aria-label="Zavřít"
+            aria-label={t('closeAria')}
             className="absolute right-5 top-5 z-10 flex size-9 items-center justify-center rounded-full bg-white/10 text-white/60 transition-colors hover:bg-white/20 hover:text-white"
           >
             <X className="size-4" />
@@ -165,7 +165,7 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
                   className="relative z-10 text-[10px] font-bold uppercase tracking-[0.25em] text-black/40"
                   style={{ fontVariantNumeric: 'tabular-nums' }}
                 >
-                  GZC · GUIDE 01
+                  {t('guideMetaTag')}
                 </p>
 
                 {/* Title block */}

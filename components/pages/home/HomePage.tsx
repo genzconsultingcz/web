@@ -90,7 +90,7 @@ function TestimonialSlider({ t }: { t: ReturnType<typeof useTranslations> }) {
                   className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-gtc-primary hover:underline"
                 >
                   <Linkedin className="size-4" />
-                  LinkedIn
+                  {t('linkedInLabel')}
                 </a>
               </div>
             </div>
@@ -101,7 +101,7 @@ function TestimonialSlider({ t }: { t: ReturnType<typeof useTranslations> }) {
         {testimonials.map((_, i) => (
           <button
             key={i}
-            aria-label={`Go to testimonial ${i + 1}`}
+            aria-label={t('testimonialNavAria', { n: i + 1 })}
             onClick={() => goTo(i)}
             className={`h-2 rounded-full transition-all duration-300 ${active === i ? 'w-6 bg-gtc-primary' : 'w-2 bg-white/25'}`}
           />
@@ -259,7 +259,7 @@ export default function HomePage() {
             <div className="relative aspect-square overflow-hidden rounded-[2.75rem] border-[3px] border-black bg-gradient-to-b from-gtc-primary/20 via-gtc-primary/10 to-white shadow-[0_0_0_1px_rgba(16,185,129,0.12)]">
               <Image
                 src="/team_no_bg.png"
-                alt="Tým GenZ Consulting"
+                alt={t('heroImageAlt')}
                 fill
                 priority
                 sizes="(max-width: 1024px) 90vw, 40vw"
@@ -501,7 +501,7 @@ export default function HomePage() {
                   className="flex flex-1 flex-col"
                 >
                   <span className="mb-3 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-gtc-dark">
-                    Case study
+                    {t('csCardLabel')}
                     <ArrowUpRight className="size-3.5" />
                   </span>
                   <h3 className="text-lg font-black text-black">{client}</h3>
@@ -583,7 +583,7 @@ export default function HomePage() {
                 style={{ aspectRatio: '3/4', transform: 'rotate(3deg)' }}
               >
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/35">
-                  GZC · GUIDE 01
+                  {t('pdfCoverMetaTag')}
                 </p>
                 <div>
                   <h3 className="text-2xl font-black leading-tight text-black">
@@ -707,7 +707,7 @@ export default function HomePage() {
                     className="mt-auto inline-flex items-center gap-1.5 pt-4 text-xs font-bold text-zinc-400 transition-colors duration-150 hover:text-gtc-dark"
                   >
                     <Linkedin className="size-3.5" />
-                    LinkedIn
+                    {t('linkedInLabel')}
                   </a>
                 </div>
               </motion.div>

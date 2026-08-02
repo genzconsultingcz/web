@@ -30,11 +30,11 @@ export const Footer = () => {
   const locale = useLocale();
 
   const navLinks = [
-    { href: `/${locale}/services`, label: 'Služby' },
-    { href: `/${locale}/about`, label: 'O nás' },
-    { href: `/${locale}/case-studies`, label: 'Case studies' },
-    { href: `/${locale}/contact`, label: 'Kontakt' },
-    { href: `/${locale}#pdf-guide`, label: 'Průvodce' },
+    { href: `/${locale}/services`, label: t('navServices') },
+    { href: `/${locale}/about`, label: t('navAbout') },
+    { href: `/${locale}/case-studies`, label: t('navCaseStudies') },
+    { href: `/${locale}/contact`, label: t('navContact') },
+    { href: `/${locale}#pdf-guide`, label: t('navGuide') },
   ];
 
   return (
@@ -43,7 +43,7 @@ export const Footer = () => {
         <div className="grid gap-12 md:grid-cols-3 justify-items-center text-center">
           {/* Brand */}
           <div className="max-w-[260px]">
-            <Link href={`/${locale}`} aria-label="GenZ Consulting — domů">
+            <Link href={`/${locale}`} aria-label={t('homeLogoAria')}>
               <Image
                 src="/logo_dark_bg_v3.png"
                 alt="GenZ Consulting"
@@ -55,7 +55,7 @@ export const Footer = () => {
             <p className="mt-4 text-sm leading-relaxed text-white/50">
               {t('tagline')}
             </p>
-            <p className="mt-2 text-xs text-white/30">www.genzconsulting.cz</p>
+            <p className="mt-2 text-xs text-white/30">{t('web')}</p>
           </div>
 
           {/* Nav */}
@@ -128,7 +128,7 @@ export const Footer = () => {
           <p className="text-xs text-white/30">
             © {new Date().getFullYear()} {header?.name}. {t('rights')}
           </p>
-          <p className="text-xs text-white/20">linkedin.com/company/gen-zconsulting</p>
+          <p className="text-xs text-white/20">{t('socialDomain')}</p>
         </div>
       </div>
     </footer>

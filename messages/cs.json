@@ -10,14 +10,27 @@
     "onboardingApp": "Onboardingová aplikace",
     "genzWorkshop": "Workshop o Gen Z",
     "careerPages": "Kariérní stránky",
-    "customSolution": "Individuální řešení"
+    "customSolution": "Individuální řešení",
+    "viewServices": "Všechny služby →",
+    "homeLogoAria": "GenZ Consulting — domů",
+    "menuOpenAria": "Otevřít menu",
+    "menuCloseAria": "Zavřít menu"
   },
   "footer": {
     "rights": "Všechna práva vyhrazena.",
     "tagline": "Systémy pro mladé by měli stavět mladí.",
     "navLabel": "Navigace",
     "contactLabel": "Kontakt",
-    "followLabel": "Sledujte nás"
+    "followLabel": "Sledujte nás",
+    "web": "www.genzconsulting.cz",
+    "socialDomain": "linkedin.com/company/gen-zconsulting",
+    "linkedIn": "LinkedIn",
+    "navServices": "Služby",
+    "navAbout": "O nás",
+    "navCaseStudies": "Case studies",
+    "navContact": "Kontakt",
+    "navGuide": "Průvodce",
+    "homeLogoAria": "GenZ Consulting — domů"
   },
   "leadMagnet": {
     "badge": "Zdarma · Pro HR & EB · Ihned ke stažení",
@@ -33,7 +46,9 @@
     "coverTitle": "7 věcí, které rozhodují o Gen Z.",
     "coverMeta": "32 stran · 2026",
     "errorGeneric": "Něco se pokazilo. Zkuste to prosím znovu.",
-    "errorInvalidEmail": "Zadejte platnou e-mailovou adresu."
+    "errorInvalidEmail": "Zadejte platnou e-mailovou adresu.",
+    "closeAria": "Zavřít",
+    "guideMetaTag": "GZC · GUIDE 01"
   },
   "home": {
     "heroEyebrow": "Specialisté na generaci Z",
@@ -134,7 +149,12 @@
     "ctaDesc": "Rezervujte si nezávazný call nebo si stáhněte náš průvodce zdarma.",
     "ctaPrimary": "Domluvit schůzku",
     "ctaSecondary": "Stáhnout průvodce zdarma",
-    "csReadMore": "Číst case study"
+    "csReadMore": "Číst case study",
+    "csCardLabel": "Case study",
+    "linkedInLabel": "LinkedIn",
+    "heroImageAlt": "Tým GenZ Consulting",
+    "testimonialNavAria": "Přejít na referenci {n}",
+    "pdfCoverMetaTag": "GZC · GUIDE 01"
   },
   "services": {
     "eyebrow": "Naše služby",
@@ -191,7 +211,10 @@
     "variant2Desc": "Přizpůsobený vašemu odvětví a firmě na základě dat a výzkumů GenZ Consulting. Účastníci si odnesou poznatky přímo z jejich světa.",
     "variant3Title": "Na míru z nového výzkumu",
     "variant3Desc": "Společně postavíme výzkum přesně pro vaši firmu a odvětví. Data, která nikdo jiný nemá.",
-    "cta": "Domluvit schůzku"
+    "cta": "Domluvit schůzku",
+    "heroImageAlt": "GenZ Consulting workshop na Career Expo",
+    "variantsLabel": "Varianty workshopu",
+    "variantsTitle": "Zvolte hloubku, která sedne vaší firmě"
   },
   "careerPages": {
     "eyebrow": "Služba 04",
@@ -217,7 +240,15 @@
     "whatText": "Společně diagnostikujeme, kde je největší kámen úrazu, a navrhneme řešení přímo pro vaši situaci. Výsledkem může být jeden z našich produktů nebo něco postaveného kompletně na míru.",
     "forLabel": "Pro koho",
     "forText": "Pro firmy, které vědí, že mají problém s Gen Z, ale ještě nevědí jak ho uchopit. A pro firmy, které přesně vědí co chtějí — jen to zatím neexistuje jako hotový produkt.",
-    "cta": "Domluvit nezávaznou schůzku"
+    "cta": "Domluvit nezávaznou schůzku",
+    "step1Title": "Zjistíme, co je špatně",
+    "step1Desc": "Krátký, bez závazků call, abychom pochopili vaši situaci a jestli vám můžeme pomoci.",
+    "step2Title": "Poznáme vaši firmu",
+    "step2Desc": "Hloubkový průzkum vašeho kontextu, cílů a problému z každého úhlu.",
+    "step3Title": "Vytvoříme řešení na míru",
+    "step3Desc": "Řešení přesně pro vás — ať už známý produkt, nebo něco vyvinutého od začátku.",
+    "ctaTitle": "Pojďme začít rozhovorem.",
+    "ctaDesc": "Bez závazků. Společně zjistíme, co vaše firma potřebuje."
   },
   "about": {
     "eyebrow": "O GenZ Consulting",
@@ -245,7 +276,11 @@
     "member2Bio": "Součást GenZ Consulting od začátku. Pohled zevnitř generace spojený s citem pro to, jak firmy reálně fungují.",
     "ctaTitle": "Chcete se dozvědět více?",
     "ctaDesc": "Rezervujte si nezávazný call.",
-    "cta": "Domluvit schůzku"
+    "cta": "Domluvit schůzku",
+    "teamImageAlt": "Tým GenZ Consulting",
+    "workshopImageAlt": "GenZ Consulting na Career Expo",
+    "teamBanner": "Tým, který Gen Z žije zevnitř.",
+    "linkedIn": "LinkedIn"
   },
   "caseStudies": {
     "eyebrow": "Naše práce",

@@ -200,9 +200,9 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="relative mb-14 aspect-video overflow-hidden"
           >
-            <Image
-              src="/team.jpeg"
-              alt="GenZ Consulting team"
+<Image
+                src="/team.jpeg"
+                alt={t('teamImageAlt')}
               fill
               className="object-cover object-center"
               sizes="100vw"
@@ -240,7 +240,7 @@ export default function AboutPage() {
                   className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-gtc-primary hover:text-white transition-colors duration-150"
                 >
                   <Linkedin className="size-3.5" />
-                  LinkedIn
+                  {t('linkedIn')}
                 </a>
               </div>
             </motion.div>
@@ -274,7 +274,7 @@ export default function AboutPage() {
                   className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-gtc-primary hover:text-white transition-colors duration-150"
                 >
                   <Linkedin className="size-3.5" />
-                  LinkedIn
+                  {t('linkedIn')}
                 </a>
               </div>
             </motion.div>
@@ -286,14 +286,14 @@ export default function AboutPage() {
       <section className="relative h-64 overflow-hidden bg-black sm:h-80">
         <Image
           src="/genzone_workshop.jpeg"
-          alt="GenZ Consulting na Career Expo"
+          alt={t('workshopImageAlt')}
           fill
           className="object-cover opacity-60"
           sizes="100vw"
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <p className="text-center text-xl font-black uppercase tracking-widest text-white sm:text-2xl">
-            Tým, který Gen Z žije zevnitř.
+            {t('teamBanner')}
           </p>
         </div>
       </section>

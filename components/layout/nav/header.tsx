@@ -59,7 +59,7 @@ export const Header = () => {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href={`/${locale}`} aria-label="GenZ Consulting — domů">
+          <Link href={`/${locale}`} aria-label={t('homeLogoAria')}>
             <Image
               src="/logo_dark_bg_v3.png"
               alt="GenZ Consulting"
@@ -117,7 +117,7 @@ export const Header = () => {
                     href={`/${locale}/services`}
                     className="block px-4 py-2.5 text-sm font-semibold text-gtc-primary hover:bg-white/5 transition-colors duration-100"
                   >
-                    Všechny služby →
+                    {t('viewServices')}
                   </Link>
                 </div>
               )}
@@ -154,7 +154,7 @@ export const Header = () => {
           <button
             onClick={() => setMenuOpen((v) => !v)}
             className="lg:hidden p-2 text-white"
-            aria-label={menuOpen ? 'Zavřít menu' : 'Otevřít menu'}
+            aria-label={menuOpen ? t('menuCloseAria') : t('menuOpenAria')}
           >
             {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -166,13 +166,13 @@ export const Header = () => {
         <div className="fixed inset-0 z-40 flex flex-col bg-black lg:hidden">
           {/* Top bar mirrors the header */}
           <div className="flex h-20 items-center justify-between px-6">
-            <Link href={`/${locale}`} aria-label="GenZ Consulting — domů" onClick={() => setMenuOpen(false)}>
+            <Link href={`/${locale}`} aria-label={t('homeLogoAria')} onClick={() => setMenuOpen(false)}>
               <Image src="/logo_dark_bg_v3.png" alt="GenZ Consulting" width={120} height={40} className="h-16 w-auto" priority />
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
               className="p-2 text-white"
-              aria-label="Zavřít menu"
+              aria-label={t('menuCloseAria')}
             >
               <X className="size-5" />
             </button>
@@ -212,7 +212,7 @@ export const Header = () => {
                   href={`/${locale}/services`}
                   className="block py-3 text-base font-semibold text-gtc-primary"
                 >
-                  Všechny služby →
+                  {t('viewServices')}
                 </Link>
               </div>
             )}

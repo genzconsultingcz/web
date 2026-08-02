@@ -117,7 +117,7 @@ export default function WorkshopPage() {
       <div className="relative h-56 overflow-hidden bg-black sm:h-72">
         <Image
           src="/genzone_workshop.jpeg"
-          alt="GenZ Consulting workshop na Career Expo"
+          alt={t('heroImageAlt')}
           fill
           className="object-cover opacity-70"
           sizes="100vw"
@@ -142,10 +142,10 @@ export default function WorkshopPage() {
             className="mb-14"
           >
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-gtc-primary">
-              Workshop variants
+              {t('variantsLabel')}
             </p>
             <h2 className="text-3xl font-black text-white md:text-4xl">
-              Choose the depth that fits your company
+              {t('variantsTitle')}
             </h2>
           </motion.div>
 
