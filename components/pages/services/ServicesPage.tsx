@@ -50,7 +50,6 @@ const CUSTOM = {
 
 export default function ServicesPage() {
   const t = useTranslations('services');
-  const tHome = useTranslations('home');
   const tCustom = useTranslations('customSolution');
   const locale = useLocale();
   return (
@@ -127,8 +126,8 @@ export default function ServicesPage() {
                 className="group relative bg-white p-10 hover:bg-zinc-50 transition-colors duration-200"
               >
                 <span className="text-5xl font-black text-zinc-100 select-none leading-none">{num}</span>
-                <h2 className="mt-4 text-xl font-black text-black">{tHome(titleKey)}</h2>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-500">{tHome(descKey)}</p>
+                <h2 className="mt-4 text-xl font-black text-black">{t(titleKey)}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-zinc-500">{t(descKey)}</p>
                 <Link
                   href={`/${locale}/services/${slug}`}
                   className="mt-6 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
