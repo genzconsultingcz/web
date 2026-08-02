@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { Phone, Mail, Linkedin } from 'lucide-react';
 import { useLayout } from '../layout-context';
 
@@ -26,15 +26,17 @@ function socialLinkName(url: string): string {
 export const Footer = () => {
   const { globalSettings } = useLayout();
   const { header, footer } = globalSettings!;
-  const t = useTranslations('footer');
   const locale = useLocale();
+  const copy = locale === 'en' ? footer?.copy?.en : footer?.copy?.cs;
+
+  if (!copy) return null;
 
   const navLinks = [
-    { href: `/${locale}/services`, label: t('navServices') },
-    { href: `/${locale}/about`, label: t('navAbout') },
-    { href: `/${locale}/case-studies`, label: t('navCaseStudies') },
-    { href: `/${locale}/contact`, label: t('navContact') },
-    { href: `/${locale}#pdf-guide`, label: t('navGuide') },
+    { href: `/${locale}/services`, label: copy.navServices },
+    { href: `/${locale}/about`, label: copy.navAbout },
+    { href: `/${locale}/case-studies`, label: copy.navCaseStudies },
+    { href: `/${locale}/contact`, label: copy.navContact },
+    { href: `/${locale}#pdf-guide`, label: copy.navGuide },
   ];
 
   return (
@@ -43,7 +45,7 @@ export const Footer = () => {
         <div className="grid gap-12 md:grid-cols-3 justify-items-center text-center">
           {/* Brand */}
           <div className="max-w-[260px]">
-            <Link href={`/${locale}`} aria-label={t('homeLogoAria')}>
+            <Link href={`/${locale}`} aria-label={copy.homeLogoAria}>
               <Image
                 src="/logo_dark_bg_v3.png"
                 alt="GenZ Consulting"
@@ -53,15 +55,15 @@ export const Footer = () => {
               />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/50">
-              {t('tagline')}
+              {copy.tagline}
             </p>
-            <p className="mt-2 text-xs text-white/30">{t('web')}</p>
+            <p className="mt-2 text-xs text-white/30">{copy.web}</p>
           </div>
 
           {/* Nav */}
           <div className="max-w-[220px]">
             <p className="mb-4 text-xs font-bold uppercase tracking-widest text-gtc-primary">
-              {t('navLabel')}
+              {copy.navLabel}
             </p>
             <ul className="space-y-2 text-center">
               {navLinks.map(({ href, label }) => (
@@ -80,25 +82,25 @@ export const Footer = () => {
           {/* Contact */}
           <div className="max-w-[260px]">
             <p className="mb-4 text-xs font-bold uppercase tracking-widest text-gtc-primary">
-              {t('contactLabel')}
+              {copy.contactLabel}
             </p>
             <div className="space-y-3">
-              {(footer as any)?.email && (
+              {footer?.email && (
                 <a
-                  href={`mailto:${(footer as any).email}`}
+                  href={`mailto:${footer.email}`}
                   className="flex items-center justify-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors duration-150"
                 >
                   <Mail className="size-4 shrink-0" />
-                  {(footer as any).email}
+                  {footer.email}
                 </a>
               )}
-              {(footer as any)?.phone && (
+              {footer?.phone && (
                 <a
-                  href={`tel:${(footer as any).phone}`}
+                  href={`tel:${footer.phone}`}
                   className="flex items-center justify-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors duration-150"
                 >
                   <Phone className="size-4 shrink-0" />
-                  {(footer as any).phone}
+                  {footer.phone}
                 </a>
               )}
               <div className="flex flex-col items-center gap-2 pt-1">
@@ -126,9 +128,9 @@ export const Footer = () => {
 
         <div className="mt-12 flex flex-col items-center justify-center gap-2 border-t border-white/10 pt-6 text-center">
           <p className="text-xs text-white/30">
-            © {new Date().getFullYear()} {header?.name}. {t('rights')}
+            © {new Date().getFullYear()} {header?.name}. {copy.rights}
           </p>
-          <p className="text-xs text-white/20">{t('socialDomain')}</p>
+          <p className="text-xs text-white/20">{copy.socialDomain}</p>
         </div>
       </div>
     </footer>
