@@ -1,0 +1,462 @@
+{
+  "cs": {
+    "client": "Generali ČP",
+    "serviceType": "Konzultace",
+    "listResult": "Identifikovány klíčové bariéry v recruitmentu a navrženy konkrétní úpravy komunikace.",
+    "logo": "/logo-orizzontale.2020-07-16-17-41-47.jpeg",
+    "logoAlt": "Generali",
+    "year": "2025",
+    "hero": {
+      "headline": "Trainee program, který Gen Z skutečně chce",
+      "intro": "Spoluvytvořili jsme s Generali Českou pojišťovnou trainee program pro generaci Z. Od přepracování náborových textů přes metodiku osobního rozvoje až po komunikační strategii. Cílem bylo postavit program, který přitáhne a udrží ty nejlepší mladé talenty."
+    },
+    "scope": [
+      {
+        "label": "Rozsah",
+        "value": "10 fází programu"
+      },
+      {
+        "label": "Délka projektu",
+        "value": "do 6 měsíců"
+      },
+      {
+        "label": "Metodika",
+        "value": "Audit + výzkum + design"
+      }
+    ],
+    "stats": [
+      {
+        "value": "10",
+        "label": "fází programu kompletně přepracovaných z pohledu Gen Z"
+      },
+      {
+        "value": "6",
+        "label": "průřezových oblastí (komunikace, manažeři, rozvoj, networking…)"
+      },
+      {
+        "value": "100 %",
+        "label": "doporučení opřena o vlastní výzkum mezi Gen Z"
+      }
+    ],
+    "context": {
+      "headline": "Trainee program v době, kdy Gen Z přepisuje pravidla náboru.",
+      "intro": "Generali Česká pojišťovna připravovala devítiměsíční trainee program pro 12 čerstvých absolventů. Otázka byla, jak ho udělat tak, aby skutečně oslovil generaci s radikálně jinými očekáváními, než ty předchozí.",
+      "clientLabel": "Kdo je klient",
+      "client": "Generali Česká pojišťovna je největší pojišťovna na českém trhu s více než 200letou historií. Trainee program patří mezi klíčové nástroje pro dlouhodobý talent pipeline a staví na modelu 60 % reálná práce v týmu, 20 % rozvoj, 20 % společný udržitelnostní projekt, s rotacemi napříč odděleními (IT, data, právo, strategie) a networkingem s top managementem.",
+      "whyTitle": "Proč to nebyl běžný projekt",
+      "whyIntro": "Gen Z je nejtěžší skupina pro nábor a zároveň skupina, která rozhoduje o budoucnosti firem. Má radikálně jiná očekávání než předchozí generace. Generali potřebovali:",
+      "whyPoints": [
+        {
+          "title": "Atraktivní nábor",
+          "body": "Texty inzerátů, video komunikaci a nábor na platformách, kde Gen Z reálně hledá."
+        },
+        {
+          "title": "Smysluplnou práci",
+          "body": "Trainees zapojené do reálných projektů, s jasnou strukturou rozvoje, kterou si sami řídí."
+        },
+        {
+          "title": "Komunitu uvnitř programu",
+          "body": "Vztahy mezi trainees, neformální setkání s vedením, aktivity, které lidi propojí i mimo Teams."
+        },
+        {
+          "title": "Komunikaci, která sedne",
+          "body": "Tón, formát i kanály, které Gen Z bere vážně, protože respektují její způsob komunikace."
+        }
+      ],
+      "briefLabel": "Naše zadání",
+      "brief": "Generali nás přizvali, abychom prošli celý devítiměsíční program pohledem Gen Z a společně s nimi ho dotvořili do podoby, která reálně osloví talenty z této generace. Měli program lehce předpřipravený interním týmem, naším úkolem bylo dovést ho do detailu, v textech, formátech, metodikách i komunikační strategii."
+    },
+    "approach": {
+      "headline": "Tři kroky od insightu k funkčnímu programu.",
+      "intro": "Postupovali jsme metodicky. Nejdřív jsme rozuměli, pak měřili, pak spolu s Generali stavěli. Každá z našich úprav vycházela z dat o Gen Z nebo z diagnostiky reálného stavu programu.",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Diagnostika",
+          "body": "Společný audit existujícího návrhu programu napříč 10 kroky, od náboru po development centrum."
+        },
+        {
+          "num": "2",
+          "title": "Výzkum",
+          "body": "Vlastní výzkum mezi Gen Z, co od trainee programu reálně očekávají."
+        },
+        {
+          "num": "3",
+          "title": "Spolutvorba",
+          "body": "Konkrétní změny v textech, formátech, metodikách i kanálech komunikace, podložené daty z výzkumu."
+        }
+      ],
+      "assessedTitle": "Co konkrétně jsme posuzovali",
+      "assessedIntro": "Program Generali se skládá z 10 na sebe navazujících fází, každá s vlastní strukturou, komunikací a cílem. Posuzovali jsme každou fázi samostatně i v celku, aby na sebe smysluplně navazovaly z pohledu zkušenosti Gen Z trainee.",
+      "assessed": [
+        {
+          "num": "1",
+          "title": "Nábor"
+        },
+        {
+          "num": "2",
+          "title": "Onboarding"
+        },
+        {
+          "num": "3",
+          "title": "Smysluplná práce"
+        },
+        {
+          "num": "4",
+          "title": "Rotace"
+        },
+        {
+          "num": "5",
+          "title": "Den s ředitelem"
+        },
+        {
+          "num": "6",
+          "title": "Praxe na retailu"
+        },
+        {
+          "num": "7",
+          "title": "Kariérní rozvoj"
+        },
+        {
+          "num": "8",
+          "title": "Networking"
+        },
+        {
+          "num": "9",
+          "title": "Společný projekt"
+        },
+        {
+          "num": "10",
+          "title": "Development centrum"
+        }
+      ],
+      "assessedNote": "Plus 6 průřezových oblastí: Komunikace náboru, Spolupráce s manažery, Očekávání kandidátů, Nástupní balíčky, Propojení trainees a chatbot Arnold. Každá s vlastní sadou společně vytvořených řešení."
+    },
+    "findings": {
+      "headline": "Čtyři příklady toho, jak GenZ-friendly mění detaily i celek.",
+      "intro": "Vybíráme čtyři z desítek konkrétních řešení, která jsme společně s Generali nastavili. Ukazují, že rozdíl mezi „obyčejným“ a „GenZ-funkčním“ programem často spočívá v detailech i ve strukturálních volbách.",
+      "column1": "Původní stav",
+      "column2": "Naše řešení",
+      "column3": "Proč to funguje",
+      "items": [
+        {
+          "category": "Komunikace náboru",
+          "title": "Hooky, které zaujmou",
+          "col1": "Popisné texty inzerátů. Formulace „seberozvoj“, „bere vážně“, „vlastní projekt“.",
+          "col2": "Hooky typu „Hledáš něco víc?“, „Nebudeš jen běhat ke kopírce“. Formulace „osobní rozvoj“ a jasně uvedený plat (200 Kč/h).",
+          "col3": "Gen Z reaguje na konkrétní hooky a transparentnost, zejména u peněz."
+        },
+        {
+          "category": "Onboarding",
+          "title": "E-learning videa pro asynchronní svět",
+          "col1": "Online meetingy v úvodním dni s přednášejícími z jednotlivých oddělení.",
+          "col2": "Krátká kvalitní e-learningová videa, pustitelná kdykoliv (i v MHD). Plus tři možné LMS varianty podle rozpočtu.",
+          "col3": "Gen Z je mobile-first a asynchronní. Šetří čas firmy (jednou natočit) i trainees (kdykoliv pustit)."
+        },
+        {
+          "category": "Společný projekt",
+          "title": "Čtyřčlenné týmy s jasným ownership",
+          "col1": "Všech 12 trainees pracovalo na jednom společném udržitelnostním projektu.",
+          "col2": "Tři čtyřčlenné týmy. Každý s vlastním mentorem v roli PM. Příprava přes 8h design thinking session („Birth Giving“).",
+          "col3": "Čtyřčlenný tým je ideální velikost pro skutečnou kolaboraci, jasný ownership a zdravou soutěživost mezi týmy."
+        },
+        {
+          "category": "Networking a visibility",
+          "title": "Influenceři + neformální setkání",
+          "col1": "Speed dating s top managementem jako forma networkingu. Tradiční komunikační kanály.",
+          "col2": "Neformální setkání typu „pivko s CEO“ a spolupráce s Gen Z influencery (David Luu, Vilém Franěk z Close Friends & Co.).",
+          "col3": "Neformální setkání podporují autenticitu. Influenceři navíc dostávají program tam, kde Gen Z reálně tráví čas."
+        }
+      ]
+    },
+    "outputs": {
+      "headline": "Co konkrétně dostalo Generali do ruky.",
+      "intro": "Naše práce nekončila prezentací. Generali odcházeli s materiály, které jejich HR a L&D tým může reálně používat u tohoto i dalších ročníků programu.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Spolutvorba 10 fází programu",
+          "body": "Společná práce na každém kroku, od formulací inzerátů přes ikonografii v komunikačních materiálech až po metodiku ukončovacího development centra. Vše s jasným „jak“ a „proč“."
+        },
+        {
+          "num": "02",
+          "title": "Komunikační manuál",
+          "body": "Hierarchie sdělení (odměna, seberozvoj, vlastní projekt, flexibilita, setkání s vedením, komunita), tonalita, formáty a doporučené kanály včetně jobs.cz, sociálních sítí a influencer marketingu."
+        },
+        {
+          "num": "03",
+          "title": "Metodika Learning Contractu",
+          "body": "Plán osobního rozvoje, který si trainee píše sám, s jasnou strukturou cílů, pravidelných check-upů s manažerem a závěrečné reflexe. Nástroj použitelný opakovaně i u dalších ročníků programu."
+        },
+        {
+          "num": "04",
+          "title": "Spolupráce manažerů s trainees",
+          "body": "Mentoring, dobrovolné check-upy, obousměrná zpětná vazba, zapojení trainees do standardních týmových procesů. Praktický návod, jak trainees skutečně rozvíjet."
+        },
+        {
+          "num": "05",
+          "title": "Validační data z výzkumu mezi Gen Z",
+          "body": "Ke každému doporučení dohledatelná evidence z našeho výzkumu, co Gen Z reálně očekává od trainee programů a co je přitahuje."
+        }
+      ],
+      "quote": "Generali měli skvělý záměr a solidně předpřipravený program. My jsme ho s nimi spolustavěli v detailech, kde se rozhoduje, jestli Gen Z řekne „tohle je pro mě“. Je to často neviditelná, ale rozhodující práce.",
+      "quoteAuthor": "— GenZ Consulting tým, vedoucí projektu"
+    },
+    "whyUs": {
+      "headline": "Děláme jednu věc. A tu pořádně.",
+      "intro": "Specializujeme se na Gen Z a propojujeme to s HR konzultací. Pracujeme s vlastními výzkumnými daty, která pravidelně aktualizujeme.",
+      "pillars": [
+        {
+          "num": "01",
+          "title": "Data na pozadí",
+          "body": "Každé doporučení opíráme o vlastní výzkum mezi Gen Z. Pracujeme s aktuálními daty o této generaci."
+        },
+        {
+          "num": "02",
+          "title": "Komplexnost i detail",
+          "body": "Pracujeme na strategické vrstvě (struktura programu) i na jednotlivých formulacích v textech. Obojí v jednom týmu."
+        },
+        {
+          "num": "03",
+          "title": "Gen Z native",
+          "body": "Naše doporučení vychází z přímé znalosti toho, jak generace Z přemýšlí a komunikuje. Mluvíme jejím jazykem."
+        }
+      ]
+    },
+    "contact": {
+      "name": "Adam Dalecký",
+      "email": "adam.dalecky@genzconsulting.cz",
+      "web": "www.genzconsulting.cz"
+    }
+  },
+  "en": {
+    "client": "Generali ČP",
+    "serviceType": "Consultation",
+    "listResult": "Key barriers in recruitment identified and specific communication adjustments proposed.",
+    "logo": "/logo-orizzontale.2020-07-16-17-41-47.jpeg",
+    "logoAlt": "Generali",
+    "year": "2025",
+    "hero": {
+      "headline": "A trainee program Gen Z actually wants.",
+      "intro": "Together with Generali Česká pojišťovna we co-created a trainee program for Gen Z — from rewriting recruitment copy through a personal-development methodology to a communication strategy. The goal was to build a program that attracts and retains the best young talent."
+    },
+    "scope": [
+      {
+        "label": "Scope",
+        "value": "10 program phases"
+      },
+      {
+        "label": "Project length",
+        "value": "up to 6 months"
+      },
+      {
+        "label": "Method",
+        "value": "Audit + research + design"
+      }
+    ],
+    "stats": [
+      {
+        "value": "10",
+        "label": "program phases completely reworked from a Gen Z perspective"
+      },
+      {
+        "value": "6",
+        "label": "cross-cutting areas (communication, managers, development, networking…)"
+      },
+      {
+        "value": "100 %",
+        "label": "of recommendations backed by our own research among Gen Z"
+      }
+    ],
+    "context": {
+      "headline": "A trainee program at a time when Gen Z is rewriting the rules of recruitment.",
+      "intro": "Generali Česká pojišťovna was preparing a nine-month trainee program for 12 fresh graduates. The question was how to make it genuinely appeal to a generation with radically different expectations than the previous ones.",
+      "clientLabel": "Who is the client",
+      "client": "Generali Česká pojišťovna is the largest insurer on the Czech market, with over 200 years of history. The trainee program is one of its key tools for a long-term talent pipeline and is built on a model of 60% real work in a team, 20% development, 20% a shared sustainability project — with rotations across departments (IT, data, legal, strategy) and networking with top management.",
+      "whyTitle": "Why this wasn't a routine project",
+      "whyIntro": "Gen Z is the hardest group to recruit and at the same time the group that decides the future of companies. It has radically different expectations than previous generations. Generali needed:",
+      "whyPoints": [
+        {
+          "title": "Attractive recruitment",
+          "body": "Ad copy, video communication and recruiting on the platforms where Gen Z actually looks."
+        },
+        {
+          "title": "Meaningful work",
+          "body": "Trainees involved in real projects, with a clear development structure they manage themselves."
+        },
+        {
+          "title": "A community inside the program",
+          "body": "Relationships between trainees, informal meetings with leadership, activities that connect people beyond Teams."
+        },
+        {
+          "title": "Communication that lands",
+          "body": "Tone, format and channels Gen Z takes seriously, because they respect its way of communicating."
+        }
+      ],
+      "briefLabel": "Our brief",
+      "brief": "Generali invited us to go through the entire nine-month program through a Gen Z lens and, together with them, finish it into a form that genuinely appeals to talent from this generation. They had the program loosely pre-prepared by an internal team — our task was to bring it to the detail level: in copy, formats, methodologies and communication strategy."
+    },
+    "approach": {
+      "headline": "Three steps from insight to a working program.",
+      "intro": "We proceeded methodically. First we understood, then we measured, then we built together with Generali. Every adjustment of ours came from data about Gen Z or from a diagnosis of the program’s real state.",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Diagnosis",
+          "body": "A joint audit of the existing program design across 10 steps — from recruitment to the development centre."
+        },
+        {
+          "num": "2",
+          "title": "Research",
+          "body": "Our own research among Gen Z — what they really expect from a trainee program."
+        },
+        {
+          "num": "3",
+          "title": "Co-creation",
+          "body": "Concrete changes in copy, formats, methodologies and communication channels, backed by research data."
+        }
+      ],
+      "assessedTitle": "What exactly we assessed",
+      "assessedIntro": "The Generali program consists of 10 consecutive phases, each with its own structure, communication and goal. We assessed each phase individually and as a whole, so they follow on meaningfully from the perspective of the Gen Z trainee experience.",
+      "assessed": [
+        {
+          "num": "1",
+          "title": "Recruitment"
+        },
+        {
+          "num": "2",
+          "title": "Onboarding"
+        },
+        {
+          "num": "3",
+          "title": "Meaningful work"
+        },
+        {
+          "num": "4",
+          "title": "Rotations"
+        },
+        {
+          "num": "5",
+          "title": "A day with the CEO"
+        },
+        {
+          "num": "6",
+          "title": "Retail practice"
+        },
+        {
+          "num": "7",
+          "title": "Career development"
+        },
+        {
+          "num": "8",
+          "title": "Networking"
+        },
+        {
+          "num": "9",
+          "title": "Shared project"
+        },
+        {
+          "num": "10",
+          "title": "Development centre"
+        }
+      ],
+      "assessedNote": "Plus 6 cross-cutting areas: Recruitment communication, Cooperation with managers, Candidate expectations, Onboarding packages, Connecting trainees and the chatbot Arnold. Each with its own set of co-created solutions."
+    },
+    "findings": {
+      "headline": "Four examples of how Gen Z-friendly changes both the details and the whole.",
+      "intro": "We pick four of dozens of concrete solutions we set up together with Generali. They show that the difference between an 'ordinary' and a 'Gen Z-functional' program often lies in details as well as structural choices.",
+      "column1": "Original state",
+      "column2": "Our solution",
+      "column3": "Why it works",
+      "items": [
+        {
+          "category": "Recruitment communication",
+          "title": "Hooks that grab attention",
+          "col1": "Descriptive ad copy. Phrases like 'self-development', 'takes you seriously', 'own project'.",
+          "col2": "Hooks like 'Looking for something more?', 'You won't just run to the copier'. The phrase 'personal development' and a clearly stated salary (200 CZK/h).",
+          "col3": "Gen Z responds to concrete hooks and transparency — especially about money."
+        },
+        {
+          "category": "Onboarding",
+          "title": "E-learning videos for an asynchronous world",
+          "col1": "Online meetings on the first day with speakers from individual departments.",
+          "col2": "Short quality e-learning videos, playable anytime (even on the tram). Plus three possible LMS variants by budget.",
+          "col3": "Gen Z is mobile-first and asynchronous. It saves the company time (film once) and the trainees’ time (play anytime)."
+        },
+        {
+          "category": "Shared project",
+          "title": "Four-person teams with clear ownership",
+          "col1": "All 12 trainees worked on a single shared sustainability project.",
+          "col2": "Three four-person teams. Each with its own mentor as PM. Prepared via an 8-hour design-thinking session ('Birth Giving').",
+          "col3": "A four-person team is the ideal size for real collaboration, clear ownership and healthy competition between teams."
+        },
+        {
+          "category": "Networking & visibility",
+          "title": "Influencers + informal meetings",
+          "col1": "Speed dating with top management as a form of networking. Traditional communication channels.",
+          "col2": "Informal meetings like 'a beer with the CEO' and cooperation with Gen Z influencers (David Luu, Vilém Franěk from Close Friends & Co.).",
+          "col3": "Informal meetings foster authenticity. And influencers carry the program to where Gen Z actually spends its time."
+        }
+      ]
+    },
+    "outputs": {
+      "headline": "What exactly Generali got in hand.",
+      "intro": "Our work didn't end with a presentation. Generali left with materials their HR and L&D team can really use for this and future cohorts of the program.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Co-creation of the 10 program phases",
+          "body": "Joint work on every step — from ad wording through iconography in communication materials to the methodology of the closing development centre. All with a clear 'how' and 'why'."
+        },
+        {
+          "num": "02",
+          "title": "Communication manual",
+          "body": "A hierarchy of messages (reward, self-development, own project, flexibility, meeting leadership, community), tone, formats and recommended channels including jobs.cz, social media and influencer marketing."
+        },
+        {
+          "num": "03",
+          "title": "Learning Contract methodology",
+          "body": "A personal development plan the trainee writes themselves — with a clear structure of goals, regular check-ups with a manager and a final reflection. A tool reusable for future cohorts too."
+        },
+        {
+          "num": "04",
+          "title": "Manager–trainee collaboration",
+          "body": "Mentoring, voluntary check-ups, two-way feedback, involving trainees in standard team processes. A practical guide to genuinely developing trainees."
+        },
+        {
+          "num": "05",
+          "title": "Validation data from research among Gen Z",
+          "body": "For every recommendation, traceable evidence from our research — what Gen Z really expects from trainee programs and what attracts it."
+        }
+      ],
+      "quote": "Generali had a great intention and a solidly pre-prepared program. We co-built it with them in the details where it's decided whether Gen Z says 'this is for me'. It's often invisible but decisive work.",
+      "quoteAuthor": "— GenZ Consulting team, project lead"
+    },
+    "whyUs": {
+      "headline": "We do one thing. And we do it properly.",
+      "intro": "We specialise in Gen Z and connect it with HR consulting. We work with our own research data, which we update regularly.",
+      "pillars": [
+        {
+          "num": "01",
+          "title": "Data in the background",
+          "body": "We back every recommendation with our own research among Gen Z. We work with current data about this generation."
+        },
+        {
+          "num": "02",
+          "title": "Big picture and detail",
+          "body": "We work at the strategic layer (program structure) and on individual wordings in the copy. Both in one team."
+        },
+        {
+          "num": "03",
+          "title": "Gen Z native",
+          "body": "Our recommendations come from direct knowledge of how Gen Z thinks and communicates. We speak its language."
+        }
+      ]
+    },
+    "contact": {
+      "name": "Adam Dalecký",
+      "email": "adam.dalecky@genzconsulting.cz",
+      "web": "www.genzconsulting.cz"
+    }
+  }
+}

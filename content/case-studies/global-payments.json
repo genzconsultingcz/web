@@ -1,0 +1,420 @@
+{
+  "cs": {
+    "client": "Global Payments",
+    "serviceType": "Workshop",
+    "listResult": "Tým odešel se čtyřmi konkrétními kroky pro optimalizaci komunikace a onboardingu.",
+    "logo": "/globalpayments.jpeg",
+    "logoAlt": "Global Payments",
+    "year": "2026",
+    "hero": {
+      "headline": "Když produkt funguje, ale Gen Z zákazník se k němu nedostane.",
+      "intro": "Prošli jsme celou cestu zákazníka Global Payments pohledem Gen Z mikropodnikatele, od Googlu přes web a objednávku až po terminál. Pojmenovali jsme, kde se ztrácí potenciální zákazníci a dali konkrétní playbook, jak je získat zpátky."
+    },
+    "scope": [
+      {
+        "label": "Rozsah",
+        "value": "Komplexní audit cesty zákazníka"
+      },
+      {
+        "label": "Metodika",
+        "value": "Mystery shopping, výzkum, analýza"
+      },
+      {
+        "label": "Výstup",
+        "value": "Konkrétní playbook"
+      }
+    ],
+    "stats": [
+      {
+        "value": "8",
+        "label": "fází cesty zákazníka pod drobnohledem, od vyhledávání po terminál"
+      },
+      {
+        "value": "2",
+        "label": "segmenty výzkumu, kvantitativní i kvalitativní data"
+      },
+      {
+        "value": "100 %",
+        "label": "doporučení opřená o vlastní výzkum mezi Gen Z"
+      }
+    ],
+    "context": {
+      "headline": "Skrytí zákazníci, které tradiční sales motion nevidí.",
+      "intro": "Global Payments má funkční produkt a silnou globální značku, ale Gen Z mikropodnikatelé se k jeho terminálům prakticky nedostanou. Když jsme se na tu cestu podívali jako zákazník, pochopili jsme proč.",
+      "clientLabel": "Kdo je klient",
+      "client": "Global Payments je globální fintech, který v Česku nabízí platební terminály a online platební brány pro kavárny, restaurace, e-shopy, maloobchody a živnostníky. V portfoliu má řešení od mobilního terminálu po komplexní pokladní systém.",
+      "whyTitle": "Proč to nebyl běžný projekt",
+      "whyIntro": "Gen Z mikropodnikatelé jsou rychle rostoucí segment, freelanceři, kreativci, malé e-shopy, kavárny, brand owneři. Stojí ale mimo tradiční B2B sales motion, kterým fintech tradičně cílí na korporátní klientelu. Global Payments potřebovali:",
+      "whyPoints": [
+        {
+          "title": "Najít je tam, kde hledají",
+          "body": "AI search, Google a sociální sítě jsou pro Gen Z první kontaktní body, klasické sales kanály už nestačí."
+        },
+        {
+          "title": "Mluvit tak, jak mluví oni",
+          "body": "Korporátní žargon a prázdné fráze Gen Z odrazují, čekají věcnost, transparentnost a srozumitelnost."
+        },
+        {
+          "title": "Nabídnout cestu, která neodrazuje",
+          "body": "UX webu, formuláře, CTA, onboardingové emaily, každý krok rozhoduje, jestli Gen Z dotáhne objednávku do konce."
+        },
+        {
+          "title": "Postavit obsah, který je zajímá",
+          "body": "Nejde o korporátní novinky a B2B partnerství, Gen Z podnikatel řeší cashflow, daně, fakturace, růst."
+        }
+      ],
+      "briefLabel": "Naše zadání",
+      "brief": "Projít celou cestu zákazníka jako Gen Z mikropodnikatel a pojmenovat, kde Global Payments ztrácí tento segment. Doplnit pohled vlastním výzkumem mezi Gen Z a předat klientovi konkrétní playbook se srozumitelnými doporučeními pro každou fázi."
+    },
+    "approach": {
+      "headline": "Tři kroky od mystery shoppingu k playbooku.",
+      "intro": "Postupovali jsme metodicky. Sami jsme prošli cestu zákazníka, doplnili ji výzkumem mezi Gen Z mikropodnikateli a teprve potom napsali doporučení.",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Diagnostika",
+          "body": "Mystery shopping celé cesty zákazníka jako Gen Z mikropodnikatel, od googlení přes web a formulář až po terminál v ruce."
+        },
+        {
+          "num": "2",
+          "title": "Výzkum",
+          "body": "Vlastní kvantitativní i kvalitativní výzkum mezi Gen Z mikropodnikateli, co reálně řeší při výběru platebního řešení."
+        },
+        {
+          "num": "3",
+          "title": "Audit & playbook",
+          "body": "Pojmenování insightů a konkrétní doporučení pro každou fázi cesty, prioritizovaný seznam změn s jasným „jak“ a „proč“."
+        }
+      ],
+      "assessedTitle": "Co konkrétně jsme posuzovali",
+      "assessedIntro": "Audit pokryl čtyři pohledy, které dohromady dávají kompletní obraz, jak Gen Z mikropodnikatel značku Global Payments vidí, hledá, kupuje a hodnotí.",
+      "assessed": [
+        {
+          "num": "01",
+          "title": "Cesta zákazníka & UX",
+          "body": "Osm fází od prvního vyhledávání přes web, formulář, objednávku, podporu a terminál. Každý krok detailně rozebraný."
+        },
+        {
+          "num": "02",
+          "title": "Social media",
+          "body": "Kde Global Payments komunikuje, jaké formáty používá, jak rezonuje obsah. Co tam Gen Z reálně zajímá a co tam chybí."
+        },
+        {
+          "num": "03",
+          "title": "Google reviews",
+          "body": "Sběr a analýza online recenzí, co konkrétně zákazníkům na Global Payments vadí, co naopak chválí a kde jsou opakované patterny."
+        },
+        {
+          "num": "04",
+          "title": "Konkurence",
+          "body": "Jak komunikují SumUp, KB SmartPay, Dotykačka, Comgate, ČSOB. Kde jsou silnější, kde slabší a co z toho plyne pro Global Payments."
+        }
+      ]
+    },
+    "findings": {
+      "headline": "Čtyři místa, kde se Gen Z ztrácí.",
+      "intro": "Z desítek nálezů z auditu vybíráme čtyři, které mají největší byznysový dopad. Tři z nich rozhodují o tom, jestli Gen Z vůbec dorazí, a jeden o tom, jak na firmu vzpomíná po prvním nákupu.",
+      "column1": "Co jsme našli",
+      "column2": "Proč to bolí",
+      "column3": "Naše doporučení",
+      "items": [
+        {
+          "category": "01 · Vyhledávání",
+          "title": "Global Payments „neexistuje“",
+          "col1": "ChatGPT vidí Global Payments jen jako řešení pro velké firmy. Google bez placené reklamy ukazuje firmu až na druhé straně výsledků.",
+          "col2": "Gen Z začíná každou rešerši přes ChatGPT a Google, pokud tam nejste, neexistujete. Konkurence vyhrává hned na prvním kroku.",
+          "col3": "SEO a AI search optimalizace, jasná pozice „pro mikropodnikatele“, brand awareness na platformách, kde Gen Z reálně tráví čas."
+        },
+        {
+          "category": "02 · Web",
+          "title": "Složitý na orientaci",
+          "col1": "Bílá přesměrovací stránka, dlouhé texty bez ceny. Není jasně řečeno, že terminály jsou v podstatě zdarma. CTA „Získat nabídku“ vyvolává obavu z prodejního hovoru.",
+          "col2": "Gen Z odchází po pár vteřinách dezorientace. Konkurence (SumUp 399 Kč) přebíjí jednoduchostí a transparentní cenou.",
+          "col3": "Zkrátit copy, „zdarma“ jako hero claim, transparentní ceník, srozumitelné CTA, kalkulačka eligibility pro self-service."
+        },
+        {
+          "category": "03 · Objednávka",
+          "title": "Zahlcující záplava emailů",
+          "col1": "Po objednání chodí nadměrné množství emailů (potvrzení, přihlašovací údaje, smluvní dokumenty, návody, marketing) v rychlém sledu, často duplicitně.",
+          "col2": "Gen Z čeká krátkou, přehlednou onboarding zprávu. Email overload působí amatérsky a generuje frustraci ještě před prvním použitím terminálu.",
+          "col3": "Konsolidovat do dvou až tří strukturovaných emailů, zbytek přesunout do zákaznického portálu nebo notifikací v aplikaci."
+        },
+        {
+          "category": "04 · Social media",
+          "title": "Mluvíme o tom, co Gen Z nezajímá",
+          "col1": "Global Payments komunikuje korporátní novinky, B2B partnerství a technické features. Gen Z mikropodnikatelé řeší cashflow, daně, fakturace a růst byznysu.",
+          "col2": "Obsah neoslovuje cílovku. Nulový engagement, nulový brand build, neviditelnost u segmentu, který by mohl značku organicky šířit.",
+          "col3": "Content pillars mířené na reálné starosti Gen Z podnikatele, edukační obsah, use cases v krátkých videoformátech."
+        }
+      ]
+    },
+    "outputs": {
+      "headline": "Co konkrétně Global Payments dostali do ruky.",
+      "intro": "Naše práce nekončila prezentací. Klient odešel s pěti samostatnými výstupy, které jeho marketing, sales i UX tým mohou používat opakovaně, ne jen u jedné kampaně.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Mystery shopping report",
+          "body": "Kompletní průchod cestou zákazníka v osmi fázích, vyhledávání, web, kontaktní formulář, objednávka, podpora, GP TOM, terminál a další tipy. Každá fáze s nálezy a doporučeními."
+        },
+        {
+          "num": "02",
+          "title": "Konkurenční analýza",
+          "body": "Kdo a jak v segmentu komunikuje, SumUp, KB SmartPay, Dotykačka, ČSOB, Comgate. V čem je každý silný, kde má slabiny a co z toho plyne pro pozici Global Payments."
+        },
+        {
+          "num": "03",
+          "title": "Výzkum mezi Gen Z mikropodnikateli",
+          "body": "Kvantitativní i kvalitativní data o tom, co rozhoduje při výběru platebního řešení, jaké brandy znají, čeho se bojí a co je naopak motivuje k nákupu."
+        },
+        {
+          "num": "04",
+          "title": "Google reviews report",
+          "body": "Sběr a analýza online recenzí, co konkrétně zákazníkům na Global Payments vadí, kde se opakují vzorce a jaké patterny komunikace by recenze posunuly k lepšímu."
+        },
+        {
+          "num": "05",
+          "title": "Playbook s konkrétními doporučeními",
+          "body": "Pro každou fázi cesty zákazníka prioritizovaný seznam změn s odhadem dopadu a náročnosti. Použitelný jako roadmap pro marketing, UX i product tým."
+        }
+      ],
+      "quote": "Global Payments mají skvělý produkt. My jsme jim ukázali, kde mezi produktem a zákazníkem stojí překážky, které nikdo zevnitř firmy už nevidí. Mystery shopping očima Gen Z je jedno z nejtvrdších zrcadel, jaké si firma může dát.",
+      "quoteAuthor": "— tým GenZ Consulting"
+    },
+    "whyUs": {
+      "headline": "Děláme jednu věc. A tu pořádně.",
+      "intro": "Specializujeme se na Gen Z a propojujeme to s konzultační prací pro značky a HR týmy. Pracujeme s vlastními výzkumnými daty, která pravidelně aktualizujeme. Naše doporučení nikdy nestojí na pocitech.",
+      "pillars": [
+        {
+          "num": "01",
+          "title": "Data na pozadí",
+          "body": "Každé doporučení opíráme o vlastní výzkum mezi Gen Z. Pracujeme s aktuálními daty o této generaci, ne s odhady ani trendovými zprávami z internetu."
+        },
+        {
+          "num": "02",
+          "title": "Komplexnost i detail",
+          "body": "Pracujeme na strategické vrstvě, pozice značky, segmentace, content pillars, i na jednotlivých formulacích v textech a CTA. Obojí v jednom týmu."
+        },
+        {
+          "num": "03",
+          "title": "Gen Z native",
+          "body": "Naše doporučení vychází z přímé znalosti toho, jak Gen Z přemýšlí a komunikuje. Nemusíme tu generaci zkoumat, jsme její součástí."
+        }
+      ]
+    },
+    "contact": {
+      "name": "Adam Dalecký",
+      "email": "adam.dalecky@genzconsulting.cz",
+      "web": "www.genzconsulting.cz"
+    }
+  },
+  "en": {
+    "client": "Global Payments",
+    "serviceType": "Workshop",
+    "listResult": "The team left with four specific steps to optimize communication and onboarding.",
+    "logo": "/globalpayments.jpeg",
+    "logoAlt": "Global Payments",
+    "year": "2026",
+    "hero": {
+      "headline": "When the product works, but the Gen Z customer can't reach it.",
+      "intro": "We walked the entire Global Payments customer journey through the eyes of a Gen Z micro-entrepreneur — from Google through the website and order to the terminal. We named where potential customers are lost and gave a concrete playbook on how to win them back."
+    },
+    "scope": [
+      {
+        "label": "Scope",
+        "value": "Comprehensive customer-journey audit"
+      },
+      {
+        "label": "Method",
+        "value": "Mystery shopping, research, analysis"
+      },
+      {
+        "label": "Output",
+        "value": "A concrete playbook"
+      }
+    ],
+    "stats": [
+      {
+        "value": "8",
+        "label": "customer-journey phases under the microscope — from search to terminal"
+      },
+      {
+        "value": "2",
+        "label": "research segments — quantitative and qualitative data"
+      },
+      {
+        "value": "100 %",
+        "label": "of recommendations backed by our own research among Gen Z"
+      }
+    ],
+    "context": {
+      "headline": "Hidden customers the traditional sales motion can't see.",
+      "intro": "Global Payments has a working product and a strong global brand, but Gen Z micro-entrepreneurs barely reach its terminals. When we looked at that journey as a customer, we understood why.",
+      "clientLabel": "Who is the client",
+      "client": "Global Payments is a global fintech that in the Czech Republic offers payment terminals and online payment gateways for cafés, restaurants, e-shops, retailers and sole traders. Its portfolio ranges from a mobile terminal to a complete POS system.",
+      "whyTitle": "Why this wasn't a routine project",
+      "whyIntro": "Gen Z micro-entrepreneurs are a fast-growing segment — freelancers, creatives, small e-shops, cafés, brand owners. But they stand outside the traditional B2B sales motion fintech uses to target corporate clients. Global Payments needed:",
+      "whyPoints": [
+        {
+          "title": "Find them where they search",
+          "body": "AI search, Google and social media are Gen Z's first touchpoints — classic sales channels are no longer enough."
+        },
+        {
+          "title": "Speak the way they speak",
+          "body": "Corporate jargon and empty phrases put Gen Z off — it expects substance, transparency and clarity."
+        },
+        {
+          "title": "Offer a journey that doesn't deter",
+          "body": "Website UX, forms, CTAs, onboarding emails — every step decides whether Gen Z finishes the order."
+        },
+        {
+          "title": "Build content they care about",
+          "body": "It's not about corporate news and B2B partnerships — the Gen Z entrepreneur deals with cashflow, taxes, invoicing, growth."
+        }
+      ],
+      "briefLabel": "Our brief",
+      "brief": "Walk the entire customer journey as a Gen Z micro-entrepreneur and name where Global Payments loses this segment. Complement the view with our own research among Gen Z and hand the client a concrete playbook with clear recommendations for each phase."
+    },
+    "approach": {
+      "headline": "Three steps from mystery shopping to a playbook.",
+      "intro": "We proceeded methodically. We walked the customer journey ourselves, complemented it with research among Gen Z micro-entrepreneurs, and only then wrote the recommendations.",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Diagnosis",
+          "body": "Mystery shopping of the entire customer journey as a Gen Z micro-entrepreneur — from googling through the website and form to the terminal in hand."
+        },
+        {
+          "num": "2",
+          "title": "Research",
+          "body": "Our own quantitative and qualitative research among Gen Z micro-entrepreneurs — what they really deal with when choosing a payment solution."
+        },
+        {
+          "num": "3",
+          "title": "Audit & playbook",
+          "body": "Naming the insights and concrete recommendations for each phase of the journey — a prioritised list of changes with a clear 'how' and 'why'."
+        }
+      ],
+      "assessedTitle": "What exactly we assessed",
+      "assessedIntro": "The audit covered four lenses that together give a complete picture of how a Gen Z micro-entrepreneur sees, searches, buys and evaluates the Global Payments brand.",
+      "assessed": [
+        {
+          "num": "01",
+          "title": "Customer journey & UX",
+          "body": "Eight phases from the first search through the website, form, order, support and terminal. Every step analysed in detail."
+        },
+        {
+          "num": "02",
+          "title": "Social media",
+          "body": "Where Global Payments communicates, what formats it uses, how the content resonates. What actually interests Gen Z there and what is missing."
+        },
+        {
+          "num": "03",
+          "title": "Google reviews",
+          "body": "Collecting and analysing online reviews — what specifically bothers customers about Global Payments, what they praise and where the recurring patterns are."
+        },
+        {
+          "num": "04",
+          "title": "Competition",
+          "body": "How SumUp, KB SmartPay, Dotykačka, Comgate and ČSOB communicate. Where they are stronger, where weaker and what that means for Global Payments."
+        }
+      ]
+    },
+    "findings": {
+      "headline": "Four places where Gen Z gets lost.",
+      "intro": "From dozens of audit findings we pick four with the biggest business impact. Three decide whether Gen Z arrives at all, and one decides how it remembers the company after the first purchase.",
+      "column1": "What we found",
+      "column2": "Why it hurts",
+      "column3": "Our recommendation",
+      "items": [
+        {
+          "category": "01 · Search",
+          "title": "Global Payments 'doesn't exist'",
+          "col1": "ChatGPT sees Global Payments only as a solution for large companies. Without paid ads, Google shows the company on the second page of results.",
+          "col2": "Gen Z starts every search via ChatGPT and Google — if you're not there, you don't exist. The competition wins at the very first step.",
+          "col3": "SEO and AI-search optimisation, a clear 'for micro-entrepreneurs' positioning, brand awareness on the platforms where Gen Z actually spends its time."
+        },
+        {
+          "category": "02 · Website",
+          "title": "Hard to navigate",
+          "col1": "A blank redirect page, long texts without a price. It's not clearly said that the terminals are essentially free. The 'Get a quote' CTA triggers fear of a sales call.",
+          "col2": "Gen Z leaves after a few seconds of disorientation. The competition (SumUp at 399 CZK) wins with simplicity and a transparent price.",
+          "col3": "Shorten the copy, 'free' as the hero claim, a transparent price list, a clear CTA, an eligibility calculator for self-service."
+        },
+        {
+          "category": "03 · Order",
+          "title": "An overwhelming flood of emails",
+          "col1": "After ordering, an excessive number of emails arrive (confirmation, login details, contract documents, guides, marketing) in quick succession, often duplicated.",
+          "col2": "Gen Z expects a short, clear onboarding message. Email overload feels amateurish and generates frustration before the terminal is even first used.",
+          "col3": "Consolidate into two or three structured emails, move the rest into a customer portal or in-app notifications."
+        },
+        {
+          "category": "04 · Social media",
+          "title": "We talk about what Gen Z doesn't care about",
+          "col1": "Global Payments communicates corporate news, B2B partnerships and technical features. Gen Z micro-entrepreneurs deal with cashflow, taxes, invoicing and business growth.",
+          "col2": "The content does not reach the target. Zero engagement, zero brand building, invisibility with a segment that could spread the brand organically.",
+          "col3": "Content pillars aimed at the real worries of the Gen Z entrepreneur, educational content, use cases in short video formats."
+        }
+      ]
+    },
+    "outputs": {
+      "headline": "What exactly Global Payments got in hand.",
+      "intro": "Our work didn't end with a presentation. The client left with five standalone outputs that its marketing, sales and UX teams can reuse repeatedly — not just for one campaign.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Mystery shopping report",
+          "body": "A complete walk-through of the customer journey in eight phases — search, website, contact form, order, support, GP TOM, terminal and further tips. Each phase with findings and recommendations."
+        },
+        {
+          "num": "02",
+          "title": "Competitive analysis",
+          "body": "Who communicates in the segment and how — SumUp, KB SmartPay, Dotykačka, ČSOB, Comgate. Where each is strong, where it has weaknesses and what that means for Global Payments' positioning."
+        },
+        {
+          "num": "03",
+          "title": "Research among Gen Z micro-entrepreneurs",
+          "body": "Quantitative and qualitative data on what decides the choice of a payment solution, which brands they know, what they fear and what motivates them to buy."
+        },
+        {
+          "num": "04",
+          "title": "Google reviews report",
+          "body": "Collecting and analysing online reviews — what specifically bothers customers, where patterns repeat and which communication patterns would move the reviews for the better."
+        },
+        {
+          "num": "05",
+          "title": "Playbook with concrete recommendations",
+          "body": "For each phase of the customer journey, a prioritised list of changes with an estimate of impact and effort. Usable as a roadmap for marketing, UX and product teams."
+        }
+      ],
+      "quote": "Global Payments has a great product. We showed them where the obstacles between product and customer stand — ones no one inside the company can see anymore. Mystery shopping through Gen Z's eyes is one of the toughest mirrors a company can hold up to itself.",
+      "quoteAuthor": "— the GenZ Consulting team"
+    },
+    "whyUs": {
+      "headline": "We do one thing. And we do it properly.",
+      "intro": "We specialise in Gen Z and connect it with consulting work for brands and HR teams. We work with our own research data, which we update regularly. Our recommendations never rest on feelings.",
+      "pillars": [
+        {
+          "num": "01",
+          "title": "Data in the background",
+          "body": "We back every recommendation with our own research among Gen Z. We work with current data about this generation, not estimates or trend reports from the internet."
+        },
+        {
+          "num": "02",
+          "title": "Big picture and detail",
+          "body": "We work at the strategic layer — brand positioning, segmentation, content pillars — and on individual wordings in copy and CTAs. Both in one team."
+        },
+        {
+          "num": "03",
+          "title": "Gen Z native",
+          "body": "Our recommendations come from direct knowledge of how Gen Z thinks and communicates. We don't have to study this generation — we're part of it."
+        }
+      ]
+    },
+    "contact": {
+      "name": "Adam Dalecký",
+      "email": "adam.dalecky@genzconsulting.cz",
+      "web": "www.genzconsulting.cz"
+    }
+  }
+}

@@ -1,0 +1,408 @@
+{
+  "cs": {
+    "client": "AV MEDIA",
+    "serviceType": "Research + Workshop",
+    "listResult": "Klient získal konkrétní playbook s kroky, jak komunikovat s juniorními kolegy a přitahovat mladé talenty.",
+    "logo": "/AV-MEDIA-SYSTEMS_horizontalni_1200_1200-970x970.png",
+    "logoAlt": "AV Media Systems",
+    "year": "2026",
+    "hero": {
+      "headline": "Co Gen Z chce od pracovního prostoru, a proč to firmy ještě nevědí.",
+      "intro": "Spojili jsme kvalitativní hloubkové rozhovory s aktivní Gen Z a kvantitativní šetření mezi běžnou Gen Z. Výsledkem jsou data ve čtyřech sekcích, Mindset, Práce, AI a Prostředí, která AV Media používá jako sales argument pro firmy, které chtějí stavět prostor pro mladé."
+    },
+    "scope": [
+      {
+        "label": "Rozsah",
+        "value": "Kvalitativní + kvantitativní výzkum"
+      },
+      {
+        "label": "Metodika",
+        "value": "Hloubkové rozhovory + dotazník"
+      },
+      {
+        "label": "Výstup",
+        "value": "2 reporty + interpretace dat"
+      }
+    ],
+    "stats": [
+      {
+        "value": "318 + 20",
+        "label": "respondentů celkem, kvantitativně i kvalitativně"
+      },
+      {
+        "value": "2",
+        "label": "segmenty Gen Z, aktivní (podnikající) a běžná (studium + brigády)"
+      },
+      {
+        "value": "4",
+        "label": "tematické sekce dat o tom, jak Gen Z přemýšlí, pracuje a kde chce být"
+      }
+    ],
+    "context": {
+      "headline": "Když prostor přestává fungovat pro generaci, která ho nejvíc využívá.",
+      "intro": "AV MEDIA dodává audiovizuální technologie do kanceláří, zasedaček a eventových prostor už přes tři dekády. Trh se ale začal měnit rychleji než návrhy projektů, a to hlavně kvůli generaci, která má od pracovního prostoru jiná očekávání než kdokoliv předtím. Cílem projektu bylo dát AV Media tvrdá data, o která se mohou opřít v sales argumentaci pro své klienty.",
+      "clientLabel": "Kdo je klient",
+      "client": "AV MEDIA je největší český dodavatel audiovizuálních technologií pro firmy. Stojí za displeji, ozvučením, videokonferencemi a kompletním vybavením zasedaček, huddle roomů, prezentačních i eventových prostor. Pracuje pro největší tuzemské i mezinárodní firmy, které potřebují, aby jejich prostor fungoval pro každodenní práci, prezentace i setkávání.",
+      "whyTitle": "Proč to nebyl běžný projekt",
+      "whyPoints": [
+        {
+          "title": "Prostor jako strategická investice",
+          "body": "Pracovní prostředí přestalo být jen interiér. Pro firmy, které bojují o talenty, je to nástroj kultury i retence, a Gen Z na něj reaguje jinak než předchozí generace."
+        },
+        {
+          "title": "Hybrid je výchozí, ne benefit",
+          "body": "Gen Z neočekává flexibilitu jako bonus. Bere ji jako standard, podle kterého poměřuje, jestli vůbec stojí za to do kanceláře přijít."
+        },
+        {
+          "title": "Wi‑Fi, zásuvky a tabule jsou must‑have",
+          "body": "Základní vybavení už není argument, je to úplný standard. Pokud chybí, prostor selhává ještě dřív, než se v něm začne pracovat."
+        },
+        {
+          "title": "Smysl > status, čas > místo",
+          "body": "Gen Z neřeší prestiž ani sociální status práce. Řeší smysl. A místo home officu si víc cení časové flexibility, která jí dovoluje žít vlastní rytmus."
+        }
+      ],
+      "briefLabel": "Naše zadání",
+      "brief": "Postavit pro AV Media datový základ o tom, co Gen Z reálně očekává od práce, prostředí a nástrojů. Spojit kvalitativní hloubku s kvantitativní validací, oddělit aktivní a běžnou Gen Z, a předat výsledky tak, aby je sales i produktový tým uměli okamžitě používat v rozhovoru s klienty."
+    },
+    "approach": {
+      "headline": "Tři kroky od dotazníku k použitelné strategii.",
+      "intro": "Postupovali jsme metodicky, od hloubky k šíři. Nejdřív jsme poslouchali, pak měřili, pak data interpretovali přímo s týmem AV Media. Každé doporučení tak má dvojí oporu, hlas konkrétních lidí a sílu čísel.",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Kvalitativní výzkum",
+          "body": "20 hloubkových rozhovorů s aktivní Gen Z, která už podniká nebo akceleruje vlastní kariéru. Cíl: rozumět tomu, jak přemýšlí o práci, prostoru a nástrojích."
+        },
+        {
+          "num": "2",
+          "title": "Kvantitativní výzkum",
+          "body": "Dotazníkové šetření mezi 318 zástupci běžné Gen Z, převážně studenty SŠ a VŠ. Validace insightů z rozhovorů na škále, identifikace nejsilnějších patternů."
+        },
+        {
+          "num": "3",
+          "title": "Interpretace & prezentace",
+          "body": "Živý workshop u týmu AV Media. Procházeli jsme data sekci po sekci a překládali je do konkrétních byznysových úhlů, kde a jak je v sales pitchích použít."
+        }
+      ],
+      "assessedTitle": "Co konkrétně jsme posuzovali",
+      "assessedIntro": "Výzkum jsme strukturovali do čtyř tematických sekcí, které dohromady dávají kompletní obraz o tom, jak Gen Z přemýšlí o práci a v jakém prostředí chce fungovat.",
+      "assessed": [
+        {
+          "num": "01",
+          "title": "Mindset",
+          "body": "Hodnoty, motivace, postoj k autoritě, vztah ke smyslu a statusu, kariérní očekávání."
+        },
+        {
+          "num": "02",
+          "title": "Práce",
+          "body": "Co Gen Z od zaměstnání reálně chce, jak vnímá flexibilitu, kompenzaci a vztahy v týmu."
+        },
+        {
+          "num": "03",
+          "title": "AI",
+          "body": "Jak Gen Z používá AI v běžném životě i ve studiu, co od ní očekává v práci a jaké signály bere u zaměstnavatele."
+        },
+        {
+          "num": "04",
+          "title": "Prostředí",
+          "body": "Jak má vypadat fyzický pracovní prostor, jaké zóny v něm Gen Z hledá a co ji od kanceláře odrazuje."
+        }
+      ]
+    },
+    "findings": {
+      "headline": "Čtyři zjištění, která mění design pracovního prostoru.",
+      "intro": "Z desítek datových bodů vybíráme čtyři, jeden z každé sekce, které mají největší byznysový dopad pro AV Media. Každý z nich má praktický důsledek pro to, jak se dnes navrhují kanceláře.",
+      "column1": "Co jsme zjistili",
+      "column2": "Proč to je důležité",
+      "column3": "Co z toho plyne pro AV Media",
+      "items": [
+        {
+          "category": "Mindset",
+          "title": "Smysl práce > status práce",
+          "col1": "Gen Z neřeší prestiž titulu ani společenský status zaměstnavatele. Řeší, jestli to, co dělá, dává smysl jim osobně i světu kolem.",
+          "col2": "Tradiční employer branding postavený na velikosti firmy a hierarchii ztrácí váhu. Mladí kandidáti si vybírají firmy podle hodnot a dopadu, ne podle vizitky.",
+          "col3": "Argument „investice do prostředí“ je přesvědčivější, když ukazuje, že prostor odráží hodnoty firmy. AV řešení jsou součástí toho, jak firma žije své hodnoty navenek i dovnitř."
+        },
+        {
+          "category": "Práce",
+          "title": "Časová flexibilita > home office",
+          "col1": "Gen Z preferuje, kdy bude pracovat, před tím, odkud bude pracovat. Pevný 8–16 režim v kanceláři ji odrazuje víc než povinná docházka samotná.",
+          "col2": "Pro Gen Z je klíčové rozhodovat si sami, kdy budou pracovat. Ve zbytku času chtějí sportovat, trávit čas s přáteli a věnovat se vlastním věcem. Práce už není střed života, ale jeden z pilířů.",
+          "col3": "Prostor musí být použitelný v různou denní dobu a v různých režimech, ráno, večer, mezi tréninkem a schůzkou. Modulární zóny a snadné přepínání AV setupu mezi focus a sync prací."
+        },
+        {
+          "category": "AI",
+          "title": "AI je už standard, ne novinka",
+          "col1": "Drtivá většina Gen Z používá AI denně. Otázka už není „jestli“, ale „jak hluboko“. U aktivní Gen Z je AI strategický nástroj, u běžné je to každodenní pomocník.",
+          "col2": "Pokud firma AI brzdí nebo neumí, Gen Z to čte jako signál zaostalosti. Naopak prostředí, které AI plně integruje, posílá tichý signál, že firma rozumí dnešku.",
+          "col3": "Návrh prostoru musí počítat s AI nástroji v meeting flow, transkripcemi a hlasovými zápisy. AV se stává nositelem AI, ne jen displejem."
+        },
+        {
+          "category": "Prostředí",
+          "title": "Klidné a sociální zóny musí být kvalitně oddělené",
+          "col1": "Pro Gen Z je klíčové mít v kanceláři jasně oddělený prostor pro soustředěnou práci a prostor pro setkávání. Open space, kde se obojí mísí, ji vyčerpává.",
+          "col2": "Pokud prostor neumí jedno z toho dvojího, Gen Z buď nepřijde, nebo přijde a pracuje s nasazenými sluchátky a mizí ze sdíleného života firmy.",
+          "col3": "Klíčová příležitost pro projekty, kde se navrhují obě zóny ve vědomém kontrastu. Tichá místnost s kvalitní akustikou plus sociální zóna s lehkým AV setupem na neformální sync."
+        }
+      ]
+    },
+    "outputs": {
+      "headline": "Co konkrétně AV Media dostali do ruky.",
+      "intro": "Naše práce nekončila prezentací. AV Media odešli se sadou výstupů, které jejich sales i produktový tým mohou používat opakovaně, u každého projektu, ne jen u jedné kampaně.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Kvalitativní výzkum",
+          "body": "Report z 20 hloubkových rozhovorů s aktivní Gen Z. Sekce Demografie, Online, Offline, Jiskra, AI a RAW data plus AI průvodce, který umožňuje data prohledávat konverzačně."
+        },
+        {
+          "num": "02",
+          "title": "Kvantitativní výzkum",
+          "body": "Report z dotazníkového šetření mezi 318 zástupci běžné Gen Z. Strukturovaný do čtyř sekcí, Kontext, Práce, Mindset a AI, s RAW daty pro vlastní analýzu."
+        },
+        {
+          "num": "03",
+          "title": "Prezentace výsledků živě u týmu",
+          "body": "Workshop, kde jsme tým AV Media provedli oběma reporty, vysvětlili kontext jednotlivých zjištění a otevřeli prostor pro otázky napříč sales i produktovými rolemi."
+        },
+        {
+          "num": "04",
+          "title": "Interpretace dat & insighty",
+          "body": "Překlad dat do byznysových důsledků pro AV Media, s konkrétními úhly, jak je použít v sales pitchích pro firmy a v argumentaci pro design pracovních prostor."
+        }
+      ],
+      "quote": "AV Media měli silnou intuici, kam se generace posouvá. Naše práce byla dát té intuici jméno, čísla a slova, která jejich klienti slyší. Když sales drží v ruce hlas tří set Gen Z lidí, mluví se z toho úplně jinak.",
+      "quoteAuthor": "— tým GenZ Consulting"
+    },
+    "whyUs": {
+      "headline": "Děláme jednu věc. A tu pořádně.",
+      "intro": "Specializujeme se na Gen Z a propojujeme to s konzultační prací pro značky a HR týmy. Pracujeme s vlastními výzkumnými daty, která pravidelně aktualizujeme. Naše doporučení nikdy nestojí na pocitech.",
+      "pillars": [
+        {
+          "num": "01",
+          "title": "Data na pozadí",
+          "body": "Každé doporučení opíráme o vlastní výzkum mezi Gen Z. Pracujeme s aktuálními daty o této generaci, ne s odhady ani s trendovými zprávami z internetu."
+        },
+        {
+          "num": "02",
+          "title": "Komplexnost i detail",
+          "body": "Pracujeme na strategické vrstvě, segmentace, content pillars, pozice značky, i na jednotlivých formulacích a doporučeních pro design prostoru. Obojí v jednom týmu."
+        },
+        {
+          "num": "03",
+          "title": "Gen Z native",
+          "body": "Naše doporučení vychází z přímé znalosti toho, jak Gen Z přemýšlí a komunikuje. Nemusíme tu generaci zkoumat zvenku, jsme její součástí."
+        }
+      ]
+    },
+    "contact": {
+      "name": "Adam Dalecký",
+      "email": "adam.dalecky@genzconsulting.cz",
+      "web": "www.genzconsulting.cz"
+    }
+  },
+  "en": {
+    "client": "AV MEDIA",
+    "serviceType": "Research + Workshop",
+    "listResult": "The client received a specific playbook with steps on how to communicate with junior colleagues and attract young talent.",
+    "logo": "/AV-MEDIA-SYSTEMS_horizontalni_1200_1200-970x970.png",
+    "logoAlt": "AV Media Systems",
+    "year": "2026",
+    "hero": {
+      "headline": "What Gen Z wants from the workplace — and why companies still don't know.",
+      "intro": "We combined qualitative in-depth interviews with active Gen Z and a quantitative survey among mainstream Gen Z. The result is data across four sections — Mindset, Work, AI and Environment — that AV Media uses as a sales argument for companies that want to build spaces for the young."
+    },
+    "scope": [
+      {
+        "label": "Scope",
+        "value": "Qualitative + quantitative research"
+      },
+      {
+        "label": "Method",
+        "value": "In-depth interviews + survey"
+      },
+      {
+        "label": "Output",
+        "value": "2 reports + data interpretation"
+      }
+    ],
+    "stats": [
+      {
+        "value": "318 + 20",
+        "label": "respondents in total, quantitative and qualitative"
+      },
+      {
+        "value": "2",
+        "label": "Gen Z segments — active (entrepreneurial) and mainstream (study + part-time jobs)"
+      },
+      {
+        "value": "4",
+        "label": "thematic data sections on how Gen Z thinks, works and where it wants to be"
+      }
+    ],
+    "context": {
+      "headline": "When the space stops working for the generation that uses it most.",
+      "intro": "AV MEDIA has supplied audiovisual technology to offices, meeting rooms and event spaces for over three decades. But the market started changing faster than project proposals — mainly because of a generation that has different expectations of the workplace than anyone before. The goal of the project was to give AV Media hard data they can lean on in the sales argumentation for their clients.",
+      "clientLabel": "Who is the client",
+      "client": "AV MEDIA is the largest Czech supplier of audiovisual technology for companies. It is behind the displays, sound systems, video conferencing and complete fit-out of meeting rooms, huddle rooms, presentation and event spaces. It works for the largest domestic and international companies that need their space to work for everyday work, presentations and gatherings.",
+      "whyTitle": "Why this wasn't a routine project",
+      "whyPoints": [
+        {
+          "title": "Space as a strategic investment",
+          "body": "The work environment stopped being just an interior. For companies fighting for talent it is a tool of culture and retention — and Gen Z reacts to it differently than previous generations."
+        },
+        {
+          "title": "Hybrid is the default, not a perk",
+          "body": "Gen Z doesn't expect flexibility as a bonus. It treats it as the standard by which it measures whether it's even worth coming to the office at all."
+        },
+        {
+          "title": "Wi‑Fi, sockets and whiteboards are must‑haves",
+          "body": "Basic equipment is no longer an argument — it is an absolute standard. If it is missing, the space fails before any work even starts."
+        },
+        {
+          "title": "Meaning > status, time > place",
+          "body": "Gen Z doesn't care about the prestige or social status of work. It cares about meaning. And rather than home office, it values the time flexibility that lets it live its own rhythm."
+        }
+      ],
+      "briefLabel": "Our brief",
+      "brief": "Build a data foundation for AV Media about what Gen Z really expects from work, environment and tools. Combine qualitative depth with quantitative validation, separate active and mainstream Gen Z, and hand over the results so that both the sales and product teams can use them immediately in conversations with clients."
+    },
+    "approach": {
+      "headline": "Three steps from a questionnaire to a usable strategy.",
+      "intro": "We proceeded methodically — from depth to breadth. First we listened, then we measured, then we interpreted the data directly with the AV Media team. Every recommendation therefore has a double backing — the voice of specific people and the power of numbers.",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Qualitative research",
+          "body": "20 in-depth interviews with active Gen Z who already run a business or are accelerating their own career. Goal: understand how they think about work, space and tools."
+        },
+        {
+          "num": "2",
+          "title": "Quantitative research",
+          "body": "A survey among 318 representatives of mainstream Gen Z, mostly high-school and university students. Validating interview insights at scale, identifying the strongest patterns."
+        },
+        {
+          "num": "3",
+          "title": "Interpretation & presentation",
+          "body": "A live workshop with the AV Media team. We went through the data section by section and translated it into concrete business angles — where and how to use it in sales pitches."
+        }
+      ],
+      "assessedTitle": "What exactly we assessed",
+      "assessedIntro": "We structured the research into four thematic sections that together give a complete picture of how Gen Z thinks about work and the environment it wants to function in.",
+      "assessed": [
+        {
+          "num": "01",
+          "title": "Mindset",
+          "body": "Values, motivation, attitude to authority, relationship to meaning and status, career expectations."
+        },
+        {
+          "num": "02",
+          "title": "Work",
+          "body": "What Gen Z really wants from a job, how it perceives flexibility, compensation and team relationships."
+        },
+        {
+          "num": "03",
+          "title": "AI",
+          "body": "How Gen Z uses AI in everyday life and study, what it expects from it at work and what signals it reads from an employer."
+        },
+        {
+          "num": "04",
+          "title": "Environment",
+          "body": "What the physical workspace should look like, which zones Gen Z looks for and what puts it off the office."
+        }
+      ]
+    },
+    "findings": {
+      "headline": "Four findings that change workspace design.",
+      "intro": "From dozens of data points we pick four — one from each section — with the biggest business impact for AV Media. Each has a practical consequence for how offices are designed today.",
+      "column1": "What we found",
+      "column2": "Why it matters",
+      "column3": "What it means for AV Media",
+      "items": [
+        {
+          "category": "Mindset",
+          "title": "Meaning of work > status of work",
+          "col1": "Gen Z doesn't care about the prestige of a title or the social status of an employer. It cares whether what it does makes sense — to itself and to the world around it.",
+          "col2": "Traditional employer branding built on company size and hierarchy is losing weight. Young candidates choose companies by values and impact, not by the business card.",
+          "col3": "The 'investment in the environment' argument is more convincing when it shows the space reflects the company's values. AV solutions are part of how a company lives its values, outward and inward."
+        },
+        {
+          "category": "Work",
+          "title": "Time flexibility > home office",
+          "col1": "Gen Z prefers choosing when it works over where it works. A fixed 9-to-5 in the office puts it off more than mandatory attendance itself.",
+          "col2": "For Gen Z it is crucial to decide for themselves when they work. In the rest of the time they want to do sports, spend time with friends and pursue their own things. Work is no longer the centre of life, but one of its pillars.",
+          "col3": "The space must be usable at different times of day and in different modes — morning, evening, between a workout and a meeting. Modular zones and easy switching of the AV setup between focus and sync work."
+        },
+        {
+          "category": "AI",
+          "title": "AI is already a standard, not a novelty",
+          "col1": "The vast majority of Gen Z uses AI daily. The question is no longer 'whether' but 'how deep'. For active Gen Z, AI is a strategic tool; for mainstream Gen Z, an everyday helper.",
+          "col2": "If a company holds AI back or can't handle it, Gen Z reads it as a signal of being behind. Conversely, an environment that fully integrates AI sends a quiet signal that the company understands today.",
+          "col3": "Space design must account for AI tools in the meeting flow — transcriptions and voice minutes. AV becomes the carrier of AI, not just a display."
+        },
+        {
+          "category": "Environment",
+          "title": "Quiet and social zones must be properly separated",
+          "col1": "For Gen Z it is crucial to have a clearly separated space for focused work and a space for meeting in the office. Open space where the two mix exhausts it.",
+          "col2": "If the space can't do one of the two, Gen Z either won't come, or comes and works with headphones on, disappearing from the shared life of the company.",
+          "col3": "A key opportunity for projects that design both zones in deliberate contrast. A quiet room with quality acoustics plus a social zone with a light AV setup for informal sync."
+        }
+      ]
+    },
+    "outputs": {
+      "headline": "What exactly AV Media got in hand.",
+      "intro": "Our work didn't end with a presentation. AV Media left with a set of outputs that their sales and product teams can reuse repeatedly — on every project, not just one campaign.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Qualitative research",
+          "body": "A report from 20 in-depth interviews with active Gen Z. Sections Demographics, Online, Offline, Spark, AI and RAW data, plus an AI guide that lets you search the data conversationally."
+        },
+        {
+          "num": "02",
+          "title": "Quantitative research",
+          "body": "A report from the survey among 318 representatives of mainstream Gen Z. Structured into four sections — Context, Work, Mindset and AI — with RAW data for your own analysis."
+        },
+        {
+          "num": "03",
+          "title": "Live presentation of the results with the team",
+          "body": "A workshop where we walked the AV Media team through both reports, explained the context of each finding and opened space for questions across sales and product roles."
+        },
+        {
+          "num": "04",
+          "title": "Data interpretation & insights",
+          "body": "Translating the data into business consequences for AV Media — with concrete angles on how to use it in sales pitches and in arguments for workspace design."
+        }
+      ],
+      "quote": "AV Media had a strong intuition about where the generation is heading. Our job was to give that intuition a name, numbers and words their clients hear. When sales holds the voice of three hundred Gen Z people in hand, the conversation is completely different.",
+      "quoteAuthor": "— the GenZ Consulting team"
+    },
+    "whyUs": {
+      "headline": "We do one thing. And we do it properly.",
+      "intro": "We specialise in Gen Z and connect it with consulting work for brands and HR teams. We work with our own research data, which we update regularly. Our recommendations never rest on feelings.",
+      "pillars": [
+        {
+          "num": "01",
+          "title": "Data in the background",
+          "body": "We back every recommendation with our own research among Gen Z. We work with current data about this generation, not estimates or trend reports from the internet."
+        },
+        {
+          "num": "02",
+          "title": "Big picture and detail",
+          "body": "We work at the strategic layer — segmentation, content pillars, brand positioning — and on individual wordings and recommendations for space design. Both in one team."
+        },
+        {
+          "num": "03",
+          "title": "Gen Z native",
+          "body": "Our recommendations come from direct knowledge of how Gen Z thinks and communicates. We don't have to study this generation from the outside — we're part of it."
+        }
+      ]
+    },
+    "contact": {
+      "name": "Adam Dalecký",
+      "email": "adam.dalecky@genzconsulting.cz",
+      "web": "www.genzconsulting.cz"
+    }
+  }
+}
