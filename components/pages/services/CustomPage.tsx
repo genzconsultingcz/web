@@ -1,8 +1,18 @@
 'use client';
 import React from 'react';
-import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import type { ServiceQuery } from '../../../tina/__generated__/types';
+
+type DeepOmitTypename<T> = T extends readonly (infer U)[]
+  ? DeepOmitTypename<U>[]
+  : T extends object
+    ? { [K in keyof T as K extends '__typename' ? never : K]: DeepOmitTypename<T[K]> }
+    : T;
+
+export type ServiceContent = DeepOmitTypename<
+  NonNullable<NonNullable<ServiceQuery['service']>['cs']>
+>;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -14,8 +24,17 @@ const fadeUp: any = {
   }),
 };
 
-export default function CustomPage() {
-  const t = useTranslations('customSolution');
+export default function CustomPage({
+  num,
+  content,
+}: {
+  num: string;
+  content: ServiceContent | null | undefined;
+}) {
+  if (!content) return null;
+
+  const sections = content.sections ?? [];
+
   return (
     <>
       {/* ── HERO ── */}
@@ -28,7 +47,7 @@ export default function CustomPage() {
             custom={0}
             className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-black/50"
           >
-            {t('eyebrow')}
+            {content.hero?.eyebrow ?? ''}
           </motion.p>
 
           <motion.h1
@@ -38,7 +57,7 @@ export default function CustomPage() {
             custom={0.1}
             className="text-5xl font-black leading-[1.05] tracking-tight text-black sm:text-6xl md:text-7xl max-w-3xl"
           >
-            {t('title')}
+            {content.hero?.title ?? ''}
           </motion.h1>
 
           <motion.p
@@ -48,7 +67,7 @@ export default function CustomPage() {
             custom={0.2}
             className="mt-6 max-w-xl text-base text-black/60 md:text-lg"
           >
-            {t('subtitle')}
+            {content.hero?.subtitle ?? ''}
           </motion.p>
 
           <motion.div
@@ -59,7 +78,7 @@ export default function CustomPage() {
               className="mt-10"
             >
               <ContactButton
-                label={t('cta')}
+                label={content.hero?.cta ?? ''}
                 size="lg"
                 className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
@@ -70,63 +89,63 @@ export default function CustomPage() {
           aria-hidden
           className="pointer-events-none absolute right-24 top-[46%] -translate-y-1/2 select-none text-[18vw] font-black leading-none text-black/5"
         >
-          05
+          {num}
         </div>
       </section>
 
       {/* ── WHAT IT IS ── */}
       <section className="bg-white py-12">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="border-b border-zinc-100 py-12"
-        >
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="grid gap-8 md:grid-cols-[240px_1fr]">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">{t('whatLabel')}</p>
-              </div>
-              <div>
-                <p className="text-base leading-relaxed text-zinc-600">{t('whatText')}</p>
+        {sections[0] && (
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="border-b border-zinc-100 py-12"
+          >
+            <div className="mx-auto max-w-6xl px-6">
+              <div className="grid gap-8 md:grid-cols-[240px_1fr]">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">{sections[0]?.label ?? ''}</p>
+                </div>
+                <div>
+                  <p className="text-base leading-relaxed text-zinc-600">{sections[0]?.text ?? ''}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        )}
 
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={0.05}
-          className="py-12"
-        >
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="grid gap-8 md:grid-cols-[240px_1fr]">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">{t('forLabel')}</p>
-              </div>
-              <div>
-                <p className="text-base leading-relaxed text-zinc-600">{t('forText')}</p>
+        {sections[1] && (
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0.05}
+            className="py-12"
+          >
+            <div className="mx-auto max-w-6xl px-6">
+              <div className="grid gap-8 md:grid-cols-[240px_1fr]">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">{sections[1]?.label ?? ''}</p>
+                </div>
+                <div>
+                  <p className="text-base leading-relaxed text-zinc-600">{sections[1]?.text ?? ''}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        )}
       </section>
 
       {/* ── PROCESS TEASER ── */}
       <section className="bg-zinc-50 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-8 md:grid-cols-3">
-            {[
-              { num: '01', title: 'Zjistíme, co je špatně', desc: 'Krátký, bez závazků call, abychom pochopili vaši situaci a jestli vám můžeme pomoci.' },
-              { num: '02', title: 'Poznáme vaši firmu', desc: 'Hloubkový průzkum vašeho kontextu, cílů a problému z každého úhlu.' },
-              { num: '03', title: 'Vytvoříme řešení na míru', desc: 'Řešení přesně pro vás — ať už známý produkt, nebo něco vyvinutého od začátku.' },
-            ].map(({ num, title, desc }, i) => (
+            {(content.steps ?? []).map((step, i, arr) => (
               <motion.div
-                key={num}
+                key={i}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -134,10 +153,10 @@ export default function CustomPage() {
                 custom={i * 0.1}
                 className="relative"
               >
-                <div className="text-6xl font-black leading-none text-gtc-primary">{num}</div>
-                <h3 className="mt-4 text-lg font-black text-black">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-500">{desc}</p>
-                {i < 2 && (
+                <div className="text-6xl font-black leading-none text-gtc-primary">{step?.num ?? ''}</div>
+                <h3 className="mt-4 text-lg font-black text-black">{step?.title ?? ''}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-500">{step?.desc ?? ''}</p>
+                {i < arr.length - 1 && (
                   <div className="absolute -right-4 top-8 hidden text-zinc-300 md:block">→</div>
                 )}
               </motion.div>
@@ -157,14 +176,14 @@ export default function CustomPage() {
             className="max-w-2xl"
           >
             <h2 className="text-4xl font-black text-white md:text-5xl">
-              Let's start with a conversation.
+              {content.finalCta?.title ?? ''}
             </h2>
             <p className="mt-4 text-base text-white/60">
-              No commitment. We'll find out together what your company needs.
+              {content.finalCta?.desc ?? ''}
             </p>
             <div className="mt-10">
               <ContactButton
-                label={t('cta')}
+                label={content.hero?.cta ?? ''}
                 size="lg"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
