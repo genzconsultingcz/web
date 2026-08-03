@@ -92,6 +92,31 @@ const Global: Collection = {
         },
       ],
     },
+    {
+      type: 'object',
+      label: 'Not Found Page',
+      name: 'notFound',
+      fields: [
+        {
+          type: 'object',
+          label: 'Czech',
+          name: 'cs',
+          fields: [
+            { type: 'string', label: 'Title', name: 'title' },
+            { type: 'string', label: 'Message', name: 'message' },
+          ],
+        },
+        {
+          type: 'object',
+          label: 'English',
+          name: 'en',
+          fields: [
+            { type: 'string', label: 'Title', name: 'title' },
+            { type: 'string', label: 'Message', name: 'message' },
+          ],
+        },
+      ],
+    },
   ],
 };
 

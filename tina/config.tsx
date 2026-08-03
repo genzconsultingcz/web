@@ -4,6 +4,8 @@ import Global from './collection/global';
 import Home from './collection/home';
 import CaseStudy from './collection/case-study';
 import CaseStudiesChrome from './collection/case-studies-chrome';
+import Service from './collection/service';
+import ServicesChrome from './collection/services-chrome';
 
 const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
@@ -24,7 +26,7 @@ const config = defineConfig({
     basePath: '',
   },
   schema: {
-    collections: [Global, Home, CaseStudy, CaseStudiesChrome],
+    collections: [Global, Home, CaseStudy, CaseStudiesChrome, Service, ServicesChrome],
   },
 });
 
