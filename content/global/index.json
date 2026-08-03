@@ -1,4 +1,8 @@
 {
+  "notFound": {
+    "cs": { "title": "404", "message": "Stránka nenalezena." },
+    "en": { "title": "404", "message": "Page not found." }
+  },
   "header": {
     "name": "GenZ Consulting",
     "nav": {

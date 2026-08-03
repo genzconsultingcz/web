@@ -1,0 +1,90 @@
+{
+  "num": "05",
+  "featured": true,
+  "cs": {
+    "card": {
+      "title": "Nevíte, kde začít, nebo hledáte něco jiného?",
+      "desc": "Každá firma je jiná. Pokud si nejste jisti, co přesně potřebujete, nebo víte přesně, co chcete, ale nenašli jste to v našich produktech, začněme rozhovorem."
+    },
+    "hero": {
+      "eyebrow": "Individuální řešení",
+      "title": "Nevíte, kde začít, nebo hledáte něco jiného?",
+      "subtitle": "Každá firma je jiná. Pokud si nejste jisti, co přesně potřebujete, nebo víte přesně, co chcete, ale nenašli jste to v našich produktech, začněme rozhovorem.",
+      "cta": "Domluvit nezávaznou schůzku"
+    },
+    "sections": [
+      {
+        "label": "Co to je",
+        "text": "Společně diagnostikujeme, kde je největší kámen úrazu, a navrhneme řešení přímo pro vaši situaci. Výsledkem může být jeden z našich produktů nebo něco postaveného kompletně na míru."
+      },
+      {
+        "label": "Pro koho",
+        "text": "Pro firmy, které vědí, že mají problém s Gen Z, ale ještě nevědí jak ho uchopit. A pro firmy, které přesně vědí co chtějí — jen to zatím neexistuje jako hotový produkt."
+      }
+    ],
+    "steps": [
+      {
+        "num": "01",
+        "title": "Zjistíme, co je špatně",
+        "desc": "Krátký, bez závazků call, abychom pochopili vaši situaci a jestli vám můžeme pomoci."
+      },
+      {
+        "num": "02",
+        "title": "Poznáme vaši firmu",
+        "desc": "Hloubkový průzkum vašeho kontextu, cílů a problému z každého úhlu."
+      },
+      {
+        "num": "03",
+        "title": "Vytvoříme řešení na míru",
+        "desc": "Řešení přesně pro vás — ať už známý produkt, nebo něco vyvinutého od začátku."
+      }
+    ],
+    "finalCta": {
+      "title": "Pojďme začít rozhovorem.",
+      "desc": "Bez závazků. Společně zjistíme, co vaše firma potřebuje."
+    }
+  },
+  "en": {
+    "card": {
+      "title": "Not sure where to start or looking for something different?",
+      "desc": "Every company is different. If you're not sure what you need — or you know exactly what you want but didn't find it in our products — let's start with a conversation."
+    },
+    "hero": {
+      "eyebrow": "Custom solution",
+      "title": "Not sure where to start or looking for something different?",
+      "subtitle": "Every company is different. If you're not sure what you need — or you know exactly what you want but didn't find it in our products — let's start with a conversation.",
+      "cta": "Book a no-obligation call"
+    },
+    "sections": [
+      {
+        "label": "What it is",
+        "text": "We'll jointly diagnose where the biggest obstacle is and propose a solution directly for your situation. The result can be one of our products or something built completely custom."
+      },
+      {
+        "label": "Who it's for",
+        "text": "Companies that know they have a problem with Gen Z but don't know how to approach it. And companies that know exactly what they want — it just doesn't exist as a ready-made product yet."
+      }
+    ],
+    "steps": [
+      {
+        "num": "01",
+        "title": "We find out what's wrong",
+        "desc": "A short, no-obligation call to understand your situation and whether we can help."
+      },
+      {
+        "num": "02",
+        "title": "We get to know your company",
+        "desc": "An in-depth look at your context, goals and problem from every angle."
+      },
+      {
+        "num": "03",
+        "title": "We build a solution on measure",
+        "desc": "A solution exactly for you — whether a known product or something built from scratch."
+      }
+    ],
+    "finalCta": {
+      "title": "Let's start with a conversation.",
+      "desc": "No commitment. We'll find out together what your company needs."
+    }
+  }
+}

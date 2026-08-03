@@ -1,0 +1,64 @@
+{
+  "num": "02",
+  "featured": false,
+  "cs": {
+    "card": {
+      "title": "Onboardingová aplikace",
+      "desc": "Digitální průvodce onboardingem v nástrojích, které firma již používá. HR vidí vše v reálném čase."
+    },
+    "hero": {
+      "eyebrow": "Služba 02",
+      "title": "Onboardingová\naplikace",
+      "subtitle": "Onboarding, který nováčka provede začátkem bez chaosu — a HR dá přehled, co se u každého nováčka děje.",
+      "cta": "Domluvit schůzku"
+    },
+    "sections": [
+      {
+        "label": "Co to je",
+        "text": "Přehledný digitální průvodce onboardingem postavený v nástroji, který firma již používá (Notion, Teams a podobně). Postupně uvolňuje úkoly tak, aby nováček nebyl přehlcený a HR měl přehled v reálném čase — kde se každý nováček nachází, jestli se nezasekl a jak rychle postupuje."
+      },
+      {
+        "label": "Co tím firma získá",
+        "text": "Nováčci se zorientují rychleji a neztrácejí motivaci hned na začátku. HR vidí kdo postupuje dobře a kdo potřebuje pomoct — a může zasáhnout včas. Navíc okamžitě poznáte, kdo je od prvního dne angažovaný a kdo ne."
+      },
+      {
+        "label": "Pro koho",
+        "text": "Pro každou firmu, která chce mít onboarding pod kontrolou. Funkční pro všechny generace — s důrazem na nároky a očekávání Gen Z, které nastavují laťku pro celý tým."
+      },
+      {
+        "label": "Co děláme jinak",
+        "text": "Aplikace je postavena na reálném pochopení toho, co Gen Z na začátku ve firmě potřebuje. Není to jen checklist úkolů — je to průvodce, který nováčka provede začátkem tak, aby se cítil dobře a přinášel výsledky co nejdříve."
+      }
+    ]
+  },
+  "en": {
+    "card": {
+      "title": "Onboarding app",
+      "desc": "A digital onboarding guide built in tools your company already uses. HR sees everything in real time."
+    },
+    "hero": {
+      "eyebrow": "Service 02",
+      "title": "Onboarding\napp",
+      "subtitle": "Onboarding that guides new hires through the beginning without chaos — and gives HR an overview of what's happening with each new employee.",
+      "cta": "Book a call"
+    },
+    "sections": [
+      {
+        "label": "What it is",
+        "text": "A clear digital onboarding guide built in a tool your company already uses (Notion, Teams, etc.). It gradually releases tasks so new hires aren't overwhelmed, and HR has real-time visibility — where each new hire is, whether they're stuck, and how quickly they're progressing."
+      },
+      {
+        "label": "What your company gains",
+        "text": "New hires get oriented faster and don't lose motivation right at the start. HR sees who is progressing well and who needs help — and can intervene in time. You also immediately see who is engaged from day one and who isn't."
+      },
+      {
+        "label": "Who it's for",
+        "text": "Any company that wants to have onboarding under control. Works for all generations — with an emphasis on Gen Z's standards and expectations, which set the bar for the whole team."
+      },
+      {
+        "label": "What we do differently",
+        "text": "The app is built on a real understanding of what Gen Z needs at the beginning at a company. It's not just a checklist of tasks — it's a guide that takes new hires through the beginning so they feel good and deliver results as soon as possible."
+      }
+    ]
+  }
+}

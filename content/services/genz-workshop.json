@@ -1,0 +1,98 @@
+{
+  "num": "03",
+  "featured": false,
+  "cs": {
+    "card": {
+      "title": "Workshop o Gen Z",
+      "desc": "Vzdělávací workshop pro HR týmy ve třech variantách, od obecného základu po výzkum na míru vaší firmě."
+    },
+    "hero": {
+      "eyebrow": "Služba 03",
+      "title": "Workshop o Gen Z",
+      "subtitle": "Workshop, který váš HR tým naučí rozumět Gen Z — ve třech variantách podle toho, jak hluboko chcete jít.",
+      "cta": "Domluvit schůzku"
+    },
+    "sections": [
+      {
+        "label": "Co to je",
+        "text": "Vzdělávací workshop pro HR týmy, který pomáhá pochopit jak Gen Z přemýšlí, co potřebuje od HR a manažerů a jaké mýty o ní prostě nejsou pravda."
+      },
+      {
+        "label": "Co tím firma získá",
+        "text": "HR tým, který Gen Z skutečně rozumí — a ví jak s ní pracovat, komunikovat a jak ji vést. Ne obecná teorie, ale poznatky přímo použitelné v jejich realitě."
+      },
+      {
+        "label": "Pro koho",
+        "text": "HR týmy ve středních a velkých firmách, které pracují s mladými zaměstnanci nebo je nabírají."
+      }
+    ],
+    "image": {
+      "src": "/genzone_workshop.jpeg",
+      "alt": "GenZ Consulting workshop na Career Expo"
+    },
+    "variants": [
+      {
+        "num": "01",
+        "title": "Obecný workshop",
+        "desc": "Pevný program, rychlý nástup. Skvělý základ pro každého, kdo s Gen Z začíná nebo chce porozumět generaci jako celku."
+      },
+      {
+        "num": "02",
+        "title": "Na míru z našich dat",
+        "desc": "Přizpůsobený vašemu odvětví a firmě na základě dat a výzkumů GenZ Consulting. Účastníci si odnesou poznatky přímo z jejich světa."
+      },
+      {
+        "num": "03",
+        "title": "Na míru z nového výzkumu",
+        "desc": "Společně postavíme výzkum přesně pro vaši firmu a odvětví. Data, která nikdo jiný nemá."
+      }
+    ]
+  },
+  "en": {
+    "card": {
+      "title": "Gen Z Workshop",
+      "desc": "An educational workshop for HR teams in three variants — from a general foundation to custom research for your company."
+    },
+    "hero": {
+      "eyebrow": "Service 03",
+      "title": "Gen Z Workshop",
+      "subtitle": "A workshop that teaches your HR team to understand Gen Z — in three variants depending on how deep you want to go.",
+      "cta": "Book a call"
+    },
+    "sections": [
+      {
+        "label": "What it is",
+        "text": "An educational workshop for HR teams that helps understand how Gen Z thinks, what it needs from HR and managers, and which myths about it simply aren't true."
+      },
+      {
+        "label": "What your company gains",
+        "text": "An HR team that truly understands Gen Z — and knows how to work with them, communicate, and lead them. Not general theory, but insights directly applicable in their reality."
+      },
+      {
+        "label": "Who it's for",
+        "text": "HR teams in mid-size and large companies that work with young employees or are hiring them."
+      }
+    ],
+    "image": {
+      "src": "/genzone_workshop.jpeg",
+      "alt": "GenZ Consulting workshop at Career Expo"
+    },
+    "variants": [
+      {
+        "num": "01",
+        "title": "General workshop",
+        "desc": "Fixed program, quick start. A great foundation for anyone starting out with Gen Z or wanting to understand the generation as a whole."
+      },
+      {
+        "num": "02",
+        "title": "Custom from our data",
+        "desc": "Tailored to your industry and company based on GenZ Consulting's data and research. Participants leave with insights directly from their world."
+      },
+      {
+        "num": "03",
+        "title": "Custom from new research",
+        "desc": "We'll build research specifically for your company and industry. Data that nobody else has."
+      }
+    ]
+  }
+}

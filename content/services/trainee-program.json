@@ -1,0 +1,72 @@
+{
+  "num": "01",
+  "featured": false,
+  "cs": {
+    "card": {
+      "title": "Trainee program",
+      "desc": "Kompletní trainee program na míru přitáhne správné talenty, efektivně je vyškolí a udrží ve firmě."
+    },
+    "hero": {
+      "eyebrow": "Služba 01",
+      "title": "Trainee program",
+      "subtitle": "Postavíme vám trainee program, který přitáhne správné mladé lidi, efektivně je vyškolí a udrží ve vaší firmě — přesně podle vašich cílů.",
+      "cta": "Domluvit schůzku"
+    },
+    "sections": [
+      {
+        "label": "Co to je",
+        "text": "Kompletně postavený trainee program šitý na míru Gen Z i vaší firmě. Součástí výstupu je řídící rozhraní v nástroji, který firma již používá, manuál jak s programem fungovat a komunikační strategie — směrem dovnitř firmy i navenek."
+      },
+      {
+        "label": "Co tím firma získá",
+        "text": "Nástroj, který přitahuje talentované mladé lidi, efektivně je vychovává k výsledkům a udržuje je ve firmě — podle cílů, které si sami definujete. Zároveň silný employer branding signál: vaše firma jde Gen Z naproti."
+      },
+      {
+        "label": "Pro koho",
+        "text": "Firmy, které chtějí Gen Z přitáhnout, vychovat a udržet — a dát světu najevo, že jim na mladé generaci záleží."
+      },
+      {
+        "label": "Co děláme jinak",
+        "text": "Program není šablona. Je stavěn na míru potřebám Gen Z a zároveň možnostem dané firmy. Vede ke splnění předem stanovených cílů — firma přesně ví, jak má vypadat mladý zaměstnanec, který programem projde."
+      }
+    ],
+    "timeline": {
+      "label": "Časový rámec",
+      "text": "1 měsíc až 6 měsíců podle rozsahu a náročnosti spolupráce."
+    }
+  },
+  "en": {
+    "card": {
+      "title": "Trainee program",
+      "desc": "A fully custom trainee program — attracts the right talent, trains them effectively and keeps them at your company."
+    },
+    "hero": {
+      "eyebrow": "Service 01",
+      "title": "Trainee program",
+      "subtitle": "We'll build you a trainee program that attracts the right young people, trains them effectively and keeps them at your company — exactly according to your goals.",
+      "cta": "Book a call"
+    },
+    "sections": [
+      {
+        "label": "What it is",
+        "text": "A fully custom trainee program tailored to both Gen Z and your company. The output includes a management interface in a tool your company already uses, a manual on how to run the program, and a communication strategy — both internally and externally."
+      },
+      {
+        "label": "What your company gains",
+        "text": "A tool that attracts talented young people, effectively develops them toward results, and keeps them in the company — according to goals you define yourself. Plus a strong employer branding signal: your company is meeting Gen Z halfway."
+      },
+      {
+        "label": "Who it's for",
+        "text": "Companies that want to attract, develop and retain Gen Z — and signal to the world that they care about the younger generation."
+      },
+      {
+        "label": "What we do differently",
+        "text": "The program is not a template. It's built to meet the needs of Gen Z while fitting the company's capabilities. It leads to achieving pre-defined goals — the company knows exactly what a young employee who completes the program should look like."
+      }
+    ],
+    "timeline": {
+      "label": "Timeline",
+      "text": "1 to 6 months depending on the scope and complexity of the collaboration."
+    }
+  }
+}
