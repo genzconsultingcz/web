@@ -31,7 +31,7 @@
 - Produces: `CaseStudyQuery['caseStudy']` and `CaseStudyConnectionQuery['caseStudyConnection']` shaped as `{ cs: CaseStudyLocaleContent, en: CaseStudyLocaleContent }` per document, where `CaseStudyLocaleContent` mirrors the `CaseStudy` interface in `components/pages/case-studies/case-study-data.ts:7-54`, with `findings.columns`/`cols` tuples flattened to named fields (see below).
 - Produces: `CaseStudiesChromeQuery['caseStudiesChrome']` shaped as `{ cs: { list: {...}, detail: {...} }, en: { list: {...}, detail: {...} } }`.
 
-- [ ] **Step 1: Create `tina/collection/case-study.ts`**
+- [x] **Step 1: Create `tina/collection/case-study.ts`**
 
 ```ts
 // tina/collection/case-study.ts
@@ -236,7 +236,7 @@ const CaseStudy: Collection = {
 export default CaseStudy;
 ```
 
-- [ ] **Step 2: Create `tina/collection/case-studies-chrome.ts`**
+- [x] **Step 2: Create `tina/collection/case-studies-chrome.ts`**
 
 ```ts
 // tina/collection/case-studies-chrome.ts
@@ -294,7 +294,7 @@ const CaseStudiesChrome: Collection = {
 export default CaseStudiesChrome;
 ```
 
-- [ ] **Step 3: Register both collections**
+- [x] **Step 3: Register both collections**
 
 Modify `tina/config.tsx`:
 
@@ -332,12 +332,12 @@ const config = defineConfig({
 export default config;
 ```
 
-- [ ] **Step 4: Regenerate the Tina client/types**
+- [x] **Step 4: Regenerate the Tina client/types**
 
 Run: `npm run build-local`
 Expected: Completes without schema errors. `tina/__generated__/types.ts` now exports `CaseStudyQuery`, `CaseStudyConnectionQuery`, `CaseStudiesChromeQuery` (and their `*Variables`/`*Fragment` siblings), and `tina/__generated__/client.ts`'s generated client exposes `client.queries.caseStudy`, `client.queries.caseStudyConnection`, `client.queries.caseStudiesChrome`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add tina/collection/case-study.ts tina/collection/case-studies-chrome.ts tina/config.tsx
@@ -367,7 +367,7 @@ EOF
 
 The `serviceType` and `listResult` values below are migrated from `messages.caseStudies`' `cs{N}Service`/`cs{N}Result` keys (verified against the current `messages/en.json`/`messages/cs.json` — these are the only two fields from that namespace actually rendered per-card; `cs{N}Client` and `cs{N}Desc` are dead keys, already superseded by `case-study-data.ts`'s own `client`/`hero.intro` and correctly NOT migrated).
 
-- [ ] **Step 1: Create the migration script**
+- [x] **Step 1: Create the migration script**
 
 ```ts
 // scripts/migrate-case-studies-to-tina.ts
@@ -441,23 +441,23 @@ for (const [slug, entry] of Object.entries(CASE_STUDIES)) {
 }
 ```
 
-- [ ] **Step 2: Run the script**
+- [x] **Step 2: Run the script**
 
 Run: `npx tsx scripts/migrate-case-studies-to-tina.ts`
 Expected: Prints three lines (`wrote content/case-studies/av-media.json`, `.../global-payments.json`, `.../generali.json`) and creates those three files. If `npx` prompts to install `tsx`, accept — it isn't a project dependency, just a one-off runner.
 
-- [ ] **Step 3: Verify the output against the source**
+- [x] **Step 3: Verify the output against the source**
 
 Run a diff check confirming no content was lost or altered — for each of the 3 slugs, confirm the JSON's `cs`/`en` field values match `case-study-data.ts`'s corresponding record exactly (spot-check `hero.headline`, `hero.intro`, at least one `whyPoints` entry, `findings.items[0].col1/col2/col3` against the source's `cols[0]/cols[1]/cols[2]`, and `outputs.quote`/`quoteAuthor`, for both locales, for all 3 slugs — that's 3 slugs × 2 locales × ~5 spot-checks = 30 comparisons; do this by eye reading both files side by side, or with a short Node one-liner that loads both and asserts equality on those paths).
 
 Expected: Every spot-checked value matches verbatim (this is a mechanical transform, not a rewrite — any mismatch means a bug in the script, not an intentional change).
 
-- [ ] **Step 4: Regenerate the Tina client and confirm the new content validates against the Task 1 schema**
+- [x] **Step 4: Regenerate the Tina client and confirm the new content validates against the Task 1 schema**
 
 Run: `npm run build-local`
 Expected: Completes without schema errors (confirms all 3 JSON files' field names match `tina/collection/case-study.ts` exactly).
 
-- [ ] **Step 5: Delete the one-off script and commit the content**
+- [x] **Step 5: Delete the one-off script and commit the content**
 
 ```bash
 rm scripts/migrate-case-studies-to-tina.ts
@@ -480,7 +480,7 @@ EOF
 **Files:**
 - Create: `content/case-studies-chrome/index.json`
 
-- [ ] **Step 1: Create the file**
+- [x] **Step 1: Create the file**
 
 ```json
 {
@@ -539,7 +539,7 @@ EOF
 }
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add content/case-studies-chrome/index.json
@@ -564,7 +564,7 @@ EOF
 - Consumes: `CaseStudiesChromeQuery`, `CaseStudyConnectionQuery` (from Task 1).
 - Produces: `CaseStudiesPage` component taking `{ chrome, cards }` props; no `useTranslations` or `getCaseStudy` dependency.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/components/CaseStudiesPage.test.tsx`:
 
@@ -608,12 +608,12 @@ describe('CaseStudiesPage', () => {
 })
 ```
 
-- [ ] **Step 2: Run the test to verify it fails**
+- [x] **Step 2: Run the test to verify it fails**
 
 Run: `npx vitest run tests/components/CaseStudiesPage.test.tsx`
 Expected: FAIL — `CaseStudiesPage` currently takes no props and sources everything from `useTranslations('caseStudies')` (mocked to identity in `vitest.setup.ts`) plus its own hardcoded `CASE_STUDIES` array, so none of the mock content appears.
 
-- [ ] **Step 3: Replace `components/pages/case-studies/CaseStudiesPage.tsx`**
+- [x] **Step 3: Replace `components/pages/case-studies/CaseStudiesPage.tsx`**
 
 ```tsx
 'use client';
@@ -787,7 +787,7 @@ export default function CaseStudiesPage({
 }
 ```
 
-- [ ] **Step 4: Replace `app/[locale]/case-studies/page.tsx`**
+- [x] **Step 4: Replace `app/[locale]/case-studies/page.tsx`**
 
 ```tsx
 import React from 'react';
@@ -838,12 +838,12 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 }
 ```
 
-- [ ] **Step 5: Run the test to verify it passes**
+- [x] **Step 5: Run the test to verify it passes**
 
 Run: `npx vitest run tests/components/CaseStudiesPage.test.tsx`
 Expected: PASS
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add components/pages/case-studies/CaseStudiesPage.tsx "app/[locale]/case-studies/page.tsx" tests/components/CaseStudiesPage.test.tsx
@@ -870,7 +870,7 @@ EOF
 - Consumes: `CaseStudyQuery`, `CaseStudyConnectionQuery`, `CaseStudiesChromeQuery` (from Task 1).
 - Produces: `CaseStudyDetail` component taking `{ cs, chrome }` props; no `useTranslations` or `getCaseStudy` dependency.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/components/CaseStudyDetail.test.tsx`:
 
@@ -961,12 +961,12 @@ describe('CaseStudyDetail', () => {
 })
 ```
 
-- [ ] **Step 2: Run the test to verify it fails**
+- [x] **Step 2: Run the test to verify it fails**
 
 Run: `npx vitest run tests/components/CaseStudyDetail.test.tsx`
 Expected: FAIL — `CaseStudyDetail` currently takes a `{ slug }` prop and calls `getCaseStudy(slug, locale)` internally plus `useTranslations('caseStudyDetail')`, so it won't recognize a `cs`/`chrome` prop pair and the mock content won't render.
 
-- [ ] **Step 3: Edit `components/pages/case-studies/CaseStudyDetail.tsx`**
+- [x] **Step 3: Edit `components/pages/case-studies/CaseStudyDetail.tsx`**
 
 This file's JSX body is unchanged except for the pieces below — apply each edit exactly as shown (old → new), leaving everything else (the `AnimatedNumber`/`AnimatedStat`/`SectionEyebrow` helper components, and all JSX not mentioned here) untouched.
 
@@ -1222,7 +1222,7 @@ export default function CaseStudyDetail({ cs, chrome }: { cs: CaseStudyContent; 
             </div>
 ```
 
-- [ ] **Step 4: Replace `app/[locale]/case-studies/[slug]/page.tsx`**
+- [x] **Step 4: Replace `app/[locale]/case-studies/[slug]/page.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1296,12 +1296,12 @@ export default async function Page({
 }
 ```
 
-- [ ] **Step 5: Run the test to verify it passes**
+- [x] **Step 5: Run the test to verify it passes**
 
 Run: `npx vitest run tests/components/CaseStudyDetail.test.tsx`
 Expected: PASS (2/2)
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add components/pages/case-studies/CaseStudyDetail.tsx "app/[locale]/case-studies/[slug]/page.tsx" tests/components/CaseStudyDetail.test.tsx
@@ -1329,7 +1329,7 @@ EOF
 - Consumes: `CaseStudyConnectionQuery` (from Task 1).
 - Produces: `HomePage` takes an additional `caseStudies: { slug: string; client: string; intro: string }[]` prop; no `case-study-data.ts` dependency remains anywhere in `components/pages/home/`.
 
-- [ ] **Step 1: Update the failing/passing test to supply the new prop**
+- [x] **Step 1: Update the failing/passing test to supply the new prop**
 
 Modify `tests/components/HomePage.test.tsx`: add a `caseStudies` array to the render call and assert one of its values renders.
 
@@ -1348,12 +1348,12 @@ render(<HomePage content={content} logos={logos} caseStudies={caseStudies} />)
 expect(screen.getByText('AV MEDIA')).toBeInTheDocument()
 ```
 
-- [ ] **Step 2: Run the test to verify it fails**
+- [x] **Step 2: Run the test to verify it fails**
 
 Run: `npx vitest run tests/components/HomePage.test.tsx`
 Expected: FAIL — `HomePage` doesn't accept a `caseStudies` prop yet (TypeScript would also flag the extra prop; at minimum the new assertion fails since `HomePage` still computes its own case studies internally via the now-removed-in-spirit `getCaseStudy` import, unrelated to this test's mock data).
 
-- [ ] **Step 3: Edit `components/pages/home/HomePage.tsx`**
+- [x] **Step 3: Edit `components/pages/home/HomePage.tsx`**
 
 **Edit 1 — remove the `case-study-data.ts` import:**
 
@@ -1397,7 +1397,7 @@ export default function HomePage({
 
 (The rest of the function — including the `caseStudies.map(({ client, intro, slug }, i) => ...)` render block later in the file — is unchanged; it already consumes the `caseStudies` array by the same shape.)
 
-- [ ] **Step 4: Update `app/[locale]/page.tsx` to fetch and pass the teaser case studies**
+- [x] **Step 4: Update `app/[locale]/page.tsx` to fetch and pass the teaser case studies**
 
 ```tsx
 // OLD:
@@ -1475,17 +1475,17 @@ export default async function Home({
 }
 ```
 
-- [ ] **Step 5: Run the test to verify it passes**
+- [x] **Step 5: Run the test to verify it passes**
 
 Run: `npx vitest run tests/components/HomePage.test.tsx`
 Expected: PASS
 
-- [ ] **Step 6: Run the full test suite and a type-check**
+- [x] **Step 6: Run the full test suite and a type-check**
 
 Run: `npm run test:run && npx tsc --noEmit`
 Expected: Same pre-existing 4 `LeadMagnetModal.test.tsx` failures (unrelated, confirmed identical on `main` before any Tina migration work), no new failures; `tsc` clean.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add components/pages/home/HomePage.tsx "app/[locale]/page.tsx" tests/components/HomePage.test.tsx
@@ -1512,32 +1512,32 @@ EOF
 - Consumes: nothing new.
 - Produces: no file in the repo imports from `case-study-data.ts`; `messages/*.json` no longer has `caseStudies`/`caseStudyDetail` keys; every other namespace untouched.
 
-- [ ] **Step 1: Confirm nothing still imports the retired file**
+- [x] **Step 1: Confirm nothing still imports the retired file**
 
 Run: `grep -rln "case-study-data" --include="*.tsx" --include="*.ts" components app tests`
 Expected: No matches (Tasks 4-6 removed the only three importers: `CaseStudiesPage.tsx`, `CaseStudyDetail.tsx`, `HomePage.tsx`).
 
-- [ ] **Step 2: Delete the file**
+- [x] **Step 2: Delete the file**
 
 ```bash
 git rm components/pages/case-studies/case-study-data.ts
 ```
 
-- [ ] **Step 3: Remove the `caseStudies` and `caseStudyDetail` keys from `messages/en.json` and `messages/cs.json`**
+- [x] **Step 3: Remove the `caseStudies` and `caseStudyDetail` keys from `messages/en.json` and `messages/cs.json`**
 
 Delete both top-level objects from each file, leaving every other namespace (`leadMagnet`, `services`, `traineeProgram`, `onboardingApp`, `genzWorkshop`, `careerPages`, `customSolution`, `about`, `contactDialog`, `contact`) exactly as-is.
 
-- [ ] **Step 4: Verify nothing still references the removed keys**
+- [x] **Step 4: Verify nothing still references the removed keys**
 
 Run: `grep -rn "useTranslations('caseStudies')\|useTranslations(\"caseStudies\")\|useTranslations('caseStudyDetail')\|useTranslations(\"caseStudyDetail\")" --include="*.tsx" components app`
 Expected: No matches.
 
-- [ ] **Step 5: Run the full test suite and a type-check**
+- [x] **Step 5: Run the full test suite and a type-check**
 
 Run: `npm run test:run && npx tsc --noEmit`
 Expected: Same pre-existing 4 `LeadMagnetModal.test.tsx` failures, no new failures; `tsc` clean (this also confirms no other file still references any type/export from the deleted `case-study-data.ts`).
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add -u messages/en.json messages/cs.json
@@ -1556,26 +1556,26 @@ EOF
 
 **Files:** none (verification only)
 
-- [ ] **Step 1: Start the dev server**
+- [x] **Step 1: Start the dev server**
 
 Run: `npm run dev`
 Expected: Starts without errors.
 
-- [ ] **Step 2: Compare rendered pages against pre-migration behavior**
+- [x] **Step 2: Compare rendered pages against pre-migration behavior**
 
 Open (or `curl`) each of these on both `/cs` and `/en`, comparing content to what existed before this pass:
 - `/case-studies` — hero eyebrow/title/subtitle, all 3 cards (logo, service type, client name, description, result box, "read more" link), bottom CTA.
 - `/case-studies/av-media`, `/case-studies/global-payments`, `/case-studies/generali` — hero, scope chips, stat band (including the count-up animation still working), all 5 sections (context, approach, findings — including the 3 columns render correctly per item, outputs, why-us), contact block, bottom CTA and back link.
 - `/` (home) — the case-study teaser section still shows all 3 cards with correct client names and intros, linking to the correct detail pages.
 
-- [ ] **Step 3: Verify a bad slug still 404s**
+- [x] **Step 3: Verify a bad slug still 404s**
 
 Visit `/en/case-studies/does-not-exist` (or `curl -o /dev/null -w '%{http_code}'`) and confirm it returns a 404, matching pre-migration behavior.
 
-- [ ] **Step 4: Verify TinaCMS admin can edit the new content**
+- [x] **Step 4: Verify TinaCMS admin can edit the new content**
 
 Open the Tina admin, confirm "Case Studies" (list collection, 3 documents) and "Case Studies Chrome" (global) both load without schema errors, and that editing a field (e.g. one case study's `hero.headline`) and saving updates the corresponding JSON file.
 
-- [ ] **Step 5: Report results**
+- [x] **Step 5: Report results**
 
 Summarize what was checked and any discrepancies found. If a discrepancy is found, stop and fix it as a follow-up step before considering this pass complete.
