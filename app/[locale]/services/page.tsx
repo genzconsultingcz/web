@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@/components/layout/layout';
-import ServicesPage, { type ServiceCard, type ServicesPageChrome } from '@/components/pages/services/ServicesPage';
+import ServicesPage, { type ServiceCard } from '@/components/pages/services/ServicesPage';
 import client from '@/tina/__generated__/client';
 
 export const revalidate = 300;
@@ -44,7 +44,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <Layout>
-      <ServicesPage chrome={chrome as ServicesPageChrome} cards={cards} />
+      <ServicesPage chrome={chrome} cards={cards} />
     </Layout>
   );
 }
