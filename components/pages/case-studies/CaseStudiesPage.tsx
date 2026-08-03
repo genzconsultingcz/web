@@ -2,11 +2,11 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
-import { getCaseStudy } from '@/components/pages/case-studies/case-study-data';
+import type { CaseStudiesChromeQuery } from '../../../tina/__generated__/types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -18,46 +18,30 @@ const fadeUp: any = {
   }),
 };
 
-const CASE_STUDIES = [
-  {
-    serviceKey: 'cs1Service' as const,
-    resultKey: 'cs1Result' as const,
-    logo: '/AV-MEDIA-SYSTEMS_horizontalni_1200_1200-970x970.png',
-    logoAlt: 'AV Media Systems',
-    slug: 'av-media',
-  },
-  {
-    serviceKey: 'cs2Service' as const,
-    resultKey: 'cs2Result' as const,
-    logo: '/globalpayments.jpeg',
-    logoAlt: 'Global Payments',
-    slug: 'global-payments',
-  },
-  {
-    serviceKey: 'cs3Service' as const,
-    resultKey: 'cs3Result' as const,
-    logo: '/logo-orizzontale.2020-07-16-17-41-47.jpeg',
-    logoAlt: 'Generali',
-    slug: 'generali',
-  },
-];
+export type CaseStudiesListChrome = NonNullable<
+  NonNullable<CaseStudiesChromeQuery['caseStudiesChrome']>['cs']
+>['list'];
 
-export default function CaseStudiesPage() {
-  const t = useTranslations('caseStudies');
+export type CaseStudyCard = {
+  slug: string;
+  client: string;
+  desc: string;
+  serviceType: string;
+  listResult: string;
+  logo: string;
+  logoAlt: string;
+};
+
+export default function CaseStudiesPage({
+  chrome,
+  cards,
+}: {
+  chrome: CaseStudiesListChrome;
+  cards: CaseStudyCard[];
+}) {
   const locale = useLocale();
 
-  const caseStudies = CASE_STUDIES.map(({ serviceKey, resultKey, logo, logoAlt, slug }) => {
-    const cs = getCaseStudy(slug, locale);
-    return {
-      serviceKey,
-      resultKey,
-      logo,
-      logoAlt,
-      slug,
-      client: cs?.client ?? '',
-      desc: cs?.hero.intro ?? '',
-    };
-  });
+  if (!chrome) return null;
 
   return (
     <>
@@ -71,7 +55,7 @@ export default function CaseStudiesPage() {
             custom={0}
             className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-black/50"
           >
-            {t('eyebrow')}
+            {chrome.eyebrow}
           </motion.p>
           <motion.h1
             variants={fadeUp}
@@ -80,7 +64,7 @@ export default function CaseStudiesPage() {
             custom={0.1}
             className="text-5xl font-black leading-[1.05] tracking-tight text-black sm:text-6xl md:text-7xl"
           >
-            {t('title')}
+            {chrome.title}
           </motion.h1>
           <motion.p
             variants={fadeUp}
@@ -89,7 +73,7 @@ export default function CaseStudiesPage() {
             custom={0.2}
             className="mt-6 max-w-xl text-lg font-semibold text-black/60"
           >
-            {t('subtitle')}
+            {chrome.subtitle}
           </motion.p>
         </div>
         <div
@@ -104,9 +88,9 @@ export default function CaseStudiesPage() {
       <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-8 md:grid-cols-3">
-            {caseStudies.map(({ serviceKey, resultKey, logo, logoAlt, slug, client, desc }, i) => (
+            {cards.map(({ slug, client, desc, serviceType, listResult, logo, logoAlt }, i) => (
               <motion.article
-                key={client}
+                key={slug}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -128,7 +112,7 @@ export default function CaseStudiesPage() {
                     </div>
                   ) : null}
                   <span className="text-xs font-bold uppercase tracking-[0.15em] text-gtc-dark">
-                    {t(serviceKey)}
+                    {serviceType}
                   </span>
                   <h2 className="text-xl font-black text-black leading-tight">{client}</h2>
                   <p className="text-sm leading-relaxed text-zinc-500">{desc}</p>
@@ -137,10 +121,10 @@ export default function CaseStudiesPage() {
                 {/* Result box */}
                 <div className="border-t border-l-4 border-t-zinc-100 border-l-gtc-primary bg-zinc-50 px-6 py-5">
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-[0.15em] text-gtc-dark">
-                    {t('resultLabel')}
+                    {chrome.resultLabel}
                   </p>
                   <p className="text-sm leading-relaxed text-zinc-700 font-medium">
-                    {t(resultKey)}
+                    {listResult}
                   </p>
                 </div>
 
@@ -149,7 +133,7 @@ export default function CaseStudiesPage() {
                   href={`/${locale}/case-studies/${slug}`}
                   className="mt-auto flex items-center justify-center gap-1.5 border-t border-zinc-100 py-4 text-xs font-bold uppercase tracking-[0.1em] text-zinc-600 transition-colors duration-150 group-hover:bg-gtc-primary group-hover:text-black hover:bg-gtc-primary hover:text-black"
                 >
-                  {t('readMore')}
+                  {chrome.readMore}
                   <ArrowUpRight className="size-3.5" />
                 </Link>
               </motion.article>
@@ -168,11 +152,11 @@ export default function CaseStudiesPage() {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h2 className="text-4xl font-black text-white md:text-5xl">{t('ctaTitle')}</h2>
-            <p className="mt-4 text-base text-white/60">{t('ctaDesc')}</p>
+            <h2 className="text-4xl font-black text-white md:text-5xl">{chrome.ctaTitle}</h2>
+            <p className="mt-4 text-base text-white/60">{chrome.ctaDesc}</p>
             <div className="mt-10">
                 <ContactButton
-                  label={t('cta')}
+                  label={chrome.cta ?? ''}
                   size="lg"
                   className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />
