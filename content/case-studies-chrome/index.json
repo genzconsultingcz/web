@@ -1,0 +1,54 @@
+{
+  "cs": {
+    "list": {
+      "eyebrow": "Naše práce",
+      "title": "Projekty, kde jsme pomohli",
+      "subtitle": "Konkrétní výsledky z reálné spolupráce se středními a velkými firmami.",
+      "resultLabel": "Výsledek",
+      "readMore": "Přečíst case study",
+      "ctaTitle": "Chcete podobné výsledky?",
+      "ctaDesc": "Domluvte si nezávazný call a zjistíme, jak můžeme pomoci vaší firmě.",
+      "cta": "Domluvit schůzku"
+    },
+    "detail": {
+      "back": "Zpět na case studies",
+      "caseLabel": "Case study",
+      "clientLabel": "Klient",
+      "sectionContext": "Kontext & výzva",
+      "sectionApproach": "Náš přístup",
+      "sectionFindings": "Klíčová zjištění",
+      "sectionOutputs": "Výstupy & dopad",
+      "sectionWhy": "Proč GenZ Consulting",
+      "contactLabel": "Kontakt",
+      "ctaTitle": "Chcete podobné výsledky?",
+      "ctaDesc": "Domluvte si nezávazný call a zjistíme, jak můžeme pomoci vaší firmě.",
+      "cta": "Domluvit schůzku"
+    }
+  },
+  "en": {
+    "list": {
+      "eyebrow": "Our work",
+      "title": "Projects where we helped",
+      "subtitle": "Concrete results from real collaboration with mid-size and large companies.",
+      "resultLabel": "Result",
+      "readMore": "Read case study",
+      "ctaTitle": "Want similar results?",
+      "ctaDesc": "Book a no-obligation call and we'll find out how we can help your company.",
+      "cta": "Book a call"
+    },
+    "detail": {
+      "back": "Back to case studies",
+      "caseLabel": "Case study",
+      "clientLabel": "Client",
+      "sectionContext": "Context & challenge",
+      "sectionApproach": "Our approach",
+      "sectionFindings": "Key findings",
+      "sectionOutputs": "Outputs & impact",
+      "sectionWhy": "Why GenZ Consulting",
+      "contactLabel": "Contact",
+      "ctaTitle": "Want similar results?",
+      "ctaDesc": "Book a no-obligation call and we'll find out how we can help your company.",
+      "cta": "Book a call"
+    }
+  }
+}
