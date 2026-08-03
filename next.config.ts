@@ -25,6 +25,15 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [{ source: '/admin', destination: '/admin/index.html' }];
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path(based|careerexpo2026|avmedia|generali|global-payments-marketing|playbook-global-payments|careerexpo|avmedia-research)',
+        destination: 'https://report.genzconsulting.cz/:path',
+        permanent: true, // 301 Permanent Redirect for SEO preservation
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
