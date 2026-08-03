@@ -9,10 +9,19 @@ import { routing } from '@/i18n/routing';
 export const revalidate = 300;
 
 export async function generateStaticParams() {
-  const { data } = await client.queries.caseStudyConnection();
-  const slugs = (data.caseStudyConnection.edges ?? []).map((edge) => edge?.node?._sys.filename).filter((slug): slug is string => Boolean(slug));
+  // Tina's local dev server isn't running during `next build`, so degrade to
+  // no static params (pages render on-demand with revalidate) rather than
+  // failing the build — same resilience as generateMetadata below.
+  try {
+    const { data } = await client.queries.caseStudyConnection();
+    const slugs = (data.caseStudyConnection.edges ?? [])
+      .map((edge) => edge?.node?._sys.filename)
+      .filter((slug): slug is string => Boolean(slug));
 
-  return routing.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+    return routing.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({
