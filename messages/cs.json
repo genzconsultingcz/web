@@ -151,28 +151,6 @@
     "teamBanner": "Tým, který Gen Z žije zevnitř.",
     "linkedIn": "LinkedIn"
   },
-  "caseStudies": {
-    "eyebrow": "Naše práce",
-    "title": "Projekty, kde jsme pomohli",
-    "subtitle": "Konkrétní výsledky z reálné spolupráce se středními a velkými firmami.",
-    "cs1Client": "AV Media Systems",
-    "cs1Service": "Research + Workshop",
-    "cs1Desc": "Hloubkový research generace Z pro AV Media — rozhovory, analýza a transkripce. Výstupy zpracovány do GenZ Playbooku přímo pro jejich tým.",
-    "cs1Result": "Klient získal konkrétní playbook s kroky, jak komunikovat s juniorními kolegy a přitahovat mladé talenty.",
-    "cs2Client": "Global Payments",
-    "cs2Service": "Workshop",
-    "cs2Desc": "Interaktivní workshop pro HR tým o tom, jak Gen Z skutečně funguje, a to z první ruky, ne z teorie.",
-    "cs2Result": "Tým odešel se čtyřmi konkrétními kroky pro optimalizaci komunikace a onboardingu.",
-    "cs3Client": "Generali",
-    "cs3Service": "Konzultace",
-    "cs3Desc": "Analýza kariérní stránky a hiring procesu se zaměřením na komunikaci nabídky práce směrem k Gen Z.",
-    "cs3Result": "Identifikovány klíčové bariéry v recruitmentu a navrženy konkrétní úpravy komunikace.",
-    "resultLabel": "Výsledek",
-    "ctaTitle": "Chcete podobné výsledky?",
-    "ctaDesc": "Domluvte si nezávazný call a zjistíme, jak můžeme pomoci vaší firmě.",
-    "cta": "Domluvit schůzku",
-    "readMore": "Přečíst case study"
-  },
   "contactDialog": {
     "close": "Zavřít",
     "title": "Domluvte si datum schůzky."
@@ -195,19 +173,5 @@
     "faq3A": "Záleží na službě, od jednorázového workshopu po šestiměsíční budování trainee programu. Vždy navrhneme rozsah, který má smysl pro vaši situaci.",
     "faq4Q": "Pracujete i s firmami mimo Prahu?",
     "faq4A": "Ano, pracujeme s firmami po celé ČR. Workshopy a setkání lze realizovat prezenčně i online."
-  },
-  "caseStudyDetail": {
-    "back": "Zpět na case studies",
-    "caseLabel": "Case study",
-    "clientLabel": "Klient",
-    "sectionContext": "Kontext & výzva",
-    "sectionApproach": "Náš přístup",
-    "sectionFindings": "Klíčová zjištění",
-    "sectionOutputs": "Výstupy & dopad",
-    "sectionWhy": "Proč GenZ Consulting",
-    "contactLabel": "Kontakt",
-    "ctaTitle": "Chcete podobné výsledky?",
-    "ctaDesc": "Domluvte si nezávazný call a zjistíme, jak můžeme pomoci vaší firmě.",
-    "cta": "Domluvit schůzku"
   }
 }
