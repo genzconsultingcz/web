@@ -2,11 +2,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { motion, useInView, useReducedMotion } from 'motion/react';
 import { ArrowLeft, ArrowUpRight, Mail, Quote } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
-import { getCaseStudy } from './case-study-data';
+import type { CaseStudyQuery, CaseStudiesChromeQuery } from '../../../tina/__generated__/types';
+
+export type CaseStudyContent = NonNullable<NonNullable<CaseStudyQuery['caseStudy']>['cs']>;
+export type CaseStudyDetailChrome = NonNullable<
+  NonNullable<CaseStudiesChromeQuery['caseStudiesChrome']>['cs']
+>['detail'];
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -90,12 +95,10 @@ function SectionEyebrow({ num, label }: { num: string; label: string }) {
   );
 }
 
-export default function CaseStudyDetail({ slug }: { slug: string }) {
+export default function CaseStudyDetail({ cs, chrome }: { cs: CaseStudyContent; chrome: CaseStudyDetailChrome }) {
   const locale = useLocale();
-  const t = useTranslations('caseStudyDetail');
 
-  const cs = getCaseStudy(slug, locale);
-  if (!cs) return null;
+  if (!cs || !chrome) return null;
 
   return (
     <>
@@ -114,7 +117,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
               className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.15em] text-white/50 transition-colors hover:text-gtc-primary"
             >
               <ArrowLeft className="size-3.5" />
-              {t('back')}
+              {chrome.back}
             </Link>
           </motion.div>
 
@@ -126,7 +129,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
             className="mt-12 flex items-center gap-4"
           >
             <span className="rounded-none bg-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-black">
-              {t('clientLabel')}
+              {chrome.clientLabel}
             </span>
             {cs.logo && (
               <div className="flex items-center rounded-sm bg-white px-3 py-1.5">
@@ -148,7 +151,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
             custom={0.16}
             className="mt-8 text-xs font-bold uppercase tracking-[0.25em] text-gtc-primary"
           >
-            {t('caseLabel')} · {cs.year}
+            {chrome.caseLabel} · {cs.year}
           </motion.p>
           <motion.h1
             variants={fadeUp}
@@ -203,7 +206,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
       {/* ── 01 · CONTEXT ── */}
       <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionEyebrow num="01" label={t('sectionContext')} />
+          <SectionEyebrow num="01" label={chrome.sectionContext} />
           <motion.h2
             variants={fadeUp}
             initial="hidden"
@@ -300,7 +303,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
       {/* ── 02 · APPROACH ── */}
       <section className="bg-zinc-50 py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionEyebrow num="02" label={t('sectionApproach')} />
+          <SectionEyebrow num="02" label={chrome.sectionApproach} />
           <motion.h2
             variants={fadeUp}
             initial="hidden"
@@ -402,7 +405,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
       {/* ── 03 · FINDINGS ── */}
       <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionEyebrow num="03" label={t('sectionFindings')} />
+          <SectionEyebrow num="03" label={chrome.sectionFindings} />
           <motion.h2
             variants={fadeUp}
             initial="hidden"
@@ -424,34 +427,38 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
           </motion.p>
 
           <div className="mt-12 flex flex-col gap-6">
-            {cs.findings.items.map((item, i) => (
-              <motion.article
-                key={item.title}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={i * 0.08}
-                className="border border-zinc-200 transition-colors hover:border-gtc-primary"
-              >
-                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 border-b border-zinc-100 bg-zinc-50 px-7 py-5">
-                  <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gtc-dark">
-                    {item.category}
-                  </span>
-                  <h3 className="text-lg font-black text-black">{item.title}</h3>
-                </div>
-                <div className="grid gap-px bg-zinc-100 md:grid-cols-3">
-                  {item.cols.map((col, c) => (
-                    <div key={c} className="bg-white p-7">
-                      <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-400">
-                        {cs.findings.columns[c]}
-                      </p>
-                      <p className="text-sm leading-relaxed text-zinc-700">{col}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.article>
-            ))}
+            {cs.findings.items.map((item, i) => {
+              const columns = [cs.findings.column1, cs.findings.column2, cs.findings.column3];
+              const cols = [item?.col1, item?.col2, item?.col3];
+              return (
+                <motion.article
+                  key={item?.title}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={i * 0.08}
+                  className="border border-zinc-200 transition-colors hover:border-gtc-primary"
+                >
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 border-b border-zinc-100 bg-zinc-50 px-7 py-5">
+                    <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gtc-dark">
+                      {item?.category}
+                    </span>
+                    <h3 className="text-lg font-black text-black">{item?.title}</h3>
+                  </div>
+                  <div className="grid gap-px bg-zinc-100 md:grid-cols-3">
+                    {cols.map((col, c) => (
+                      <div key={c} className="bg-white p-7">
+                        <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+                          {columns[c]}
+                        </p>
+                        <p className="text-sm leading-relaxed text-zinc-700">{col}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -468,7 +475,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
           >
             <span className="text-gtc-primary">04</span>
             <span className="mx-2 text-white/30">·</span>
-            {t('sectionOutputs')}
+            {chrome.sectionOutputs}
           </motion.p>
           <motion.h2
             variants={fadeUp}
@@ -532,7 +539,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
       {/* ── 05 · WHY US ── */}
       <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionEyebrow num="05" label={t('sectionWhy')} />
+          <SectionEyebrow num="05" label={chrome.sectionWhy} />
           <motion.h2
             variants={fadeUp}
             initial="hidden"
@@ -580,7 +587,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
             className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-zinc-200 pt-8"
           >
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">
-              {t('contactLabel')}
+              {chrome.contactLabel}
             </p>
             <span className="text-sm font-semibold text-black">{cs.contact.name}</span>
             <a
@@ -604,11 +611,11 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h2 className="text-4xl font-black text-white md:text-5xl">{t('ctaTitle')}</h2>
-            <p className="mt-4 text-base text-white/60">{t('ctaDesc')}</p>
+            <h2 className="text-4xl font-black text-white md:text-5xl">{chrome.ctaTitle}</h2>
+            <p className="mt-4 text-base text-white/60">{chrome.ctaDesc}</p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <ContactButton
-                  label={t('cta')}
+                  label={chrome.cta ?? ''}
                   size="lg"
                   className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black transition-colors hover:bg-gtc-primary/90"
                 />
@@ -616,7 +623,7 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
                 href={`/${locale}/case-studies`}
                 className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-[0.1em] text-white/60 transition-colors hover:text-gtc-primary"
               >
-                {t('back')}
+                {chrome.back}
                 <ArrowUpRight className="size-4" />
               </Link>
             </div>
