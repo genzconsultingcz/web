@@ -30,6 +30,8 @@
       "src": "/genzone_workshop.jpeg",
       "alt": "GenZ Consulting workshop na Career Expo"
     },
+    "variantsLabel": "Varianty workshopu",
+    "variantsTitle": "Zvolte hloubku, která sedne vaší firmě",
     "variants": [
       {
         "num": "01",
@@ -77,6 +79,8 @@
       "src": "/genzone_workshop.jpeg",
       "alt": "GenZ Consulting workshop at Career Expo"
     },
+    "variantsLabel": "Workshop variants",
+    "variantsTitle": "Choose the depth that fits your company",
     "variants": [
       {
         "num": "01",

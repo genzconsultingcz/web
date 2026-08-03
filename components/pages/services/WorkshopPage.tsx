@@ -1,9 +1,19 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import type { ServiceQuery } from '../../../tina/__generated__/types';
+
+type DeepOmitTypename<T> = T extends readonly (infer U)[]
+  ? DeepOmitTypename<U>[]
+  : T extends object
+    ? { [K in keyof T as K extends '__typename' ? never : K]: DeepOmitTypename<T[K]> }
+    : T;
+
+export type ServiceContent = DeepOmitTypename<
+  NonNullable<NonNullable<ServiceQuery['service']>['cs']>
+>;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -47,13 +57,16 @@ function DetailRow({
   );
 }
 
-export default function WorkshopPage() {
-  const t = useTranslations('genzWorkshop');
-  const variants = [
-    { num: '01', title: t('variant1Title'), desc: t('variant1Desc') },
-    { num: '02', title: t('variant2Title'), desc: t('variant2Desc') },
-    { num: '03', title: t('variant3Title'), desc: t('variant3Desc') },
-  ];
+export default function WorkshopPage({
+  num,
+  content,
+}: {
+  num: string;
+  content: ServiceContent | null | undefined;
+}) {
+  if (!content) return null;
+
+  const variants = content.variants ?? [];
 
   return (
     <>
@@ -67,7 +80,7 @@ export default function WorkshopPage() {
             custom={0}
             className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-black/50"
           >
-            {t('eyebrow')}
+            {content.hero?.eyebrow ?? ''}
           </motion.p>
 
           <motion.h1
@@ -77,7 +90,7 @@ export default function WorkshopPage() {
             custom={0.1}
             className="text-5xl font-black leading-[1.05] tracking-tight text-black sm:text-6xl md:text-7xl"
           >
-            {t('title')}
+            {content.hero?.title ?? ''}
           </motion.h1>
 
           <motion.p
@@ -87,7 +100,7 @@ export default function WorkshopPage() {
             custom={0.2}
             className="mt-6 max-w-xl text-base text-black/60 md:text-lg"
           >
-            {t('subtitle')}
+            {content.hero?.subtitle ?? ''}
           </motion.p>
 
           <motion.div
@@ -98,7 +111,7 @@ export default function WorkshopPage() {
               className="mt-10"
             >
               <ContactButton
-                label={t('cta')}
+                label={content.hero?.cta ?? ''}
                 size="lg"
                 className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
@@ -109,15 +122,15 @@ export default function WorkshopPage() {
           aria-hidden
           className="pointer-events-none absolute right-12 top-1/2 -translate-y-1/2 select-none text-[18vw] font-black leading-none text-black/5"
         >
-          03
+          {num}
         </div>
       </section>
 
       {/* ── WORKSHOP PHOTO ── */}
       <div className="relative h-56 overflow-hidden bg-black sm:h-72">
         <Image
-          src="/genzone_workshop.jpeg"
-          alt={t('heroImageAlt')}
+          src={content.image?.src ?? ''}
+          alt={content.image?.alt ?? ''}
           fill
           className="object-cover opacity-70"
           sizes="100vw"
@@ -126,9 +139,9 @@ export default function WorkshopPage() {
 
       {/* ── OVERVIEW ROWS ── */}
       <section className="bg-white">
-        <DetailRow label={t('whatLabel')} text={t('whatText')} index={0} />
-        <DetailRow label={t('gainLabel')} text={t('gainText')} index={1} />
-        <DetailRow label={t('forLabel')} text={t('forText')} index={2} />
+        {(content.sections ?? []).map((s, i) => (
+          <DetailRow key={i} label={s?.label ?? ''} text={s?.text ?? ''} index={i} />
+        ))}
       </section>
 
       {/* ── VARIANTS ── */}
@@ -142,17 +155,17 @@ export default function WorkshopPage() {
             className="mb-14"
           >
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-gtc-primary">
-              {t('variantsLabel')}
+              {content.variantsLabel ?? ''}
             </p>
             <h2 className="text-3xl font-black text-white md:text-4xl">
-              {t('variantsTitle')}
+              {content.variantsTitle ?? ''}
             </h2>
           </motion.div>
 
           <div className="grid gap-px bg-white/10 sm:grid-cols-3">
-            {variants.map(({ num, title, desc }, i) => (
+            {variants.map((v, i) => (
               <motion.div
-                key={num}
+                key={i}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -160,9 +173,9 @@ export default function WorkshopPage() {
                 custom={i * 0.1}
                 className="group relative bg-gtc-deep p-8 hover:bg-white/5 transition-colors duration-200"
               >
-                <span className="text-5xl font-black text-white/10 select-none leading-none">{num}</span>
-                <h3 className="mt-4 text-lg font-black text-white">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/60">{desc}</p>
+                <span className="text-5xl font-black text-white/10 select-none leading-none">{v?.num ?? ''}</span>
+                <h3 className="mt-4 text-lg font-black text-white">{v?.title ?? ''}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-white/60">{v?.desc ?? ''}</p>
                 <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gtc-primary transition-all duration-300 group-hover:w-full" />
               </motion.div>
             ))}
@@ -177,7 +190,7 @@ export default function WorkshopPage() {
             className="mt-14"
           >
             <ContactButton
-              label={t('cta')}
+              label={content.hero?.cta ?? ''}
               size="lg"
               className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
             />

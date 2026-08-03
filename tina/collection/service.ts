@@ -51,6 +51,8 @@ const serviceLocaleFields = [
       { type: 'string', label: 'Alt Text', name: 'alt' },
     ],
   } as const,
+  { type: 'string', label: 'Variants Eyebrow (workshop only)', name: 'variantsLabel' } as const,
+  { type: 'string', label: 'Variants Title (workshop only)', name: 'variantsTitle' } as const,
   {
     type: 'object',
     label: 'Variants (optional)',
