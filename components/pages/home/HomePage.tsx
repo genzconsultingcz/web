@@ -7,7 +7,6 @@ import { motion } from 'motion/react';
 import { ArrowRight, ArrowUpRight, ArrowDown, Check, Quote, Linkedin, Download } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
-import { getCaseStudy } from '@/components/pages/case-studies/case-study-data';
 import type { HomeQuery } from '../../../tina/__generated__/types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -106,23 +105,20 @@ function TestimonialSlider({ content }: { content: HomeContent['testimonials'] }
   );
 }
 
+export type HomeCaseStudyTeaser = { slug: string; client: string; intro: string };
+
 export default function HomePage({
   content,
   logos,
+  caseStudies,
 }: {
   content: HomeContent | null | undefined;
   logos: HomeLogos;
+  caseStudies: HomeCaseStudyTeaser[];
 }) {
   const locale = useLocale();
 
   if (!content) return null;
-
-  const caseStudies = ['av-media', 'global-payments', 'generali']
-    .map((slug) => {
-      const cs = getCaseStudy(slug, locale);
-      return cs ? { slug, client: cs.client, intro: cs.hero.intro } : null;
-    })
-    .filter((cs): cs is { slug: string; client: string; intro: string } => Boolean(cs));
 
   return (
     <>

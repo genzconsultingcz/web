@@ -51,13 +51,18 @@ const content = {
 
 const logos = [{ name: 'Global Payments', src: '/globalpayments.jpeg' }] as any
 
+const caseStudies = [
+  { slug: 'av-media', client: 'AV MEDIA', intro: 'Testovací case study popis.' },
+] as any
+
 describe('HomePage', () => {
   it('renders copy from the content prop instead of translation keys', () => {
-    render(<HomePage content={content} logos={logos} />)
+    render(<HomePage content={content} logos={logos} caseStudies={caseStudies} />)
     expect(screen.getByText('Generace Z není')).toBeInTheDocument()
     expect(screen.getByText('Trainee program')).toBeInTheDocument()
     expect(screen.getByText('spokojených firem')).toBeInTheDocument()
     expect(screen.getByText('Skvělá spolupráce')).toBeInTheDocument()
     expect(screen.getByText('Připraveni začít?')).toBeInTheDocument()
+    expect(screen.getByText('AV MEDIA')).toBeInTheDocument()
   })
 })
