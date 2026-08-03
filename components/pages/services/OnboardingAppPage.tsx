@@ -1,8 +1,18 @@
 'use client';
 import React from 'react';
-import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import type { ServiceQuery } from '../../../tina/__generated__/types';
+
+type DeepOmitTypename<T> = T extends readonly (infer U)[]
+  ? DeepOmitTypename<U>[]
+  : T extends object
+    ? { [K in keyof T as K extends '__typename' ? never : K]: DeepOmitTypename<T[K]> }
+    : T;
+
+export type ServiceContent = DeepOmitTypename<
+  NonNullable<NonNullable<ServiceQuery['service']>['cs']>
+>;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -46,8 +56,15 @@ function DetailRow({
   );
 }
 
-export default function OnboardingAppPage() {
-  const t = useTranslations('onboardingApp');
+export default function OnboardingAppPage({
+  num,
+  content,
+}: {
+  num: string;
+  content: ServiceContent | null | undefined;
+}) {
+  if (!content) return null;
+
   return (
     <>
       {/* ── HERO ── */}
@@ -60,7 +77,7 @@ export default function OnboardingAppPage() {
             custom={0}
             className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-black/50"
           >
-            {t('eyebrow')}
+            {content.hero?.eyebrow ?? ''}
           </motion.p>
 
           <motion.h1
@@ -70,7 +87,7 @@ export default function OnboardingAppPage() {
             custom={0.1}
             className="text-5xl font-black leading-[1.05] tracking-tight text-black whitespace-pre-line sm:text-6xl md:text-7xl"
           >
-            {t('title')}
+            {content.hero?.title ?? ''}
           </motion.h1>
 
           <motion.p
@@ -80,7 +97,7 @@ export default function OnboardingAppPage() {
             custom={0.2}
             className="mt-6 max-w-xl text-base text-black/60 md:text-lg"
           >
-            {t('subtitle')}
+            {content.hero?.subtitle ?? ''}
           </motion.p>
 
           <motion.div
@@ -91,7 +108,7 @@ export default function OnboardingAppPage() {
               className="mt-10"
             >
               <ContactButton
-                label={t('cta')}
+                label={content.hero?.cta ?? ''}
                 size="lg"
                 className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
@@ -102,16 +119,15 @@ export default function OnboardingAppPage() {
           aria-hidden
           className="pointer-events-none absolute right-12 top-1/2 -translate-y-1/2 select-none text-[18vw] font-black leading-none text-black/5"
         >
-          02
+          {num}
         </div>
       </section>
 
       {/* ── DETAIL SECTIONS ── */}
       <section className="bg-white">
-        <DetailRow label={t('whatLabel')} text={t('whatText')} index={0} />
-        <DetailRow label={t('gainLabel')} text={t('gainText')} index={1} />
-        <DetailRow label={t('forLabel')} text={t('forText')} index={2} />
-        <DetailRow label={t('differentiatorLabel')} text={t('differentiatorText')} index={3} />
+        {(content.sections ?? []).map((s, i) => (
+          <DetailRow key={i} label={s?.label ?? ''} text={s?.text ?? ''} index={i} />
+        ))}
       </section>
 
       {/* ── FINAL CTA ── */}
@@ -124,11 +140,15 @@ export default function OnboardingAppPage() {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h2 className="text-4xl font-black text-white md:text-5xl">{t('title')}</h2>
-            <p className="mt-4 text-base text-white/60">{t('subtitle')}</p>
+            <h2 className="text-4xl font-black text-white md:text-5xl">
+              {content.finalCta?.title ?? content.hero?.title ?? ''}
+            </h2>
+            <p className="mt-4 text-base text-white/60">
+              {content.finalCta?.desc ?? content.hero?.subtitle ?? ''}
+            </p>
             <div className="mt-10">
               <ContactButton
-                label={t('cta')}
+                label={content.hero?.cta ?? ''}
                 size="lg"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
