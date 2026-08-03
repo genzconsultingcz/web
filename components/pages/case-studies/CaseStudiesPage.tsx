@@ -8,6 +8,15 @@ import { ArrowUpRight } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import type { CaseStudiesChromeQuery } from '../../../tina/__generated__/types';
 
+// Strips __typename at every depth: the `cs` and `en` chrome branches are
+// structurally identical aside from that literal, so this type accepts either
+// without a cast at the call site — same pattern as HomePage's HomeContent.
+type DeepOmitTypename<T> = T extends readonly (infer U)[]
+  ? DeepOmitTypename<U>[]
+  : T extends object
+    ? { [K in keyof T as K extends '__typename' ? never : K]: DeepOmitTypename<T[K]> }
+    : T;
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
   hidden: { opacity: 0, y: 24 },
@@ -18,8 +27,8 @@ const fadeUp: any = {
   }),
 };
 
-export type CaseStudiesListChrome = NonNullable<
-  NonNullable<CaseStudiesChromeQuery['caseStudiesChrome']>['cs']
+export type CaseStudiesListChrome = DeepOmitTypename<
+  NonNullable<NonNullable<CaseStudiesChromeQuery['caseStudiesChrome']>['cs']>
 >['list'];
 
 export type CaseStudyCard = {
@@ -36,7 +45,7 @@ export default function CaseStudiesPage({
   chrome,
   cards,
 }: {
-  chrome: CaseStudiesListChrome;
+  chrome: CaseStudiesListChrome | null | undefined;
   cards: CaseStudyCard[];
 }) {
   const locale = useLocale();

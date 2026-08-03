@@ -9,16 +9,13 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
 
   const [{ data: chromeData }, { data: connectionData }] = await Promise.all([
-    client.queries.caseStudiesChrome(
-      { relativePath: 'index.json' },
-      { fetchOptions: { next: { revalidate: 300 } } }
-    ),
+    client.queries.caseStudiesChrome({ relativePath: 'index.json' }, { fetchOptions: { next: { revalidate: 300 } } }),
     client.queries.caseStudyConnection(undefined, {
       fetchOptions: { next: { revalidate: 300 } },
     }),
   ]);
 
-  const chrome = locale === 'en' ? chromeData.caseStudiesChrome?.en : chromeData.caseStudiesChrome?.cs;
+  const chrome = locale === 'en' ? chromeData.caseStudiesChrome?.en?.list : chromeData.caseStudiesChrome?.cs?.list;
 
   const cards: CaseStudyCard[] = (connectionData.caseStudyConnection.edges ?? [])
     .map((edge) => {

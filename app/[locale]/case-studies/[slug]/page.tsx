@@ -10,9 +10,7 @@ export const revalidate = 300;
 
 export async function generateStaticParams() {
   const { data } = await client.queries.caseStudyConnection();
-  const slugs = (data.caseStudyConnection.edges ?? [])
-    .map((edge) => edge?.node?._sys.filename)
-    .filter((slug): slug is string => Boolean(slug));
+  const slugs = (data.caseStudyConnection.edges ?? []).map((edge) => edge?.node?._sys.filename).filter((slug): slug is string => Boolean(slug));
 
   return routing.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
@@ -48,9 +46,7 @@ export default async function Page({
   // Tina's generated client may either reject or resolve with `errors` populated
   // when `relativePath` doesn't match a document — handle both the same way,
   // matching the old `if (!getCaseStudy(slug, locale)) notFound();` check.
-  const result = await client.queries
-    .caseStudy({ relativePath: `${slug}.json` })
-    .catch(() => ({ data: null, errors: [{ message: 'not found' }] }));
+  const result = await client.queries.caseStudy({ relativePath: `${slug}.json` }).catch(() => ({ data: null, errors: [{ message: 'not found' }] }));
 
   if (result.errors?.length || !result.data?.caseStudy) notFound();
 
