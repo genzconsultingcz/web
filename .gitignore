@@ -39,3 +39,9 @@ pnpm-debug.log*
 
 # tina cms
 tina/__generated__/
+
+# cloudflare / opennext
+/.open-next/
+/.wrangler/
+.dev.vars
+wrangler.wrangler.env/
