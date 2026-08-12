@@ -150,9 +150,7 @@ export default function HomePage({
               {content.hero?.headline1}{' '}
               {(() => {
                 const h2 = content.hero?.headline2 ?? '';
-                const m = h2.match(/^(.*?)([.!?]*)$/);
-                const word = m?.[1] ?? h2;
-                const trail = m?.[2] ?? '';
+                const word = h2.replace(/[.!?]+$/g, '');
                 return (
                   <>
                     <span className="relative inline-block">
@@ -166,7 +164,6 @@ export default function HomePage({
                       />
                       <span className="relative z-10">{word}</span>
                     </span>
-                    {trail}
                   </>
                 );
               })()}

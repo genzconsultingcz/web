@@ -65,4 +65,20 @@ describe('HomePage', () => {
     expect(screen.getByText('Připraveni začít?')).toBeInTheDocument()
     expect(screen.getByText('AV MEDIA')).toBeInTheDocument()
   })
+
+  it('does not render a trailing period in the highlighted English headline', () => {
+    const englishContent = {
+      ...content,
+      hero: {
+        ...content.hero,
+        headline1: 'Gen Z is not',
+        headline2: 'complicated.',
+      },
+    } as any
+
+    render(<HomePage content={englishContent} logos={logos} caseStudies={caseStudies} />)
+
+    expect(document.body.textContent).toContain('Gen Z is not complicated')
+    expect(document.body.textContent).not.toContain('complicated.')
+  })
 })
