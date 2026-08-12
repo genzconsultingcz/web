@@ -299,13 +299,13 @@ export default function HomePage({
               <h2 className="text-2xl font-black leading-tight text-white md:text-3xl">
                 {content.problem?.title}
               </h2>
-              <p className="mt-4 text-base font-semibold text-white/60 italic">
+              <p className="mt-4 text-base font-medium leading-relaxed text-white/80 not-italic">
                 {content.problem?.villain}
               </p>
               <ul className="mt-6 space-y-3">
                 {(content.problem?.items ?? []).map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-gtc-primary" />
+                    <Check className="mt-0.5 size-4 shrink-0 text-gtc-primary" />
                     <span className="text-sm leading-relaxed text-white/70">{item}</span>
                   </li>
                 ))}
@@ -326,7 +326,7 @@ export default function HomePage({
               <h2 className="text-2xl font-black leading-tight text-white md:text-3xl">
                 {content.solution?.title}
               </h2>
-              <p className="mt-2 text-xl font-black text-gtc-primary md:text-2xl">
+              <p className="mt-2 text-2xl font-black leading-tight text-white md:text-3xl">
                 {content.solution?.subtitle}
               </p>
               <ul className="mt-6 space-y-3">
