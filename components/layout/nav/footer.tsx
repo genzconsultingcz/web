@@ -54,7 +54,7 @@ export const Footer = () => {
                 className="h-16 w-auto mx-auto"
               />
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-white/50">
+            <p className="mt-4 whitespace-nowrap text-sm leading-relaxed text-white/50">
               {copy.tagline}
             </p>
             <p className="mt-2 text-xs text-white/30">{copy.web}</p>
