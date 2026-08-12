@@ -326,7 +326,7 @@ export default function HomePage({
               <h2 className="text-2xl font-black leading-tight text-white md:text-3xl">
                 {content.solution?.title}
               </h2>
-              <p className="mt-4 text-base font-medium leading-relaxed text-white/80 not-italic">
+              <p className="mt-4 text-xl font-medium leading-relaxed text-white/80 not-italic md:text-[1.66rem]">
                 {content.solution?.subtitle}
               </p>
               <ul className="mt-6 space-y-3">
