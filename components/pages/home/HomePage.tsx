@@ -379,10 +379,9 @@ export default function HomePage({
                 <p className="mt-2 text-sm leading-relaxed text-zinc-500">{service?.desc}</p>
                 <Link
                   href={`/${locale}/services/${service?.slug}`}
-                  className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
+                  className="mt-5 inline-flex items-center text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
                 >
                   {content.services?.learnMore}
-                  <ArrowRight className="size-3" />
                 </Link>
                 <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gtc-primary transition-all duration-300 group-hover:w-full" />
               </motion.div>
