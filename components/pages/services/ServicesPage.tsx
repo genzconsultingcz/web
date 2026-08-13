@@ -102,13 +102,6 @@ export default function ServicesPage({
           </motion.div>
         </div>
 
-        {/* decorative large text */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-8 top-1/2 -translate-y-1/2 select-none text-[20vw] font-black leading-none text-black/5"
-        >
-          SVC
-        </div>
       </section>
 
       {/* ── SERVICE CARDS ── */}
