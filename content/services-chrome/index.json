@@ -2,7 +2,7 @@
   "cs": {
     "hero": { "eyebrow": "Naše služby", "title": "Jak pomáháme firmám pracovat s Gen Z", "subtitle": "Pět konkrétních způsobů, jak zlepšit nábor, onboarding a retenci mladých talentů.", "cta": "Domluvit schůzku" },
     "learnMore": "Zjistit více",
-    "notSure": { "title": "Nevíte, kde začít?", "desc": "Každá firma je jiná. Pokud si nejste jistí co přesně potřebujete, začněme rozhovorem.", "cta": "Domluvit nezávaznou schůzku" }
+    "notSure": { "title": "Hledáte něco jiného?", "desc": "Každá firma je jiná. Pokud si nejste jistí co přesně potřebujete, začněme rozhovorem.", "cta": "Domluvit nezávaznou schůzku" }
   },
   "en": {
     "hero": { "eyebrow": "Our services", "title": "How we help companies work with Gen Z", "subtitle": "Five concrete ways to improve recruitment, onboarding and retention of young talent.", "cta": "Book a call" },
