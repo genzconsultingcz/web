@@ -3,13 +3,13 @@
   "featured": true,
   "cs": {
     "card": {
-      "title": "Nevíte, kde začít, nebo hledáte něco jiného?",
-      "desc": "Každá firma je jiná. Pokud si nejste jisti, co přesně potřebujete, nebo víte přesně, co chcete, ale nenašli jste to v našich produktech, začněme rozhovorem."
+      "title": "Nevíte, kde začít?",
+      "desc": "Pokud si nejste jisti, co přesně potřebujete, začněme rozhovorem."
     },
     "hero": {
       "eyebrow": "Individuální řešení",
-      "title": "Nevíte, kde začít, nebo hledáte něco jiného?",
-      "subtitle": "Každá firma je jiná. Pokud si nejste jisti, co přesně potřebujete, nebo víte přesně, co chcete, ale nenašli jste to v našich produktech, začněme rozhovorem.",
+      "title": "Nevíte, kde začít?",
+      "subtitle": "Pokud si nejste jisti, co přesně potřebujete, začněme rozhovorem.",
       "cta": "Domluvit nezávaznou schůzku"
     },
     "sections": [
