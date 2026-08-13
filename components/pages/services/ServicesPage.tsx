@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import type { ServicesChromeQuery } from '../../../tina/__generated__/types';
 
@@ -37,6 +37,21 @@ export interface ServiceCard {
 export type ServicesPageChrome = DeepOmitTypename<
   NonNullable<NonNullable<ServicesChromeQuery['servicesChrome']>['cs']>
 >;
+
+function LongArrowIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 44 18"
+      className={className}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1 9H31" stroke="currentColor" strokeWidth="1.9" strokeLinecap="square" />
+      <path d="M31 9L24 2L24 16L31 9Z" fill="currentColor" />
+    </svg>
+  );
+}
 
 export default function ServicesPage({
   chrome,
@@ -123,10 +138,10 @@ export default function ServicesPage({
                 <p className="mt-3 text-sm leading-relaxed text-zinc-500">{c.desc}</p>
                 <Link
                   href={`/${locale}/services/${c.slug}`}
-                  className="mt-6 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
+                  className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
                 >
                   {chrome.learnMore}
-                  <ArrowRight className="size-3" />
+                  <LongArrowIcon className="h-3 w-8 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
                 <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gtc-primary transition-all duration-300 group-hover:w-full" />
               </motion.div>
@@ -151,10 +166,10 @@ export default function ServicesPage({
                   </div>
                   <Link
                     href={`/${locale}/services/${c.slug}`}
-                    className="shrink-0 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
+                    className="shrink-0 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
                   >
                     {chrome.learnMore}
-                    <ArrowRight className="size-3" />
+                    <LongArrowIcon className="h-3 w-8 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </Link>
                 </div>
                 <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gtc-primary transition-all duration-300 group-hover:w-full" />
