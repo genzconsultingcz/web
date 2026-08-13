@@ -6,6 +6,6 @@ allowBuilds:
   core-js: true
   esbuild: true
   protobufjs: true
-  rclone.js: set this to true or false
+  rclone.js: false
   sharp: true
-  workerd: set this to true or false
+  workerd: false
