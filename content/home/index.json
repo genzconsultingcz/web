@@ -14,7 +14,7 @@
     "problem": {
       "eyebrow": "Proč to nefunguje",
       "title": "Firmy nepřicházejí o Gen Z kvůli tomu, že je tato generace složitá.",
-      "villain": "Přicházejí o ně, protože systémy pro mladé staví lidé, kteří jejich potřeby nikdy nežili.",
+      "villain": "Přicházejí o ně, protože systémy pro mladé staví lidé, kteří je nikdy nežili.",
       "items": [
         "Kandidáti se nehlásí nebo po nástupu rychle odcházejí.",
         "Onboarding a HR komunikace z minulých let Gen Z prostě neosloví.",
@@ -24,7 +24,7 @@
     "solution": {
       "eyebrow": "Jak přistupujeme jinak",
       "title": "Nejsme konzultanti, kteří o Gen Z jen čtou.",
-      "subtitle": "Jsme Gen Z a rozumíme i tomu, jak funguje firma.",
+      "subtitle": "Jsme Gen Z a rozumíme i byznysu.",
       "items": [
         "Přímá zkušenost z vlastní generace, ne jen teorie.",
         "Pracujeme s firmami jako Global Payments, Generali nebo AV Media.",
@@ -136,7 +136,7 @@
     "problem": {
       "eyebrow": "Why it's not working",
       "title": "Companies do not lose Gen Z because this generation is complicated.",
-      "villain": "They lose them because systems for young people are built by people who never lived those needs.",
+      "villain": "They lose them because systems for young people are built by people who never lived their needs.",
       "items": [
         "Candidates do not apply or leave soon after joining.",
         "Onboarding and HR communication from the past decade simply do not reach Gen Z.",
@@ -146,7 +146,7 @@
     "solution": {
       "eyebrow": "How we do it differently",
       "title": "We are not consultants who only read about Gen Z.",
-      "subtitle": "We are Gen Z and we understand how businesses work.",
+      "subtitle": "We are Gen Z and we understand business too.",
       "items": [
         "Direct experience from our own generation, not just theory.",
         "We work with companies such as Global Payments, Generali and AV Media.",
