@@ -187,7 +187,7 @@ export default function WorkshopPage({
             whileInView="visible"
             viewport={{ once: true }}
             custom={0.35}
-            className="mt-14"
+            className="mt-14 flex justify-center"
           >
             <ContactButton
               label={content.hero?.cta ?? ''}

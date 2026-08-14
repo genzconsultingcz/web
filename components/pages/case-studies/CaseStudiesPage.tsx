@@ -153,7 +153,7 @@ export default function CaseStudiesPage({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="max-w-2xl"
+            className="mx-auto max-w-2xl text-center"
           >
             <h2 className="text-4xl font-black text-white md:text-5xl">{chrome.ctaTitle}</h2>
             <p className="mt-4 text-base text-white/60">{chrome.ctaDesc}</p>

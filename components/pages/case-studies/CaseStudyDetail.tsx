@@ -632,11 +632,11 @@ export default function CaseStudyDetail({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="max-w-2xl"
+            className="mx-auto max-w-2xl text-center"
           >
             <h2 className="text-4xl font-black text-white md:text-5xl">{chrome.ctaTitle}</h2>
             <p className="mt-4 text-base text-white/60">{chrome.ctaDesc}</p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <ContactButton
                   label={chrome.cta ?? ''}
                   size="lg"

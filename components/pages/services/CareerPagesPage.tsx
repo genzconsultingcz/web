@@ -165,7 +165,7 @@ export default function CareerPagesPage({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="max-w-2xl"
+            className="mx-auto max-w-2xl text-center"
           >
             <h2 className="text-4xl font-black text-white md:text-5xl">
               {content.finalCta?.title ?? content.hero?.title ?? ''}

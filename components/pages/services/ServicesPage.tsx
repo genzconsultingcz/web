@@ -172,11 +172,11 @@ export default function ServicesPage({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="max-w-2xl"
+            className="mx-auto max-w-2xl text-center"
           >
             <h2 className="text-4xl font-black text-white md:text-5xl">{chrome.notSure?.title}</h2>
             <p className="mt-4 text-base text-white/60">{chrome.notSure?.desc}</p>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-10 flex flex-wrap justify-center gap-3">
               <ContactButton
                 label={chrome.notSure?.cta ?? ''}
                 size="lg"
