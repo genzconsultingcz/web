@@ -7,7 +7,7 @@
       "subline": "Firmy ji jen neumí oslovit.",
       "body": "Pomáháme firmám přitáhnout, vybrat a udržet Gen Z talenty. A protože sami Gen Z jsme, rozumíme jim opravdu.",
       "primaryCta": "Domluvit schůzku",
-      "secondaryCta": "Stáhnout průvodce zdarma",
+      "secondaryCta": "Stáhnout průvodce",
       "imageAlt": "Tým GenZ Consulting"
     },
     "logosEyebrow": "Klienti a partneři",
@@ -103,7 +103,7 @@
       "title": "Připraveni začít?",
       "desc": "Rezervujte si nezávazný call nebo si stáhněte náš průvodce zdarma.",
       "primary": "Domluvit schůzku",
-      "secondary": "Stáhnout průvodce zdarma"
+      "secondary": "Stáhnout průvodce"
     }
   },
   "en": {
@@ -114,7 +114,7 @@
       "subline": "Companies just don't know how to reach them.",
       "body": "We help companies attract, select and retain Gen Z talent. And because we are Gen Z ourselves, we truly understand them.",
       "primaryCta": "Book a call",
-      "secondaryCta": "Download free guide",
+      "secondaryCta": "Download guide",
       "imageAlt": "GenZ Consulting team"
     },
     "logosEyebrow": "Clients & partners",
@@ -210,7 +210,7 @@
       "title": "Ready to start?",
       "desc": "Book a no-obligation call or download our free guide.",
       "primary": "Book a call",
-      "secondary": "Download free guide"
+      "secondary": "Download guide"
     }
   },
   "logos": [

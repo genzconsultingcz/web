@@ -205,9 +205,8 @@ export default function HomePage({
                 className="rounded-full bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
               <a
-                href="/downloads/GZC_Karierka_pro_Gen_Z.pdf"
-                download
-                onClick={() => posthog.capture('guide_downloaded', { placement: 'hero' })}
+                href="#pdf-guide"
+                onClick={() => posthog.capture('guide_cta_clicked', { placement: 'hero' })}
                 className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-transparent px-8 py-4 text-sm font-bold text-black hover:bg-black hover:text-white transition-colors"
               >
                 <Download className="size-4" />
@@ -535,7 +534,7 @@ export default function HomePage({
       </section>
 
       {/* ── PDF GUIDE ── */}
-      <section id="pdf-guide" className="bg-black py-20 lg:py-28">
+      <section id="pdf-guide" className="scroll-mt-20 bg-black py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
             {/* Left */}
