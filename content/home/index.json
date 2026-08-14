@@ -2,7 +2,7 @@
   "cs": {
     "hero": {
       "eyebrow": "Specialisté na generaci Z",
-      "headline1": "Generace Z není",
+      "headline1": "Generace\u00A0Z není",
       "headline2": "komplikovaná",
       "subline": "Firmy ji jen neumí oslovit.",
       "body": "Pomáháme firmám přitáhnout, vybrat a udržet Gen Z talenty. A protože sami Gen Z jsme, rozumíme jim opravdu.",
@@ -109,7 +109,7 @@
   "en": {
     "hero": {
       "eyebrow": "Gen Z specialists",
-      "headline1": "Gen Z is not",
+      "headline1": "Gen\u00A0Z is not",
       "headline2": "complicated",
       "subline": "Companies just don't know how to reach them.",
       "body": "We help companies attract, select and retain Gen Z talent. And because we are Gen Z ourselves, we truly understand them.",
