@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import { SITE_URL, OG_IMAGE } from '@/lib/seo';
 import { VideoDialogProvider } from '@/components/ui/VideoDialogContext';
 import VideoDialog from '@/components/ui/VideoDialog';
 import '@/styles.css';
@@ -14,8 +15,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'GenZ Consulting — Specialisté na generaci Z',
+    default: 'GenZ Consulting | Specialisté na generaci Z',
     template: '%s | GenZ Consulting',
   },
   description:
@@ -30,13 +32,22 @@ export const metadata: Metadata = {
     'trainee program',
     'GenZ Consulting',
   ],
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
-    title: 'GenZ Consulting — Specialisté na generaci Z',
+    title: 'GenZ Consulting | Specialisté na generaci Z',
     description:
       'Pomáháme středním a velkým firmám komunikovat, přitahovat a udržet generaci Z.',
     siteName: 'GenZ Consulting',
     locale: 'cs_CZ',
     type: 'website',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'GenZ Consulting' }],
   },
   robots: {
     index: true,

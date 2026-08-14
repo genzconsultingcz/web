@@ -1,10 +1,27 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Layout from '@/components/layout/layout';
 import CareerPagesPage from '@/components/pages/services/CareerPagesPage';
 import client from '@/tina/__generated__/client';
+import { getPageMetadata, SEO } from '@/lib/seo';
 
 export const revalidate = 300;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const seo = SEO['career-pages'][locale === 'en' ? 'en' : 'cs'];
+  return getPageMetadata({
+    locale,
+    path: '/services/career-pages',
+    title: seo.title,
+    description: seo.description,
+  });
+}
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

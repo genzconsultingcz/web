@@ -1,9 +1,15 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { notFound as nextNotFound } from 'next/navigation';
 import { getLocale } from 'next-intl/server';
 import client from '@/tina/__generated__/client';
 
 export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: 'Stránka nenalezena',
+  robots: { index: false, follow: false },
+};
 
 export default async function NotFound() {
   const locale = await getLocale();

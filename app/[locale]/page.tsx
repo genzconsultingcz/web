@@ -1,11 +1,28 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Layout from '@/components/layout/layout';
 import HomePage, { type HomeCaseStudyTeaser } from '@/components/pages/home/HomePage';
 import client from '@/tina/__generated__/client';
+import { getPageMetadata, SEO } from '@/lib/seo';
 
 export const revalidate = 300;
 
 const TEASER_SLUGS = ['av-media', 'global-payments', 'generali'];
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const seo = SEO.home[locale === 'en' ? 'en' : 'cs'];
+  return getPageMetadata({
+    locale,
+    path: '/',
+    title: { absolute: seo.title },
+    description: seo.description,
+  });
+}
 
 export default async function Home({
   params,

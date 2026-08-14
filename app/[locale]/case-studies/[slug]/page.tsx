@@ -5,6 +5,7 @@ import Layout from '@/components/layout/layout';
 import CaseStudyDetail from '@/components/pages/case-studies/CaseStudyDetail';
 import client from '@/tina/__generated__/client';
 import { routing } from '@/i18n/routing';
+import { getPageMetadata } from '@/lib/seo';
 
 export const revalidate = 300;
 
@@ -34,12 +35,10 @@ export async function generateMetadata({
     const { data } = await client.queries.caseStudy({ relativePath: `${slug}.json` });
     const content = locale === 'en' ? data.caseStudy.en : data.caseStudy.cs;
     if (!content) return {};
-    const title = `${content.client} — Case study | GenZ Consulting`;
-    return {
-      title,
-      description: content.hero?.intro ?? '',
-      openGraph: { title, description: content.hero?.intro ?? '' },
-    };
+    const isEn = locale === 'en';
+    const title = isEn ? `${content.client} — Case study` : `${content.client} — Případová studie`;
+    const description = content.hero?.intro ?? '';
+    return getPageMetadata({ locale, path: `/case-studies/${slug}`, title, description });
   } catch {
     return {};
   }
