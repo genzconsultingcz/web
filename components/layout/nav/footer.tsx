@@ -2,9 +2,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Phone, Mail, Linkedin } from 'lucide-react';
 import { useLayout } from '../layout-context';
+import { useCookieConsent } from '@/components/ui/CookieConsentContext';
 
 // Derive a readable display name from a LinkedIn URL (the Tina query doesn't expose a label).
 const SOCIAL_NAME_OVERRIDES: Record<string, string> = {
@@ -27,6 +28,8 @@ export const Footer = () => {
   const { globalSettings } = useLayout();
   const { header, footer } = globalSettings ?? {};
   const locale = useLocale();
+  const t = useTranslations('cookieConsent');
+  const { openConsent } = useCookieConsent();
   const copy = locale === 'en' ? footer?.copy?.en : footer?.copy?.cs;
 
   if (!copy) return null;
@@ -129,6 +132,19 @@ export const Footer = () => {
           <p className="text-xs text-white/30">
             © {new Date().getFullYear()} {header?.name}. {copy.rights}
           </p>
+          <Link
+            href={`/${locale}/gdpr`}
+            className="text-xs text-white/40 hover:text-white transition-colors duration-150"
+          >
+            {t('gdprLink')}
+          </Link>
+          <button
+            type="button"
+            onClick={openConsent}
+            className="text-xs text-white/40 hover:text-white transition-colors duration-150"
+          >
+            {t('change')}
+          </button>
           <a
             href="https://webe.tuuli.cz"
             target="_blank"

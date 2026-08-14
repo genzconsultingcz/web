@@ -8,6 +8,7 @@ if (projectToken && host) {
     api_host: host,
     defaults: "2026-01-30",
     capture_exceptions: true,
+    opt_out_capturing_by_default: true,
     debug: process.env.NODE_ENV === "development",
   });
 } else if (process.env.NODE_ENV === "development") {

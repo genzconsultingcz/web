@@ -144,6 +144,18 @@ export const SEO = {
       description: 'How GenZ Consulting helped companies like AV Media, Global Payments or Generali attract Generation Z.',
     },
   },
+  gdpr: {
+    cs: {
+      title: 'Ochrana osobních údajů (GDPR)',
+      description:
+        'Informace o zpracování osobních údajů, analytických cookies a vašich právech podle nařízení GDPR.',
+    },
+    en: {
+      title: 'Privacy policy (GDPR)',
+      description:
+        'Information about how we process personal data, analytics cookies and your rights under the GDPR.',
+    },
+  },
   media: {
     cs: {
       title: 'Média o nás',

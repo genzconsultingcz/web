@@ -7,6 +7,8 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { SEO, OG_IMAGE } from '@/lib/seo';
 import { LocaleLang } from '@/components/seo/locale-lang';
+import { CookieConsent } from '@/components/ui/CookieConsent';
+import { CookieConsentProvider } from '@/components/ui/CookieConsentContext';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -48,8 +50,11 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <LocaleLang />
-      {children}
+      <CookieConsentProvider>
+        <LocaleLang />
+        {children}
+        <CookieConsent />
+      </CookieConsentProvider>
     </NextIntlClientProvider>
   );
 }

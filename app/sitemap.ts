@@ -13,6 +13,7 @@ const STATIC_ROUTES = [
   { path: '/services/custom', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/media', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.5, changeFrequency: 'monthly' },
+  { path: '/gdpr', priority: 0.3, changeFrequency: 'yearly' },
 ] as const;
 
 function entryFor(locale: string, path: string, priority: number, changeFrequency: string): MetadataRoute.Sitemap[number] {
