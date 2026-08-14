@@ -20,7 +20,7 @@ const cards = [
     desc: 'Popis case study.',
     serviceType: 'Research + Workshop',
     listResult: 'Klient získal konkrétní playbook.',
-    logo: '/AV-MEDIA-SYSTEMS_horizontalni_1200_1200-970x970.png',
+    logo: '/av_media.webp',
     logoAlt: 'AV Media Systems',
   },
 ] as any

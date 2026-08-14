@@ -214,12 +214,12 @@
     }
   },
   "logos": [
-    { "name": "Global Payments", "src": "/globalpayments.jpeg" },
-    { "name": "Generali", "src": "/logo-orizzontale.2020-07-16-17-41-47.jpeg" },
-    { "name": "AV Media", "src": "/AV-MEDIA-SYSTEMS_horizontalni_1200_1200-970x970.png" },
-    { "name": "Raynet", "src": "/LOGO_Raynet_big.png" },
-    { "name": "ČZU", "src": "/CZU_logotyp_V_zelena.png" },
-    { "name": "CITA", "src": "/CITALogo.png" },
-    { "name": "TAP", "src": "/tap_logo.png" }
+    { "name": "Global Payments", "src": "/globalpayments.webp" },
+    { "name": "Generali", "src": "/generali.webp" },
+    { "name": "AV Media", "src": "/av_media.webp" },
+    { "name": "Raynet", "src": "/raynet.webp" },
+    { "name": "ČZU", "src": "/czu.webp" },
+    { "name": "CITA", "src": "/cita.webp" },
+    { "name": "TAP", "src": "/tap_logo.webp" }
   ]
 }

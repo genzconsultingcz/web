@@ -49,7 +49,7 @@ export const Footer = () => {
           <div className="max-w-[260px]">
             <Link href={`/${locale}`} aria-label={copy.homeLogoAria || undefined}>
               <Image
-                src="/logo_dark_bg_v3.png"
+                src="/logo_dark_bg.webp"
                 alt="GenZ Consulting"
                 width={140}
                 height={48}
@@ -156,7 +156,7 @@ export const Footer = () => {
               {copy.socialDomain}
             </span>
             <Image
-              src="/webe.png"
+              src="/webe.webp"
               alt="WeBe"
               width={530}
               height={193}

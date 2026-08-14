@@ -19,7 +19,7 @@ const chrome = {
 
 const cs = {
   client: 'AV MEDIA',
-  logo: '/logo.png',
+  logo: '/logo_dark_bg.webp',
   logoAlt: 'AV Media',
   year: '2026',
   hero: { headline: 'Testovací headline', intro: 'Testovací intro.' },

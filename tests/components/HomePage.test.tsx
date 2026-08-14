@@ -50,12 +50,12 @@ const content = {
   team: {
     eyebrow: 'Náš tým',
     title: 'Team title',
-    members: [{ name: 'Adam Dalecký', role: 'Co-founder', bio: 'bio', photo: '/adam_cropped.jpeg', linkedin: 'https://linkedin.com' }],
+    members: [{ name: 'Adam Dalecký', role: 'Co-founder', bio: 'bio', photo: '/adam_cropped.webp', linkedin: 'https://linkedin.com' }],
   },
   cta: { title: 'Připraveni začít?', desc: 'desc', primary: 'primary', secondary: 'secondary' },
 } as any
 
-const logos = [{ name: 'Global Payments', src: '/globalpayments.jpeg' }] as any
+const logos = [{ name: 'Global Payments', src: '/globalpayments.webp' }] as any
 
 const caseStudies = [
   { slug: 'av-media', client: 'AV MEDIA', intro: 'Testovací case study popis.' },
