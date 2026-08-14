@@ -126,20 +126,28 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-2 border-t border-white/10 pt-6 text-center">
+        <div className="mt-12 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-6 text-center">
           <p className="text-xs text-white/30">
             © {new Date().getFullYear()} {header?.name}. {copy.rights}
           </p>
-          <p className="text-sm text-white/60">
-            <a
-              href="https://webe.tuuli.cz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors duration-150"
-            >
+          <a
+            href="https://webe.tuuli.cz"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WeBe"
+            className="group inline-flex select-none items-center justify-center gap-2.5 text-white/40 transition-colors duration-200 hover:text-white/70"
+          >
+            <span className="text-[11px] font-medium uppercase tracking-[0.2em]">
               {copy.socialDomain}
-            </a>
-          </p>
+            </span>
+            <Image
+              src="/webe.png"
+              alt="WeBe"
+              width={530}
+              height={193}
+              className="h-4 w-auto opacity-60 transition-opacity duration-200 group-hover:opacity-100"
+            />
+          </a>
         </div>
       </div>
     </footer>
