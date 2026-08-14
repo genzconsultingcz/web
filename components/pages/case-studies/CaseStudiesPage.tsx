@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import type { CaseStudiesChromeQuery } from '../../../tina/__generated__/types';
 
@@ -137,7 +137,7 @@ export default function CaseStudiesPage({
                   className="mt-auto flex items-center justify-center gap-1.5 border-t border-zinc-100 py-4 text-xs font-bold uppercase tracking-[0.1em] text-zinc-600 transition-colors duration-150 group-hover:bg-gtc-primary group-hover:text-black hover:bg-gtc-primary hover:text-black"
                 >
                   {chrome.readMore}
-                  <ArrowUpRight className="size-3.5" />
+                  <ArrowRight className="size-3.5" />
                 </Link>
               </motion.article>
             ))}

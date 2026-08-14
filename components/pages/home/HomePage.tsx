@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
-import { ArrowRight, ArrowUpRight, Quote, Linkedin, Download } from 'lucide-react';
+import { ArrowRight, Quote, Linkedin, Download } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import type { HomeQuery } from '../../../tina/__generated__/types';
@@ -342,9 +342,10 @@ export default function HomePage({
                 <p className="mt-2 text-sm leading-relaxed text-zinc-500">{service?.desc}</p>
                 <Link
                   href={`/${locale}/services/${service?.slug}`}
-                  className="mt-5 inline-flex items-center text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
+                  className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
                 >
                   {content.services?.learnMore}
+                  <ArrowRight className="size-3.5" />
                 </Link>
                 <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gtc-primary transition-all duration-300 group-hover:w-full" />
               </motion.div>
@@ -360,9 +361,10 @@ export default function HomePage({
           >
             <Link
               href={`/${locale}/services`}
-              className="text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
             >
               {content.services?.viewAll}
+              <ArrowRight className="size-3.5" />
             </Link>
           </motion.div>
         </div>
@@ -399,7 +401,9 @@ export default function HomePage({
                 <h3 className="mt-4 text-lg font-black text-black">{step?.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-500">{step?.desc}</p>
                 {i < arr.length - 1 && (
-                  <div className="absolute -right-4 top-8 hidden text-zinc-300 md:block">→</div>
+                  <div className="absolute -right-4 top-8 hidden text-zinc-300 md:block">
+                    <ArrowRight className="size-5" />
+                  </div>
                 )}
               </motion.div>
             ))}
@@ -440,13 +444,13 @@ export default function HomePage({
                 >
                   <span className="mb-3 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-gtc-dark">
                     {content.caseStudies?.cardLabel}
-                    <ArrowUpRight className="size-3.5" />
+                    <ArrowRight className="size-3.5" />
                   </span>
                   <h3 className="text-lg font-black text-black">{client}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-zinc-500">{intro}</p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gtc-dark group-hover:text-black transition-colors duration-150">
                     {content.caseStudies?.readMore}
-                    <ArrowRight className="size-3" />
+                    <ArrowRight className="size-3.5" />
                   </span>
                 </motion.span>
                 <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gtc-primary transition-all duration-300 group-hover:w-full" />
@@ -463,9 +467,10 @@ export default function HomePage({
           >
             <Link
               href={`/${locale}/case-studies`}
-              className="text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
             >
               {content.caseStudies?.viewAll}
+              <ArrowRight className="size-3.5" />
             </Link>
           </motion.div>
         </div>
@@ -620,6 +625,7 @@ export default function HomePage({
             className="mt-8 inline-flex items-center gap-1.5 text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
           >
             {content.team?.viewAbout}
+            <ArrowRight className="size-3.5" />
           </Link>
         </div>
       </section>

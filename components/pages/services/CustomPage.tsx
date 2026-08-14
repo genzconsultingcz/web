@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import type { ServiceQuery } from '../../../tina/__generated__/types';
 
@@ -157,7 +158,9 @@ export default function CustomPage({
                 <h3 className="mt-4 text-lg font-black text-black">{step?.title ?? ''}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-500">{step?.desc ?? ''}</p>
                 {i < arr.length - 1 && (
-                  <div className="absolute -right-4 top-8 hidden text-zinc-300 md:block">→</div>
+                  <div className="absolute -right-4 top-8 hidden text-zinc-300 md:block">
+                    <ArrowRight className="size-5" />
+                  </div>
                 )}
               </motion.div>
             ))}

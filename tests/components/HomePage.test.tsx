@@ -19,8 +19,8 @@ const content = {
   services: {
     eyebrow: 'Co umíme',
     title: 'Čtyři způsoby, jak pomáháme',
-    viewAll: 'Zobrazit všechny služby →',
-    learnMore: 'Zjistit více →',
+    viewAll: 'Zobrazit všechny služby',
+    learnMore: 'Zjistit více',
     items: [{ num: '01', title: 'Trainee program', desc: 'desc', slug: 'trainee-program' }],
   },
   process: {

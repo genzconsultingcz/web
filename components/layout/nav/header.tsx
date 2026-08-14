@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { ContactButton } from '../../ui/ContactButton';
 import { useLayout } from '../layout-context';
 import { cn } from '@/lib/utils';
@@ -112,9 +112,10 @@ export const Header = () => {
                   <div className="mx-4 my-2 border-t border-white/10" />
                   <Link
                     href={`/${locale}/services`}
-                    className="block px-4 py-2.5 text-sm font-semibold text-gtc-primary hover:bg-white/5 transition-colors duration-100"
+                    className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gtc-primary hover:bg-white/5 transition-colors duration-100"
                   >
                     {nav.viewServicesLabel}
+                    <ArrowRight className="size-3.5" />
                   </Link>
                 </div>
               )}
@@ -207,9 +208,10 @@ export const Header = () => {
                 ))}
                 <Link
                   href={`/${locale}/services`}
-                  className="block py-3 text-base font-semibold text-gtc-primary"
+                  className="flex items-center gap-1.5 py-3 text-base font-semibold text-gtc-primary"
                 >
                   {nav.viewServicesLabel}
+                  <ArrowRight className="size-3.5" />
                 </Link>
               </div>
             )}

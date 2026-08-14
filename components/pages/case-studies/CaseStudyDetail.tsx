@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { motion, useInView, useReducedMotion } from 'motion/react';
-import { ArrowLeft, ArrowUpRight, Mail, Quote } from 'lucide-react';
+import { ArrowLeft, Mail, Quote } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import type { CaseStudyQuery, CaseStudiesChromeQuery } from '../../../tina/__generated__/types';
 
@@ -647,7 +647,7 @@ export default function CaseStudyDetail({
                 className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-[0.1em] text-white/60 transition-colors hover:text-gtc-primary"
               >
                 {chrome.back}
-                <ArrowUpRight className="size-4" />
+                <ArrowLeft className="size-3.5" />
               </Link>
             </div>
           </motion.div>

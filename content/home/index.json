@@ -14,8 +14,8 @@
     "services": {
       "eyebrow": "Co umíme",
       "title": "Čtyři způsoby, jak pomáháme",
-      "viewAll": "Zobrazit všechny služby →",
-      "learnMore": "Zjistit více →",
+      "viewAll": "Zobrazit všechny služby",
+      "learnMore": "Zjistit více",
       "items": [
         { "num": "01", "title": "Trainee program", "desc": "Kompletní trainee program na míru přitáhne správné talenty, efektivně je vyškolí a udrží ve firmě.", "slug": "trainee-program" },
         { "num": "02", "title": "Onboardingová aplikace", "desc": "Digitální průvodce onboardingem v nástrojích, které firma již používá. HR vidí vše v reálném čase.", "slug": "onboarding-app" },
@@ -35,7 +35,7 @@
     "caseStudies": {
       "eyebrow": "Naše práce",
       "title": "Projekty, kde jsme pomohli",
-      "viewAll": "Zobrazit všechny case studies →",
+      "viewAll": "Zobrazit všechny case studies",
       "cardLabel": "Case study",
       "readMore": "Číst case study"
     },
@@ -76,7 +76,7 @@
     "team": {
       "eyebrow": "Náš tým",
       "title": "Sami jsme Gen Z. Rozumíme té generaci zevnitř.",
-      "viewAbout": "Více o nás →",
+      "viewAbout": "Více o nás",
       "members": [
         {
           "name": "Adam Dalecký",
@@ -116,8 +116,8 @@
     "services": {
       "eyebrow": "What we do",
       "title": "Four ways we help",
-      "viewAll": "View all services →",
-      "learnMore": "Learn more →",
+      "viewAll": "View all services",
+      "learnMore": "Learn more",
       "items": [
         { "num": "01", "title": "Trainee program", "desc": "A fully custom trainee program — attracts the right talent, trains them effectively and keeps them at your company.", "slug": "trainee-program" },
         { "num": "02", "title": "Onboarding app", "desc": "A digital onboarding guide built in tools your company already uses. HR sees everything in real time.", "slug": "onboarding-app" },
@@ -137,7 +137,7 @@
     "caseStudies": {
       "eyebrow": "Our work",
       "title": "Projects where we helped",
-      "viewAll": "View all case studies →",
+      "viewAll": "View all case studies",
       "cardLabel": "Case study",
       "readMore": "Read case study"
     },
@@ -178,7 +178,7 @@
     "team": {
       "eyebrow": "Our team",
       "title": "We are Gen Z ourselves. We understand this generation from the inside.",
-      "viewAbout": "More about us →",
+      "viewAbout": "More about us",
       "members": [
         {
           "name": "Adam Dalecký",
