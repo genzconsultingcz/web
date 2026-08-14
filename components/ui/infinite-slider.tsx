@@ -1,6 +1,6 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { useMotionValue, animate, motion } from 'motion/react';
+import { useMotionValue, animate, motion, useReducedMotion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import useMeasure from 'react-use-measure';
 
@@ -28,8 +28,10 @@ export function InfiniteSlider({
   const translation = useMotionValue(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [key, setKey] = useState(0);
+  const reduce = useReducedMotion();
 
   useEffect(() => {
+    if (reduce) return;
     let controls;
     const size = direction === 'horizontal' ? width : height;
     const contentSize = size + gap;
@@ -66,6 +68,7 @@ export function InfiniteSlider({
 
     return controls?.stop;
   }, [
+    reduce,
     key,
     translation,
     currentSpeed,
@@ -77,7 +80,7 @@ export function InfiniteSlider({
     reverse,
   ]);
 
-  const hoverProps = speedOnHover
+  const hoverProps = speedOnHover && !reduce
     ? {
         onHoverStart: () => {
           setIsTransitioning(true);

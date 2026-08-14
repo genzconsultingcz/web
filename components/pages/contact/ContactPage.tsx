@@ -85,10 +85,10 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark">
-                {t('title')}
+                {t('eyebrow')}
               </p>
               <ContactButton
-                label={t('title')}
+                label={t('ctaLabel')}
                 size="lg"
                 className="w-full rounded-none bg-gtc-primary px-8 py-5 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
@@ -181,9 +181,11 @@ export default function ContactPage() {
                     <div key={q}>
                       <button
                         type="button"
+                        id={`faq-q-${index}`}
                         onClick={() => toggleFaq(index)}
                         className="flex w-full items-start justify-between gap-4 py-5 text-left"
                         aria-expanded={isOpen}
+                        aria-controls={`faq-a-${index}`}
                       >
                         <span className="text-sm font-bold text-black leading-snug">
                           {t(q)}
@@ -195,6 +197,10 @@ export default function ContactPage() {
                         />
                       </button>
                       <div
+                        id={`faq-a-${index}`}
+                        role="region"
+                        aria-labelledby={`faq-q-${index}`}
+                        aria-hidden={!isOpen}
                         className={`overflow-hidden transition-all duration-300 ${
                           isOpen ? 'max-h-96 pb-5' : 'max-h-0'
                         }`}

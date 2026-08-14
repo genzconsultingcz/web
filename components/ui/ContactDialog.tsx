@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Dialog, DialogPanel } from '@headlessui/react';
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import { X, Phone, Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useLayout } from '@/components/layout/layout-context';
@@ -27,14 +27,14 @@ export function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
           <button
             onClick={onClose}
             aria-label={t('close')}
-            className="absolute right-5 top-5 flex size-9 items-center justify-center rounded-full bg-white/10 text-white/60 transition-colors hover:bg-white/20 hover:text-white"
+            className="absolute right-5 top-5 flex size-11 items-center justify-center rounded-full bg-white/10 text-white/60 transition-colors hover:bg-white/20 hover:text-white"
           >
             <X className="size-4" />
           </button>
 
-          <h2 className="mt-4 text-2xl font-black leading-tight text-white md:text-3xl">
+          <DialogTitle as="h2" className="mt-4 text-2xl font-black leading-tight text-white md:text-3xl">
             {t('title')}
-          </h2>
+          </DialogTitle>
 
           <div className="mt-8 space-y-3">
             {phone && (

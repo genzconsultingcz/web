@@ -93,14 +93,19 @@ function TestimonialSlider({ content }: { content: HomeContent['testimonials'] }
           </motion.div>
         ))}
       </div>
-      <div className="mt-6 flex justify-center gap-2 lg:hidden">
+      <div className="mt-6 flex justify-center gap-1 lg:hidden">
         {testimonials.map((_, i) => (
           <button
             key={i}
+            type="button"
             aria-label={content?.navAria?.replace('{n}', String(i + 1))}
             onClick={() => goTo(i)}
-            className={`h-2 rounded-full transition-all duration-300 ${active === i ? 'w-6 bg-gtc-primary' : 'w-2 bg-zinc-400/50'}`}
-          />
+            className="flex size-11 items-center justify-center"
+          >
+            <span
+              className={`h-2 rounded-full transition-all duration-300 ${active === i ? 'w-6 bg-gtc-primary' : 'w-2 bg-zinc-400/50'}`}
+            />
+          </button>
         ))}
       </div>
     </>
@@ -340,7 +345,7 @@ export default function HomePage({
                 custom={i * 0.08}
                 className="group relative bg-white p-8 hover:bg-zinc-50 transition-colors duration-200"
               >
-                <span className="text-4xl font-black text-gtc-primary select-none">{service?.num}</span>
+                <span className="text-4xl font-black text-gtc-dark select-none">{service?.num}</span>
                 <h3 className="mt-3 text-lg font-black text-black">{service?.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-500">{service?.desc}</p>
                 <Link
@@ -400,7 +405,7 @@ export default function HomePage({
                 custom={i * 0.1}
                 className="relative"
               >
-                <div className="text-6xl font-black leading-none text-gtc-primary">{step?.num}</div>
+                <div className="text-6xl font-black leading-none text-gtc-dark">{step?.num}</div>
                 <h3 className="mt-4 text-lg font-black text-black">{step?.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-500">{step?.desc}</p>
                 {i < arr.length - 1 && (
@@ -440,13 +445,15 @@ export default function HomePage({
             </motion.div>
 
             {/* Right: podcast player */}
-            <motion.div
+            <motion.button
+              type="button"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               custom={0.15}
-              className="relative aspect-video w-full overflow-hidden rounded-2xl group cursor-pointer"
+              aria-label={`${locale === 'cs' ? 'Přehrát video' : 'Play video'} — ${content.story?.title ?? ''}`}
+              className="group relative block aspect-video w-full cursor-pointer overflow-hidden rounded-2xl"
               onClick={() => {
                 posthog.capture('video_opened', { placement: 'homepage_story' });
                 openVideo('https://www.youtube.com/embed/uKZZ0pGV8Gg?si=DGtU4qkpWg_-8OEO');
@@ -457,13 +464,13 @@ export default function HomePage({
                 alt=""
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
-              <div className="absolute inset-0 flex items-center justify-center">
+              <span aria-hidden className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
+              <span aria-hidden className="absolute inset-0 flex items-center justify-center">
                 <span className="flex size-20 items-center justify-center rounded-full bg-gtc-primary text-black shadow-lg transition-transform duration-300 group-hover:scale-110">
                   <Play className="size-8 fill-current ml-1" />
                 </span>
-              </div>
-            </motion.div>
+              </span>
+            </motion.button>
           </div>
         </div>
       </section>

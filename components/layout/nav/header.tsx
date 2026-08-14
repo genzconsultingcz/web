@@ -14,6 +14,7 @@ export const Header = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileCloseRef = useRef<HTMLButtonElement>(null);
   const { globalSettings } = useLayout();
   const locale = useLocale();
   const pathname = usePathname();
@@ -24,17 +25,35 @@ export const Header = () => {
     const withoutLocale = pathname.replace(/^\/(cs|en)/, '') || '/';
     return `/${newLocale}${withoutLocale}`;
   };
-  const otherLocale = locale === 'cs' ? 'en' : 'cs';
-
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setServicesOpen(false);
       }
     };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setServicesOpen(false);
+        setMobileServicesOpen(false);
+      }
+    };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+      mobileCloseRef.current?.focus();
+      return () => {
+        document.body.style.overflow = '';
+      };
+    }
+  }, [menuOpen]);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -82,8 +101,11 @@ export const Header = () => {
             {/* Services dropdown */}
             <div ref={dropdownRef} className="relative">
               <button
+                type="button"
                 onClick={() => setServicesOpen((v) => !v)}
-                onMouseEnter={() => setServicesOpen(true)}
+                aria-haspopup="menu"
+                aria-expanded={servicesOpen}
+                aria-controls="services-menu"
                 className={cn(
                   'flex items-center gap-1 text-sm font-medium transition-colors duration-150',
                   servicesOpen ? 'text-gtc-primary' : 'text-white/70 hover:text-white'
@@ -97,7 +119,7 @@ export const Header = () => {
 
               {servicesOpen && (
                 <div
-                  onMouseLeave={() => setServicesOpen(false)}
+                  id="services-menu"
                   className="absolute left-0 top-full mt-2 w-56 border border-white/10 bg-black py-2 shadow-xl"
                 >
                   {nav.serviceLinks?.map((service) => (
@@ -134,12 +156,19 @@ export const Header = () => {
               </Link>
             ))}
 
-            <Link
-              href={switchLocale(otherLocale)}
-              className="text-xs font-bold uppercase tracking-widest text-white/40 hover:text-white/80 transition-colors duration-150"
-            >
-              {otherLocale}
-            </Link>
+            <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest">
+              {locale === 'cs' ? (
+                <span className="text-white" aria-current="true">CS</span>
+              ) : (
+                <Link href={switchLocale('cs')} lang="cs" aria-label="Čeština" className="text-white/40 hover:text-white transition-colors duration-150">CS</Link>
+              )}
+              <span aria-hidden className="text-white/30">/</span>
+              {locale === 'en' ? (
+                <span className="text-white" aria-current="true">EN</span>
+              ) : (
+                <Link href={switchLocale('en')} lang="en" aria-label="English" className="text-white/40 hover:text-white transition-colors duration-150">EN</Link>
+              )}
+            </div>
 
             <ContactButton
                 label={nav.bookCallLabel ?? ''}
@@ -168,6 +197,7 @@ export const Header = () => {
               <Image src="/logo_dark_bg_v3.png" alt="GenZ Consulting" width={120} height={40} className="h-16 w-auto" priority />
             </Link>
             <button
+              ref={mobileCloseRef}
               onClick={() => setMenuOpen(false)}
               className="p-2 text-white"
               aria-label={nav.menuCloseAria || undefined}
@@ -233,12 +263,19 @@ export const Header = () => {
                   size="lg"
                   className="h-auto w-full rounded-none bg-gtc-primary px-6 py-4 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />
-              <Link
-                href={switchLocale(otherLocale)}
-                className="block text-center text-xs font-bold uppercase tracking-widest text-white/40 hover:text-white/70 transition-colors"
-              >
-                {otherLocale === 'en' ? 'English' : 'Česky'}
-              </Link>
+              <div className="flex items-center justify-center gap-1.5 text-xs font-bold uppercase tracking-widest">
+                {locale === 'cs' ? (
+                  <span className="text-white" aria-current="true">CS</span>
+                ) : (
+                  <Link href={switchLocale('cs')} lang="cs" aria-label="Čeština" className="text-white/40 hover:text-white transition-colors">CS</Link>
+                )}
+                <span aria-hidden className="text-white/30">/</span>
+                {locale === 'en' ? (
+                  <span className="text-white" aria-current="true">EN</span>
+                ) : (
+                  <Link href={switchLocale('en')} lang="en" aria-label="English" className="text-white/40 hover:text-white transition-colors">EN</Link>
+                )}
+              </div>
             </div>
           </nav>
         </div>
