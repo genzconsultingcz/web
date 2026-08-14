@@ -1,5 +1,6 @@
 // tina/collection/service.ts
 import type { Collection } from 'tinacms';
+import { imagePath } from '../fields/image-path';
 
 const serviceLocaleFields = [
   {
@@ -47,7 +48,7 @@ const serviceLocaleFields = [
     label: 'Image (optional)',
     name: 'image',
     fields: [
-      { type: 'string', label: 'Source Path', name: 'src' },
+      { type: 'image', label: 'Source Image', name: 'src', ui: { ...imagePath } },
       { type: 'string', label: 'Alt Text', name: 'alt' },
     ],
   } as const,

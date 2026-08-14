@@ -245,7 +245,7 @@ export default function HomePage({
             {/* framed photo — object-top + square ratio crops the lower legs cleanly */}
             <div className="relative aspect-square overflow-hidden rounded-[2.75rem] border-[3px] border-black bg-gradient-to-b from-gtc-primary/20 via-gtc-primary/10 to-white shadow-[0_0_0_1px_rgba(16,185,129,0.12)]">
               <Image
-                src="/team_no_bg.webp"
+                src={content.hero?.image ?? ''}
                 alt={content.hero?.imageAlt ?? ''}
                 fill
                 priority

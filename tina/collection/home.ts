@@ -1,4 +1,5 @@
 import type { Collection } from 'tinacms';
+import { imagePath } from '../fields/image-path';
 
 const homeLocaleFields = [
   {
@@ -14,6 +15,7 @@ const homeLocaleFields = [
       { type: 'string', label: 'Primary CTA', name: 'primaryCta' },
       { type: 'string', label: 'Secondary CTA', name: 'secondaryCta' },
       { type: 'string', label: 'Team Photo Alt Text', name: 'imageAlt' },
+      { type: 'image', label: 'Team Photo', name: 'image', ui: { ...imagePath } },
     ],
   } as const,
   { type: 'string', label: 'Logos Eyebrow', name: 'logosEyebrow' } as const,
@@ -151,7 +153,7 @@ const homeLocaleFields = [
           { type: 'string', label: 'Name', name: 'name' },
           { type: 'string', label: 'Role', name: 'role' },
           { type: 'string', label: 'Bio', name: 'bio', ui: { component: 'textarea' } },
-          { type: 'string', label: 'Photo', name: 'photo' },
+          { type: 'image', label: 'Photo', name: 'photo', ui: { ...imagePath } },
           { type: 'string', label: 'LinkedIn URL', name: 'linkedin' },
         ],
       },
@@ -187,7 +189,7 @@ const Home: Collection = {
       ui: { itemProps: (item: any) => ({ label: item?.name }) },
       fields: [
         { type: 'string', label: 'Name', name: 'name' },
-        { type: 'string', label: 'Logo Image', name: 'src' },
+        { type: 'image', label: 'Logo Image', name: 'src', ui: { ...imagePath } },
       ],
     },
   ],

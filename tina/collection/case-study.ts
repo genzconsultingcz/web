@@ -1,11 +1,12 @@
 // tina/collection/case-study.ts
 import type { Collection } from 'tinacms';
+import { imagePath } from '../fields/image-path';
 
 const caseStudyLocaleFields = [
   { type: 'string', label: 'Client Name', name: 'client' } as const,
   { type: 'string', label: 'Service Type (list card label)', name: 'serviceType' } as const,
   { type: 'string', label: 'List Card Result Summary', name: 'listResult', ui: { component: 'textarea' } } as const,
-  { type: 'string', label: 'Logo Image Path', name: 'logo' } as const,
+  { type: 'image', label: 'Logo Image', name: 'logo', ui: { ...imagePath } } as const,
   { type: 'string', label: 'Logo Alt Text', name: 'logoAlt' } as const,
   { type: 'string', label: 'Year', name: 'year' } as const,
   {

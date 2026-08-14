@@ -1,6 +1,7 @@
 // tina/collection/global.ts
 import type { Collection } from 'tinacms';
 import { iconSchema } from '../fields/icon';
+import { imagePath } from '../fields/image-path';
 
 const navContentFields = [
   { type: 'string', label: 'Home Label', name: 'homeLabel' } as const,
@@ -55,6 +56,7 @@ const Global: Collection = {
       name: 'header',
       fields: [
         { type: 'string', label: 'Site Name', name: 'name' },
+        { type: 'image', label: 'Logo', name: 'logo', ui: { ...imagePath } },
         {
           type: 'object',
           label: 'Nav',
@@ -73,6 +75,7 @@ const Global: Collection = {
       fields: [
         { type: 'string', label: 'Phone', name: 'phone' },
         { type: 'string', label: 'Email', name: 'email' },
+        { type: 'image', label: 'WeBe Logo', name: 'webeLogo', ui: { ...imagePath } },
         {
           type: 'object',
           label: 'Social Links',

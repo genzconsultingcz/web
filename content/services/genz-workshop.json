@@ -27,7 +27,7 @@
       }
     ],
     "image": {
-      "src": "/genzone_workshop.webp",
+      "src": "/uploads/genzone_workshop.webp",
       "alt": "GenZ Consulting workshop na Career Expo"
     },
     "variantsLabel": "Varianty workshopu",
@@ -76,7 +76,7 @@
       }
     ],
     "image": {
-      "src": "/genzone_workshop.webp",
+      "src": "/uploads/genzone_workshop.webp",
       "alt": "GenZ Consulting workshop at Career Expo"
     },
     "variantsLabel": "Workshop variants",

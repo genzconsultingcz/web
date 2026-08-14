@@ -5,6 +5,7 @@
   },
   "header": {
     "name": "GenZ Consulting",
+    "logo": "/uploads/logo_dark_bg.webp",
     "nav": {
       "cs": {
         "homeLabel": "Domů",
@@ -49,6 +50,7 @@
   "footer": {
     "phone": "+420 606 028 051",
     "email": "adam.dalecky@genzconsulting.cz",
+    "webeLogo": "/uploads/webe.webp",
     "social": [
       {
         "icon": { "name": "FaLinkedin" },

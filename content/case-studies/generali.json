@@ -3,7 +3,7 @@
     "client": "Generali ČP",
     "serviceType": "Konzultace",
     "listResult": "Identifikovány klíčové bariéry v recruitmentu a navrženy konkrétní úpravy komunikace.",
-    "logo": "/generali.webp",
+    "logo": "/uploads/generali.webp",
     "logoAlt": "Generali",
     "year": "2025",
     "hero": {
@@ -233,7 +233,7 @@
     "client": "Generali ČP",
     "serviceType": "Consultation",
     "listResult": "Key barriers in recruitment identified and specific communication adjustments proposed.",
-    "logo": "/generali.webp",
+    "logo": "/uploads/generali.webp",
     "logoAlt": "Generali",
     "year": "2025",
     "hero": {

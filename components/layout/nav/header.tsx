@@ -63,6 +63,8 @@ export const Header = () => {
 
   if (!nav) return null;
 
+  const logo = globalSettings?.header?.logo ?? '/uploads/logo_dark_bg.webp';
+
   const homeLink = { href: `/${locale}`, label: nav.homeLabel };
   const navLinks = [
     { href: `/${locale}/case-studies`, label: nav.caseStudiesLabel },
@@ -77,7 +79,7 @@ export const Header = () => {
           {/* Logo */}
           <Link href={`/${locale}`} aria-label={nav.homeLogoAria || undefined}>
             <Image
-              src="/logo_dark_bg.webp"
+              src={logo}
               alt="GenZ Consulting"
               width={120}
               height={40}
@@ -195,7 +197,7 @@ export const Header = () => {
           {/* Top bar mirrors the header */}
           <div className="flex h-20 items-center justify-between px-6">
             <Link href={`/${locale}`} aria-label={nav.homeLogoAria || undefined} onClick={() => setMenuOpen(false)}>
-              <Image src="/logo_dark_bg.webp" alt="GenZ Consulting" width={120} height={40} className="h-16 w-auto" priority />
+              <Image src={logo} alt="GenZ Consulting" width={120} height={40} className="h-16 w-auto" priority />
             </Link>
             <button
               ref={mobileCloseRef}
