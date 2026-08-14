@@ -35,7 +35,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <Layout>
-      <WorkshopPage num={service.num ?? ''} content={content} />
+      <WorkshopPage num={service.num ?? ''} slug="genz-workshop" content={content} />
     </Layout>
   );
 }

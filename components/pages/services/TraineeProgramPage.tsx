@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import { useTrackPageView } from '@/lib/analytics';
 import type { ServiceQuery } from '../../../tina/__generated__/types';
 
 // Strips __typename at every depth: the `cs` and `en` branches (and each of
@@ -63,11 +64,15 @@ function DetailRow({ label, text, index = 0, dark = false }: DetailRowProps) {
 
 export default function TraineeProgramPage({
   num,
+  slug,
   content,
 }: {
   num: string;
+  slug: string;
   content: ServiceContent | null | undefined;
 }) {
+  useTrackPageView('service_page_viewed', { service: slug });
+
   if (!content) return null;
 
   return (
@@ -115,6 +120,7 @@ export default function TraineeProgramPage({
             <ContactButton
               label={content.hero?.cta ?? ''}
               size="lg"
+              placement="trainee_hero"
               className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
             />
           </motion.div>
@@ -182,6 +188,7 @@ export default function TraineeProgramPage({
               <ContactButton
                 label={content.hero?.cta ?? ''}
                 size="lg"
+                placement="trainee_cta"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
             </div>

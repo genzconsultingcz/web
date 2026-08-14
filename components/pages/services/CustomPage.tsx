@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import { useTrackPageView } from '@/lib/analytics';
 import type { ServiceQuery } from '../../../tina/__generated__/types';
 
 type DeepOmitTypename<T> = T extends readonly (infer U)[]
@@ -27,11 +28,15 @@ const fadeUp: any = {
 
 export default function CustomPage({
   num,
+  slug,
   content,
 }: {
   num: string;
+  slug: string;
   content: ServiceContent | null | undefined;
 }) {
+  useTrackPageView('service_page_viewed', { service: slug });
+
   if (!content) return null;
 
   const sections = content.sections ?? [];
@@ -81,6 +86,7 @@ export default function CustomPage({
               <ContactButton
                 label={content.hero?.cta ?? ''}
                 size="lg"
+                placement="custom_hero"
                 className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
             </motion.div>
@@ -188,6 +194,7 @@ export default function CustomPage({
               <ContactButton
                 label={content.hero?.cta ?? ''}
                 size="lg"
+                placement="custom_cta"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
             </div>

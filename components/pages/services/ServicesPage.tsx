@@ -5,6 +5,7 @@ import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import posthog from 'posthog-js';
 import type { ServicesChromeQuery } from '../../../tina/__generated__/types';
 
 // Strips __typename at every depth: the `cs` and `en` chrome branches are
@@ -97,6 +98,7 @@ export default function ServicesPage({
             <ContactButton
               label={chrome.hero?.cta ?? ''}
               size="lg"
+              placement="services_hero"
               className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
             />
           </motion.div>
@@ -123,6 +125,7 @@ export default function ServicesPage({
                 <p className="mt-3 text-sm leading-relaxed text-zinc-500">{c.desc}</p>
                 <Link
                   href={`/${locale}/services/${c.slug}`}
+                  onClick={() => posthog.capture('service_link_clicked', { service: c.slug })}
                   className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
                 >
                   {chrome.learnMore}
@@ -151,6 +154,7 @@ export default function ServicesPage({
                   </div>
                   <Link
                     href={`/${locale}/services/${c.slug}`}
+                    onClick={() => posthog.capture('service_link_clicked', { service: c.slug })}
                     className="shrink-0 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gtc-dark hover:text-black transition-colors duration-150"
                   >
                     {chrome.learnMore}
@@ -180,6 +184,7 @@ export default function ServicesPage({
               <ContactButton
                 label={chrome.notSure?.cta ?? ''}
                 size="lg"
+                placement="services_footer"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
             </div>

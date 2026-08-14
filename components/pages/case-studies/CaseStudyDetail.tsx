@@ -640,6 +640,7 @@ export default function CaseStudyDetail({
               <ContactButton
                   label={chrome.cta ?? ''}
                   size="lg"
+                  placement="case_study_detail_cta"
                   className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black transition-colors hover:bg-gtc-primary/90"
                 />
               <Link

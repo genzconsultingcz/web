@@ -25,7 +25,10 @@ export const CookieConsent = () => {
 
   const accept = () => {
     try {
-      posthog.opt_in_capturing();
+      posthog.opt_in_capturing({
+        captureEventName: 'consent_action',
+        captureProperties: { action: 'accepted' },
+      });
     } catch {
       // ignore
     }

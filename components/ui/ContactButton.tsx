@@ -10,6 +10,7 @@ interface ContactButtonProps {
   variant?: 'default' | 'outline' | 'ghost';
   size?: 'default' | 'sm' | 'lg';
   className?: string;
+  placement?: string;
 }
 
 export function ContactButton({
@@ -17,6 +18,7 @@ export function ContactButton({
   variant = 'default',
   size = 'lg',
   className,
+  placement,
 }: ContactButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,7 +29,7 @@ export function ContactButton({
         size={size}
         className={cn('h-auto', className)}
         onClick={() => {
-          posthog.capture('contact_cta_opened');
+          posthog.capture('contact_cta_opened', placement ? { placement } : undefined);
           setIsOpen(true);
         }}
       >

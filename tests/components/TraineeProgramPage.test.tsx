@@ -14,7 +14,7 @@ const content = {
 
 describe('TraineeProgramPage', () => {
   it('renders hero, sections, timeline and CTA from props', () => {
-    render(<TraineeProgramPage num="01" content={content} />)
+    render(<TraineeProgramPage num="01" slug="trainee-program" content={content} />)
     expect(screen.getByText('Trainee program')).toBeInTheDocument()
     expect(screen.getByText('Co to je')).toBeInTheDocument()
     expect(screen.getByText('Kompletně postavený trainee program.')).toBeInTheDocument()

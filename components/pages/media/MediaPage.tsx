@@ -200,6 +200,7 @@ export default function MediaPage({
               <ContactButton
                 label={chrome.cta ?? ''}
                 size="lg"
+                placement="media_cta"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
             </div>

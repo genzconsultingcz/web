@@ -83,6 +83,7 @@ function TestimonialSlider({ content }: { content: HomeContent['testimonials'] }
                   href={item?.linkedin ?? '#'}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => posthog.capture('outbound_link_clicked', { target: 'linkedin_testimonial' })}
                   className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-gtc-dark hover:underline"
                 >
                   <Linkedin className="size-4" />
@@ -207,11 +208,12 @@ export default function HomePage({
               <ContactButton
                 label={content.hero?.primaryCta ?? ''}
                 size="lg"
+                placement="hero"
                 className="w-full justify-center rounded-full bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors sm:w-auto"
               />
               <a
                 href="#pdf-guide"
-                onClick={() => posthog.capture('guide_cta_clicked', { placement: 'hero' })}
+                onClick={() => posthog.capture('guide_engagement', { stage: 'cta_clicked', placement: 'hero' })}
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-black bg-transparent px-8 py-4 text-sm font-bold text-black hover:bg-black hover:text-white transition-colors sm:w-auto"
               >
                 <Download className="size-4" />
@@ -496,6 +498,7 @@ export default function HomePage({
               <Link
                 key={slug}
                 href={`/${locale}/case-studies/${slug}`}
+                onClick={() => posthog.capture('case_study_opened', { slug })}
                 className="group relative flex flex-col border border-zinc-200 bg-white p-7 transition-colors duration-200 hover:border-gtc-primary"
               >
                 <motion.span
@@ -562,7 +565,7 @@ export default function HomePage({
                 <a
                   href="/downloads/GZC_Karierka_pro_Gen_Z.pdf"
                   download
-                  onClick={() => posthog.capture('guide_downloaded', { placement: 'guide_section' })}
+                  onClick={() => posthog.capture('guide_engagement', { stage: 'downloaded', placement: 'guide_section' })}
                   className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gtc-primary px-7 py-3.5 text-sm font-bold text-black transition-opacity hover:opacity-90"
                 >
                   <Download className="size-4" />
@@ -572,7 +575,8 @@ export default function HomePage({
                   label={content.pdf?.secondaryCta ?? ''}
                   size="lg"
                   variant="outline"
-                  className="rounded-full border-white/25 bg-transparent px-7 py-3.5 text-sm font-bold text-white hover:border-white/50 hover:bg-white/5"
+                  placement="pdf_section"
+                  className="rounded-full border-white/25 bg-transparent px-7 py-3.5 text-sm font-bold text-white hover:border-white/50 hover:bg-white/5 hover:text-white"
                 />
               </div>
             </div>
@@ -675,6 +679,7 @@ export default function HomePage({
                     href={member?.linkedin ?? '#'}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => posthog.capture('outbound_link_clicked', { target: 'linkedin_team' })}
                     className="mt-auto inline-flex items-center gap-1.5 pt-4 text-xs font-bold text-zinc-400 transition-colors duration-150 hover:text-gtc-dark"
                   >
                     <Linkedin className="size-3.5" />
@@ -703,12 +708,13 @@ export default function HomePage({
               <ContactButton
                 label={content.cta?.primary ?? ''}
                 size="lg"
+                placement="footer_cta"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
               <a
                 href="/downloads/GZC_Karierka_pro_Gen_Z.pdf"
                 download
-                onClick={() => posthog.capture('guide_downloaded', { placement: 'footer_cta' })}
+                onClick={() => posthog.capture('guide_engagement', { stage: 'downloaded', placement: 'footer_cta' })}
                 className="inline-flex items-center gap-2.5 rounded-none border-2 border-white/30 bg-transparent px-8 py-4 text-sm font-bold text-white hover:border-white hover:bg-white/5 transition-colors"
               >
                 <Download className="size-4" />

@@ -173,6 +173,7 @@ export const Header = () => {
             <ContactButton
                 label={nav.bookCallLabel ?? ''}
                 size="default"
+                placement="nav_desktop"
                 className="rounded-none bg-gtc-primary px-5 py-2 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
             </nav>
@@ -261,6 +262,7 @@ export const Header = () => {
               <ContactButton
                   label={nav.bookCallLabel ?? ''}
                   size="lg"
+                  placement="nav_mobile"
                   className="h-auto w-full rounded-none bg-gtc-primary px-6 py-4 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />
               <div className="flex items-center justify-center gap-1.5 text-xs font-bold uppercase tracking-widest">

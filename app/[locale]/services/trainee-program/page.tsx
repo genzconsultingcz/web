@@ -35,7 +35,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <Layout>
-      <TraineeProgramPage num={service.num ?? ''} content={content} />
+      <TraineeProgramPage num={service.num ?? ''} slug="trainee-program" content={content} />
     </Layout>
   );
 }

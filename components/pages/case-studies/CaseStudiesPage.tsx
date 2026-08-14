@@ -6,6 +6,7 @@ import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import posthog from 'posthog-js';
 import type { CaseStudiesChromeQuery } from '../../../tina/__generated__/types';
 
 // Strips __typename at every depth: the `cs` and `en` chrome branches are
@@ -134,6 +135,7 @@ export default function CaseStudiesPage({
                 {/* Read case study */}
                 <Link
                   href={`/${locale}/case-studies/${slug}`}
+                  onClick={() => posthog.capture('case_study_opened', { slug })}
                   className="mt-auto flex items-center justify-center gap-1.5 border-t border-zinc-100 py-4 text-xs font-bold uppercase tracking-[0.1em] text-zinc-600 transition-colors duration-150 group-hover:bg-gtc-primary group-hover:text-black hover:bg-gtc-primary hover:text-black"
                 >
                   {chrome.readMore}
@@ -161,6 +163,7 @@ export default function CaseStudiesPage({
                 <ContactButton
                   label={chrome.cta ?? ''}
                   size="lg"
+                  placement="case_studies_cta"
                   className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
                 />
               </div>

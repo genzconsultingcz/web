@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { Mail, Phone, Linkedin, ChevronDown } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import posthog from 'posthog-js';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fadeUp: any = {
@@ -90,6 +91,7 @@ export default function ContactPage() {
               <ContactButton
                 label={t('ctaLabel')}
                 size="lg"
+                placement="contact_page"
                 className="w-full rounded-none bg-gtc-primary px-8 py-5 text-base font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
 
@@ -135,6 +137,7 @@ export default function ContactPage() {
                       href="https://cz.linkedin.com/company/gen-zconsulting"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => posthog.capture('outbound_link_clicked', { target: 'linkedin_company' })}
                       className="inline-flex items-center gap-2 text-sm font-bold text-black hover:text-gtc-dark transition-colors duration-150"
                     >
                       <Linkedin className="size-4 text-gtc-dark shrink-0" />
@@ -144,6 +147,7 @@ export default function ContactPage() {
                       href="https://www.linkedin.com/in/adam-dalecky/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => posthog.capture('outbound_link_clicked', { target: 'linkedin_adam' })}
                       className="inline-flex items-center gap-2 text-sm font-bold text-black hover:text-gtc-dark transition-colors duration-150"
                     >
                       <Linkedin className="size-4 text-gtc-dark shrink-0" />
@@ -153,6 +157,7 @@ export default function ContactPage() {
                       href="https://www.linkedin.com/in/jonatan-petr/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => posthog.capture('outbound_link_clicked', { target: 'linkedin_jonatan' })}
                       className="inline-flex items-center gap-2 text-sm font-bold text-black hover:text-gtc-dark transition-colors duration-150"
                     >
                       <Linkedin className="size-4 text-gtc-dark shrink-0" />

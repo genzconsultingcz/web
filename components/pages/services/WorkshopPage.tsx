@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import { useTrackPageView } from '@/lib/analytics';
 import type { ServiceQuery } from '../../../tina/__generated__/types';
 
 type DeepOmitTypename<T> = T extends readonly (infer U)[]
@@ -59,11 +60,15 @@ function DetailRow({
 
 export default function WorkshopPage({
   num,
+  slug,
   content,
 }: {
   num: string;
+  slug: string;
   content: ServiceContent | null | undefined;
 }) {
+  useTrackPageView('service_page_viewed', { service: slug });
+
   if (!content) return null;
 
   const variants = content.variants ?? [];
@@ -113,6 +118,7 @@ export default function WorkshopPage({
               <ContactButton
                 label={content.hero?.cta ?? ''}
                 size="lg"
+                placement="workshop_hero"
                 className="rounded-none bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
             </motion.div>
@@ -192,6 +198,7 @@ export default function WorkshopPage({
             <ContactButton
               label={content.hero?.cta ?? ''}
               size="lg"
+              placement="workshop_cta"
               className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
             />
           </motion.div>

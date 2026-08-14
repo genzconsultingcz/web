@@ -35,7 +35,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <Layout>
-      <OnboardingAppPage num={service.num ?? ''} content={content} />
+      <OnboardingAppPage num={service.num ?? ''} slug="onboarding-app" content={content} />
     </Layout>
   );
 }
