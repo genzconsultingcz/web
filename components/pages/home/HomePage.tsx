@@ -202,7 +202,7 @@ export default function HomePage({
                 className="rounded-full bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
               <a
-                href="/downloads/legit-check.pdf"
+                href="/downloads/GZC_Karierka_pro_Gen_Z.pdf"
                 download
                 className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-transparent px-8 py-4 text-sm font-bold text-black hover:bg-black hover:text-white transition-colors"
               >
@@ -496,7 +496,7 @@ export default function HomePage({
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
-                  href="/downloads/legit-check.pdf"
+                  href="/downloads/GZC_Karierka_pro_Gen_Z.pdf"
                   download
                   className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gtc-primary px-7 py-3.5 text-sm font-bold text-black transition-opacity hover:opacity-90"
                 >
@@ -648,12 +648,14 @@ export default function HomePage({
                 size="lg"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
-              <ContactButton
-                label={content.cta?.secondary ?? ''}
-                size="lg"
-                variant="outline"
-                className="rounded-none border-2 border-white/30 bg-transparent px-8 py-4 text-sm font-bold text-white hover:border-white hover:bg-white/5 transition-colors"
-              />
+              <a
+                href="/downloads/GZC_Karierka_pro_Gen_Z.pdf"
+                download
+                className="inline-flex items-center gap-2.5 rounded-none border-2 border-white/30 bg-transparent px-8 py-4 text-sm font-bold text-white hover:border-white hover:bg-white/5 transition-colors"
+              >
+                <Download className="size-4" />
+                {content.cta?.secondary}
+              </a>
             </div>
           </motion.div>
         </div>

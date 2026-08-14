@@ -71,7 +71,7 @@ describe('HomePage', () => {
 
     const link = screen.getByRole('link', { name: 'Stáhnout průvodce zdarma' })
 
-    expect(link).toHaveAttribute('href', '/downloads/legit-check.pdf')
+    expect(link).toHaveAttribute('href', '/downloads/GZC_Karierka_pro_Gen_Z.pdf')
     expect(link).toHaveAttribute('download')
   })
 
