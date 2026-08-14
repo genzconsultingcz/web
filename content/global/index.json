@@ -8,7 +8,6 @@
     "nav": {
       "cs": {
         "homeLabel": "Domů",
-        "aboutLabel": "O nás",
         "caseStudiesLabel": "Case studies",
         "mediaLabel": "Média",
         "contactLabel": "Kontakt",
@@ -28,7 +27,6 @@
       },
       "en": {
         "homeLabel": "Home",
-        "aboutLabel": "About",
         "caseStudiesLabel": "Case studies",
         "mediaLabel": "Media",
         "contactLabel": "Contact",
@@ -75,8 +73,8 @@
         "web": "www.genzconsulting.cz",
         "socialDomain": "Vytvořilo",
         "navServices": "Služby",
-        "navAbout": "O nás",
         "navCaseStudies": "Case studies",
+        "navMedia": "Média",
         "navContact": "Kontakt",
         "navGuide": "Průvodce",
         "homeLogoAria": "GenZ Consulting — domů"
@@ -90,8 +88,8 @@
         "web": "www.genzconsulting.cz",
         "socialDomain": "Created by",
         "navServices": "Services",
-        "navAbout": "About",
         "navCaseStudies": "Case studies",
+        "navMedia": "Media",
         "navContact": "Contact",
         "navGuide": "Guide",
         "homeLogoAria": "GenZ Consulting — home"

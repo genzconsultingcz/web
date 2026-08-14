@@ -91,6 +91,17 @@ const homeLocaleFields = [
   } as const,
   {
     type: 'object',
+    label: 'Story (podcast section)',
+    name: 'story',
+    fields: [
+      { type: 'string', label: 'Eyebrow', name: 'eyebrow' },
+      { type: 'string', label: 'Title', name: 'title' },
+      { type: 'string', label: 'Body (paragraph 1)', name: 'body1', ui: { component: 'textarea' } },
+      { type: 'string', label: 'Body (paragraph 2)', name: 'body2', ui: { component: 'textarea' } },
+    ],
+  } as const,
+  {
+    type: 'object',
     label: 'Stats',
     name: 'stats',
     list: true,
@@ -130,7 +141,6 @@ const homeLocaleFields = [
     fields: [
       { type: 'string', label: 'Eyebrow', name: 'eyebrow' },
       { type: 'string', label: 'Title', name: 'title' },
-      { type: 'string', label: 'View About Label', name: 'viewAbout' },
       {
         type: 'object',
         label: 'Members',

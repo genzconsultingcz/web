@@ -33,8 +33,8 @@ export const Footer = () => {
 
   const navLinks = [
     { href: `/${locale}/services`, label: copy.navServices },
-    { href: `/${locale}/about`, label: copy.navAbout },
     { href: `/${locale}/case-studies`, label: copy.navCaseStudies },
+    { href: `/${locale}/media`, label: copy.navMedia },
     { href: `/${locale}/contact`, label: copy.navContact },
     { href: `/${locale}#pdf-guide`, label: copy.navGuide },
   ];

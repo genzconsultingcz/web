@@ -69,20 +69,20 @@ function TestimonialSlider({ content }: { content: HomeContent['testimonials'] }
             custom={0.1 * (i + 1)}
             className="flex w-[82vw] shrink-0 snap-start flex-col lg:w-auto lg:shrink-none lg:snap-none"
           >
-            <Quote className="mb-6 size-10 text-gtc-primary" fill="currentColor" />
-            <blockquote className="flex-1 text-base font-medium leading-relaxed text-white/90 md:text-lg">
+            <Quote className="mb-6 size-10 text-gtc-dark" fill="currentColor" />
+            <blockquote className="flex-1 text-base font-medium leading-relaxed text-zinc-700 md:text-lg">
               {item?.quote}
             </blockquote>
             <div className="mt-8 flex items-center gap-3">
               <div className="h-px w-8 bg-gtc-primary" />
               <div>
-                <p className="text-sm font-bold text-white">{item?.author}</p>
-                <p className="text-xs text-white/40">{item?.role}</p>
+                <p className="text-sm font-bold text-black">{item?.author}</p>
+                <p className="text-xs text-zinc-500">{item?.role}</p>
                 <a
                   href={item?.linkedin ?? '#'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-gtc-primary hover:underline"
+                  className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-gtc-dark hover:underline"
                 >
                   <Linkedin className="size-4" />
                   {content?.linkedInLabel}
@@ -98,7 +98,7 @@ function TestimonialSlider({ content }: { content: HomeContent['testimonials'] }
             key={i}
             aria-label={content?.navAria?.replace('{n}', String(i + 1))}
             onClick={() => goTo(i)}
-            className={`h-2 rounded-full transition-all duration-300 ${active === i ? 'w-6 bg-gtc-primary' : 'w-2 bg-white/25'}`}
+            className={`h-2 rounded-full transition-all duration-300 ${active === i ? 'w-6 bg-gtc-primary' : 'w-2 bg-zinc-400/50'}`}
           />
         ))}
       </div>
@@ -413,29 +413,54 @@ export default function HomePage({
         </div>
       </section>
 
-      {/* ── VIDEO ── */}
+      {/* ── STORY / PODCAST ── */}
       <section className="bg-black py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="relative aspect-video w-full overflow-hidden rounded-2xl group cursor-pointer"
-            onClick={() => openVideo('https://www.youtube.com/embed/uKZZ0pGV8Gg?si=DGtU4qkpWg_-8OEO')}
-          >
-            <img
-              src="https://img.youtube.com/vi/uKZZ0pGV8Gg/maxresdefault.jpg"
-              alt=""
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="flex size-20 items-center justify-center rounded-full bg-gtc-primary text-black shadow-lg transition-transform duration-300 group-hover:scale-110">
-                <Play className="size-8 fill-current ml-1" />
-              </span>
-            </div>
-          </motion.div>
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* Left: story text */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-gtc-primary">
+                {content.story?.eyebrow}
+              </p>
+              <h2 className="text-3xl font-black leading-tight text-white md:text-4xl">
+                {content.story?.title}
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-white/70 md:text-lg">
+                {content.story?.body1}
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
+                {content.story?.body2}
+              </p>
+            </motion.div>
+
+            {/* Right: podcast player */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={0.15}
+              className="relative aspect-video w-full overflow-hidden rounded-2xl group cursor-pointer"
+              onClick={() => openVideo('https://www.youtube.com/embed/uKZZ0pGV8Gg?si=DGtU4qkpWg_-8OEO')}
+            >
+              <img
+                src="https://img.youtube.com/vi/uKZZ0pGV8Gg/maxresdefault.jpg"
+                alt=""
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="flex size-20 items-center justify-center rounded-full bg-gtc-primary text-black shadow-lg transition-transform duration-300 group-hover:scale-110">
+                  <Play className="size-8 fill-current ml-1" />
+                </span>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -505,7 +530,7 @@ export default function HomePage({
       </section>
 
       {/* ── PDF GUIDE ── */}
-      <section id="pdf-guide" className="bg-[#0c0c0c] py-20 lg:py-28">
+      <section id="pdf-guide" className="bg-black py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
             {/* Left */}
@@ -576,14 +601,14 @@ export default function HomePage({
       </section>
 
       {/* ── TESTIMONIAL ── */}
-      <section className="bg-black py-24">
+      <section className="bg-zinc-50 py-24">
         <div className="mx-auto max-w-6xl px-6">
           <motion.p
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="mb-12 text-xs font-bold uppercase tracking-[0.2em] text-gtc-primary"
+            className="mb-12 text-xs font-bold uppercase tracking-[0.2em] text-gtc-dark"
           >
             {content.testimonials?.eyebrow}
           </motion.p>
@@ -646,14 +671,6 @@ export default function HomePage({
                 </div>
               </motion.div>
             ))}
-            <div className="flex items-end justify-end p-6 sm:col-start-2">
-              <Link
-                href={`/${locale}/about`}
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
-              >
-                {content.team?.viewAbout}
-              </Link>
-            </div>
           </div>
         </div>
       </section>

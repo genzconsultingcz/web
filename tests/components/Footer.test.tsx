@@ -19,8 +19,8 @@ const globalSettings = {
         web: 'www.genzconsulting.cz',
         socialDomain: 'linkedin.com/company/gen-zconsulting',
         navServices: 'Služby',
-        navAbout: 'O nás',
         navCaseStudies: 'Case studies',
+        navMedia: 'Média',
         navContact: 'Kontakt',
         navGuide: 'Průvodce',
         homeLogoAria: 'GenZ Consulting — domů',
@@ -34,8 +34,8 @@ const globalSettings = {
         web: 'www.genzconsulting.cz',
         socialDomain: 'linkedin.com/company/gen-zconsulting',
         navServices: 'Services',
-        navAbout: 'About',
         navCaseStudies: 'Case studies',
+        navMedia: 'Media',
         navContact: 'Contact',
         navGuide: 'Guide',
         homeLogoAria: 'GenZ Consulting — home',
@@ -54,6 +54,7 @@ describe('Footer', () => {
     // vitest.setup.ts mocks next-intl's useLocale() to always return 'cs'
     expect(screen.getByText('Systémy pro mladé by měli stavět mladí.')).toBeInTheDocument()
     expect(screen.getByText('Služby')).toBeInTheDocument()
+    expect(screen.getByText('Média')).toBeInTheDocument()
     expect(screen.getByText('Všechna práva vyhrazena.', { exact: false })).toBeInTheDocument()
   })
 })

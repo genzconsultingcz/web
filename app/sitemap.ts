@@ -11,7 +11,6 @@ const STATIC_ROUTES = [
   { path: '/services/genz-workshop', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/services/career-pages', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/services/custom', priority: 0.6, changeFrequency: 'monthly' },
-  { path: '/about', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/media', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.5, changeFrequency: 'monthly' },
 ] as const;

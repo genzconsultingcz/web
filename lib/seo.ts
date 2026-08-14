@@ -62,18 +62,6 @@ export const SEO = {
         'We help mid-sized and large companies communicate with, attract and retain Generation Z. Workshops, training programs and a custom onboarding app.',
     },
   },
-  about: {
-    cs: {
-      title: 'O nás',
-      description:
-        'Poznejte GenZ Consulting — tým konzultantů, kteří jsou generací Z zevnitř. Pomáháme firmám porozumět mladé generaci.',
-    },
-    en: {
-      title: 'About us',
-      description:
-        'Meet GenZ Consulting — a team of consultants who are Generation Z from the inside. We help companies understand the young generation.',
-    },
-  },
   contact: {
     cs: {
       title: 'Kontakt',

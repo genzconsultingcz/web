@@ -10,14 +10,13 @@ const OUT_DIR = path.join(process.cwd(), 'screenshots');
 
 const pages = [
   { name: '01-home', path: `/${LOCALE}` },
-  { name: '02-about', path: `/${LOCALE}/about` },
-  { name: '03-services', path: `/${LOCALE}/services` },
-  { name: '04-services-career-pages', path: `/${LOCALE}/services/career-pages` },
-  { name: '05-services-onboarding-app', path: `/${LOCALE}/services/onboarding-app` },
-  { name: '06-services-trainee-program', path: `/${LOCALE}/services/trainee-program` },
-  { name: '07-services-genz-workshop', path: `/${LOCALE}/services/genz-workshop` },
-  { name: '08-services-custom', path: `/${LOCALE}/services/custom` },
-  { name: '09-contact', path: `/${LOCALE}/contact` },
+  { name: '02-services', path: `/${LOCALE}/services` },
+  { name: '03-services-career-pages', path: `/${LOCALE}/services/career-pages` },
+  { name: '04-services-onboarding-app', path: `/${LOCALE}/services/onboarding-app` },
+  { name: '05-services-trainee-program', path: `/${LOCALE}/services/trainee-program` },
+  { name: '06-services-genz-workshop', path: `/${LOCALE}/services/genz-workshop` },
+  { name: '07-services-custom', path: `/${LOCALE}/services/custom` },
+  { name: '08-contact', path: `/${LOCALE}/contact` },
 ];
 
 await mkdir(OUT_DIR, { recursive: true });

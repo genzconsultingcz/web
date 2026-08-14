@@ -40,7 +40,7 @@
       "readMore": "Číst case study"
     },
     "pdf": {
-      "badge": "Zdarma · Bez emailu · Bez triků",
+      "badge": "Zdarma · Bez emailu",
       "headline": "PDF: Proč Gen Z nepošle CV",
       "body": "13 stran, 8 věcí, které rozhodují, jestli Gen Z pošle CV, a checklist k odškrtnutí — od názvu inzerátu po výzvu k akci, s reálnými příklady NE/ANO, co Gen Z hledá a kde české firmy padají",
       "cta": "Stáhnout PDF (107 kB)",
@@ -48,6 +48,12 @@
       "coverTitle": "8 věcí, které rozhodují, jestli Gen Z pošle CV.",
       "coverMeta": "13 stran · 2026",
       "coverMetaTag": "GZC · GUIDE 01"
+    },
+    "story": {
+      "eyebrow": "Náš příběh",
+      "title": "Proč GenZ Consulting vznikl",
+      "body1": "GenZ Consulting vznikl z jednoduché myšlenky: firmy ztrácejí Gen Z talenty ne proto, že by tato generace byla složitá, ale proto, že systémy pro mladé staví lidé z jiné generace, kteří nemohou plně pochopit jejich potřeby a očekávání.",
+      "body2": "My jsme jiní. Sami jsme Gen Z a zároveň rozumíme tomu, jak firmy fungují. Naše řešení nevycházejí z teorie, ale z reálné zkušenosti z první ruky."
     },
     "stats": [
       { "num": "7", "label": "spokojených firem" },
@@ -76,7 +82,6 @@
     "team": {
       "eyebrow": "Náš tým",
       "title": "Sami jsme Gen Z. Rozumíme té generaci zevnitř.",
-      "viewAbout": "Více o nás",
       "members": [
         {
           "name": "Adam Dalecký",
@@ -142,7 +147,7 @@
       "readMore": "Read case study"
     },
     "pdf": {
-      "badge": "Free · No email · No tricks",
+      "badge": "Free · No email",
       "headline": "PDF: Why Gen Z won't send their CV",
       "body": "13 pages, 8 things that decide whether Gen Z sends their CV and a checklist to tick off — from job title to call to action, with real NE/ANO examples of what Gen Z looks for and where companies fall short. Download, share with your manager, use in your next meeting.",
       "cta": "Download PDF (107 KB)",
@@ -150,6 +155,12 @@
       "coverTitle": "8 things that decide whether Gen Z sends their CV.",
       "coverMeta": "13 pages · 2026",
       "coverMetaTag": "GZC · GUIDE 01"
+    },
+    "story": {
+      "eyebrow": "Our story",
+      "title": "Why GenZ Consulting was founded",
+      "body1": "GenZ Consulting was born from a simple idea: companies lose Gen Z talent not because this generation is complicated — but because systems for young people are built by people from another generation who cannot fully understand their needs and expectations.",
+      "body2": "We're different. We are Gen Z ourselves and we understand how companies work. Our solutions don't come from theory — they come from real first-hand experience."
     },
     "stats": [
       { "num": "7", "label": "satisfied companies" },
@@ -178,7 +189,6 @@
     "team": {
       "eyebrow": "Our team",
       "title": "We are Gen Z ourselves. We understand this generation from the inside.",
-      "viewAbout": "More about us",
       "members": [
         {
           "name": "Adam Dalecký",

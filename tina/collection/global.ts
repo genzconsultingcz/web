@@ -4,7 +4,6 @@ import { iconSchema } from '../fields/icon';
 
 const navContentFields = [
   { type: 'string', label: 'Home Label', name: 'homeLabel' } as const,
-  { type: 'string', label: 'About Label', name: 'aboutLabel' } as const,
   { type: 'string', label: 'Case Studies Label', name: 'caseStudiesLabel' } as const,
   { type: 'string', label: 'Media Label', name: 'mediaLabel' } as const,
   { type: 'string', label: 'Contact Label', name: 'contactLabel' } as const,
@@ -36,8 +35,8 @@ const footerCopyFields = [
   { type: 'string', label: 'Website', name: 'web' } as const,
   { type: 'string', label: 'Social Domain', name: 'socialDomain' } as const,
   { type: 'string', label: 'Nav: Services', name: 'navServices' } as const,
-  { type: 'string', label: 'Nav: About', name: 'navAbout' } as const,
   { type: 'string', label: 'Nav: Case Studies', name: 'navCaseStudies' } as const,
+  { type: 'string', label: 'Nav: Media', name: 'navMedia' } as const,
   { type: 'string', label: 'Nav: Contact', name: 'navContact' } as const,
   { type: 'string', label: 'Nav: Guide', name: 'navGuide' } as const,
   { type: 'string', label: 'Home Logo Aria Label', name: 'homeLogoAria' } as const,

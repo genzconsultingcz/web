@@ -9,7 +9,6 @@ const globalSettings = {
     nav: {
       cs: {
         homeLabel: 'Domů',
-        aboutLabel: 'O nás',
         caseStudiesLabel: 'Case studies',
         contactLabel: 'Kontakt',
         servicesLabel: 'Služby',
@@ -22,7 +21,6 @@ const globalSettings = {
       },
       en: {
         homeLabel: 'Home',
-        aboutLabel: 'About',
         caseStudiesLabel: 'Case studies',
         contactLabel: 'Contact',
         servicesLabel: 'Services',
@@ -46,7 +44,6 @@ describe('Header', () => {
       </LayoutProvider>
     )
     // vitest.setup.ts mocks next-intl's useLocale() to always return 'cs'
-    expect(screen.getByText('O nás')).toBeInTheDocument()
     expect(screen.getByText('Kontakt')).toBeInTheDocument()
     expect(screen.getByLabelText('GenZ Consulting — domů')).toBeInTheDocument()
   })

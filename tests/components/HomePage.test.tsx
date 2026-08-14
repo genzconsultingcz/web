@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import HomePage from '@/components/pages/home/HomePage'
+import { VideoDialogProvider } from '@/components/ui/VideoDialogContext'
 
 const content = {
   hero: {
@@ -34,6 +35,12 @@ const content = {
     coverTitle: 'cover', coverMeta: 'meta', coverMetaTag: 'GZC · GUIDE 01',
   },
   stats: [{ num: '7', label: 'spokojených firem' }],
+  story: {
+    eyebrow: 'Náš příběh',
+    title: 'Proč GenZ Consulting vznikl',
+    body1: 'GenZ Consulting vznikl z jednoduché myšlenky.',
+    body2: 'My jsme jiní.',
+  },
   testimonials: {
     eyebrow: 'Co říkají klienti',
     linkedInLabel: 'LinkedIn',
@@ -43,7 +50,6 @@ const content = {
   team: {
     eyebrow: 'Náš tým',
     title: 'Team title',
-    viewAbout: 'more',
     members: [{ name: 'Adam Dalecký', role: 'Co-founder', bio: 'bio', photo: '/adam_cropped.jpeg', linkedin: 'https://linkedin.com' }],
   },
   cta: { title: 'Připraveni začít?', desc: 'desc', primary: 'primary', secondary: 'secondary' },
@@ -56,18 +62,26 @@ const caseStudies = [
 ] as any
 
 describe('HomePage', () => {
+  const renderHome = (props: { content: any; logos?: any; caseStudies?: any }) =>
+    render(
+      <VideoDialogProvider>
+        <HomePage content={props.content} logos={props.logos ?? logos} caseStudies={props.caseStudies ?? caseStudies} />
+      </VideoDialogProvider>,
+    )
+
   it('renders copy from the content prop instead of translation keys', () => {
-    render(<HomePage content={content} logos={logos} caseStudies={caseStudies} />)
+    renderHome({ content })
     expect(screen.getByText('Generace Z není')).toBeInTheDocument()
     expect(screen.getByText('Trainee program')).toBeInTheDocument()
     expect(screen.getByText('spokojených firem')).toBeInTheDocument()
     expect(screen.getByText('Skvělá spolupráce')).toBeInTheDocument()
     expect(screen.getByText('Připraveni začít?')).toBeInTheDocument()
+    expect(screen.getByText('Proč GenZ Consulting vznikl')).toBeInTheDocument()
     expect(screen.getByText('AV MEDIA')).toBeInTheDocument()
   })
 
   it('links directly to the PDF download from the hero CTA', () => {
-    render(<HomePage content={content} logos={logos} caseStudies={caseStudies} />)
+    renderHome({ content })
 
     const link = screen.getByRole('link', { name: 'Stáhnout průvodce zdarma' })
 
@@ -85,7 +99,7 @@ describe('HomePage', () => {
       },
     } as any
 
-    render(<HomePage content={englishContent} logos={logos} caseStudies={caseStudies} />)
+    renderHome({ content: englishContent })
 
     expect(document.body.textContent).toContain('Gen Z is not complicated')
     expect(document.body.textContent).not.toContain('complicated.')
