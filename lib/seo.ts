@@ -156,4 +156,16 @@ export const SEO = {
       description: 'How GenZ Consulting helped companies like AV Media, Global Payments or Generali attract Generation Z.',
     },
   },
+  media: {
+    cs: {
+      title: 'Média o nás',
+      description:
+        'Psali o nás — přehled článků, výzkumů a vystoupení o GenZ Consulting v médiích, akademických portálech a ve veřejné správě.',
+    },
+    en: {
+      title: 'Media coverage',
+      description:
+        'They wrote about us — an overview of articles, research and appearances about GenZ Consulting in media, academic portals and public administration.',
+    },
+  },
 } satisfies Record<string, { cs: { title: string; description: string }; en: { title: string; description: string } }>;

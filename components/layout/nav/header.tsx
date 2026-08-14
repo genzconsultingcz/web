@@ -48,6 +48,7 @@ export const Header = () => {
   const navLinks = [
     { href: `/${locale}/about`, label: nav.aboutLabel },
     { href: `/${locale}/case-studies`, label: nav.caseStudiesLabel },
+    { href: `/${locale}/media`, label: nav.mediaLabel },
     { href: `/${locale}/contact`, label: nav.contactLabel },
   ];
 

@@ -4,6 +4,8 @@ import Global from './collection/global';
 import Home from './collection/home';
 import CaseStudy from './collection/case-study';
 import CaseStudiesChrome from './collection/case-studies-chrome';
+import Press from './collection/press';
+import PressChrome from './collection/press-chrome';
 import Service from './collection/service';
 import ServicesChrome from './collection/services-chrome';
 
@@ -26,7 +28,7 @@ const config = defineConfig({
     basePath: '',
   },
   schema: {
-    collections: [Global, Home, CaseStudy, CaseStudiesChrome, Service, ServicesChrome],
+    collections: [Global, Home, CaseStudy, CaseStudiesChrome, Press, PressChrome, Service, ServicesChrome],
   },
 });
 

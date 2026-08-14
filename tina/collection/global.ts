@@ -6,6 +6,7 @@ const navContentFields = [
   { type: 'string', label: 'Home Label', name: 'homeLabel' } as const,
   { type: 'string', label: 'About Label', name: 'aboutLabel' } as const,
   { type: 'string', label: 'Case Studies Label', name: 'caseStudiesLabel' } as const,
+  { type: 'string', label: 'Media Label', name: 'mediaLabel' } as const,
   { type: 'string', label: 'Contact Label', name: 'contactLabel' } as const,
   { type: 'string', label: 'Services Label', name: 'servicesLabel' } as const,
   { type: 'string', label: 'View All Services Label', name: 'viewServicesLabel' } as const,

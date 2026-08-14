@@ -1,0 +1,22 @@
+{
+  "cs": {
+    "eyebrow": "Média o nás",
+    "title": "Psali o nás",
+    "subtitle": "Naše výzkumy a projekty rezonují u firem, akademické obce i ve veřejné správě. Přehled článků, reportů a vystoupení, které o GenZ Consulting vznikly.",
+    "sectionLabel": "Články a zmínky",
+    "readArticle": "Přečíst článek",
+    "ctaTitle": "Chcete o nás vědět víc?",
+    "ctaDesc": "Domluvte si nezávazný call a zeptejte se na cokoli.",
+    "cta": "Domluvit schůzku"
+  },
+  "en": {
+    "eyebrow": "Media coverage",
+    "title": "They wrote about us",
+    "subtitle": "Our research and projects resonate with companies, academia and public administration. An overview of the articles, reports and appearances about GenZ Consulting.",
+    "sectionLabel": "Articles & mentions",
+    "readArticle": "Read article",
+    "ctaTitle": "Want to know more about us?",
+    "ctaDesc": "Book a no-obligation call and ask us anything.",
+    "cta": "Book a call"
+  }
+}
