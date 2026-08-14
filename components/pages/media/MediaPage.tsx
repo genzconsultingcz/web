@@ -123,7 +123,7 @@ export default function MediaPage({
                       whileInView="visible"
                       viewport={{ once: true }}
                       custom={i * 0.05}
-                      className="pt-1 text-xs font-bold uppercase tracking-wider text-zinc-400 sm:pl-3 sm:pt-1.5"
+                      className="pt-1 pl-8 text-xs font-bold uppercase tracking-wider text-zinc-400 sm:pl-3 sm:pt-1.5"
                     >
                       {dateLabel ?? ''}
                     </motion.span>
