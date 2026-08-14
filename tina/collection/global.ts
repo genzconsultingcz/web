@@ -107,6 +107,8 @@ const Global: Collection = {
           fields: [
             { type: 'string', label: 'Title', name: 'title' },
             { type: 'string', label: 'Message', name: 'message' },
+            { type: 'string', label: 'Back Home Label', name: 'backHomeLabel' },
+            { type: 'string', label: 'Contact Label', name: 'contactLabel' },
           ],
         },
         {
@@ -116,6 +118,8 @@ const Global: Collection = {
           fields: [
             { type: 'string', label: 'Title', name: 'title' },
             { type: 'string', label: 'Message', name: 'message' },
+            { type: 'string', label: 'Back Home Label', name: 'backHomeLabel' },
+            { type: 'string', label: 'Contact Label', name: 'contactLabel' },
           ],
         },
       ],

@@ -1,7 +1,17 @@
 {
   "notFound": {
-    "cs": { "title": "404", "message": "Stránka nenalezena." },
-    "en": { "title": "404", "message": "Page not found." }
+    "cs": {
+      "title": "Tahle stránka neexistuje.",
+      "message": "Možná byla přesunuta nebo smazána. Vraťte se na hlavní stránku, nebo nám rovnou napište.",
+      "backHomeLabel": "Zpět na hlavní stránku",
+      "contactLabel": "Napište nám"
+    },
+    "en": {
+      "title": "This page doesn't exist.",
+      "message": "It may have been moved or deleted. Head back home or get in touch with us.",
+      "backHomeLabel": "Back to home",
+      "contactLabel": "Contact us"
+    }
   },
   "header": {
     "name": "GenZ Consulting",
@@ -19,11 +29,26 @@
         "menuOpenAria": "Otevřít menu",
         "menuCloseAria": "Zavřít menu",
         "serviceLinks": [
-          { "slug": "trainee-program", "label": "Trainee program" },
-          { "slug": "onboarding-app", "label": "Onboardingová aplikace" },
-          { "slug": "genz-workshop", "label": "Workshop o Gen Z" },
-          { "slug": "career-pages", "label": "Kariérní stránky" },
-          { "slug": "custom", "label": "Individuální řešení" }
+          {
+            "slug": "trainee-program",
+            "label": "Trainee program"
+          },
+          {
+            "slug": "onboarding-app",
+            "label": "Onboardingová aplikace"
+          },
+          {
+            "slug": "genz-workshop",
+            "label": "Workshop o Gen Z"
+          },
+          {
+            "slug": "career-pages",
+            "label": "Kariérní stránky"
+          },
+          {
+            "slug": "custom",
+            "label": "Individuální řešení"
+          }
         ]
       },
       "en": {
@@ -38,11 +63,26 @@
         "menuOpenAria": "Open menu",
         "menuCloseAria": "Close menu",
         "serviceLinks": [
-          { "slug": "trainee-program", "label": "Trainee program" },
-          { "slug": "onboarding-app", "label": "Onboarding app" },
-          { "slug": "genz-workshop", "label": "Gen Z Workshop" },
-          { "slug": "career-pages", "label": "Career pages" },
-          { "slug": "custom", "label": "Custom solution" }
+          {
+            "slug": "trainee-program",
+            "label": "Trainee program"
+          },
+          {
+            "slug": "onboarding-app",
+            "label": "Onboarding app"
+          },
+          {
+            "slug": "genz-workshop",
+            "label": "Gen Z Workshop"
+          },
+          {
+            "slug": "career-pages",
+            "label": "Career pages"
+          },
+          {
+            "slug": "custom",
+            "label": "Custom solution"
+          }
         ]
       }
     }
@@ -53,15 +93,21 @@
     "webeLogo": "/uploads/webe.webp",
     "social": [
       {
-        "icon": { "name": "FaLinkedin" },
+        "icon": {
+          "name": "FaLinkedin"
+        },
         "url": "https://cz.linkedin.com/company/gen-zconsulting"
       },
       {
-        "icon": { "name": "FaLinkedin" },
+        "icon": {
+          "name": "FaLinkedin"
+        },
         "url": "https://www.linkedin.com/in/adam-dalecky/"
       },
       {
-        "icon": { "name": "FaLinkedin" },
+        "icon": {
+          "name": "FaLinkedin"
+        },
         "url": "https://www.linkedin.com/in/jonatan-petr/"
       }
     ],
