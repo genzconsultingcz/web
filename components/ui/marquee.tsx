@@ -1,7 +1,7 @@
 'use client';
 import { InfiniteSlider } from './infinite-slider';
 
-const TICKER_ITEMS = ['WORKSHOP', 'ONBOARDING', 'GEN Z FIRST', '50+ FIREM', 'REAL TALK', 'CONSULTING'];
+const TICKER_ITEMS = ['WORKSHOP', 'ONBOARDING', 'GEN Z FIRST', '7 FIREM', 'REAL TALK', 'CONSULTING'];
 
 export const Marquee = () => (
   <div className="overflow-hidden bg-black py-4">

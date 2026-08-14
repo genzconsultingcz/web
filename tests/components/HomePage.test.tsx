@@ -33,7 +33,7 @@ const content = {
     badge: 'badge', headline: 'PDF headline', body: 'body', cta: 'cta', secondaryCta: 'secondary',
     coverTitle: 'cover', coverMeta: 'meta', coverMetaTag: 'GZC · GUIDE 01',
   },
-  stats: [{ num: '50+', label: 'spokojených firem' }],
+  stats: [{ num: '7', label: 'spokojených firem' }],
   testimonials: {
     eyebrow: 'Co říkají klienti',
     linkedInLabel: 'LinkedIn',

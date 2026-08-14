@@ -130,7 +130,16 @@ export const Footer = () => {
           <p className="text-xs text-white/30">
             © {new Date().getFullYear()} {header?.name}. {copy.rights}
           </p>
-          <p className="text-xs text-white/20">{copy.socialDomain}</p>
+          <p className="text-sm text-white/60">
+            <a
+              href="https://webe.tuuli.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors duration-150"
+            >
+              {copy.socialDomain}
+            </a>
+          </p>
         </div>
       </div>
     </footer>
