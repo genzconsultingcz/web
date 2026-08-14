@@ -19,28 +19,6 @@ const homeLocaleFields = [
   { type: 'string', label: 'Logos Eyebrow', name: 'logosEyebrow' } as const,
   {
     type: 'object',
-    label: 'Problem',
-    name: 'problem',
-    fields: [
-      { type: 'string', label: 'Eyebrow', name: 'eyebrow' },
-      { type: 'string', label: 'Title', name: 'title' },
-      { type: 'string', label: 'Villain Statement', name: 'villain' },
-      { type: 'string', label: 'Items', name: 'items', list: true },
-    ],
-  } as const,
-  {
-    type: 'object',
-    label: 'Solution',
-    name: 'solution',
-    fields: [
-      { type: 'string', label: 'Eyebrow', name: 'eyebrow' },
-      { type: 'string', label: 'Title', name: 'title' },
-      { type: 'string', label: 'Subtitle', name: 'subtitle' },
-      { type: 'string', label: 'Items', name: 'items', list: true },
-    ],
-  } as const,
-  {
-    type: 'object',
     label: 'Services',
     name: 'services',
     fields: [

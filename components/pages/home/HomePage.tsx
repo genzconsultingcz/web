@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
-import { ArrowRight, ArrowUpRight, ArrowDown, Check, Quote, Linkedin, Download } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ArrowDown, Quote, Linkedin, Download } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import { LeadMagnetModal } from '@/components/ui/LeadMagnetModal';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
@@ -286,62 +286,24 @@ export default function HomePage({
         </div>
       </section>
 
-      {/* ── PROBLEM / SOLUTION ── */}
-      <section className="bg-gtc-deep py-24">
+      {/* ── STATS ── */}
+      <section className="bg-gtc-primary py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-16 md:grid-cols-2">
-            {/* Problem */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-gtc-primary">
-                {content.problem?.eyebrow}
-              </p>
-              <h2 className="text-2xl font-black leading-tight text-white md:text-3xl">
-                {content.problem?.title}
-              </h2>
-              <p className="mt-4 text-base font-medium leading-relaxed text-white/80 not-italic">
-                {content.problem?.villain}
-              </p>
-              <ul className="mt-6 space-y-3">
-                {(content.problem?.items ?? []).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="mt-0.5 size-4 shrink-0 text-gtc-primary" />
-                    <span className="text-sm leading-relaxed text-white/70">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Solution */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={0.15}
-            >
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-gtc-primary">
-                {content.solution?.eyebrow}
-              </p>
-              <h2 className="text-2xl font-black leading-tight text-white md:text-3xl">
-                {content.solution?.title}
-              </h2>
-              <p className="mt-4 text-base font-medium leading-relaxed text-white/80 not-italic md:text-lg">
-                {content.solution?.subtitle}
-              </p>
-              <ul className="mt-6 space-y-3">
-                {(content.solution?.items ?? []).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="mt-0.5 size-4 shrink-0 text-gtc-primary" />
-                    <span className="text-sm leading-relaxed text-white/70">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+          <div className="grid gap-8 sm:grid-cols-3">
+            {(content.stats ?? []).map((stat, i) => (
+              <motion.div
+                key={stat?.label}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i * 0.1}
+                className="text-center"
+              >
+                <div className="text-6xl font-black text-black md:text-7xl">{stat?.num}</div>
+                <div className="mt-2 text-sm font-semibold uppercase tracking-widest text-black/60">{stat?.label}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -579,28 +541,6 @@ export default function HomePage({
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── STATS ── */}
-      <section className="bg-gtc-primary py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-8 sm:grid-cols-3">
-            {(content.stats ?? []).map((stat, i) => (
-              <motion.div
-                key={stat?.label}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={i * 0.1}
-                className="text-center"
-              >
-                <div className="text-6xl font-black text-black md:text-7xl">{stat?.num}</div>
-                <div className="mt-2 text-sm font-semibold uppercase tracking-widest text-black/60">{stat?.label}</div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
