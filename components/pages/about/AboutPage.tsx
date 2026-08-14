@@ -256,7 +256,7 @@ export default function AboutPage() {
             >
               <div className="relative h-28 w-20 shrink-0 overflow-hidden">
                 <Image
-                  src="/jonathan.png"
+                  src="/jonathan_cropped.jpeg"
                   alt="Jonatan Petr"
                   fill
                   className="object-cover object-center"
