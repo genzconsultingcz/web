@@ -61,12 +61,6 @@ export default function AboutPage() {
             {t('subtitle')}
           </motion.p>
         </div>
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-8 top-1/2 -translate-y-1/2 select-none text-[18vw] font-black leading-none text-black/5"
-        >
-          GZ
-        </div>
       </section>
 
       {/* ── STORY ── */}
@@ -222,7 +216,7 @@ export default function AboutPage() {
             >
               <div className="relative h-28 w-20 shrink-0 overflow-hidden">
                 <Image
-                  src="/adam.jpeg"
+                  src="/jonathan.jpg"
                   alt="Adam Dalecký"
                   fill
                   className="object-cover object-center"
@@ -256,7 +250,7 @@ export default function AboutPage() {
             >
               <div className="relative h-28 w-20 shrink-0 overflow-hidden">
                 <Image
-                  src="/jonathan.png"
+                  src="/jonathan_cropped.jpeg"
                   alt="Jonatan Petr"
                   fill
                   className="object-cover object-center"
