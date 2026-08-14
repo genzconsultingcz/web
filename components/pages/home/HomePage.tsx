@@ -4,9 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
-import { ArrowRight, ArrowUpRight, ArrowDown, Quote, Linkedin, Download } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Quote, Linkedin, Download } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
-import { LeadMagnetModal } from '@/components/ui/LeadMagnetModal';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import type { HomeQuery } from '../../../tina/__generated__/types';
 
@@ -118,13 +117,11 @@ export default function HomePage({
   caseStudies: HomeCaseStudyTeaser[];
 }) {
   const locale = useLocale();
-  const [isLeadMagnetOpen, setLeadMagnetOpen] = React.useState(false);
 
   if (!content) return null;
 
   return (
     <>
-      <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setLeadMagnetOpen(false)} />
       {/* ── HERO ── */}
       <section className="relative overflow-hidden bg-white">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 py-20 lg:min-h-[90vh] lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:py-24">
@@ -204,14 +201,14 @@ export default function HomePage({
                 size="lg"
                 className="rounded-full bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
               />
-              <button
-                type="button"
-                onClick={() => setLeadMagnetOpen(true)}
+              <a
+                href="/downloads/legit-check.pdf"
+                download
                 className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-transparent px-8 py-4 text-sm font-bold text-black hover:bg-black hover:text-white transition-colors"
               >
+                <Download className="size-4" />
                 {content.hero?.secondaryCta}
-                <ArrowDown className="size-4" />
-              </button>
+              </a>
             </motion.div>
           </div>
 
@@ -645,13 +642,12 @@ export default function HomePage({
                 size="lg"
                 className="rounded-none bg-gtc-primary px-8 py-4 text-sm font-bold text-black hover:bg-gtc-primary/90 transition-colors"
               />
-              <button
-                type="button"
-                onClick={() => setLeadMagnetOpen(true)}
-                className="rounded-none border-2 border-white/30 px-8 py-4 text-sm font-bold text-white hover:border-white hover:bg-white/5 transition-colors"
-              >
-                {content.cta?.secondary}
-              </button>
+              <ContactButton
+                label={content.cta?.secondary ?? ''}
+                size="lg"
+                variant="outline"
+                className="rounded-none border-2 border-white/30 bg-transparent px-8 py-4 text-sm font-bold text-white hover:border-white hover:bg-white/5 transition-colors"
+              />
             </div>
           </motion.div>
         </div>

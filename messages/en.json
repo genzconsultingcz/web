@@ -1,22 +1,4 @@
 {
-  "leadMagnet": {
-    "badge": "Free · For HR & EB · Instant download",
-    "title": "7 things that decide whether Gen Z stays at your company",
-    "description": "A practical guide for HR, Talent Acquisition and Employer Branding — enter your email to download.",
-    "emailPlaceholder": "your@email.com",
-    "submit": "Download the guide",
-    "submitting": "Sending...",
-    "successTitle": "Done! The guide is on its way.",
-    "successDescription": "Check your email.",
-    "downloadButton": "Download PDF",
-    "secondaryCta": "Or book a call instead",
-    "coverTitle": "7 things that decide about Gen Z.",
-    "coverMeta": "32 pages · 2026",
-    "errorGeneric": "Something went wrong. Please try again.",
-    "errorInvalidEmail": "Please enter a valid email address.",
-    "closeAria": "Close",
-    "guideMetaTag": "GZC · GUIDE 01"
-  },
   "about": {
     "eyebrow": "About GenZ Consulting",
     "title": "Systems for young people should be built by young people.",

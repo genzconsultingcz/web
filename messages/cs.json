@@ -1,22 +1,4 @@
 {
-  "leadMagnet": {
-    "badge": "Zdarma · Pro HR & EB · Ihned ke stažení",
-    "title": "7 věcí, které rozhodují, jestli vám Gen Z zůstane ve firmě",
-    "description": "Praktický průvodce pro HR, Talent Acquisition a Employer Branding — ke stažení po zadání e-mailu.",
-    "emailPlaceholder": "vas@email.cz",
-    "submit": "Stáhnout průvodce",
-    "submitting": "Posíláme...",
-    "successTitle": "Hotovo! Průvodce je na cestě.",
-    "successDescription": "Zkontrolujte svůj e-mail.",
-    "downloadButton": "Stáhnout PDF",
-    "secondaryCta": "Domluvit nezávazný call",
-    "coverTitle": "7 věcí, které rozhodují o Gen Z.",
-    "coverMeta": "32 stran · 2026",
-    "errorGeneric": "Něco se pokazilo. Zkuste to prosím znovu.",
-    "errorInvalidEmail": "Zadejte platnou e-mailovou adresu.",
-    "closeAria": "Zavřít",
-    "guideMetaTag": "GZC · GUIDE 01"
-  },
   "about": {
     "eyebrow": "O GenZ Consulting",
     "title": "Systémy pro mladé by měli stavět mladí.",

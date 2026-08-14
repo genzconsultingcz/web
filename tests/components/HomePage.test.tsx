@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import HomePage from '@/components/pages/home/HomePage'
 
 const content = {
@@ -66,12 +66,13 @@ describe('HomePage', () => {
     expect(screen.getByText('AV MEDIA')).toBeInTheDocument()
   })
 
-  it('opens the lead magnet modal when the download CTA is clicked', () => {
+  it('links directly to the PDF download from the hero CTA', () => {
     render(<HomePage content={content} logos={logos} caseStudies={caseStudies} />)
 
-    fireEvent.click(screen.getByRole('button', { name: 'Stáhnout průvodce zdarma' }))
+    const link = screen.getByRole('link', { name: 'Stáhnout průvodce zdarma' })
 
-    expect(screen.getByText('7 věcí, které rozhodují, jestli vám Gen Z zůstane ve firmě')).toBeInTheDocument()
+    expect(link).toHaveAttribute('href', '/downloads/legit-check.pdf')
+    expect(link).toHaveAttribute('download')
   })
 
   it('does not render a trailing period in the highlighted English headline', () => {
