@@ -36,7 +36,6 @@ export const Footer = () => {
     { href: `/${locale}/case-studies`, label: copy.navCaseStudies },
     { href: `/${locale}/media`, label: copy.navMedia },
     { href: `/${locale}/contact`, label: copy.navContact },
-    { href: `/${locale}#pdf-guide`, label: copy.navGuide },
   ];
 
   return (
