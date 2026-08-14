@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-export const SITE_URL = 'https://www.genzconsulting.cz';
+export const SITE_URL = 'https://genzconsulting.cz';
 export const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export const DEFAULT_LOCALE = 'cs';
