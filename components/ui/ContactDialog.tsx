@@ -4,6 +4,7 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import { X, Phone, Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useLayout } from '@/components/layout/layout-context';
+import posthog from 'posthog-js';
 
 interface ContactDialogProps {
   isOpen: boolean;
@@ -39,6 +40,7 @@ export function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
             {phone && (
               <a
                 href={`tel:${phone}`}
+                onClick={() => posthog.capture('contact_phone_clicked')}
                 className="flex items-center justify-center gap-2.5 w-full rounded-full bg-gtc-primary px-6 py-4 text-sm font-bold text-black transition-opacity hover:opacity-90"
               >
                 <Phone className="size-4" />
@@ -48,6 +50,7 @@ export function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
             {email && (
               <a
                 href={`mailto:${email}`}
+                onClick={() => posthog.capture('contact_email_clicked')}
                 className="flex items-center justify-center gap-2.5 w-full rounded-full border border-white/20 px-6 py-4 text-sm font-bold text-white transition-colors hover:border-white/40 hover:bg-white/5"
               >
                 <Mail className="size-4" />

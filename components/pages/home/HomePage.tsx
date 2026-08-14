@@ -8,6 +8,7 @@ import { ArrowRight, Quote, Linkedin, Download, Play } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
 import { useVideoDialog } from '@/components/ui/VideoDialogContext';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
+import posthog from 'posthog-js';
 import type { HomeQuery } from '../../../tina/__generated__/types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -206,6 +207,7 @@ export default function HomePage({
               <a
                 href="/downloads/GZC_Karierka_pro_Gen_Z.pdf"
                 download
+                onClick={() => posthog.capture('guide_downloaded', { placement: 'hero' })}
                 className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-transparent px-8 py-4 text-sm font-bold text-black hover:bg-black hover:text-white transition-colors"
               >
                 <Download className="size-4" />
@@ -446,7 +448,10 @@ export default function HomePage({
               viewport={{ once: true }}
               custom={0.15}
               className="relative aspect-video w-full overflow-hidden rounded-2xl group cursor-pointer"
-              onClick={() => openVideo('https://www.youtube.com/embed/uKZZ0pGV8Gg?si=DGtU4qkpWg_-8OEO')}
+              onClick={() => {
+                posthog.capture('video_opened', { placement: 'homepage_story' });
+                openVideo('https://www.youtube.com/embed/uKZZ0pGV8Gg?si=DGtU4qkpWg_-8OEO');
+              }}
             >
               <img
                 src="https://img.youtube.com/vi/uKZZ0pGV8Gg/maxresdefault.jpg"
@@ -551,6 +556,7 @@ export default function HomePage({
                 <a
                   href="/downloads/GZC_Karierka_pro_Gen_Z.pdf"
                   download
+                  onClick={() => posthog.capture('guide_downloaded', { placement: 'guide_section' })}
                   className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gtc-primary px-7 py-3.5 text-sm font-bold text-black transition-opacity hover:opacity-90"
                 >
                   <Download className="size-4" />
@@ -696,6 +702,7 @@ export default function HomePage({
               <a
                 href="/downloads/GZC_Karierka_pro_Gen_Z.pdf"
                 download
+                onClick={() => posthog.capture('guide_downloaded', { placement: 'footer_cta' })}
                 className="inline-flex items-center gap-2.5 rounded-none border-2 border-white/30 bg-transparent px-8 py-4 text-sm font-bold text-white hover:border-white hover:bg-white/5 transition-colors"
               >
                 <Download className="size-4" />

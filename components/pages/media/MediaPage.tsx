@@ -6,6 +6,7 @@ import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import { format } from 'date-fns';
 import { cs as csLocale, enUS as enLocale } from 'date-fns/locale';
 import { ContactButton } from '@/components/ui/ContactButton';
+import posthog from 'posthog-js';
 import type { PressChromeQuery } from '../../../tina/__generated__/types';
 
 // Strips __typename at every depth: the `cs` and `en` chrome branches are
@@ -151,6 +152,7 @@ export default function MediaPage({
                         {item.url ? (
                           <a
                             href={item.url}
+                            onClick={() => posthog.capture('external_article_opened', { outlet: item.outlet })}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group inline-flex items-start gap-2 transition-colors duration-150 hover:text-gtc-dark"

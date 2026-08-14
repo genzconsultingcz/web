@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ContactDialog } from '@/components/ui/ContactDialog';
+import posthog from 'posthog-js';
 
 interface ContactButtonProps {
   label: string;
@@ -25,7 +26,10 @@ export function ContactButton({
         variant={variant}
         size={size}
         className={cn('h-auto', className)}
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          posthog.capture('contact_cta_opened');
+          setIsOpen(true);
+        }}
       >
         {label}
       </Button>
