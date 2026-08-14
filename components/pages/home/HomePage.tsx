@@ -4,8 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import { motion } from 'motion/react';
-import { ArrowRight, Quote, Linkedin, Download } from 'lucide-react';
+import { ArrowRight, Quote, Linkedin, Download, Play } from 'lucide-react';
 import { ContactButton } from '@/components/ui/ContactButton';
+import { useVideoDialog } from '@/components/ui/VideoDialogContext';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import type { HomeQuery } from '../../../tina/__generated__/types';
 
@@ -117,6 +118,7 @@ export default function HomePage({
   caseStudies: HomeCaseStudyTeaser[];
 }) {
   const locale = useLocale();
+  const { openVideo } = useVideoDialog();
 
   if (!content) return null;
 
@@ -408,6 +410,32 @@ export default function HomePage({
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── VIDEO ── */}
+      <section className="bg-black py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="relative aspect-video w-full overflow-hidden rounded-2xl group cursor-pointer"
+            onClick={() => openVideo('https://www.youtube.com/embed/uKZZ0pGV8Gg?si=DGtU4qkpWg_-8OEO')}
+          >
+            <img
+              src="https://img.youtube.com/vi/uKZZ0pGV8Gg/maxresdefault.jpg"
+              alt=""
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="flex size-20 items-center justify-center rounded-full bg-gtc-primary text-black shadow-lg transition-transform duration-300 group-hover:scale-110">
+                <Play className="size-8 fill-current ml-1" />
+              </span>
+            </div>
+          </motion.div>
         </div>
       </section>
 
