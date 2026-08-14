@@ -9,25 +9,25 @@
     "hero": {
       "eyebrow": "Služba 04",
       "title": "Kariérní stránky\npro Gen Z",
-      "subtitle": "Zjistěte přesně, proč Gen Z přijde na vaši kariérní stránku a životopis nepošle — a dostanete konkrétní doporučení jak to změnit.",
+      "subtitle": "Zjistěte přesně, proč Gen Z přijde na vaši kariérní stránku a životopis nepošle a dostanete konkrétní doporučení, jak to změnit.",
       "cta": "Domluvit schůzku"
     },
     "sections": [
       {
         "label": "Co to je",
-        "text": "Odborná analýza kariérní stránky vaší firmy z pohledu Gen Z. GenZ Consulting projde vaši kariérní stránku, identifikuje konkrétní pain points, které odrazují Gen Z kandidáty od odeslání životopisu, a dodá přehledný souhrn doporučení — s vysvětlením proč a jak to změnit."
+        "text": "Odborná analýza kariérní stránky vaší firmy z pohledu Gen Z. GenZ Consulting projde vaši kariérní stránku, identifikuje konkrétní pain points, které odrazují Gen Z kandidáty od odeslání životopisu, a dodá přehledný souhrn doporučení s vysvětlením, proč a jak to změnit."
       },
       {
         "label": "Co tím firma získá",
-        "text": "Jasný přehled o tom, co na kariérní stránce funguje a co Gen Z odrazuje ještě před tím, než vůbec pošle životopis. Konkrétní doporučení co a jak změnit — ne obecné rady, ale přesné kroky s vysvětlením proč to tak Gen Z vidí."
+        "text": "Jasný přehled o tom, co na kariérní stránce funguje a co Gen Z odrazuje ještě před tím, než vůbec pošle životopis. Konkrétní doporučení co a jak změnit, ne obecné rady, ale přesné kroky s vysvětlením proč to tak Gen Z vidí."
       },
       {
         "label": "Pro koho",
-        "text": "Pro firmy, které investují do náboru Gen Z, ale výsledky neodpovídají očekávání. Pro HR a Employer Branding týmy, které tuší, že kariérní stránka není optimální — ale nevědí přesně kde a proč."
+        "text": "Pro firmy, které investují do náboru Gen Z, ale výsledky neodpovídají očekávání. Pro HR a Employer Branding týmy, které tuší, že kariérní stránka není optimální, ale nevědí přesně kde a proč."
       },
       {
         "label": "Co děláme jinak",
-        "text": "Kariérní stránku hodnotíme z perspektivy, kterou nikdo jiný nemá — přímo z pohledu Gen Z, která zároveň rozumí firemnímu kontextu. Nejde o obecný UX audit, ale o analýzu toho, jak vaši stránku vidí přesně ten člověk, kterého chcete získat."
+        "text": "Kariérní stránku hodnotíme z perspektivy, kterou nikdo jiný nemá, přímo z pohledu Gen Z, která zároveň rozumí firemnímu kontextu. Nejde o obecný UX audit, ale o analýzu toho, jak vaši stránku vidí přesně ten člověk, kterého chcete získat."
       }
     ],
     "timeline": {
@@ -38,30 +38,30 @@
   "en": {
     "card": {
       "title": "Career pages",
-      "desc": "An analysis of your career page from Gen Z's perspective — concrete recommendations on what and how to change."
+      "desc": "An analysis of your career page from Gen Z's perspective, concrete recommendations on what and how to change."
     },
     "hero": {
       "eyebrow": "Service 04",
       "title": "Career pages\nfor Gen Z",
-      "subtitle": "Find out exactly why Gen Z visits your career page but doesn't apply — and get concrete recommendations on what and how to change.",
+      "subtitle": "Find out exactly why Gen Z visits your career page but doesn't apply and get concrete recommendations on what and how to change.",
       "cta": "Book a call"
     },
     "sections": [
       {
         "label": "What it is",
-        "text": "An expert analysis of your company's career page from Gen Z's perspective. GenZ Consulting goes through your career page, identifies specific pain points that discourage Gen Z candidates from submitting a CV, and delivers a clear summary of recommendations — with an explanation of why and how to change it."
+        "text": "An expert analysis of your company's career page from Gen Z's perspective. GenZ Consulting goes through your career page, identifies specific pain points that discourage Gen Z candidates from submitting a CV, and delivers a clear summary of recommendations with an explanation of why and how to change it."
       },
       {
         "label": "What your company gains",
-        "text": "A clear overview of what works on the career page and what puts Gen Z off before they even send a CV. Concrete recommendations on what and how to change — not general advice, but precise steps with an explanation of why Gen Z sees it this way."
+        "text": "A clear overview of what works on the career page and what puts Gen Z off before they even send a CV. Concrete recommendations on what and how to change, not general advice, but precise steps with an explanation of why Gen Z sees it this way."
       },
       {
         "label": "Who it's for",
-        "text": "Companies investing in Gen Z recruitment but not getting results that match expectations. HR and Employer Branding teams who suspect the career page isn't optimal — but don't know exactly where and why."
+        "text": "Companies investing in Gen Z recruitment but not getting results that match expectations. HR and Employer Branding teams who suspect the career page isn't optimal but don't know exactly where and why."
       },
       {
         "label": "What we do differently",
-        "text": "We evaluate the career page from a perspective nobody else has — directly from the point of view of Gen Z that also understands the business context. It's not a general UX audit, but an analysis of how your page is seen by exactly the person you want to attract."
+        "text": "We evaluate the career page from a perspective nobody else has, directly from the point of view of Gen Z that also understands the business context. It's not a general UX audit, but an analysis of how your page is seen by exactly the person you want to attract."
       }
     ],
     "timeline": {
