@@ -43,7 +43,7 @@
     "pdf": {
       "badge": "Zdarma · Bez emailu",
       "headline": "PDF: Proč Gen Z nepošle CV",
-      "body": "13 stran, 8 věcí, které rozhodují, jestli Gen Z pošle CV, a checklist k odškrtnutí — od názvu inzerátu po výzvu k akci, s reálnými příklady NE/ANO, co Gen Z hledá a kde české firmy padají",
+      "body": "13 stran, 8 věcí, které rozhodují, jestli Gen Z pošle CV, a checklist k odškrtnutí: od názvu inzerátu po výzvu k akci, s reálnými příklady NE/ANO, co Gen Z hledá a kde české firmy padají",
       "cta": "Stáhnout PDF (107 kB)",
       "secondaryCta": "Domluvit nezávazný call",
       "coverTitle": "8 věcí, které rozhodují, jestli Gen Z pošle CV.",
@@ -126,10 +126,10 @@
       "viewAll": "View all services",
       "learnMore": "Learn more",
       "items": [
-        { "num": "01", "title": "Trainee program", "desc": "A fully custom trainee program — attracts the right talent, trains them effectively and keeps them at your company.", "slug": "trainee-program" },
+        { "num": "01", "title": "Trainee program", "desc": "A fully custom trainee program that attracts the right talent, trains them effectively and keeps them at your company.", "slug": "trainee-program" },
         { "num": "02", "title": "Onboarding app", "desc": "A digital onboarding guide built in tools your company already uses. HR sees everything in real time.", "slug": "onboarding-app" },
-        { "num": "03", "title": "Gen Z Workshop", "desc": "An educational workshop for HR teams in three variants — from a general foundation to custom research for your company.", "slug": "genz-workshop" },
-        { "num": "04", "title": "Career pages", "desc": "An analysis of your career page from Gen Z's perspective — concrete recommendations on what and how to change.", "slug": "career-pages" }
+        { "num": "03", "title": "Gen Z Workshop", "desc": "An educational workshop for HR teams in three variants: from a general foundation to custom research for your company.", "slug": "genz-workshop" },
+        { "num": "04", "title": "Career pages", "desc": "An analysis of your career page from Gen Z's perspective with concrete recommendations on what and how to change.", "slug": "career-pages" }
       ]
     },
     "process": {
@@ -138,7 +138,7 @@
       "steps": [
         { "num": "01", "title": "We find out what's wrong", "desc": "We meet and find out whether it makes sense to solve it together. No commitment." },
         { "num": "02", "title": "We get to know your company", "desc": "We understand how things work at your company and what the full context of the problem is." },
-        { "num": "03", "title": "We build a tailored solution", "desc": "We design a solution precisely for you — easy to implement, with measurable impact." }
+        { "num": "03", "title": "We build a tailored solution", "desc": "We design a solution precisely for you: easy to implement, with measurable impact." }
       ]
     },
     "caseStudies": {
@@ -151,7 +151,7 @@
     "pdf": {
       "badge": "Free · No email",
       "headline": "PDF: Why Gen Z won't send their CV",
-      "body": "13 pages, 8 things that decide whether Gen Z sends their CV and a checklist to tick off — from job title to call to action, with real NE/ANO examples of what Gen Z looks for and where companies fall short. Download, share with your manager, use in your next meeting.",
+      "body": "13 pages, 8 things that decide whether Gen Z sends their CV and a checklist to tick off: from job title to call to action, with real NE/ANO examples of what Gen Z looks for and where companies fall short. Download, share with your manager, use in your next meeting.",
       "cta": "Download PDF (107 KB)",
       "secondaryCta": "Or book a call instead",
       "coverTitle": "8 things that decide whether Gen Z sends their CV.",
@@ -161,8 +161,8 @@
     "story": {
       "eyebrow": "Our story",
       "title": "Why GenZ Consulting was founded",
-      "body1": "GenZ Consulting was born from a simple idea: companies lose Gen Z talent not because this generation is complicated — but because systems for young people are built by people from another generation who cannot fully understand their needs and expectations.",
-      "body2": "We're different. We are Gen Z ourselves and we understand how companies work. Our solutions don't come from theory — they come from real first-hand experience."
+      "body1": "GenZ Consulting was born from a simple idea: companies lose Gen Z talent not because this generation is complicated, but because systems for young people are built by people from another generation who cannot fully understand their needs and expectations.",
+      "body2": "We're different. We are Gen Z ourselves and we understand how companies work. Our solutions don't come from theory; they come from real first-hand experience."
     },
     "stats": [
       { "num": "7", "label": "satisfied companies" },

@@ -9,7 +9,7 @@
     "hero": {
       "eyebrow": "Služba 03",
       "title": "Workshop o Gen Z",
-      "subtitle": "Workshop, který váš HR tým naučí rozumět Gen Z — ve třech variantách podle toho, jak hluboko chcete jít.",
+      "subtitle": "Workshop, který váš HR tým naučí rozumět Gen Z ve třech variantách podle toho, jak hluboko chcete jít.",
       "cta": "Domluvit schůzku"
     },
     "sections": [
@@ -19,7 +19,7 @@
       },
       {
         "label": "Co tím firma získá",
-        "text": "HR tým, který Gen Z skutečně rozumí — a ví jak s ní pracovat, komunikovat a jak ji vést. Ne obecná teorie, ale poznatky přímo použitelné v jejich realitě."
+        "text": "HR tým, který Gen Z skutečně rozumí a ví, jak s ní pracovat, komunikovat a jak ji vést. Ne obecná teorie, ale poznatky přímo použitelné v jejich realitě."
       },
       {
         "label": "Pro koho",
@@ -53,12 +53,12 @@
   "en": {
     "card": {
       "title": "Gen Z Workshop",
-      "desc": "An educational workshop for HR teams in three variants — from a general foundation to custom research for your company."
+      "desc": "An educational workshop for HR teams in three variants: from a general foundation to custom research for your company."
     },
     "hero": {
       "eyebrow": "Service 03",
       "title": "Gen Z Workshop",
-      "subtitle": "A workshop that teaches your HR team to understand Gen Z — in three variants depending on how deep you want to go.",
+      "subtitle": "A workshop that teaches your HR team to understand Gen Z in three variants depending on how deep you want to go.",
       "cta": "Book a call"
     },
     "sections": [
@@ -68,7 +68,7 @@
       },
       {
         "label": "What your company gains",
-        "text": "An HR team that truly understands Gen Z — and knows how to work with them, communicate, and lead them. Not general theory, but insights directly applicable in their reality."
+        "text": "An HR team that truly understands Gen Z and knows how to work with them, communicate, and lead them. Not general theory, but insights directly applicable in their reality."
       },
       {
         "label": "Who it's for",

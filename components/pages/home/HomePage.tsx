@@ -454,7 +454,7 @@ export default function HomePage({
               whileInView="visible"
               viewport={{ once: true }}
               custom={0.15}
-              aria-label={`${locale === 'cs' ? 'Přehrát video' : 'Play video'} — ${content.story?.title ?? ''}`}
+              aria-label={`${locale === 'cs' ? 'Přehrát video' : 'Play video'}, ${content.story?.title ?? ''}`}
               className="group relative block aspect-video w-full cursor-pointer overflow-hidden rounded-2xl"
               onClick={() => {
                 posthog.capture('video_opened', { placement: 'homepage_story' });
@@ -664,7 +664,7 @@ export default function HomePage({
                 <div className="relative h-40 w-28 shrink-0 overflow-hidden">
                   <Image
                     src={member?.photo ?? ''}
-                    alt={`${member?.name} — GenZ Consulting`}
+                    alt={`${member?.name}, GenZ Consulting`}
                     fill
                     className="object-cover object-[center_0%]"
                     sizes="112px"

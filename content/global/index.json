@@ -25,7 +25,7 @@
         "servicesLabel": "Služby",
         "viewServicesLabel": "Všechny služby",
         "bookCallLabel": "Domluvit schůzku",
-        "homeLogoAria": "GenZ Consulting — domů",
+        "homeLogoAria": "GenZ Consulting, domů",
         "menuOpenAria": "Otevřít menu",
         "menuCloseAria": "Zavřít menu",
         "serviceLinks": [
@@ -59,7 +59,7 @@
         "servicesLabel": "Services",
         "viewServicesLabel": "All services",
         "bookCallLabel": "Book a call",
-        "homeLogoAria": "GenZ Consulting — home",
+        "homeLogoAria": "GenZ Consulting, home",
         "menuOpenAria": "Open menu",
         "menuCloseAria": "Close menu",
         "serviceLinks": [
@@ -125,7 +125,7 @@
         "navMedia": "Média",
         "navContact": "Kontakt",
         "navGuide": "Průvodce",
-        "homeLogoAria": "GenZ Consulting — domů"
+        "homeLogoAria": "GenZ Consulting, domů"
       },
       "en": {
         "tagline": "Systems for young people should be built by young people.",
@@ -140,7 +140,7 @@
         "navMedia": "Media",
         "navContact": "Contact",
         "navGuide": "Guide",
-        "homeLogoAria": "GenZ Consulting — home"
+        "homeLogoAria": "GenZ Consulting, home"
       }
     }
   }

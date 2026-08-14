@@ -12,7 +12,7 @@ const pressLocaleFields = [
   } as const,
   {
     type: 'string',
-    label: 'Date (ISO format, e.g. 2026-05-14 — used for sorting and display)',
+    label: 'Date (ISO format, e.g. 2026-05-14, used for sorting and display)',
     name: 'date',
   } as const,
   { type: 'string', label: 'Article URL', name: 'url' } as const,

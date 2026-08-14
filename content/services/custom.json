@@ -19,7 +19,7 @@
       },
       {
         "label": "Pro koho",
-        "text": "Pro firmy, které vědí, že mají problém s Gen Z, ale ještě nevědí jak ho uchopit. A pro firmy, které přesně vědí co chtějí — jen to zatím neexistuje jako hotový produkt."
+        "text": "Pro firmy, které vědí, že mají problém s Gen Z, ale ještě nevědí jak ho uchopit. A pro firmy, které přesně vědí co chtějí, jen to zatím neexistuje jako hotový produkt."
       }
     ],
     "steps": [
@@ -36,7 +36,7 @@
       {
         "num": "03",
         "title": "Vytvoříme řešení na míru",
-        "desc": "Řešení přesně pro vás — ať už známý produkt, nebo něco vyvinutého od začátku."
+        "desc": "Řešení přesně pro vás, ať už známý produkt, nebo něco vyvinutého od začátku."
       }
     ],
     "finalCta": {
@@ -47,12 +47,12 @@
   "en": {
     "card": {
       "title": "Not sure where to start or looking for something different?",
-      "desc": "Every company is different. If you're not sure what you need — or you know exactly what you want but didn't find it in our products — let's start with a conversation."
+      "desc": "Every company is different. If you're not sure what you need, or you know exactly what you want but didn't find it in our products, let's start with a conversation."
     },
     "hero": {
       "eyebrow": "Custom solution",
       "title": "Not sure where to start or looking for something different?",
-      "subtitle": "Every company is different. If you're not sure what you need — or you know exactly what you want but didn't find it in our products — let's start with a conversation.",
+      "subtitle": "Every company is different. If you're not sure what you need, or you know exactly what you want but didn't find it in our products, let's start with a conversation.",
       "cta": "Book a no-obligation call"
     },
     "sections": [
@@ -62,7 +62,7 @@
       },
       {
         "label": "Who it's for",
-        "text": "Companies that know they have a problem with Gen Z but don't know how to approach it. And companies that know exactly what they want — it just doesn't exist as a ready-made product yet."
+        "text": "Companies that know they have a problem with Gen Z but don't know how to approach it. And companies that know exactly what they want; it just doesn't exist as a ready-made product yet."
       }
     ],
     "steps": [
@@ -79,7 +79,7 @@
       {
         "num": "03",
         "title": "We build a solution on measure",
-        "desc": "A solution exactly for you — whether a known product or something built from scratch."
+        "desc": "A solution exactly for you, whether a known product or something built from scratch."
       }
     ],
     "finalCta": {

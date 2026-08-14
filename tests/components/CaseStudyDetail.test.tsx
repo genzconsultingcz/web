@@ -56,7 +56,7 @@ const cs = {
     intro: 'Outputs intro.',
     items: [{ num: '01', title: 'Output jedna', body: 'Popis outputu.' }],
     quote: 'Testovací citace.',
-    quoteAuthor: '— tým',
+    quoteAuthor: 'Tým',
   },
   whyUs: {
     headline: 'Why us headline',

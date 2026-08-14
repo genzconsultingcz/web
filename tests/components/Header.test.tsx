@@ -14,7 +14,7 @@ const globalSettings = {
         servicesLabel: 'Služby',
         viewServicesLabel: 'Všechny služby',
         bookCallLabel: 'Domluvit schůzku',
-        homeLogoAria: 'GenZ Consulting — domů',
+        homeLogoAria: 'GenZ Consulting, domů',
         menuOpenAria: 'Otevřít menu',
         menuCloseAria: 'Zavřít menu',
         serviceLinks: [{ slug: 'trainee-program', label: 'Trainee program' }],
@@ -26,7 +26,7 @@ const globalSettings = {
         servicesLabel: 'Services',
         viewServicesLabel: 'All services',
         bookCallLabel: 'Book a call',
-        homeLogoAria: 'GenZ Consulting — home',
+        homeLogoAria: 'GenZ Consulting, home',
         menuOpenAria: 'Open menu',
         menuCloseAria: 'Close menu',
         serviceLinks: [{ slug: 'trainee-program', label: 'Trainee program' }],
@@ -45,6 +45,6 @@ describe('Header', () => {
     )
     // vitest.setup.ts mocks next-intl's useLocale() to always return 'cs'
     expect(screen.getByText('Kontakt')).toBeInTheDocument()
-    expect(screen.getByLabelText('GenZ Consulting — domů')).toBeInTheDocument()
+    expect(screen.getByLabelText('GenZ Consulting, domů')).toBeInTheDocument()
   })
 })

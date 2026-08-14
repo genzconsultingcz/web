@@ -36,7 +36,7 @@ export async function generateMetadata({
     const content = locale === 'en' ? data.caseStudy.en : data.caseStudy.cs;
     if (!content) return {};
     const isEn = locale === 'en';
-    const title = isEn ? `${content.client} — Case study` : `${content.client} — Případová studie`;
+    const title = isEn ? `${content.client} · Case study` : `${content.client} · Případová studie`;
     const description = content.hero?.intro ?? '';
     return getPageMetadata({ locale, path: `/case-studies/${slug}`, title, description });
   } catch {

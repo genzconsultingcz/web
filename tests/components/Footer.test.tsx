@@ -23,7 +23,7 @@ const globalSettings = {
         navMedia: 'Média',
         navContact: 'Kontakt',
         navGuide: 'Průvodce',
-        homeLogoAria: 'GenZ Consulting — domů',
+        homeLogoAria: 'GenZ Consulting, domů',
       },
       en: {
         tagline: 'Systems for young people should be built by young people.',
@@ -38,7 +38,7 @@ const globalSettings = {
         navMedia: 'Media',
         navContact: 'Contact',
         navGuide: 'Guide',
-        homeLogoAria: 'GenZ Consulting — home',
+        homeLogoAria: 'GenZ Consulting, home',
       },
     },
   },
