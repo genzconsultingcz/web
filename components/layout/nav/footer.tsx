@@ -128,31 +128,33 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-6 text-center">
+        <div className="mt-12 border-t border-white/10 pt-8 text-center">
           <p className="text-xs text-white/30">
             © {new Date().getFullYear()} {header?.name}. {copy.rights}
+            {' · '}
+            <Link
+              href={`/${locale}/gdpr`}
+              className="text-white/40 hover:text-white transition-colors duration-150"
+            >
+              {t('gdprLink')}
+            </Link>
+            {' · '}
+            <button
+              type="button"
+              onClick={openConsent}
+              className="text-white/40 hover:text-white transition-colors duration-150"
+            >
+              {t('change')}
+            </button>
           </p>
-          <Link
-            href={`/${locale}/gdpr`}
-            className="text-xs text-white/40 hover:text-white transition-colors duration-150"
-          >
-            {t('gdprLink')}
-          </Link>
-          <button
-            type="button"
-            onClick={openConsent}
-            className="text-xs text-white/40 hover:text-white transition-colors duration-150"
-          >
-            {t('change')}
-          </button>
           <a
             href="https://webe.tuuli.cz"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="WeBe"
-            className="group inline-flex select-none items-center justify-center gap-2.5 text-white/40 transition-colors duration-200 hover:text-white/70"
+            aria-label="WeBe – tvorba webů"
+            className="group mt-6 inline-flex flex-col items-center gap-1 rounded-xl px-5 py-3 transition-all duration-300 hover:bg-white/5"
           >
-            <span className="text-[11px] font-medium uppercase tracking-[0.2em]">
+            <span className="text-[9px] font-normal uppercase tracking-[0.25em] text-white/30 transition-colors duration-300 group-hover:text-white/50">
               {copy.socialDomain}
             </span>
             <Image
@@ -160,7 +162,7 @@ export const Footer = () => {
               alt="WeBe"
               width={530}
               height={193}
-              className="h-4 w-auto opacity-60 transition-opacity duration-200 group-hover:opacity-100"
+              className="h-5 w-auto opacity-60 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105"
             />
           </a>
         </div>
