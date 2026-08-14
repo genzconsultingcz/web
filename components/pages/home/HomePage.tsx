@@ -263,15 +263,15 @@ export default function HomePage({
         <div className="overflow-hidden w-full px-6">
           <InfiniteSlider gap={64} speed={40} speedOnHover={20} className="w-full">
             {(logos ?? []).map((logo) => (
-              <div key={logo?.name} className="flex items-center justify-center">
+              <div key={logo?.name} className="flex h-16 w-40 items-center justify-center">
                 {logo?.src ? (
                   <Image
                     src={logo.src}
                     alt={logo.name ?? ''}
                     width={0}
                     height={0}
-                    sizes="200px"
-                    style={{ height: '2.5rem', width: 'auto' }}
+                    sizes="160px"
+                    style={{ maxHeight: '3rem', maxWidth: '9rem', width: 'auto', height: 'auto', objectFit: 'contain' }}
                     className="grayscale opacity-60 transition-all duration-300 hover:opacity-100 hover:grayscale-0"
                   />
                 ) : (

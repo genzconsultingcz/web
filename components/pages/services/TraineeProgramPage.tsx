@@ -156,7 +156,7 @@ export default function TraineeProgramPage({
               viewport={{ once: true }}
               custom={0.05}
             >
-              <p className="text-2xl font-black text-black">{content.timeline?.text ?? ''}</p>
+              <p className="text-base leading-relaxed text-zinc-600">{content.timeline?.text ?? ''}</p>
             </motion.div>
           </div>
         </div>
