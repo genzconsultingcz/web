@@ -676,14 +676,15 @@ export default function HomePage({
                 </div>
               </motion.div>
             ))}
+            <div className="flex items-end justify-end p-6 sm:col-start-2">
+              <Link
+                href={`/${locale}/about`}
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
+              >
+                {content.team?.viewAbout}
+              </Link>
+            </div>
           </div>
-
-          <Link
-            href={`/${locale}/about`}
-            className="mt-8 inline-flex items-center gap-1.5 text-sm font-bold text-zinc-400 hover:text-black transition-colors duration-150"
-          >
-            {content.team?.viewAbout}
-          </Link>
         </div>
       </section>
 
