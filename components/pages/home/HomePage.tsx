@@ -129,13 +129,13 @@ export default function HomePage({
       <section className="relative overflow-hidden bg-white">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 py-20 lg:min-h-[90vh] lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:py-24">
           {/* ── LEFT: text ── */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 text-center lg:order-1 lg:text-left">
             <motion.div
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               custom={0}
-              className="mb-8 flex items-center gap-3"
+              className="mb-8 flex items-center justify-center gap-3 lg:justify-start"
             >
               <span aria-hidden className="h-px w-10 bg-black/40" />
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-black/50">
@@ -187,7 +187,7 @@ export default function HomePage({
               initial="hidden"
               animate="visible"
               custom={0.3}
-              className="mt-5 max-w-xl text-base text-black/60 md:text-lg"
+              className="mt-5 mx-auto max-w-xl text-base text-black/60 md:text-lg lg:mx-0"
             >
               {content.hero?.body}
             </motion.p>
@@ -197,17 +197,17 @@ export default function HomePage({
               initial="hidden"
               animate="visible"
               custom={0.4}
-              className="mt-10 flex flex-wrap gap-3"
+              className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
             >
               <ContactButton
                 label={content.hero?.primaryCta ?? ''}
                 size="lg"
-                className="rounded-full bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors"
+                className="w-full justify-center rounded-full bg-black px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition-colors sm:w-auto"
               />
               <a
                 href="#pdf-guide"
                 onClick={() => posthog.capture('guide_cta_clicked', { placement: 'hero' })}
-                className="inline-flex items-center gap-2 rounded-full border-2 border-black bg-transparent px-8 py-4 text-sm font-bold text-black hover:bg-black hover:text-white transition-colors"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-black bg-transparent px-8 py-4 text-sm font-bold text-black hover:bg-black hover:text-white transition-colors sm:w-auto"
               >
                 <Download className="size-4" />
                 {content.hero?.secondaryCta}
